@@ -25,7 +25,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-6 text-center lg:text-left"
           >
             {/* Headline */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -38,13 +38,13 @@ export default function CTASection() {
             </p>
 
             {/* Badge: Jetzt Online & Erreichbar */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-green-500/20 border border-green-500/30 backdrop-blur-sm"
-            >
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="inline-flex items-center justify-center gap-3 px-4 py-3 rounded-xl bg-green-500/20 border border-green-500/30 backdrop-blur-sm"
+                >
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
@@ -62,7 +62,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
-            className="space-y-4 flex flex-col"
+            className="space-y-4 flex flex-col items-center lg:items-stretch"
           >
             {/* WhatsApp Box - Desktop zuerst, Mobile zweite */}
             <motion.a
@@ -70,7 +70,7 @@ export default function CTASection() {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
-              className="group relative block bg-green-600/20 border-2 border-green-500/30 rounded-2xl p-6 hover:border-green-500 transition-all duration-300 overflow-hidden order-2 lg:order-1"
+              className="group relative block bg-green-600/20 border-2 border-green-500/30 rounded-2xl p-6 hover:border-green-500 transition-all duration-300 overflow-hidden order-2 lg:order-1 w-full max-w-md lg:max-w-none"
             >
               {/* Neon-Glow Effekt */}
               <motion.div
@@ -97,7 +97,7 @@ export default function CTASection() {
             <motion.a
               href={`tel:${phoneNumber}`}
               whileHover={{ scale: 1.02 }}
-              className="group relative block bg-blue-600/20 border-2 border-blue-500/30 rounded-2xl p-6 hover:border-blue-500 transition-all duration-300 overflow-hidden order-1 lg:order-2"
+              className="group relative block bg-blue-600/20 border-2 border-blue-500/30 rounded-2xl p-6 hover:border-blue-500 transition-all duration-300 overflow-hidden order-1 lg:order-2 w-full max-w-md lg:max-w-none"
             >
               {/* Neon-Glow Effekt */}
               <motion.div
@@ -124,7 +124,7 @@ export default function CTASection() {
             <motion.a
               href={`mailto:${email}`}
               whileHover={{ scale: 1.02 }}
-              className="group relative block bg-white/5 border-2 border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 overflow-hidden order-3"
+              className="group relative block bg-white/5 border-2 border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 overflow-hidden order-3 w-full max-w-md lg:max-w-none"
             >
               <div className="relative flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">

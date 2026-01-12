@@ -87,7 +87,7 @@ export default function EventPaketeSection() {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Unsere Event-Pakete
+            Unsere Dienstleistungs-Pakete
           </h2>
         </motion.div>
 
@@ -123,7 +123,7 @@ export default function EventPaketeSection() {
             </p>
             <Link
               href="/leistungen#lieferservice"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn"
+              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn w-full md:w-auto"
             >
               Details ansehen
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -154,13 +154,13 @@ export default function EventPaketeSection() {
               </div>
               
               {/* Rechts: 25% Rabatt Badge & Details Button */}
-              <div className="flex flex-col items-end gap-3 flex-shrink-0">
+              <div className="flex flex-col items-center md:items-end gap-3 flex-shrink-0 w-full md:w-auto">
                 <span className="inline-flex items-center px-4 py-2 rounded-lg bg-yellow-400 text-gray-900 font-bold text-lg shadow-md">
                   25% Rabatt-Vorteil *
                 </span>
                 <Link
                   href="/leistungen#edeka-festanhaenger"
-                  className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-primary px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn w-full md:w-auto"
                 >
                   Details ansehen
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -193,7 +193,7 @@ export default function EventPaketeSection() {
                     <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${paket.emotional ? 'bg-pink-100' : 'bg-primary/10'}`}>
                       <IconComponent className={`w-7 h-7 ${paket.emotional ? 'text-pink-600' : 'text-primary'}`} />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                         {paket.title}
                       </h3>
@@ -212,10 +212,10 @@ export default function EventPaketeSection() {
                   </div>
 
                   {/* Rechts: Preis & Button */}
-                  <div className="flex flex-col items-end gap-4 flex-shrink-0">
+                  <div className="flex flex-col items-center md:items-end gap-4 flex-shrink-0 w-full md:w-auto">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className="text-right"
+                      className="text-center md:text-right w-full md:w-auto"
                     >
                       <div className="text-3xl md:text-4xl font-bold text-primary">
                         {paket.price}€
@@ -224,7 +224,7 @@ export default function EventPaketeSection() {
                         <div className="text-xs text-gray-500 mt-1">{paket.priceNote}</div>
                       )}
                     </motion.div>
-                    <div className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn">
+                    <div className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn w-full md:w-auto">
                       Details ansehen
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </div>
@@ -263,15 +263,15 @@ export default function EventPaketeSection() {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-col items-end gap-4 flex-shrink-0">
-              <div className="text-right">
+            <div className="flex flex-col items-center md:items-end gap-4 flex-shrink-0 w-full md:w-auto">
+              <div className="text-center md:text-right w-full md:w-auto">
                 <div className="text-xl md:text-2xl font-bold text-primary">
                   Preis auf Anfrage
                 </div>
               </div>
               <Link
                 href="/leistungen#kuenstlervermittlung"
-                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn"
+                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn w-full md:w-auto"
               >
                 Details ansehen
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

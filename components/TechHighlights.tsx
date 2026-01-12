@@ -114,8 +114,8 @@ export default function TechHighlights() {
           </div>
 
           {/* Tablet & Mobile: Horizontales Scroll */}
-          <div className="lg:hidden overflow-x-auto pb-4 -mx-4 px-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            <div className="flex gap-4 min-w-max">
+          <div className="lg:hidden overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] w-full">
+            <div className="flex gap-4" style={{ width: 'max-content' }}>
               {techHighlights.map((product, index) => (
                 <div key={product.id} className="w-[280px] flex-shrink-0">
                   <TechCard product={product} index={index} />

@@ -68,7 +68,7 @@ export default function HighlightProduct({
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="relative flex items-center justify-center lg:justify-start"
+            className="relative flex items-center justify-center"
           >
             <div className="relative w-full max-w-sm lg:max-w-md aspect-square">
               <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl transform rotate-3 opacity-20" />
@@ -92,10 +92,10 @@ export default function HighlightProduct({
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
-            className="space-y-6"
+            className="space-y-6 text-center lg:text-left"
           >
             {/* Badge */}
-            <div className="inline-block">
+            <div className="flex justify-center lg:justify-start">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-xs md:text-sm font-semibold bg-primary text-white uppercase tracking-wide">
                 Highlight der Woche
               </span>
@@ -128,7 +128,7 @@ export default function HighlightProduct({
                     initial={{ opacity: 0, x: 20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                    className="flex items-center gap-4"
+                    className="flex items-center gap-4 justify-center lg:justify-start"
                   >
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                       <IconComponent className="w-6 h-6 text-primary" />
@@ -146,7 +146,7 @@ export default function HighlightProduct({
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className="pt-4"
+              className="pt-4 flex justify-center lg:justify-start"
             >
               {productUrl ? (
                 <Link

@@ -58,10 +58,10 @@ export default function ExpertiseSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-white rounded-2xl p-6 md:p-8 border-2 border-transparent hover:border-primary transition-all duration-300 cursor-pointer hover:-translate-y-1 shadow-sm hover:shadow-md"
+                className="group relative bg-white rounded-2xl p-6 md:p-8 border-2 border-transparent hover:border-primary transition-all duration-300 cursor-pointer hover:-translate-y-1 shadow-sm hover:shadow-md text-center md:text-left"
               >
                 {/* Icon */}
-                <div className="mb-4">
+                <div className="mb-4 flex justify-center md:justify-start">
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                     <IconComponent className="w-7 h-7 text-primary" />
                   </div>

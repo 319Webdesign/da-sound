@@ -2,6 +2,7 @@ import { data } from '@/lib/data';
 import { Volume2, Lightbulb, Package, MessageCircle, MapPin, Clock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import MobileNavigation from '@/components/MobileNavigation';
 import Hero from '@/components/Hero';
 import HighlightProduct from '@/components/HighlightProduct';
 import ExpertiseSection from '@/components/ExpertiseSection';
@@ -15,15 +16,15 @@ import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 
 // ISR: Incremental Static Regeneration für bessere Performance
-export const revalidate = 60; // Revalidierung jede Minute
+export const revalidate = 60;
 
 export default function HomePage() {
   const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich habe eine Anfrage bezüglich Ihrer Veranstaltungstechnik.')}`;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
       {/* Header / Navigation */}
-      <header className="border-b border-gray-100 sticky top-0 z-50 bg-white/95 backdrop-blur-sm">
+      <header className="border-b border-gray-100 sticky top-0 z-50 bg-white/95 backdrop-blur-sm relative">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center">
@@ -35,6 +36,8 @@ export default function HomePage() {
                 className="h-12 w-auto"
               />
             </Link>
+            
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6">
               <Link
                 href="/"
@@ -67,6 +70,9 @@ export default function HomePage() {
                 Kontakt
               </Link>
             </div>
+
+            {/* Mobile Navigation */}
+            <MobileNavigation />
           </div>
         </nav>
       </header>
@@ -132,8 +138,8 @@ export default function HomePage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               {/* Öffnungszeiten */}
-              <div>
-                <div className="flex items-center gap-3 mb-4">
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                   <Clock className="w-6 h-6 text-primary" />
                   <h3 className="text-xl font-semibold text-gray-900">Öffnungszeiten</h3>
                 </div>
@@ -145,8 +151,8 @@ export default function HomePage() {
               </div>
 
               {/* Standort */}
-              <div>
-                <div className="flex items-center gap-3 mb-4">
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                   <MapPin className="w-6 h-6 text-primary" />
                   <h3 className="text-xl font-semibold text-gray-900">Standort</h3>
                 </div>
