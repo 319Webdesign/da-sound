@@ -7,6 +7,7 @@ const nextConfig = {
   // Optimierung für Mobile
   images: {
     formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
     remotePatterns: [
       {
         protocol: 'https',
@@ -14,6 +15,10 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  // Experimental features für bessere Performance
+  experimental: {
+    optimizeCss: true,
   },
 };
 

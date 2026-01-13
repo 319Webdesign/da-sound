@@ -127,6 +127,17 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                         : 'scale(1)',
                     }}
                     sizes="(max-width: 1024px) 50vw, 25vw"
+                    quality={80}
+                    priority
+                    onError={(e) => {
+                      console.error('Failed to load image:', speakerImage.url);
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.opacity = '1';
+                    }}
+                    onLoad={(e) => {
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.opacity = '1';
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </motion.div>
@@ -158,6 +169,17 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                         : 'scale(1)',
                     }}
                     sizes="(max-width: 1024px) 50vw, 25vw"
+                    quality={80}
+                    loading="lazy"
+                    onError={(e) => {
+                      console.error('Failed to load image:', liveEventImage.url);
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.opacity = '1';
+                    }}
+                    onLoad={(e) => {
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.opacity = '1';
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </motion.div>
@@ -190,7 +212,17 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                       : 'scale(1)',
                   }}
                   sizes="(max-width: 1024px) 50vw, 50vw"
+                  quality={80}
                   priority
+                  onError={(e) => {
+                    console.error('Failed to load image:', lightshowImage.url);
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.opacity = '1';
+                  }}
+                  onLoad={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.opacity = '1';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
@@ -227,7 +259,18 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                       : 'scale(1)',
                   }}
                   sizes="(max-width: 768px) 50vw, 100vw"
+                  quality={80}
                   priority={index === 0}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  onError={(e) => {
+                    console.error('Failed to load image:', image.url);
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.opacity = '1';
+                  }}
+                  onLoad={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.opacity = '1';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>

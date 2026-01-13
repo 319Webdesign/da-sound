@@ -15,9 +15,11 @@ import {
   Settings, 
   Layers, 
   Boxes,
-  Download
+  Download,
+  Plus
 } from 'lucide-react';
 import Image from 'next/image';
+import { useRentalCart } from '@/context/RentalCartContext';
 
 interface CategoryCard {
   icon: React.ComponentType<{ className?: string }>;
@@ -102,9 +104,18 @@ const categories: CategoryCard[] = [
 ];
 
 export default function RentalCategories() {
+  const { addItem } = useRentalCart();
+
   const handleDownload = () => {
     // Hier würde normalerweise der PDF-Download ausgelöst werden
     alert('PDF-Download wird vorbereitet...\n\nIn der finalen Version wird hier die Mietpreisliste als PDF heruntergeladen.');
+  };
+
+  const handleAddToCart = (category: CategoryCard) => {
+    addItem({
+      id: `category-${category.title.toLowerCase().replace(/\s+/g, '-')}`,
+      name: category.title,
+    });
   };
 
   return (
@@ -133,7 +144,7 @@ export default function RentalCategories() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                    transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.3) }}
                 className="group relative aspect-[4/5] rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer"
               >
                 {/* Hintergrundbild */}
@@ -144,8 +155,9 @@ export default function RentalCategories() {
                     fill
                     className="object-cover object-center"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    quality={90}
-                    priority={index < 6 || category.image === '/images/sk3-1920w.webp'}
+                    quality={75}
+                    loading={index < 4 ? 'eager' : 'lazy'}
+                    priority={index < 3}
                     unoptimized={category.image === '/images/slxd4e86-1920w.webp' || category.image === '/images/z1200_1-1920w.webp'}
                     onError={(e) => {
                       console.error('Failed to load image:', category.image, 'for category:', category.title);
@@ -185,6 +197,18 @@ export default function RentalCategories() {
                   <p className="text-white/90 sm:text-white/0 sm:group-hover:text-white/90 text-[10px] sm:text-xs md:text-sm lg:text-base leading-snug sm:leading-relaxed transition-all duration-300 mt-1 sm:mt-2 line-clamp-2">
                     {category.description}
                   </p>
+
+                  {/* Auswählen Button */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleAddToCart(category);
+                    }}
+                    className="mt-3 sm:mt-4 w-full sm:w-auto sm:opacity-0 sm:group-hover:opacity-100 flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-semibold transition-all text-sm sm:text-base shadow-lg hover:shadow-xl"
+                  >
+                    <Plus className="w-4 h-4" />
+                    Auswählen
+                  </button>
                 </div>
               </motion.div>
             );

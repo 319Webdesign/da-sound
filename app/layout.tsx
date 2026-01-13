@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import ClientProviders from "@/components/ClientProviders";
 
 export const metadata: Metadata = {
   title: "da-sound Veranstaltungstechnik | Pfungstadt",
@@ -21,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className="overflow-x-hidden">
-      <body className="overflow-x-hidden w-full">{children}</body>
+      <body className="overflow-x-hidden w-full">
+        <ClientProviders>{children}</ClientProviders>
+      </body>
     </html>
   );
 }

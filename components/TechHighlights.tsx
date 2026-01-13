@@ -138,7 +138,7 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.3) }}
       whileHover={{ scale: 1.02 }}
       className={`
         group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full
@@ -163,6 +163,8 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
             fill
             className="object-cover group-hover:scale-110 transition-transform duration-500"
             sizes="(max-width: 768px) 280px, (max-width: 1024px) 25vw, 250px"
+            quality={75}
+            loading="lazy"
           />
         ) : (
           <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">

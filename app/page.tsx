@@ -14,6 +14,7 @@ import CTASection from '@/components/CTASection';
 import DryHireServiceSection from '@/components/DryHireServiceSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
+import RentalCart from '@/components/RentalCart';
 
 // ISR: Incremental Static Regeneration für bessere Performance
 export const revalidate = 60;
@@ -180,6 +181,9 @@ export default function HomePage() {
       </section>
 
       <Footer />
+
+      {/* Sticky Warenkorb */}
+      <RentalCart />
     </div>
   );
 }
