@@ -21,6 +21,11 @@ export const revalidate = 60;
 
 export default function HomePage() {
   const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich habe eine Anfrage bezüglich Ihrer Veranstaltungstechnik.')}`;
+  
+  // Sicherstellen, dass die Seite gerendert wird
+  if (!data) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
@@ -37,11 +42,6 @@ export default function HomePage() {
                 className="h-12 w-auto"
                 quality={90}
                 priority
-                onError={(e) => {
-                  console.error('Failed to load logo');
-                  const target = e.currentTarget as HTMLImageElement;
-                  target.style.opacity = '1';
-                }}
               />
             </Link>
             

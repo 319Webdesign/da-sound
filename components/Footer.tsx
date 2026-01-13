@@ -23,11 +23,6 @@ export default function Footer() {
                 className="h-12 w-auto"
                 quality={90}
                 priority
-                onError={(e) => {
-                  console.error('Failed to load logo');
-                  const target = e.currentTarget as HTMLImageElement;
-                  target.style.opacity = '1';
-                }}
               />
             </div>
             <p className="text-sm leading-relaxed">
