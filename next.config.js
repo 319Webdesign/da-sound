@@ -16,10 +16,6 @@ const nextConfig = {
       },
     ],
   },
-  // Experimental features für bessere Performance
-  experimental: {
-    optimizeCss: true,
-  },
 };
 
 module.exports = nextConfig;

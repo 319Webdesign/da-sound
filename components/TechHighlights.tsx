@@ -165,6 +165,15 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
             sizes="(max-width: 768px) 280px, (max-width: 1024px) 25vw, 250px"
             quality={75}
             loading="lazy"
+            onError={(e) => {
+              console.error('Failed to load image:', product.image);
+              const target = e.currentTarget as HTMLImageElement;
+              target.style.opacity = '1';
+            }}
+            onLoad={(e) => {
+              const target = e.currentTarget as HTMLImageElement;
+              target.style.opacity = '1';
+            }}
           />
         ) : (
           <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">

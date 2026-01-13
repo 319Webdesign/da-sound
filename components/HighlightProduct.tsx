@@ -82,6 +82,15 @@ export default function HighlightProduct({
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     quality={80}
                     priority
+                    onError={(e) => {
+                      console.error('Failed to load image:', image);
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.opacity = '1';
+                    }}
+                    onLoad={(e) => {
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.opacity = '1';
+                    }}
                   />
                 </div>
               </div>
