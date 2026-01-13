@@ -2,120 +2,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Package, 
-  Speaker, 
-  Sliders, 
-  Lightbulb, 
-  Sparkles, 
-  Mic, 
-  Cloud, 
-  Monitor, 
-  Zap, 
-  Settings, 
-  Layers, 
-  Boxes,
-  Download,
-  Plus
-} from 'lucide-react';
+import { Download, Plus, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRentalCart } from '@/context/RentalCartContext';
-
-interface CategoryCard {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  description: string;
-  image: string;
-}
-
-const categories: CategoryCard[] = [
-  {
-    icon: Package,
-    title: 'Komplett-Sets',
-    description: 'All-inclusive Event-Pakete mit Ton, Licht und Bühne',
-    image: '/images/profx3-1920w.webp',
-  },
-  {
-    icon: Speaker,
-    title: 'PA-Anlagen',
-    description: 'Druckvoller Sound für bis zu 500 Personen',
-    image: '/images/audiozenit-1920w.webp',
-  },
-  {
-    icon: Sliders,
-    title: 'Mischpulte',
-    description: 'Professionelle Audio-Mischpulte',
-    image: '/images/chorkonzert-1920w.webp',
-  },
-  {
-    icon: Lightbulb,
-    title: 'LED Spots',
-    description: 'Energieeffiziente LED-Beleuchtung für jeden Raum',
-    image: '/images/kls120_1-1920w.webp',
-  },
-  {
-    icon: Sparkles,
-    title: 'Moving Heads',
-    description: 'Professionelles Show-Licht für deine Bühne',
-    image: '/images/sk3-1920w.webp',
-  },
-  {
-    icon: Mic,
-    title: 'Mikrofone',
-    description: 'Funk- und Kabelmikrofone für klare Kommunikation',
-    image: '/images/slxd4e86-1920w.webp',
-  },
-  {
-    icon: Cloud,
-    title: 'Nebelmaschinen',
-    description: 'Atmosphärische Nebel- und Dunsteffekte',
-    image: '/images/z1200_1-1920w.webp',
-  },
-  {
-    icon: Monitor,
-    title: 'Beamer',
-    description: 'Hochauflösende Projektion für Präsentationen',
-    image: '/images/acer1-1920w.webp',
-  },
-  {
-    icon: Zap,
-    title: 'Stromerzeuger',
-    description: 'Mobile Stromversorgung für Outdoor-Events',
-    image: '/images/hy3200si_1-1920w.jpg',
-  },
-  {
-    icon: Settings,
-    title: 'Lichtsteuerung',
-    description: 'DMX-Controller und Steuerungssysteme',
-    image: '/images/quickq10_1-1920w.webp',
-  },
-  {
-    icon: Layers,
-    title: 'Traversen',
-    description: 'Stabile Traversensysteme für sichere Installation',
-    image: '/images/stative.jpg',
-  },
-  {
-    icon: Boxes,
-    title: 'Bühnenpodeste',
-    description: 'Modulare Podestsysteme in verschiedenen Höhen',
-    image: '/images/ixstage5-1920w.jpg',
-  },
-];
+import { categories } from '@/lib/categories';
 
 export default function RentalCategories() {
-  const { addItem } = useRentalCart();
-
   const handleDownload = () => {
     // Hier würde normalerweise der PDF-Download ausgelöst werden
     alert('PDF-Download wird vorbereitet...\n\nIn der finalen Version wird hier die Mietpreisliste als PDF heruntergeladen.');
-  };
-
-  const handleAddToCart = (category: CategoryCard) => {
-    addItem({
-      id: `category-${category.title.toLowerCase().replace(/\s+/g, '-')}`,
-      name: category.title,
-    });
   };
 
   return (
@@ -139,14 +35,17 @@ export default function RentalCategories() {
             if (!IconComponent) return null;
             
             return (
-              <motion.div
+              <Link
+                href={`/kategorien/${category.slug}`}
                 key={`${category.title}-${index}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.3) }}
-                className="group relative aspect-[4/5] rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer"
               >
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.3) }}
+                  className="group relative aspect-[4/5] rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer"
+                >
                 {/* Hintergrundbild */}
                 <div className="absolute inset-0 bg-gray-800">
                   <Image
@@ -198,19 +97,9 @@ export default function RentalCategories() {
                     {category.description}
                   </p>
 
-                  {/* Auswählen Button */}
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleAddToCart(category);
-                    }}
-                    className="mt-3 sm:mt-4 w-full sm:w-auto sm:opacity-0 sm:group-hover:opacity-100 flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-semibold transition-all text-sm sm:text-base shadow-lg hover:shadow-xl"
-                  >
-                    <Plus className="w-4 h-4" />
-                    Auswählen
-                  </button>
                 </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             );
           })}
         </div>

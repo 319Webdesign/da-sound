@@ -54,7 +54,7 @@ export default function HomePage() {
                 Home
               </Link>
               <Link
-                href="/#about"
+                href="/ueber-uns"
                 className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
               >
                 Über uns
@@ -66,13 +66,13 @@ export default function HomePage() {
                 Eventservice
               </Link>
               <Link
-                href="/#liefergebiet"
+                href="/liefergebiet"
                 className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
               >
                 Liefergebiet
               </Link>
               <Link
-                href="/#kontakt"
+                href="/kontakt"
                 className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
               >
                 Kontakt

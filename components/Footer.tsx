@@ -81,7 +81,7 @@ export default function Footer() {
                 Home
               </Link>
               <Link
-                href="/#about"
+                href="/ueber-uns"
                 className="block text-sm hover:text-primary transition-colors"
               >
                 Über uns
@@ -93,13 +93,13 @@ export default function Footer() {
                 Eventservice
               </Link>
               <Link
-                href="/#liefergebiet"
+                href="/liefergebiet"
                 className="block text-sm hover:text-primary transition-colors"
               >
                 Liefergebiet
               </Link>
               <Link
-                href="/#kontakt"
+                href="/kontakt"
                 className="block text-sm hover:text-primary transition-colors"
               >
                 Kontakt

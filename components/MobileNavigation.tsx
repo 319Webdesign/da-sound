@@ -34,7 +34,7 @@ export default function MobileNavigation() {
               Home
             </Link>
             <Link
-              href="/#about"
+              href="/ueber-uns"
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-medium text-white hover:bg-gray-800 transition-colors py-4 px-6 border-b border-gray-800"
             >
@@ -48,14 +48,14 @@ export default function MobileNavigation() {
               Eventservice
             </Link>
             <Link
-              href="/#liefergebiet"
+              href="/liefergebiet"
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-medium text-white hover:bg-gray-800 transition-colors py-4 px-6 border-b border-gray-800"
             >
               Liefergebiet
             </Link>
             <Link
-              href="/#kontakt"
+              href="/kontakt"
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-medium text-white hover:bg-gray-800 transition-colors py-4 px-6"
             >
