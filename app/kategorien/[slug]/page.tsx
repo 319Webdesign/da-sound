@@ -5,7 +5,7 @@ import { data } from '@/lib/data';
 import { MapPin, Clock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MobileNavigation from '@/components/MobileNavigation';
+import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import CategoryHero from '@/components/CategoryHero';
@@ -38,60 +38,7 @@ export default async function CategoryPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
       {/* Header / Navigation */}
-      <header className="border-b border-gray-100 sticky top-0 z-50 bg-white/95 backdrop-blur-sm relative">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo.webp"
-                alt="da-sound Logo"
-                width={48}
-                height={48}
-                className="h-12 w-auto"
-                quality={90}
-                priority
-              />
-            </Link>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6">
-              <Link
-                href="/"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/ueber-uns"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Über uns
-              </Link>
-              <Link
-                href="/leistungen"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Eventservice
-              </Link>
-              <Link
-                href="/#liefergebiet"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Liefergebiet
-              </Link>
-              <Link
-                href="/kontakt"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Kontakt
-              </Link>
-            </div>
-
-            {/* Mobile Navigation */}
-            <MobileNavigation />
-          </div>
-        </nav>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
       <CategoryHero 

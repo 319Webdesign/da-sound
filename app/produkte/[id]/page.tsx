@@ -5,7 +5,7 @@ import { data } from '@/lib/data';
 import { MapPin, Clock, ShoppingBag, ArrowLeft, Check } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MobileNavigation from '@/components/MobileNavigation';
+import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import AddToCartButton from '@/components/AddToCartButton';
@@ -35,60 +35,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
       {/* Header / Navigation */}
-      <header className="border-b border-gray-100 sticky top-0 z-50 bg-white/95 backdrop-blur-sm relative">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo.webp"
-                alt="da-sound Logo"
-                width={48}
-                height={48}
-                className="h-12 w-auto"
-                quality={90}
-                priority
-              />
-            </Link>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6">
-              <Link
-                href="/"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/ueber-uns"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Über uns
-              </Link>
-              <Link
-                href="/leistungen"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Eventservice
-              </Link>
-              <Link
-                href="/liefergebiet"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Liefergebiet
-              </Link>
-              <Link
-                href="/kontakt"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Kontakt
-              </Link>
-            </div>
-
-            {/* Mobile Navigation */}
-            <MobileNavigation />
-          </div>
-        </nav>
-      </header>
+      <Navigation />
 
       {/* Breadcrumb */}
       <section className="bg-gray-50 py-4 border-b border-gray-100">
@@ -155,7 +102,11 @@ export default async function ProductDetailPage({ params }: PageProps) {
                       className={
                         product.id === 'akku-lautsprecher-compact' ||
                         product.id === 'aktivlautsprecher-bluetooth' ||
-                        product.id === 'pa-saeule-bluetooth'
+                        product.id === 'pa-saeule-bluetooth' ||
+                        product.id === 'party-set-small' ||
+                        product.id === 'party-set-medium' ||
+                        product.id === 'party-set-white' ||
+                        product.id === 'party-set-large'
                           ? 'object-contain p-8'
                           : 'object-cover'
                       }
@@ -228,7 +179,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 {/* Description */}
                 <div className="mb-6">
                   <h2 className="text-xl font-semibold text-gray-900 mb-3">Beschreibung</h2>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
                     {product.description}
                   </p>
                 </div>
@@ -264,7 +215,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     <h2 className="text-xl font-semibold text-gray-900 mb-3">Technische Daten</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {product.specs
-                        .filter((spec) => spec.label !== 'Personen')
+                        .filter((spec) => !(product.categorySlug === 'pa-anlagen' && spec.label === 'Personen'))
                         .map((spec, idx) => (
                           <div key={idx} className="bg-gray-50 rounded-lg p-4">
                             <div className="text-sm font-semibold text-gray-700 mb-1">

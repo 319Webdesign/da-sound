@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="mb-4">
               <Image
-                src="/images/logo.webp"
+                src="/images/logo.png"
                 alt="da-sound Logo"
                 width={48}
                 height={48}

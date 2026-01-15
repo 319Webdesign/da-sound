@@ -17,47 +17,84 @@ export const products: Product[] = [
   {
     id: 'party-set-small',
     name: 'Party-Set SMALL',
-    description: 'Enthält PA-System, Mischpult, Mikrofone und Basis-Beleuchtung.',
-    images: ['/images/profx3-1920w.webp'],
-    pricePerUnit: 200,
+    description: `Bestehend aus:
+1 x Aktives Lautsprechersystem mit 700W RMS
+12-Zoll Subwoofer
+2 Satelliten
+Bluetooth Verbindung direkt mit dem Handy
+2 x Lautsprecherstativ
+1 x LED Kompakt Licht-Set m. Stativ + Fernbedienung
+1 x Nebelmaschine (800W) + Fernbedienung
+Alle benötigten Anschlusskabel`,
+    images: ['/images/partysetsmall.jpg'],
+    pricePerUnit: 80,
+    pricePerPair: 120,
     categorySlug: 'party-sets-ton-licht',
-    features: ['PA bis 50 Personen', '16-Kanal Mischpult', '2 Funkmikrofone', 'Basis-Lichtset'],
   },
   {
     id: 'party-set-medium',
     name: 'Party-Set MEDIUM',
-    description: 'Erweiterte Ausstattung mit besserem Sound und professioneller Beleuchtung.',
-    images: ['/images/profx3-1920w.webp'],
-    pricePerUnit: 300,
+    description: `Bestehend aus:
+Profi PA System 2.1
+1 x Subwoofer 15-Zoll, 1.200W
+2 x Satelliten 400W 
+2 x Lautsprecherstative
+1 x Audiomischpult mit Bluetooth
+1 x Mikrofon mit Schalter, 10m Kabel
+1 x LED FX Scan Licht-Set m. Stativ + Fernbedienung
+1 x Nebelmaschine (800W) + Fernbedienung
+Alle benötigten Anschlusskabel`,
+    images: ['/images/partysetmedium.jpg'],
+    pricePerUnit: 140,
+    pricePerPair: 200,
     categorySlug: 'party-sets-ton-licht',
-    features: ['PA bis 100 Personen', '24-Kanal Mischpult', '4 Funkmikrofone', 'LED-Spots + Moving Heads'],
   },
   {
     id: 'party-set-white',
     name: 'Party-Set WHITE',
-    description: 'Speziell für elegante Veranstaltungen. Dezente Beleuchtung und klarer Sound für einen unvergesslichen Anlass.',
-    images: ['/images/profx3-1920w.webp'],
-    pricePerUnit: 350,
+    description: `Bestehend aus:
+2 x Säulen-PA in weiß, 2.000W Bluetooth
+1 x Mikrofon mit Kabel
+1 x Licht-Set in weiß mit passendem Ständer für die  Lichtshow auf der Tanzfläche
+8 x LED Uplight in weiß zur stimmungsvollen Hintergrundbeleuchtung des Saales/Zeltes`,
+    images: ['/images/partysetwhite.jpg'],
+    pricePerUnit: 150,
+    pricePerPair: 220,
     categorySlug: 'party-sets-ton-licht',
-    features: ['PA bis 120 Personen', '24-Kanal Mischpult', '4 Funkmikrofone', 'Elegante weiße Beleuchtung'],
   },
   {
     id: 'party-set-large',
     name: 'Party-Set LARGE',
-    description: 'Premium-Ausstattung mit professionellem System und umfangreicher Lichttechnik.',
-    images: ['/images/profx3-1920w.webp'],
-    pricePerUnit: 450,
+    description: `Bestehend aus:
+2 x PA Subwoofer 15-Zoll 1.200W aktiv
+2 x PA Lautsprecher 12/1-Zoll 750W aktiv, bi-amped
+2 x Distanzstange
+1 x 2-Kanal Audiomixer mit Bluetooth
+1 x Funk-Mikrofon 
+1 x LED Pro-FX Lichtset mit Laser (inkl. Stativ)
+1 x Nebelmaschine 1,25 KW mit Timer-/Volumen-Controller
+Alle benötigten Anschlusskabel`,
+    images: ['/images/partysetlarge.jpg'],
+    pricePerUnit: 180,
+    pricePerPair: 250,
     categorySlug: 'party-sets-ton-licht',
-    features: ['PA bis 150 Personen', '32-Kanal Digital Mixer', '6 Funkmikrofone', 'Vollständige Lichtshow'],
   },
   {
     id: 'party-set-xlarge',
     name: 'Party-Set X-LARGE',
-    description: 'Maximale Ausstattung für große Events. Professionelles Line Array System mit umfangreicher Lichttechnik.',
+    description: `Bestehend aus:
+2 x PA Subwoofer 18-Zoll 2.000W aktiv
+2 x PA Lautsprecher 12/1-Zoll 1.000W aktiv, bi-amped
+2 x Distanzstange
+1 x 4-Kanal Audiomixer inkl. Aux-Kabel
+1 x Funk-Mikrofon
+2 x LED Pro-FX Lichtset mit Laser (inkl. Stativ)
+1 x Hazer (Dunstnebelmaschine) + Funkfernbedienung
+Alle benötigten Anschlusskabel`,
     images: ['/images/profx3-1920w.webp'],
-    pricePerUnit: 650,
+    pricePerUnit: 249,
+    pricePerPair: 350,
     categorySlug: 'party-sets-ton-licht',
-    features: ['PA bis 250 Personen', '32-Kanal Digital Mixer', '8 Funkmikrofone', 'Vollständige Lichtshow mit Moving Heads'],
   },
 
   // PA-Anlagen / Lautsprecher

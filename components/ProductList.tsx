@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShoppingBag, ArrowRight } from 'lucide-react';
+import { ShoppingBag, ArrowRight, Zap, Users, Music } from 'lucide-react';
 import { useRentalCart } from '@/context/RentalCartContext';
 import type { Product } from '@/lib/products';
 
@@ -39,7 +39,7 @@ export default function ProductList({ products }: ProductListProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow"
+          className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
             {/* Bilder */}
@@ -79,7 +79,11 @@ export default function ProductList({ products }: ProductListProps) {
                       className={
                         product.id === 'akku-lautsprecher-compact' ||
                         product.id === 'aktivlautsprecher-bluetooth' ||
-                        product.id === 'pa-saeule-bluetooth'
+                        product.id === 'pa-saeule-bluetooth' ||
+                        product.id === 'party-set-small' ||
+                        product.id === 'party-set-medium' ||
+                        product.id === 'party-set-white' ||
+                        product.id === 'party-set-large'
                           ? 'object-contain p-4'
                           : 'object-cover'
                       }
@@ -102,14 +106,14 @@ export default function ProductList({ products }: ProductListProps) {
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-4 leading-relaxed whitespace-pre-line">
                   {product.description}
                 </p>
 
                 {/* Offer Info */}
                 {product.offerInfo && (
                   <div className="bg-primary/10 border-l-4 border-primary p-4 rounded-r-lg mb-4">
-                    <div className="text-sm font-semibold text-primary mb-1">Angebot extra:</div>
+                    <div className="text-sm font-semibold text-primary mb-1">Pro-Tipp für mehr Bass</div>
                     <p className="text-gray-700 leading-relaxed">
                       {product.offerInfo}
                     </p>
@@ -132,15 +136,26 @@ export default function ProductList({ products }: ProductListProps) {
 
                 {/* Specs */}
                 {product.specs && product.specs.length > 0 && (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
+                  <div className="flex flex-wrap gap-4 mb-4">
                     {product.specs
-                      .filter((spec) => spec.label !== 'Personen')
-                      .map((spec, idx) => (
-                        <div key={idx} className="text-sm">
-                          <span className="font-semibold text-gray-700">{spec.label}:</span>{' '}
-                          <span className="text-gray-600">{spec.value}</span>
-                        </div>
-                      ))}
+                      .filter((spec) => !(product.categorySlug === 'pa-anlagen' && spec.label === 'Personen'))
+                      .map((spec, idx) => {
+                        let icon = null;
+                        if (spec.label === 'Leistung') {
+                          icon = <Zap className="w-4 h-4" />;
+                        } else if (spec.label === 'Personen') {
+                          icon = <Users className="w-4 h-4" />;
+                        } else if (spec.label === 'Typ') {
+                          icon = <Music className="w-4 h-4" />;
+                        }
+                        
+                        return (
+                          <div key={idx} className="flex items-center gap-2 text-sm">
+                            {icon && <span className="text-primary">{icon}</span>}
+                            <span className="text-gray-600">{spec.value}</span>
+                          </div>
+                        );
+                      })}
                   </div>
                 )}
               </div>
@@ -161,11 +176,11 @@ export default function ProductList({ products }: ProductListProps) {
                     </div>
                   ) : (
                     <>
-                      <div className="text-lg font-bold text-primary">
+                      <div className="text-xl font-bold text-primary">
                         {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor') ? 'Tag' : 'Stück'}
                       </div>
                       {product.pricePerPair && (
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-500">
                           {product.pricePerPair.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor') ? 'Wochenende' : 'Paar'}
                         </div>
                       )}
@@ -175,14 +190,14 @@ export default function ProductList({ products }: ProductListProps) {
                 <div className="flex items-center gap-3">
                   <Link
                     href={`/produkte/${product.id}`}
-                    className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-all shadow-sm hover:shadow-md"
+                    className="flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-lg font-semibold transition-all"
                   >
                     Details
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <button
                     onClick={() => handleAddToCart(product)}
-                    className="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
+                    className="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
                   >
                     <ShoppingBag className="w-5 h-5" />
                     In Warenkorb

@@ -4,7 +4,7 @@ import { data } from '@/lib/data';
 import { MapPin, Clock, Users, Award, Heart, Zap, MessageCircle, Volume2, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MobileNavigation from '@/components/MobileNavigation';
+import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import PartnerLogos from '@/components/PartnerLogos';
@@ -16,60 +16,7 @@ export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
       {/* Header / Navigation */}
-      <header className="border-b border-gray-100 sticky top-0 z-50 bg-white/95 backdrop-blur-sm relative">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo.webp"
-                alt="da-sound Logo"
-                width={48}
-                height={48}
-                className="h-12 w-auto"
-                quality={90}
-                priority
-              />
-            </Link>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6">
-              <Link
-                href="/"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/ueber-uns"
-                className="text-sm font-medium text-primary transition-colors"
-              >
-                Über uns
-              </Link>
-              <Link
-                href="/leistungen"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Eventservice
-              </Link>
-              <Link
-                href="/liefergebiet"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Liefergebiet
-              </Link>
-              <Link
-                href="/kontakt"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-              >
-                Kontakt
-              </Link>
-            </div>
-
-            {/* Mobile Navigation */}
-            <MobileNavigation />
-          </div>
-        </nav>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/10 via-blue-50/50 to-white py-16 md:py-24 lg:py-32">
@@ -597,73 +544,6 @@ export default function UeberUnsPage() {
             <p className="text-gray-600 text-lg italic">
               Ihr regionaler Partner in Pfungstadt, Darmstadt und Umgebung.
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Standort & Kontakt */}
-      <section className="py-16 md:py-20 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-xl shadow-lg p-8 md:p-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Standort & Kontakt
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              {/* Standort */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Adresse</h3>
-                  <p className="text-gray-700">
-                    Wormser Str. 23<br />
-                    64319 Pfungstadt
-                  </p>
-                </div>
-              </div>
-
-              {/* Öffnungszeiten */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Öffnungszeiten</h3>
-                  <div className="text-gray-700 space-y-1">
-                    <p>{data.openingHours.weekdays}</p>
-                    <p>{data.openingHours.saturday}</p>
-                    <p>{data.openingHours.sunday}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-gray-100">
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Kontakt via WhatsApp
-              </a>
-              <Link
-                href="/kontakt"
-                className="flex-1 flex items-center justify-center gap-3 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
-              >
-                Weitere Kontaktmöglichkeiten
-              </Link>
-            </div>
           </motion.div>
         </div>
       </section>
