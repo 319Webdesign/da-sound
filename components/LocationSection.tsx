@@ -16,7 +16,7 @@ export default function LocationSection() {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Desktop: 2-Spalten Layout - Karte links, Info rechts */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-[70%_30%] gap-8" style={{ height: '700px' }}>
+          <div className="grid grid-cols-[70%_30%] gap-8 min-h-[700px]">
             {/* Links: Google Maps Embed */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -123,8 +123,7 @@ export default function LocationSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-2xl overflow-hidden shadow-xl"
-            style={{ aspectRatio: '1 / 1' }}
+            className="relative rounded-2xl overflow-hidden shadow-xl aspect-square"
           >
             <iframe
               src={mapEmbedCode}

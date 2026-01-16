@@ -76,7 +76,7 @@ const techHighlights: TechHighlight[] = [
       { label: 'Invertertechnik' },
       { label: 'Geräuschgedämmt' },
     ],
-    image: '/images/hy3200si_1-1920w.jpg',
+    image: '/images/hy3200si_1-1920w.webp',
     imageAlt: 'Stromerzeuger bis 6,5kW',
     isSpecial: true,
   },

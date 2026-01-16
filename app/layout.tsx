@@ -1,6 +1,15 @@
 import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import ClientProviders from "@/components/ClientProviders";
+
+// Optimiertes Font Loading mit next/font
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "da-sound Veranstaltungstechnik | Pfungstadt",
@@ -21,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className="overflow-x-hidden">
-      <body className="overflow-x-hidden w-full">
+    <html lang="de" className={`overflow-x-hidden ${inter.variable}`}>
+      <body className="overflow-x-hidden w-full font-sans">
         <ClientProviders>{children}</ClientProviders>
       </body>
     </html>

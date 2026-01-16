@@ -11,7 +11,7 @@ export default function Navigation() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/ueber-uns', label: 'Über uns' },
-    { href: 'https://g.page/r/YOUR_GOOGLE_REVIEWS_LINK', label: 'Google Reviews', external: true },
+    { href: '/google-review', label: 'Google Reviews' },
     { href: '/liefergebiet', label: 'Liefergebiet' },
     { href: '/kontakt', label: 'Kontakt' },
   ];
@@ -21,15 +21,19 @@ export default function Navigation() {
       <header className="border-b border-gray-100 fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center" prefetch={true}>
             <Image
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="da-sound Logo"
-              width={64}
-              height={64}
-              className="h-16 w-auto"
-              quality={90}
+              width={50}
+              height={50}
+              className="h-[50px] w-auto"
+              style={{
+                imageRendering: '-webkit-optimize-contrast',
+              }}
+              quality={100}
               priority
+              sizes="50px"
             />
             </Link>
             
@@ -57,6 +61,7 @@ export default function Navigation() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    prefetch={true}
                     className={`text-base font-medium transition-colors ${
                       isActive
                         ? 'text-primary'

@@ -17,13 +17,16 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="mb-4">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 alt="da-sound Logo"
                 width={48}
                 height={48}
                 className="h-12 w-auto"
-                quality={90}
+                quality={100}
                 priority
+                style={{
+                  imageRendering: '-webkit-optimize-contrast',
+                }}
               />
             </div>
             <p className="text-sm leading-relaxed">

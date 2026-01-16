@@ -7,11 +7,27 @@ import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 import ContactSection from '@/components/ContactSection';
 import ServiceDeliverySection from '@/components/ServiceDeliverySection';
 import ContactMethodsSection from '@/components/ContactMethodsSection';
-import LocationSection from '@/components/LocationSection';
 import { motion } from 'framer-motion';
+
+// Dynamic Import für Google Maps - Lazy Loading
+const LocationSection = dynamic(
+  () => import('@/components/LocationSection'),
+  { 
+    loading: () => (
+      <div className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="h-[400px] md:h-[700px] bg-gray-100 rounded-2xl animate-pulse" />
+        </div>
+      </div>
+    ),
+    ssr: true 
+  }
+);
 
 export default function KontaktPage() {
   const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich habe eine Anfrage bezüglich Ihrer Veranstaltungstechnik.')}`;
@@ -61,7 +77,15 @@ export default function KontaktPage() {
       <ServiceDeliverySection />
 
       {/* Anfahrt & Standort */}
-      <LocationSection />
+      <Suspense fallback={
+        <div className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="h-[400px] md:h-[700px] bg-gray-100 rounded-2xl animate-pulse" />
+          </div>
+        </div>
+      }>
+        <LocationSection />
+      </Suspense>
 
       {/* FAQ / Häufige Fragen */}
       <section className="py-16 md:py-24 bg-gray-50">

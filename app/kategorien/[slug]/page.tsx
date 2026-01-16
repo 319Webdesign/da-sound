@@ -20,6 +20,9 @@ interface PageProps {
   }>;
 }
 
+// ISR: Incremental Static Regeneration für Kategorieseiten
+export const revalidate = 3600; // 1 Stunde
+
 export async function generateStaticParams() {
   return getAllCategorySlugs().map((slug) => ({
     slug,

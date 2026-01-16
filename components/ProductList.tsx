@@ -87,8 +87,8 @@ export default function ProductList({ products }: ProductListProps) {
                           ? 'object-contain p-4'
                           : 'object-cover'
                       }
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      quality={80}
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={85}
                       loading="lazy"
                     />
                   ) : (

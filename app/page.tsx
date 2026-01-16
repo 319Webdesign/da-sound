@@ -8,6 +8,16 @@ import ExpertiseSection from '@/components/ExpertiseSection';
 import TechHighlights from '@/components/TechHighlights';
 import RentalCategories from '@/components/RentalCategories';
 import AboutServiceSection from '@/components/AboutServiceSection';
+import dynamic from 'next/dynamic';
+
+// Dynamic Import für schwere Komponenten - Lazy Loading
+const CustomerReviewsSection = dynamic(
+  () => import('@/components/CustomerReviewsSection'),
+  { 
+    loading: () => <div className="h-96 bg-white" />, // Placeholder während des Ladens
+    ssr: true 
+  }
+);
 import CTASection from '@/components/CTASection';
 import DryHireServiceSection from '@/components/DryHireServiceSection';
 import FAQSection from '@/components/FAQSection';
@@ -67,6 +77,9 @@ export default function HomePage() {
 
       {/* Technik-Highlights */}
       <TechHighlights />
+
+      {/* Kundenbewertungen */}
+      <CustomerReviewsSection />
 
       {/* CTA Section */}
       <CTASection />

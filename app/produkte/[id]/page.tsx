@@ -17,6 +17,9 @@ interface PageProps {
   }>;
 }
 
+// ISR: Incremental Static Regeneration für Produktseiten
+export const revalidate = 3600; // 1 Stunde - Preise können sich ändern
+
 export async function generateStaticParams() {
   // Diese Funktion wird zur Build-Zeit aufgerufen
   // Für dynamische Generierung müssten wir alle Produkt-IDs haben
@@ -76,7 +79,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                       alt={`${product.name} - Bild 1`}
                       fill
                       className="object-contain"
-                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                       quality={90}
                       priority
                     />
@@ -87,9 +90,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
                       alt={`${product.name} - Bild 2`}
                       fill
                       className="object-contain"
-                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                       quality={90}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -111,7 +114,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                           ? 'object-contain p-8'
                           : 'object-cover'
                       }
-                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                       quality={90}
                       priority
                     />

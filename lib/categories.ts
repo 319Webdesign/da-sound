@@ -150,7 +150,7 @@ export const categories: CategoryCard[] = [
     title: 'Bühnenpodeste & Traversen',
     slug: 'buehlenpodeste-traversen',
     description: 'Modulare Podestsysteme und Traversen in verschiedenen Größen',
-    image: '/images/ixstage5-1920w.jpg',
+    image: '/images/ixstage5-1920w.webp',
     longDescription: 'Flexible Bühnenpodeste und stabile Traversensysteme für jede Veranstaltungsgröße. Modulare Systeme, die sich an Ihre Räumlichkeiten anpassen.',
     features: [
       'Verschiedene Höhen und Größen',
@@ -167,7 +167,7 @@ export const categories: CategoryCard[] = [
     title: 'Stromerzeuger / Generatoren',
     slug: 'stromerzeuger',
     description: 'Mobile Stromversorgung für Outdoor-Events',
-    image: '/images/hy3200si_1-1920w.jpg',
+    image: '/images/hy3200si_1-1920w.webp',
     longDescription: 'Zuverlässige Stromerzeuger und Generatoren für Events ohne Stromanschluss. Von kompakten 2kW bis hin zu leistungsstarken 6,5kW Generatoren.',
     features: [
       'Leistung von 2kW bis 6,5kW',

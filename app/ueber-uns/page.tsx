@@ -456,7 +456,7 @@ export default function UeberUnsPage() {
               className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
             >
               <Image
-                src="/images/ixstage5-1920w.jpg"
+                src="/images/ixstage5-1920w.webp"
                 alt="Event-Referenz: IXStage5 Veranstaltung"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"

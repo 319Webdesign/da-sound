@@ -79,8 +79,8 @@ export default function HighlightProduct({
                     alt={imageAlt}
                     fill
                     className="object-contain object-center"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    quality={80}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+                    quality={90}
                     priority
                     onError={(e) => {
                       console.error('Failed to load image:', image);

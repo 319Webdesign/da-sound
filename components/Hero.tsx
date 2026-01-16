@@ -5,6 +5,7 @@ import { ArrowRight, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import GoogleRatingBadge from './GoogleRatingBadge';
 
 interface HeroProps {
   headline: string;
@@ -48,7 +49,7 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-900 leading-tight"
           >
             {headline}
           </motion.h1>
@@ -88,6 +89,16 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
               Kontakt
             </Link>
           </motion.div>
+
+          {/* Google Rating Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="pt-2"
+          >
+            <GoogleRatingBadge />
+          </motion.div>
         </motion.div>
 
         {/* Rechts: Bento-Grid - 50% */}
@@ -126,8 +137,8 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                         ? 'scale(1.1)' 
                         : 'scale(1)',
                     }}
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                    quality={80}
+                    sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
+                    quality={85}
                     priority
                     onError={(e) => {
                       console.error('Failed to load image:', speakerImage.url);
@@ -168,8 +179,8 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                         ? 'scale(1.1)' 
                         : 'scale(1)',
                     }}
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                    quality={80}
+                    sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
+                    quality={85}
                     loading="lazy"
                     onError={(e) => {
                       console.error('Failed to load image:', liveEventImage.url);
@@ -211,8 +222,8 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                       ? 'scale(1.1)' 
                       : 'scale(1)',
                   }}
-                  sizes="(max-width: 1024px) 50vw, 50vw"
-                  quality={80}
+                  sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 50vw, 40vw"
+                  quality={85}
                   priority
                   onError={(e) => {
                     console.error('Failed to load image:', lightshowImage.url);
@@ -258,8 +269,8 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                       ? 'scale(1.1)' 
                       : 'scale(1)',
                   }}
-                  sizes="(max-width: 768px) 50vw, 100vw"
-                  quality={80}
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, 100vw"
+                  quality={85}
                   priority={index === 0}
                   loading={index === 0 ? 'eager' : 'lazy'}
                   onError={(e) => {
