@@ -40,22 +40,8 @@ export default function Navigation() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => {
-                const isActive = !link.external && (pathname === link.href || 
-                  (link.href !== '/' && pathname?.startsWith(link.href)));
-                
-                if (link.external) {
-                  return (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-base font-medium transition-colors text-gray-700 hover:text-primary"
-                    >
-                      {link.label}
-                    </a>
-                  );
-                }
+                const isActive = pathname === link.href || 
+                  (link.href !== '/' && pathname?.startsWith(link.href));
                 
                 return (
                   <Link
