@@ -5,28 +5,10 @@ import { motion } from 'framer-motion';
 import {
   Package,
   Truck,
-  Volume2,
-  Lightbulb,
-  Monitor,
-  Mic,
-  Zap,
-  Settings,
-  Layers,
   ArrowRight,
 } from 'lucide-react';
+import Link from 'next/link';
 import { data } from '@/lib/data';
-
-const mietbareGeraete = [
-  { icon: Volume2, label: 'PA-Systeme' },
-  { icon: Lightbulb, label: 'Licht' },
-  { icon: Monitor, label: 'Beamer' },
-  { icon: Mic, label: 'Mikrofone' },
-  { icon: Zap, label: 'Strom' },
-  { icon: Settings, label: 'Steuerung' },
-  { icon: Layers, label: 'Bühne' },
-];
-
-const lieferStaedte = ['Darmstadt', 'Bensheim', 'Pfungstadt', 'Riedstadt', 'Griesheim', 'Weiterstadt'];
 
 export default function DryHireServiceSection() {
   const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich möchte eine Mietanfrage stellen.')}`;
@@ -83,13 +65,13 @@ export default function DryHireServiceSection() {
                 <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>
-                <span className="text-gray-700">Abholung im Lager Pfungstadt</span>
+                <span className="text-gray-700">Abholung & Rückgabe im Lager Pfungstadt</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>
-                <span className="text-gray-700">Eigenständiger Aufbau (Video-Anleitung inkl.)</span>
+                <span className="text-gray-700">Eigenständiger Auf- und Abbau</span>
               </li>
             </ul>
           </motion.div>
@@ -107,7 +89,7 @@ export default function DryHireServiceSection() {
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                Full-Service: Wir kümmern uns
+                Liefer-Service: Wir kümmern uns
               </h3>
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white">
                 Rundum-Sorglos
@@ -119,7 +101,11 @@ export default function DryHireServiceSection() {
                 <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <div className="w-2 h-2 rounded-full bg-white" />
                 </div>
-                <span className="text-white/90">Lieferung & Abholung (Raum DA, MZ, GG)</span>
+                <span className="text-white/90">
+                  <Link href="/liefergebiet" className="underline hover:text-white transition-colors">
+                    Lieferung & Abholung (im Liefergebiet)
+                  </Link>
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -135,46 +121,23 @@ export default function DryHireServiceSection() {
               </li>
             </ul>
 
-            {/* SEO: Liefergebiet-Städte */}
+            {/* SEO: Liefergebiet-Zonen */}
             <div className="mt-6 pt-6 border-t border-white/20">
-              <p className="text-white/70 text-xs mb-2">Liefergebiet:</p>
-              <p className="text-white/80 text-sm">
-                {lieferStaedte.join(', ')}
-              </p>
+              <p className="text-white/70 text-xs mb-3 font-semibold">Liefergebiete:</p>
+              <div className="space-y-2 text-white/80 text-sm">
+                <p>
+                  <span className="font-semibold">ZONE1:</span> Darmstadt, Bensheim, Pfungstadt, Riedstadt, Griesheim, Weiterstadt
+                </p>
+                <p>
+                  <span className="font-semibold">ZONE2:</span> Groß-Gerau, Dieburg, Langen, Biblis, Heppenheim, Weinheim
+                </p>
+                <p>
+                  <span className="font-semibold">ZONE3:</span> Mainz, Frankfurt, Mannheim, Odenwaldkreis, Hanau, Aschaffenburg
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Icon-Band für mietbare Geräte */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="bg-white rounded-xl p-6 md:p-8 shadow-md mb-8"
-        >
-          <p className="text-center text-sm text-gray-500 mb-4 font-medium">
-            Mietbare Geräte
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
-            {mietbareGeraete.map((geraet, index) => {
-              const IconComponent = geraet.icon;
-              return (
-                <div
-                  key={index}
-                  className="flex flex-col items-center gap-2"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <IconComponent className="w-6 h-6 text-primary" />
-                  </div>
-                  <span className="text-xs text-gray-600 text-center">
-                    {geraet.label}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-        </motion.div>
 
         {/* CTA Button */}
         <motion.div

@@ -11,7 +11,7 @@ export default function Navigation() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/ueber-uns', label: 'Über uns' },
-    { href: '/leistungen', label: 'Eventservice' },
+    { href: 'https://g.page/r/YOUR_GOOGLE_REVIEWS_LINK', label: 'Google Reviews', external: true },
     { href: '/liefergebiet', label: 'Liefergebiet' },
     { href: '/kontakt', label: 'Kontakt' },
   ];
@@ -36,8 +36,22 @@ export default function Navigation() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => {
-                const isActive = pathname === link.href || 
-                  (link.href !== '/' && pathname?.startsWith(link.href));
+                const isActive = !link.external && (pathname === link.href || 
+                  (link.href !== '/' && pathname?.startsWith(link.href)));
+                
+                if (link.external) {
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-base font-medium transition-colors text-gray-700 hover:text-primary"
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
                 
                 return (
                   <Link

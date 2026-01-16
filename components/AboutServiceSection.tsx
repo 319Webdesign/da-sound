@@ -11,7 +11,10 @@ import {
   Music,
   Volume2,
   Zap,
-  ArrowRight
+  ArrowRight,
+  Mic,
+  PartyPopper,
+  Truck
 } from 'lucide-react';
 import { data } from '@/lib/data';
 
@@ -25,15 +28,19 @@ const eventTypes: EventType[] = [
   { icon: Music, label: 'Hochzeiten' },
   { icon: Briefcase, label: 'Firmenevents' },
   { icon: Users, label: 'Stadtfeste' },
+  { icon: Mic, label: 'Live-Konzerte' },
+  { icon: PartyPopper, label: 'Faschingsveranstaltungen' },
 ];
 
 const cities = [
   'Darmstadt',
   'Pfungstadt',
+  'Bensheim',
+  'Kreis Bergstraße',
+  'Odenwaldkreis',
   'Frankfurt',
   'Mainz',
   'Mannheim',
-  'Heidelberg',
   'Hanau',
 ];
 
@@ -60,13 +67,14 @@ export default function AboutServiceSection() {
             {/* Text */}
             <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
               <p>
-                Wir bieten Ihnen nicht nur hochwertige Veranstaltungstechnik zum Mieten, sondern einen 
-                umfassenden Full-Service für Ihre Events. Unser Lieferservice bringt die komplette 
-                Technik direkt zu Ihnen – inklusive Aufbau und professioneller Betreuung vor Ort.
+                Wir bieten Ihnen nicht nur hochwertige Veranstaltungstechnik zum Mieten, sondern auf
+                Wunsch auch einen umfassenden Full-Service für Ihre Events. Unser Lieferservice
+                optionaler bringt die komplette Technik direkt zu Ihnen – inklusive betriebsfertiger
+                Übergabe.
               </p>
               <p>
-                Ob Sie eine komplette Eventpauschale oder einzelne Komponenten benötigen: Wir stellen 
-                Ihnen maßgeschneiderte Lösungen zusammen und sorgen dafür, dass Ihre Veranstaltung 
+                Ob für ihre private Familienfeier, ein Vereinsfest oder Firmenevent: Wir stellen Ihnen
+                maßgeschneiderte Lösungen zusammen und sorgen dafür, dass Ihre Veranstaltung
                 reibungslos verläuft.
               </p>
             </div>
@@ -74,7 +82,7 @@ export default function AboutServiceSection() {
             {/* Event-Typen Checkliste */}
             <div className="pt-4">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Unsere Expertise für:
+                Wir sind Experten für
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 {eventTypes.map((event, index) => {
@@ -157,13 +165,13 @@ export default function AboutServiceSection() {
                   <div>
                     <h4 className="text-xl font-bold mb-1">Beschallung</h4>
                     <p className="text-white/90 text-lg font-semibold">
-                      bis 1.000 Personen
+                      bis 1.500 Personen
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Stromerzeuger */}
+              {/* Lieferservice */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -173,12 +181,12 @@ export default function AboutServiceSection() {
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-6 h-6 text-white" />
+                    <Truck className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-1">Stromerzeuger</h4>
+                    <h4 className="text-xl font-bold mb-1">Lieferservice</h4>
                     <p className="text-white/90 text-lg font-semibold">
-                      bis 6,5 KW
+                      ab 75€ zzgl. MwSt.
                     </p>
                   </div>
                 </div>

@@ -34,21 +34,21 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20 relative overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start relative">
         {/* Links: Content - 50% */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="space-y-8 lg:w-full"
+          className="space-y-8 lg:w-full relative z-10"
         >
           {/* Headline */}
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight"
           >
             {headline}
           </motion.h1>
@@ -59,7 +59,7 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="text-lg md:text-xl lg:text-2xl text-gray-600 font-medium leading-relaxed"
+              className="text-xl md:text-2xl lg:text-3xl text-gray-600 font-medium leading-relaxed"
             >
               {highlight}
             </motion.div>
@@ -95,7 +95,7 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="relative w-full"
+          className="relative w-full z-0"
         >
           {/* Desktop: Neues Layout - Links 2 kleine übereinander, Rechts großes Hochformat */}
           <div className="hidden lg:grid lg:grid-cols-2 gap-4">

@@ -40,13 +40,15 @@ export default function MobileNavigation() {
             >
               Über uns
             </Link>
-            <Link
-              href="/leistungen"
+            <a
+              href="https://g.page/r/YOUR_GOOGLE_REVIEWS_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-medium text-white hover:bg-gray-800 transition-colors py-4 px-6 border-b border-gray-800"
             >
-              Eventservice
-            </Link>
+              Google Reviews
+            </a>
             <Link
               href="/liefergebiet"
               onClick={() => setMobileMenuOpen(false)}

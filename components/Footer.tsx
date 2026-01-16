@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Volume2, MapPin, Phone, Mail, Clock, Facebook, Youtube, MessageCircle, Building2 } from 'lucide-react';
+import { Volume2, MapPin, Phone, Mail, Clock, Facebook, Youtube, MessageCircle } from 'lucide-react';
 import { data } from '@/lib/data';
+import OpeningHoursCompact from '@/components/OpeningHoursCompact';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -86,12 +87,14 @@ export default function Footer() {
               >
                 Über uns
               </Link>
-              <Link
-                href="/leistungen"
+              <a
+                href="https://g.page/r/YOUR_GOOGLE_REVIEWS_LINK"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-sm hover:text-primary transition-colors"
               >
-                Eventservice
-              </Link>
+                Google Reviews
+              </a>
               <Link
                 href="/liefergebiet"
                 className="block text-sm hover:text-primary transition-colors"
@@ -140,39 +143,38 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-slate-500 mt-0.5 flex-shrink-0" />
-                <div className="text-sm space-y-0.5">
-                  <div>{data.openingHours.weekdays}</div>
-                  <div>{data.openingHours.saturday}</div>
-                  <div>{data.openingHours.sunday}</div>
+                <div className="text-sm">
+                  <OpeningHoursCompact />
                 </div>
               </li>
             </ul>
           </div>
 
-          {/* Spalte 4: Zahlungsarten & Partner */}
+          {/* Spalte 4: Zahlungsarten */}
           <div>
             <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
-              ZAHLUNG & PARTNER
+              ZAHLUNG
             </h3>
-            <div className="space-y-4">
-              {/* Zahlungsarten */}
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-sm">
-                  <span>💵</span>
-                  <span>Barzahlung</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <span>🏦</span>
-                  <span>Überweisung</span>
-                </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-sm">
+                <span>💵</span>
+                <span>Barzahlung</span>
               </div>
-
-              {/* EDEKA Partner Logo */}
-              <div className="pt-4 border-t border-slate-700">
-                <div className="flex items-center gap-2 text-sm text-slate-500">
-                  <Building2 className="w-5 h-5" />
-                  <span>EDEKA Partner</span>
-                </div>
+              <div className="flex items-center gap-2 text-sm">
+                <span>💳</span>
+                <span>Kartenzahlung</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <span>📱</span>
+                <span>Kontaktlos</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <span>🅿️</span>
+                <span>PayPal</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <span>🏦</span>
+                <span>Überweisung</span>
               </div>
             </div>
           </div>

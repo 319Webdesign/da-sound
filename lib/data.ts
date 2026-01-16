@@ -2,9 +2,13 @@
 export const data = {
   highlight: '',
   openingHours: {
-    weekdays: 'Montag - Freitag: 9:00 - 18:00 Uhr',
-    saturday: 'Samstag: 10:00 - 16:00 Uhr',
-    sunday: 'Sonntag: Geschlossen',
+    monday: 'Montag: 09:30 - 18:00 Uhr',
+    tuesday: 'Dienstag: 09:30 - 18:00 Uhr',
+    wednesday: 'Mittwoch: Geschlossen',
+    thursday: 'Donnerstag: 09:30 - 18:00 Uhr',
+    friday: 'Freitag: 09:30 - 14:00 Uhr',
+    saturday: 'Samstag: 10:00 - 14:00 Uhr',
+    sunday: 'Sonntag: 12:00 - 15:00 Uhr',
   },
   prices: [
     { id: 1, name: 'PA-Komplettset Small', price: 150, category: 'Tontechnik' },

@@ -48,13 +48,13 @@ export default function ContactSection() {
 
   // Öffnungszeiten
   const openingHours = [
-    { day: 'Montag', time: '9:00 - 18:00 Uhr', isOpen: true },
-    { day: 'Dienstag', time: '9:00 - 18:00 Uhr', isOpen: true },
-    { day: 'Mittwoch', time: '9:00 - 18:00 Uhr', isOpen: true },
-    { day: 'Donnerstag', time: '9:00 - 18:00 Uhr', isOpen: true },
-    { day: 'Freitag', time: '9:00 - 18:00 Uhr', isOpen: true },
-    { day: 'Samstag', time: '10:00 - 16:00 Uhr', isOpen: true },
-    { day: 'Sonntag', time: 'Geschlossen', isOpen: false },
+    { day: 'Montag', time: '09:30 - 18:00 Uhr', isOpen: true },
+    { day: 'Dienstag', time: '09:30 - 18:00 Uhr', isOpen: true },
+    { day: 'Mittwoch', time: 'Geschlossen', isOpen: false },
+    { day: 'Donnerstag', time: '09:30 - 18:00 Uhr', isOpen: true },
+    { day: 'Freitag', time: '09:30 - 14:00 Uhr', isOpen: true },
+    { day: 'Samstag', time: '10:00 - 14:00 Uhr', isOpen: true },
+    { day: 'Sonntag', time: '12:00 - 15:00 Uhr', isOpen: true },
   ];
 
   // Aktuellen Tag ermitteln

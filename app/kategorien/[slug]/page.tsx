@@ -12,6 +12,7 @@ import CategoryHero from '@/components/CategoryHero';
 import CategoryContent from '@/components/CategoryContent';
 import CategoryCTA from '@/components/CategoryCTA';
 import ProductList from '@/components/ProductList';
+import OpeningHours from '@/components/OpeningHours';
 
 interface PageProps {
   params: Promise<{
@@ -105,10 +106,8 @@ export default async function CategoryPage({ params }: PageProps) {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Öffnungszeiten</h3>
-                  <div className="text-gray-700 space-y-1">
-                    <p>{data.openingHours.weekdays}</p>
-                    <p>{data.openingHours.saturday}</p>
-                    <p>{data.openingHours.sunday}</p>
+                  <div className="text-gray-700">
+                    <OpeningHours />
                   </div>
                 </div>
               </div>

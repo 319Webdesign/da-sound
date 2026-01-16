@@ -7,30 +7,58 @@ import {
   Minus,
   MessageCircle,
   Mail,
+  ArrowRight,
 } from 'lucide-react';
 import { data } from '@/lib/data';
+import Link from 'next/link';
 
 interface FAQ {
   question: string;
-  answer: string;
+  answer: string | React.ReactNode;
 }
 
 const faqs: FAQ[] = [
   {
     question: 'Wie wird der Mietpreis berechnet?',
-    answer: 'Der Mietpreis wird als Tagessatz inkl. 19% MwSt. berechnet. Bei Wochenend-Buchungen (Freitag bis Montag) gelten spezielle Wochenend-Tarife. Alle Preise sind transparent aufgeführt und beinhalten die Grundausstattung.',
+    answer: 'Die in unserer Preisliste angegebenen Mietpreise verstehen sich pro Tag inklusive 19% MwSt (in der Regel 24 Stunden).\n\nFür jeden weiteren Tag berechnen wir 50% des Tagespreises. Für ein Wochenende Fr-Mo werden grundsätzlich 2 Miettage (also das 1,5-fache des Mietpreises) berechnet. Auch Langzeitmieten sind möglich, bitte erfragen Sie ihr individuelles Angebot.',
   },
   {
     question: 'Wo / Wann kann ich die Sachen abholen?',
-    answer: 'Die Abholung erfolgt in unserem Lager in Pfungstadt. Nach Vereinbarung können Sie die Geräte zu unseren Öffnungszeiten abholen: Montag bis Freitag 9:00 - 18:00 Uhr, Samstag 10:00 - 16:00 Uhr. Eine Terminvereinbarung ist empfehlenswert.',
+    answer: (
+      <div className="space-y-4">
+        <p>
+          Abholung und Rückgabe erfolgen ausschließlich in unserem Lager: Wormser Str. 23, 64319 Pfungstadt. Eine Wegbeschreibung finden Sie auf unserer Kontaktseite.
+        </p>
+        <p>
+          Zeitpunkte der Abholung und Rückgabe werden vorab mit Ihnen vereinbart.
+        </p>
+        <p>
+          Auf Wunsch und gegen Aufpreis liefern wir Ihnen das Equipment inkl. Aufbau und Abholung.
+        </p>
+        <p>
+          Unsere Lageröffnungszeiten und Wegbeschreibung finden Sie hier:
+        </p>
+        <Link
+          href="/kontakt"
+          className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg group mt-2"
+        >
+          Zur Kontaktseite
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
+    ),
   },
   {
     question: 'Wie kann ich bezahlen?',
-    answer: 'Sie können per Vorkasse, Rechnung oder Barzahlung bei Abholung bezahlen. Bei größeren Buchungen ist eine Anzahlung üblich. Genaue Zahlungsmodalitäten besprechen wir individuell mit Ihnen.',
+    answer: 'Grundsätzlich erfolgt die Zahlung bei Abholung oder Anlieferung in bar oder per Karte (wir akzeptieren alle gänigen Zahlungsarten).\n\nAuf Rechnung können Sie zahlen als Gewerbetreibende oder Vereine ab einem Auftragswert von 100€.\n\nIn manchen Fällen wird eine Kaution fällig, wir informieren Sie rechtzeitig vor der Abholung falls dies der Fall sein sollte.',
   },
   {
     question: 'Kann ich eine Buchung stornieren?',
-    answer: 'Stornierungen sind bis 7 Tage vor dem Mietbeginn kostenfrei möglich. Bei späteren Stornierungen können Stornogebühren anfallen. Im Falle höherer Gewalt besprechen wir individuelle Lösungen.',
+    answer: 'Ihre Buchung für die Miete von Material (Dry-Hire) können Sie bis 48 Stunden vor Mietbeginn kostenfrei stornieren.\n\nBis zu 24 Stunden vor Mietbeginn berechnen wir lediglich 50% des Auftragswertes.\n\nSollten Sie uns zu spät informieren oder nicht erscheinen berechnen wir den vollen Betrag als Mietausfall / Schadenersatz.\n\nFür Veranstaltungstechnik Dienstleistungen gelten andere Stornobedingungen (siehe AGB)',
+  },
+  {
+    question: 'Sind die Mietgegenstände versichert?',
+    answer: 'Ja, unsere Veranstaltungstechnik ist gegen Diebstahl, Feuer, technische / elektrische Defekte versichert.\n\nSelbst verursachte Schäden durch Fehlbedienung, unsachgemäßen Anschluss / Handhabung oder grobe Fahrlässigkeit sind selbstredend davon ausgenommen.',
   },
 ];
 
@@ -106,9 +134,15 @@ export default function FAQSection() {
                       className="overflow-hidden"
                     >
                       <div className="pb-6 md:pb-8 pr-12">
-                        <p className="text-gray-600 leading-relaxed">
-                          {faq.answer}
-                        </p>
+                        {typeof faq.answer === 'string' ? (
+                          <p className="text-gray-600 leading-relaxed whitespace-pre-line">
+                            {faq.answer}
+                          </p>
+                        ) : (
+                          <div className="text-gray-600 leading-relaxed">
+                            {faq.answer}
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   )}

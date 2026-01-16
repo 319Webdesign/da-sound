@@ -34,7 +34,8 @@ export default function CTASection() {
 
             {/* Subtext */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Kurzentschlossen? Technik-Ausfall? Bei uns erreichst du 7 Tage die Woche echte Experten aus Pfungstadt. Wir lassen dich nicht im Stich.
+              Kurzentschlossen? Technik-Ausfall? Bei uns erreichst du 7 Tage die Woche echte
+              Experten aus Pfungstadt. Wir lassen dich nicht im Stich.
             </p>
 
             {/* Badge: Jetzt Online & Erreichbar */}
@@ -87,7 +88,7 @@ export default function CTASection() {
                     WhatsApp Chat
                   </div>
                   <div className="text-gray-400 text-sm">
-                    Antwort meist in &lt; 15 Min
+                    7 Tage erreichbar
                   </div>
                 </div>
               </div>
@@ -111,10 +112,10 @@ export default function CTASection() {
                 </div>
                 <div className="flex-1">
                   <div className="text-white font-bold text-lg md:text-xl mb-1">
-                    {phoneNumber}
+                    Telefon
                   </div>
                   <div className="text-gray-400 text-sm">
-                    7 Tage erreichbar
+                    Hotline täglich von 9-21 Uhr (außer an Sonn- und Feiertagen)
                   </div>
                 </div>
               </div>
@@ -131,8 +132,11 @@ export default function CTASection() {
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <div className="text-white font-bold text-lg md:text-xl">
-                    {email}
+                  <div className="text-white font-bold text-lg md:text-xl mb-1">
+                    Mail
+                  </div>
+                  <div className="text-gray-400 text-sm">
+                    Erhalten Sie eine Antwort innerhalb 24 Std
                   </div>
                 </div>
               </div>

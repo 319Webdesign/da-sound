@@ -8,12 +8,12 @@ import ExpertiseSection from '@/components/ExpertiseSection';
 import TechHighlights from '@/components/TechHighlights';
 import RentalCategories from '@/components/RentalCategories';
 import AboutServiceSection from '@/components/AboutServiceSection';
-import EventPaketeSection from '@/components/EventPaketeSection';
 import CTASection from '@/components/CTASection';
 import DryHireServiceSection from '@/components/DryHireServiceSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
+import OpeningHours from '@/components/OpeningHours';
 
 // ISR: Incremental Static Regeneration für bessere Performance
 export const revalidate = 60;
@@ -33,8 +33,8 @@ export default function HomePage() {
 
       {/* Hero-Bereich */}
       <Hero
-        headline="Professionelle Event-Technik. Einfach gemietet."
-        highlight={data.highlight}
+        headline="Professionelle Veranstaltungstechnik"
+        highlight="Einfach gemietet"
         images={data.heroImages}
         socialProof={data.socialProof}
       />
@@ -68,9 +68,6 @@ export default function HomePage() {
       {/* Technik-Highlights */}
       <TechHighlights />
 
-      {/* Event-Pakete */}
-      <EventPaketeSection />
-
       {/* CTA Section */}
       <CTASection />
 
@@ -97,10 +94,8 @@ export default function HomePage() {
                   <Clock className="w-6 h-6 text-primary" />
                   <h3 className="text-xl font-semibold text-gray-900">Öffnungszeiten</h3>
                 </div>
-                <div className="space-y-2 text-gray-700">
-                  <p>{data.openingHours.weekdays}</p>
-                  <p>{data.openingHours.saturday}</p>
-                  <p>{data.openingHours.sunday}</p>
+                <div className="text-gray-700">
+                  <OpeningHours />
                 </div>
               </div>
 

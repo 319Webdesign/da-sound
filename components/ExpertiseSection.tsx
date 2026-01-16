@@ -14,22 +14,22 @@ const expertiseCards: ExpertiseCard[] = [
   {
     icon: Volume2,
     title: 'Druckvoller Sound',
-    text: 'Professionelle PA- & Musikanlagen für jede Eventgröße.',
+    text: 'Professionelle PA- & Musikanlagen für Events bis 1.500 Personen.',
   },
   {
     icon: Sparkles,
     title: 'Tolle Lichteffekte',
-    text: 'Von der Ambientebeleuchtung bis zur dynamischen Show.',
+    text: 'Von der Ambiente beleuchtung bis zur dynamischen Light-Show',
   },
   {
     icon: Layers,
-    title: 'Sichere Bühnentechnik',
-    text: 'Stabile Podest- und Traversensysteme für deinen Auftritt.',
+    title: 'Zuverlässige Bühnentechnik',
+    text: 'Equipment für ihre Veranstaltung von namhaften Herstellern wie Shure, Allen Heath, Yamaha, u.v.m.',
   },
   {
     icon: Disc,
-    title: 'DJ-Equipment',
-    text: 'Pioneer-Standards und modernes Zubehör für Profis.',
+    title: 'Zubehör von A-Z',
+    text: 'Mobile Bühnenpodeste, Stative und Stromerzeuger – alles aus einer Hand.',
   },
 ];
 
