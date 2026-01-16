@@ -20,10 +20,6 @@ const nextConfig = {
   },
   // Optimierte Compiler-Optionen
   swcMinify: true,
-  // Experimental Features für bessere Performance
-  experimental: {
-    optimizeCss: true,
-  },
 };
 
 module.exports = nextConfig;
