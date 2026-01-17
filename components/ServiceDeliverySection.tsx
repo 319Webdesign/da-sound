@@ -72,9 +72,9 @@ export default function ServiceDeliverySection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
+              className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-center lg:text-left"
             >
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-6 justify-center lg:justify-start">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-green-600" />
                 </div>
@@ -84,11 +84,11 @@ export default function ServiceDeliverySection() {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+              <div className="grid grid-cols-2 gap-3 mb-4">
                 {nahbereichCities.map((city, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 text-gray-700"
+                    className="flex items-center gap-2 text-gray-700 justify-center sm:justify-start"
                   >
                     <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
                     <span className="text-sm font-medium">{city.name}</span>
@@ -103,9 +103,9 @@ export default function ServiceDeliverySection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
+              className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-center lg:text-left"
             >
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-6 justify-center lg:justify-start">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
@@ -124,11 +124,11 @@ export default function ServiceDeliverySection() {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 {erweitertCities.map((city, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 text-gray-700"
+                    className="flex items-center gap-2 text-gray-700 justify-center sm:justify-start"
                   >
                     <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
                     <span className="text-sm font-medium">{city.name}</span>

@@ -38,9 +38,9 @@ export default function ContactMethodsSection() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.02 }}
-            className="group bg-gradient-to-br from-[#25D366] to-[#20BA5A] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all"
+            className="group bg-gradient-to-br from-[#25D366] to-[#20BA5A] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all text-center md:text-left"
           >
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
               <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center">
                 <MessageCircle className="w-7 h-7 text-white" />
               </div>
@@ -49,7 +49,7 @@ export default function ContactMethodsSection() {
             <p className="text-white/90 mb-4">
               Schnelle Antworten und direkte Kommunikation
             </p>
-            <div className="flex items-center gap-2 text-white font-semibold">
+            <div className="flex items-center gap-2 text-white font-semibold justify-center md:justify-start">
               <span>Jetzt schreiben</span>
               <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
@@ -63,9 +63,9 @@ export default function ContactMethodsSection() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             whileHover={{ scale: 1.02 }}
-            className="group bg-gradient-to-br from-primary to-primary-dark rounded-xl p-8 shadow-lg hover:shadow-xl transition-all"
+            className="group bg-gradient-to-br from-primary to-primary-dark rounded-xl p-8 shadow-lg hover:shadow-xl transition-all text-center md:text-left"
           >
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
               <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center">
                 <Phone className="w-7 h-7 text-white" />
               </div>
@@ -74,7 +74,7 @@ export default function ContactMethodsSection() {
             <p className="text-white/90 mb-4">
               Rufen Sie uns direkt an
             </p>
-            <div className="flex items-center gap-2 text-white font-semibold text-lg">
+            <div className="flex items-center gap-2 text-white font-semibold text-lg justify-center md:justify-start">
               <span>{phoneNumber}</span>
               <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
             </div>
@@ -88,9 +88,9 @@ export default function ContactMethodsSection() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             whileHover={{ scale: 1.02 }}
-            className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all"
+            className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all text-center md:text-left"
           >
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
               <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center">
                 <Mail className="w-7 h-7 text-white" />
               </div>
@@ -99,7 +99,7 @@ export default function ContactMethodsSection() {
             <p className="text-white/90 mb-4">
               Schreiben Sie uns eine Nachricht
             </p>
-            <div className="flex items-center gap-2 text-white font-semibold text-sm break-all">
+            <div className="flex items-center gap-2 text-white font-semibold text-sm break-all justify-center md:justify-start">
               <span>{email}</span>
               <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </div>

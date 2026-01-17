@@ -57,10 +57,10 @@ export default function AboutServiceSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-6 text-center lg:text-left"
           >
             {/* Headline */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight text-center lg:text-left">
               Veranstaltungstechnik & Full-Service aus einer Hand
             </h2>
 
@@ -81,10 +81,10 @@ export default function AboutServiceSection() {
 
             {/* Event-Typen Checkliste */}
             <div className="pt-4">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center lg:text-left">
                 Wir sind Experten für
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 justify-items-center lg:justify-items-start">
                 {eventTypes.map((event, index) => {
                   const IconComponent = event.icon;
                   return (
@@ -94,7 +94,7 @@ export default function AboutServiceSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className="flex items-center gap-3"
+                      className="flex items-center gap-3 w-full justify-center lg:justify-start"
                     >
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <CheckCircle2 className="w-5 h-5 text-primary" />

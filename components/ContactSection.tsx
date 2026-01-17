@@ -147,7 +147,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Linke Spalte: Info & Öffnungszeiten */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 text-center lg:text-left">
             {/* Headline */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               Besuchen Sie uns im Lager Pfungstadt
@@ -252,7 +252,7 @@ export default function ContactSection() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 Unser Leistungsspektrum
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 {services.map((service, index) => (
                   <button
                     key={index}
@@ -271,7 +271,7 @@ export default function ContactSection() {
 
             {/* Adresse */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 justify-center lg:justify-start">
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">da-sound Veranstaltungstechnik</p>

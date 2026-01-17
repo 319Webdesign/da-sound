@@ -14,8 +14,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Spalte 1: Brand & Region */}
-          <div className="space-y-4">
-            <div className="mb-4">
+          <div className="space-y-4 text-center md:text-left">
+            <div className="mb-4 flex justify-center md:justify-start">
               <Image
                 src="/images/logo.svg"
                 alt="da-sound Logo"
@@ -34,7 +34,7 @@ export default function Footer() {
             </p>
             
             {/* Social Media Icons */}
-            <div className="flex items-center gap-4 pt-2">
+            <div className="flex items-center gap-4 pt-2 justify-center md:justify-start">
               <a
                 href="mailto:info@da-sound.de"
                 className="text-slate-400 hover:text-white transition-colors"
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           {/* Spalte 2: Navigation */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
               NAVIGATION
             </h3>
@@ -106,19 +106,19 @@ export default function Footer() {
           </div>
 
           {/* Spalte 3: Kontakt Quick-Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
               KONTAKT
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
+              <li className="flex items-start gap-3 justify-center md:justify-start">
                 <MapPin className="w-4 h-4 text-slate-500 mt-0.5 flex-shrink-0" />
                 <span className="text-sm">
                   Wormser Str. 23<br />
                   64319 Pfungstadt
                 </span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-3 justify-center md:justify-start">
                 <Phone className="w-4 h-4 text-slate-500 flex-shrink-0" />
                 <a
                   href={`tel:${data.phoneNumber}`}
@@ -127,7 +127,7 @@ export default function Footer() {
                   {data.phoneNumberFormatted}
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-3 justify-center md:justify-start">
                 <Mail className="w-4 h-4 text-slate-500 flex-shrink-0" />
                 <a
                   href="mailto:info@da-sound.de"
@@ -136,7 +136,7 @@ export default function Footer() {
                   info@da-sound.de
                 </a>
               </li>
-              <li className="flex items-start gap-3">
+              <li className="flex items-start gap-3 justify-center md:justify-start">
                 <Clock className="w-4 h-4 text-slate-500 mt-0.5 flex-shrink-0" />
                 <div className="text-sm">
                   <OpeningHoursCompact />
@@ -146,28 +146,28 @@ export default function Footer() {
           </div>
 
           {/* Spalte 4: Zahlungsarten */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
               ZAHLUNG
             </h3>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm">
+              <div className="flex items-center gap-2 text-sm justify-center md:justify-start">
                 <span>💵</span>
                 <span>Barzahlung</span>
               </div>
-              <div className="flex items-center gap-2 text-sm">
+              <div className="flex items-center gap-2 text-sm justify-center md:justify-start">
                 <span>💳</span>
                 <span>Kartenzahlung</span>
               </div>
-              <div className="flex items-center gap-2 text-sm">
+              <div className="flex items-center gap-2 text-sm justify-center md:justify-start">
                 <span>📱</span>
                 <span>Kontaktlos</span>
               </div>
-              <div className="flex items-center gap-2 text-sm">
+              <div className="flex items-center gap-2 text-sm justify-center md:justify-start">
                 <span>🅿️</span>
                 <span>PayPal</span>
               </div>
-              <div className="flex items-center gap-2 text-sm">
+              <div className="flex items-center gap-2 text-sm justify-center md:justify-start">
                 <span>🏦</span>
                 <span>Überweisung</span>
               </div>

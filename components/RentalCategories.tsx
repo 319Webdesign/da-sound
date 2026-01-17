@@ -34,7 +34,7 @@ export default function RentalCategories() {
         </motion.h2>
 
         {/* Grid mit Bild-Karten */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
           {categories.map((category, index) => {
             const IconComponent = category.icon;
             if (!IconComponent) return null;

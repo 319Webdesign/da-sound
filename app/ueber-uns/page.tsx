@@ -65,7 +65,7 @@ export default function UeberUnsPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="space-y-8"
+              className="space-y-8 text-center lg:text-left"
             >
               {/* Subline */}
               <div className="inline-block">
@@ -98,20 +98,20 @@ export default function UeberUnsPage() {
               </div>
 
               {/* Info-Boxen */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 justify-items-center lg:justify-items-start items-stretch">
                 {/* Bis 1000 Personen */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10"
+                  className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10 text-center lg:text-left flex flex-col h-full w-full max-w-sm sm:max-w-none"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto lg:mx-0">
                     <Users className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">Bis 1000 Personen</h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 flex-grow">
                     Beschallung für kleine und mittlere Events
                   </p>
                 </motion.div>
@@ -122,13 +122,13 @@ export default function UeberUnsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10"
+                  className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10 text-center lg:text-left flex flex-col h-full w-full max-w-sm sm:max-w-none"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto lg:mx-0">
                     <Volume2 className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">Premium D.A.S. Audio</h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 flex-grow">
                     Exklusiv hochwertige Lautsprecher
                   </p>
                 </motion.div>
@@ -139,13 +139,13 @@ export default function UeberUnsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10"
+                  className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10 text-center lg:text-left flex flex-col h-full w-full max-w-sm sm:max-w-none"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto lg:mx-0">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">Regionaler Partner</h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 flex-grow">
                     Pfungstadt & Darmstadt
                   </p>
                 </motion.div>
@@ -231,9 +231,9 @@ export default function UeberUnsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center md:text-left"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto md:mx-0">
                     <IconComponent className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -486,7 +486,7 @@ export default function UeberUnsPage() {
               
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
                 {/* Text */}
-                <div className="flex-1 space-y-6 text-lg text-gray-700 leading-relaxed">
+                <div className="flex-1 space-y-6 text-lg text-gray-700 leading-relaxed text-center md:text-left">
                   <p>
                     Wir bieten individuelle und bezahlbare Lösungen, damit Ihre Veranstaltung zum Erfolg wird. 
                     Von der privaten Party bis zum Firmenevent mit 1.000 Personen setzen wir kompromisslos 

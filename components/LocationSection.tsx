@@ -143,11 +143,11 @@ export default function LocationSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100"
+            className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 text-center"
           >
             {/* Headline */}
             <div className="mb-6">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-4 justify-center">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
@@ -174,13 +174,13 @@ export default function LocationSection() {
                 Wegbeschreibung
               </h3>
               <div className="space-y-3">
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 justify-center">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                   <p className="text-gray-700 leading-relaxed text-sm">
                     <strong>In der Nähe von McDonald's</strong> – leicht zu finden
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 justify-center">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                   <p className="text-gray-700 leading-relaxed text-sm">
                     <strong>Direkt am Autobahnanschluss A67 Pfungstadt</strong> – perfekte Anbindung
@@ -194,7 +194,7 @@ export default function LocationSection() {
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                 Verkehrsanbindung
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {['A67', 'A5', 'B3', 'B426'].map((route, index) => (
                   <span
                     key={index}
