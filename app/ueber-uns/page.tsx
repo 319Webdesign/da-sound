@@ -502,11 +502,14 @@ export default function UeberUnsPage() {
                 {/* D.A.S. Logo als Qualitätssiegel */}
                 <div className="flex-shrink-0">
                   <div className="bg-gray-50 rounded-xl p-8 border-2 border-primary/10 shadow-sm">
-                    <div className="w-32 h-32 md:w-40 md:h-40 mx-auto bg-white rounded-lg flex items-center justify-center border border-gray-200">
-                      <div className="text-center">
-                        <div className="text-2xl md:text-3xl font-bold text-primary mb-2">D.A.S.</div>
-                        <div className="text-sm md:text-base font-semibold text-gray-600">AUDIO</div>
-                      </div>
+                    <div className="w-32 h-32 md:w-40 md:h-40 mx-auto bg-white rounded-lg flex items-center justify-center border border-gray-200 p-4">
+                      <Image
+                        src="/images/DASlogo-1920w.webp"
+                        alt="D.A.S. Audio Logo"
+                        width={200}
+                        height={200}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                     <p className="text-center text-sm text-gray-600 mt-4 font-medium">
                       Unser Partner<br />für Premium-Sound
