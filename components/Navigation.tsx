@@ -11,7 +11,6 @@ export default function Navigation() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/ueber-uns', label: 'Über uns' },
-    { href: '/google-review', label: 'Google Reviews' },
     { href: '/liefergebiet', label: 'Liefergebiet' },
     { href: '/kontakt', label: 'Kontakt' },
   ];

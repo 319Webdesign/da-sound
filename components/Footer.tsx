@@ -90,14 +90,6 @@ export default function Footer() {
               >
                 Über uns
               </Link>
-              <a
-                href="https://g.page/r/YOUR_GOOGLE_REVIEWS_LINK"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-sm hover:text-primary transition-colors"
-              >
-                Google Reviews
-              </a>
               <Link
                 href="/liefergebiet"
                 className="block text-sm hover:text-primary transition-colors"

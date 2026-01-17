@@ -76,17 +76,7 @@ export default function ProductList({ products }: ProductListProps) {
                       src={product.images[0]}
                       alt={product.name}
                       fill
-                      className={
-                        product.id === 'akku-lautsprecher-compact' ||
-                        product.id === 'aktivlautsprecher-bluetooth' ||
-                        product.id === 'pa-saeule-bluetooth' ||
-                        product.id === 'party-set-small' ||
-                        product.id === 'party-set-medium' ||
-                        product.id === 'party-set-white' ||
-                        product.id === 'party-set-large'
-                          ? 'object-contain p-4'
-                          : 'object-cover'
-                      }
+                      className="object-contain p-4"
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       quality={85}
                       loading="lazy"

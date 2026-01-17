@@ -2,7 +2,6 @@
 
 import { Star, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 // Test-Daten für Bewertungen
 const reviews = [
@@ -73,13 +72,15 @@ export default function CustomerReviewsSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <Link
-            href="/google-review"
+          <a
+            href="https://www.google.com/maps/place/?q=place_id:ChIJ5c3RqQ57vUcR790xWEv0vQo"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
           >
             Weitere Bewertungen
             <ExternalLink className="w-5 h-5" />
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>
