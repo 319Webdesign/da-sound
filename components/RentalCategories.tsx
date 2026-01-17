@@ -10,8 +10,13 @@ import { categories } from '@/lib/categories';
 
 export default function RentalCategories() {
   const handleDownload = () => {
-    // Hier würde normalerweise der PDF-Download ausgelöst werden
-    alert('PDF-Download wird vorbereitet...\n\nIn der finalen Version wird hier die Mietpreisliste als PDF heruntergeladen.');
+    // Erstelle einen temporären Link für den Download
+    const link = document.createElement('a');
+    link.href = '/Mietpreisliste da-sound.pdf';
+    link.download = 'Mietpreisliste da-sound.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

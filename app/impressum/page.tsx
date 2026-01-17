@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import { motion } from 'framer-motion';
 import { FileText, Building2, MapPin, Phone, Mail } from 'lucide-react';
+import { data } from '@/lib/data';
 
 export default function ImpressumPage() {
   return (
@@ -55,7 +56,8 @@ export default function ImpressumPage() {
                 </h2>
               </div>
               <div className="space-y-3 text-gray-700">
-                <p className="font-semibold text-gray-900">da-sound Veranstaltungstechnik</p>
+                <p className="font-semibold text-gray-900">da-sound</p>
+                <p className="text-gray-700">Inh. Carsten Helfrich</p>
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
                   <div>
@@ -65,8 +67,8 @@ export default function ImpressumPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                  <a href="tel:015735451130" className="hover:text-primary transition-colors">
-                    0157-35451130
+                  <a href={`tel:${data.phoneNumber}`} className="hover:text-primary transition-colors">
+                    {data.phoneNumberFormatted}
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -84,7 +86,7 @@ export default function ImpressumPage() {
                 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
               </h2>
               <div className="space-y-2 text-gray-700">
-                <p>Maik Schmidt</p>
+                <p>Carsten Helfrich</p>
                 <p>Wormser Str. 23</p>
                 <p>64319 Pfungstadt</p>
               </div>

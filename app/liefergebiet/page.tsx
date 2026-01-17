@@ -8,29 +8,22 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function LiefergebietPage() {
-  const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich habe eine Frage zu Ihrem Liefergebiet.')}`;
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Beispiel-Städte im Liefergebiet
-  const cities = [
-    { name: 'Pfungstadt', distance: '0 km', highlight: true },
-    { name: 'Darmstadt', distance: '8 km', highlight: true },
-    { name: 'Weiterstadt', distance: '12 km' },
-    { name: 'Griesheim', distance: '15 km' },
-    { name: 'Dieburg', distance: '18 km' },
-    { name: 'Langen', distance: '20 km' },
-    { name: 'Ober-Ramstadt', distance: '22 km' },
-    { name: 'Reinheim', distance: '25 km' },
-    { name: 'Groß-Gerau', distance: '28 km' },
-    { name: 'Rüsselsheim', distance: '30 km' },
-    { name: 'Frankfurt am Main', distance: '35 km', highlight: true },
-    { name: 'Offenbach', distance: '38 km' },
-    { name: 'Hanau', distance: '42 km' },
-    { name: 'Aschaffenburg', distance: '55 km' },
-    { name: 'Mainz', distance: '45 km' },
-    { name: 'Wiesbaden', distance: '50 km' },
-  ];
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich habe eine Frage zu Ihrem Liefergebiet.')}`;
 
   const regions = [
     {
@@ -62,13 +55,13 @@ export default function LiefergebietPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/10 via-blue-50/50 to-white py-16 md:py-24 lg:py-32">
+      <section className="relative bg-gradient-to-b from-primary/10 via-blue-50/50 to-white py-16 md:py-24 lg:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            transition={isMobile ? {} : { duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto mb-12"
           >
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
               <MapPin className="w-8 h-8 text-primary" />
@@ -80,125 +73,123 @@ export default function LiefergebietPage() {
               Professionelle Event-Technik direkt zu Ihnen geliefert – in Pfungstadt, Darmstadt und ganz Südhessen.
             </p>
           </motion.div>
+          
+          {/* Liefergebiet Bild */}
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, scale: 0.95 }}
+            animate={isMobile ? false : { opacity: 1, scale: 1 }}
+            transition={isMobile ? {} : { duration: 0.6, delay: 0.3 }}
+            className="relative w-full max-w-7xl mx-auto rounded-2xl overflow-hidden shadow-2xl"
+          >
+            <Image
+              src="/images/liefergebiet-021a7ce5-1920w.webp"
+              alt="Liefergebiet von da-sound Veranstaltungstechnik"
+              width={1920}
+              height={1080}
+              className="w-full h-auto object-contain rounded-2xl"
+              priority
+              quality={95}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1920px"
+              unoptimized
+            />
+          </motion.div>
         </div>
       </section>
 
-      {/* Liefergebiete Übersicht */}
+      {/* Zonen-Boxen */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Wir liefern in ganz Südhessen
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Von Pfungstadt bis Frankfurt – wir bringen die Technik direkt zu Ihrem Event
-            </p>
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {/* Zone 1 - Kerngebiet grün */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, y: 20 }}
+              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+              viewport={isMobile ? undefined : { once: true, amount: 0.2 }}
+              transition={isMobile ? {} : { duration: 0.5, delay: 0.1 }}
+              className="bg-white rounded-xl border-4 border-green-500 p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-green-500 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">1</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Zone 1</h3>
+              </div>
+              <p className="text-sm font-semibold text-green-600 mb-4">
+                Kerngebiet grün
+              </p>
+              <p className="text-gray-700 mb-6 leading-relaxed text-sm">
+                Lieferung nach Pfungstadt (und Ortsteile), Darmstadt (Stadtgebiet), Griesheim, Riedstadt, Seeheim-Jugenheim, Weiterstadt, Bensheim, Gernsheim, Mühltal, Ober-Ramstadt
+              </p>
+              <div className="pt-4 border-t border-gray-200">
+                <p className="text-lg font-bold text-gray-900">
+                  Lieferpauschale 75€
+                </p>
+                <p className="text-sm text-gray-600">
+                  zzgl. 19% MwSt.
+                </p>
+              </div>
+            </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {regions.map((region, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl border-2 border-gray-100 p-8 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{region.name}</h3>
+            {/* Zone 2 - Blauer Ring */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, y: 20 }}
+              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+              viewport={isMobile ? undefined : { once: true, amount: 0.2 }}
+              transition={isMobile ? {} : { duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-xl border-4 border-blue-500 p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-blue-500 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">2</span>
                 </div>
-                <p className="text-gray-600 mb-6">{region.description}</p>
-                
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <Clock className="w-4 h-4 text-primary" />
-                    <span>Lieferzeit: <strong>{region.deliveryTime}</strong></span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <Truck className="w-4 h-4 text-primary" />
-                    <span>Lieferkosten: <strong>{region.deliveryCost}</strong></span>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Zone 2</h3>
+              </div>
+              <p className="text-sm font-semibold text-blue-600 mb-4">
+                Blauer Ring
+              </p>
+              <p className="text-gray-700 mb-6 leading-relaxed text-sm">
+                Lieferung z.B. nach Lorsch, Weinheim, Dieburg, Rüsselsheim, Dreieich, Heppenheim, Biblis, etc.
+              </p>
+              <div className="pt-4 border-t border-gray-200">
+                <p className="text-lg font-bold text-gray-900">
+                  Lieferpauschale 100€
+                </p>
+                <p className="text-sm text-gray-600">
+                  zzgl. 19% MwSt.
+                </p>
+              </div>
+            </motion.div>
 
-                <div className="pt-4 border-t border-gray-100">
-                  <p className="text-sm font-semibold text-gray-900 mb-2">Städte:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {region.cities.map((city, cityIndex) => (
-                      <span
-                        key={cityIndex}
-                        className="px-3 py-1 bg-primary/5 text-primary rounded-full text-xs font-medium"
-                      >
-                        {city}
-                      </span>
-                    ))}
-                  </div>
+            {/* Zone 3 - Oranger Ring */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, y: 20 }}
+              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+              viewport={isMobile ? undefined : { once: true, amount: 0.2 }}
+              transition={isMobile ? {} : { duration: 0.5, delay: 0.3 }}
+              className="bg-white rounded-xl border-4 border-orange-500 p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-orange-500 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">3</span>
                 </div>
-              </motion.div>
-            ))}
+                <h3 className="text-2xl font-bold text-gray-900">Zone 3</h3>
+              </div>
+              <p className="text-sm font-semibold text-orange-600 mb-4">
+                Oranger Ring
+              </p>
+              <p className="text-gray-700 mb-6 leading-relaxed text-sm">
+                Lieferung z.B. nach Frankfurt, Mainz, Mannheim, Hanau, Aschaffenburg, Frankenthal, Erbach, etc.
+              </p>
+              <div className="pt-4 border-t border-gray-200">
+                <p className="text-lg font-bold text-gray-900">
+                  Lieferpauschale 150€
+                </p>
+                <p className="text-sm text-gray-600">
+                  zzgl. 19% MwSt.
+                </p>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Städte-Liste */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Alle Städte im Liefergebiet
-            </h2>
-            <p className="text-lg text-gray-600">
-              Eine Übersicht aller Städte, in die wir liefern
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-xl shadow-sm p-8 md:p-12"
-          >
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {cities.map((city, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center gap-3 p-4 rounded-lg transition-colors ${
-                    city.highlight
-                      ? 'bg-primary/5 border-2 border-primary/20'
-                      : 'bg-gray-50 hover:bg-gray-100'
-                  }`}
-                >
-                  <CheckCircle2
-                    className={`w-5 h-5 flex-shrink-0 ${
-                      city.highlight ? 'text-primary' : 'text-gray-400'
-                    }`}
-                  />
-                  <div>
-                    <p className={`font-medium ${city.highlight ? 'text-primary' : 'text-gray-900'}`}>
-                      {city.name}
-                    </p>
-                    <p className="text-xs text-gray-500">{city.distance}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -206,10 +197,10 @@ export default function LiefergebietPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            viewport={isMobile ? undefined : { once: true, amount: 0.2 }}
+            transition={isMobile ? {} : { duration: 0.6 }}
             className="bg-gradient-to-br from-primary/5 to-blue-50/50 rounded-xl p-8 md:p-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -266,10 +257,10 @@ export default function LiefergebietPage() {
       <section className="bg-gradient-to-br from-primary to-primary-dark py-16 md:py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            viewport={isMobile ? undefined : { once: true, amount: 0.2 }}
+            transition={isMobile ? {} : { duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Fragen zum Liefergebiet?

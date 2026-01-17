@@ -15,7 +15,9 @@ export const data = {
     { id: 2, name: 'DJ-Pult Pioneer', price: 120, category: 'Tontechnik' },
     { id: 3, name: 'Ambiente-Beleuchtung (10er Set)', price: 80, category: 'Lichttechnik' },
   ],
-  whatsappNumber: '+491234567890', // Bitte ersetzen Sie dies mit der echten Nummer
+  whatsappNumber: '+4915735451130', // WhatsApp-Nummer im internationalen Format
+  phoneNumber: '015735451130', // Telefonnummer für tel:-Links
+  phoneNumberFormatted: '0157-35451130', // Formatierte Telefonnummer für Anzeige
   heroImages: [
     {
       id: 1,

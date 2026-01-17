@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Server, Mail, Phone } from 'lucide-react';
+import { data } from '@/lib/data';
 
 export default function DatenschutzPage() {
   return (
@@ -106,8 +107,8 @@ export default function DatenschutzPage() {
                   <div className="pt-2 space-y-1">
                     <div className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-gray-400" />
-                      <a href="tel:015735451130" className="hover:text-primary transition-colors">
-                        0157-35451130
+                      <a href={`tel:${data.phoneNumber}`} className="hover:text-primary transition-colors">
+                        {data.phoneNumberFormatted}
                       </a>
                     </div>
                     <div className="flex items-center gap-2">

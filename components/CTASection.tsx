@@ -12,7 +12,7 @@ import { data } from '@/lib/data';
 
 export default function CTASection() {
   const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich habe eine Anfrage bezüglich Ihrer Veranstaltungstechnik.')}`;
-  const phoneNumber = '015735451130';
+  const phoneNumber = data.phoneNumber;
   const email = 'info@da-sound.de';
 
   return (
