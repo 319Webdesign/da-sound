@@ -1340,7 +1340,7 @@ Beide Varianten eignen sich perfekt zur dekorativen Ausleuchtung von Räumen, G�
 Vielseitiger Strahleneffekt für kleine Tanzflächen/Räume mit Strobo-Funktion
 
 Dieser coole und kompakte LED Effekt, bringt Bewegung und Dynamik auf jede Tanzfläche. Über 48 Linsen werden verschieden farbige LED Strahlen durch den Raum geschleudert. Die zusätzlichen weißen Strobe-LEDs sorgen für eine abwechslungsreiche Lightshow.`,
-    images: ['/images/led-derby.jpg'],
+    images: ['/images/led-derby.webp'],
     pricePerUnit: 15,
     categorySlug: 'moving-heads',
     specs: [
@@ -1363,7 +1363,7 @@ Dieser coole und kompakte LED Effekt, bringt Bewegung und Dynamik auf jede Tanzf
 Heller und dynamischer Lichteffekt bringt Bewegung auf den Dancefloor
 
 Dieser Multieffekt liefert beeindruckende raumfüllende Flowereffekte in Partyräumen, kleineren Clubs und mehr. Die drei rotierenden Prismen und 132 SMD-LEDs erzeugen flickerfreie Farbmischungen, Lauflichter und Strobe-Effekte, die im Soundmodus automatisch zur Musik passen.`,
-    images: ['/images/led-flower.jpg'],
+    images: ['/images/led-flower.webp'],
     pricePerUnit: 22.5,
     categorySlug: 'moving-heads',
     specs: [
@@ -1391,7 +1391,7 @@ Verschiedene Showprogramme
 Statisch langsam drehender Effekt
 Farbe: Weiß
 Optimal für Hochzeiten oder Motto-Partys`,
-    images: ['/images/mirror-ball.jpg'],
+    images: ['/images/mirror-ball.webp'],
     pricePerUnit: 25,
     categorySlug: 'moving-heads',
     specs: [
@@ -1410,7 +1410,7 @@ Optimal für Hochzeiten oder Motto-Partys`,
 Immer einen kühlen Kopf bewahren - mit LED Moving Heads kein Problem.
 
 Der BT-Meteor des belgischen Herstellers Briteq ist ein wahrer Hingucker. Die kraftvolle 100W LED wird durch die hochwertige Optik in idealerweise in Szene gesetzt. Helle, durchsetzungsfähige Farben und ruckelfreie Bewegungen zeichnen dieses Moving Head aus.`,
-    images: ['/images/moving-head-spot.jpg'],
+    images: ['/images/moving-head-spot.webp'],
     pricePerUnit: 30,
     priceOptions: [
       { label: 'Einzeln', price: 30 },
@@ -1444,7 +1444,7 @@ Der BT-Meteor des belgischen Herstellers Briteq ist ein wahrer Hingucker. Die kr
 Power auf Reichweite - die gebündelten Strahlen "zersägen" den Nachthimmel
 
 Mit den 200W starken LED Moving Heads Beam von JB Systems erzeugen Sie atemberaubende Lichtshows auf großen Bühnen, Hallen oder Outdoor. Ein farbiger LED Ring (AURA-Effekt) sorgt für zusätzliche Begeisterung.`,
-    images: ['/images/moving-head-beam.jpg'],
+    images: ['/images/moving-head-beam.webp'],
     pricePerUnit: 39,
     priceOptions: [
       { label: 'Einzeln', price: 39 },
@@ -1963,79 +1963,203 @@ Preis auf Anfrage`,
   {
     id: 'leinwand-projection-screen-4m',
     name: 'Leinwand / Projection Screen 4m',
-    description: 'Professionelle Projektionsleinwand 4 Meter Breite. Für große Präsentationen.',
-    images: ['/images/acer1-1920w.webp'],
-    pricePerUnit: 60,
+    description: 'Mobile Rahmenleinwand mit einer sichtbaren Bilddiagonale von 188 Zoll im Bildformat 16:10. Mit 2 Personen ohne Werkzeug im Handumdrehen aufzubauen.',
+    detailDescription: `Leinwand / Projection Screen 4m
+
+Mobile Rahmenleinwand mit einer sichtbaren Bilddiagonale von 188 Zoll im Bildformat 16:10. Mit 2 Personen ohne Werkzeug im Handumdrehen aufzubauen.
+
+Merkmale:
+
+Projektionsfläche 400 x 258 cm (sichtbares Bild)
+
+Frontprojektion
+
+Gainfaktor 1,2
+
+Faltbarer Aluminiumrahmen
+
+Transportgewicht ca. 40kg
+
+verstellbare Höhe
+
+inkl. Flighcase
+
+Mietpreis: 99,- €`,
+    images: ['/images/leinwannd4m.webp'],
+    pricePerUnit: 99,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Größe', value: '4 Meter' },
-      { label: 'Typ', value: 'Projection Screen' },
-      { label: 'Format', value: '16:9' },
+      { label: 'Projektionsfläche', value: '400 x 258 cm (sichtbares Bild)' },
+      { label: 'Bilddiagonale', value: '188 Zoll' },
+      { label: 'Bildformat', value: '16:10' },
+      { label: 'Projektion', value: 'Frontprojektion' },
+      { label: 'Gainfaktor', value: '1,2' },
+      { label: 'Rahmen', value: 'Faltbarer Aluminiumrahmen' },
+      { label: 'Transportgewicht', value: 'ca. 40kg' },
+      { label: 'Höhe', value: 'verstellbar' },
+      { label: 'Zubehör', value: 'inkl. Flighcase' },
     ],
   },
   {
     id: 'leinwand-projection-screen-3m',
     name: 'Leinwand / Projection Screen 3m',
-    description: 'Professionelle Projektionsleinwand 3 Meter Breite. Standard-Größe für Präsentationen.',
-    images: ['/images/acer1-1920w.webp'],
-    pricePerUnit: 45,
+    description: 'Mobile Rahmenleinwand mit einer sichtbaren Bilddiagonale von 143 Zoll im Bildformat 16:10. Mit 2 Personen ohne Werkzeug im Handumdrehen aufzubauen.',
+    detailDescription: `Leinwand / Projection Screen 3m
+
+Mobile Rahmenleinwand mit einer sichtbaren Bilddiagonale von 143 Zoll im Bildformat 16:10. Mit 2 Personen ohne Werkzeug im Handumdrehen aufzubauen.
+
+Merkmale:
+
+Projektionsfläche 300 x 188 cm (sichtbares Bild)
+
+Frontprojektion
+
+Gainfaktor 1,2
+
+Faltbarer Aluminiumrahmen
+
+Transportgewicht ca. 30kg
+
+verstellbare Höhe
+
+inkl. Flightcase
+
+Mietpreis: 50,- €`,
+    images: ['/images/leinwand3m.webp'],
+    pricePerUnit: 50,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Größe', value: '3 Meter' },
-      { label: 'Typ', value: 'Projection Screen' },
-      { label: 'Format', value: '16:9' },
+      { label: 'Projektionsfläche', value: '300 x 188 cm (sichtbares Bild)' },
+      { label: 'Bilddiagonale', value: '143 Zoll' },
+      { label: 'Bildformat', value: '16:10' },
+      { label: 'Projektion', value: 'Frontprojektion' },
+      { label: 'Gainfaktor', value: '1,2' },
+      { label: 'Rahmen', value: 'Faltbarer Aluminiumrahmen' },
+      { label: 'Transportgewicht', value: 'ca. 30kg' },
+      { label: 'Höhe', value: 'verstellbar' },
+      { label: 'Zubehör', value: 'inkl. Flightcase' },
     ],
   },
   {
     id: 'leinwand-projection-screen-2m',
     name: 'Leinwand / Projection Screen 2m',
-    description: 'Kompakte Projektionsleinwand 2 Meter Breite. Ideal für kleine Räume.',
-    images: ['/images/acer1-1920w.webp'],
-    pricePerUnit: 30,
+    description: 'Standard Leinwand im Format 4:3 mit Stativ. Perfekt für Diashows und Videopräsentationen.',
+    detailDescription: `Leinwand / Projection Screen 2m
+
+Standard Leinwand im Format 4:3 mit Stativ. Perfekt für Diashows und Videopräsentationen.
+
+Merkmale:
+
+Projektionsfläche ca. 2m x 1,8m
+
+Gainfaktor 1,2
+
+Dreibeinstativ
+
+Höhe einstellbar
+
+Einfacher und schneller Aufbau
+
+Mietpreis: 25,- €`,
+    images: ['/images/leinwand_2m.webp'],
+    pricePerUnit: 25,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Größe', value: '2 Meter' },
-      { label: 'Typ', value: 'Projection Screen' },
-      { label: 'Format', value: '16:9' },
+      { label: 'Projektionsfläche', value: 'ca. 2m x 1,8m' },
+      { label: 'Bildformat', value: '4:3' },
+      { label: 'Gainfaktor', value: '1,2' },
+      { label: 'Stativ', value: 'Dreibeinstativ' },
+      { label: 'Höhe', value: 'einstellbar' },
+      { label: 'Aufbau', value: 'Einfacher und schneller Aufbau' },
     ],
   },
   {
     id: 'stativ-projektor-laptop',
     name: 'Stativ für Projektor / Laptop',
-    description: 'Stabiles Stativ für Projektor oder Laptop. Höhenverstellbar und flexibel einsetzbar.',
-    images: ['/images/acer1-1920w.webp'],
-    pricePerUnit: 20,
+    description: 'Stabiles Stativ für einen Beamer oder Laptop. Neigungswinkel und Höhe verstellbar. Rutschfeste Auflage.',
+    detailDescription: `Stativ für Projektor / Laptop
+
+Stabiles Stativ für einen Beamer oder Laptop. Neigungswinkel und Höhe verstellbar. Rutschfeste Auflage.
+
+Mietpreis: 5,- €`,
+    images: ['/images/beamerstand.webp'],
+    pricePerUnit: 5,
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Typ', value: 'Stativ' },
-      { label: 'Anwendung', value: 'Projektor / Laptop' },
+      { label: 'Anwendung', value: 'Beamer / Laptop' },
       { label: 'Höhe', value: 'Verstellbar' },
+      { label: 'Neigungswinkel', value: 'Verstellbar' },
+      { label: 'Auflage', value: 'Rutschfeste Auflage' },
     ],
   },
   {
     id: 'pro-av-mixer',
     name: 'Pro AV Mixer',
-    description: 'Professioneller AV-Mixer für Audio- und Video-Signale. Ideal für Konferenzen und Events.',
-    images: ['/images/acer1-1920w.webp'],
-    pricePerUnit: 100,
+    description: 'Vielseitiger, professionaller A/V Mischpult für Streaming, Konferenz, Contentproduction, u.v.m.',
+    detailDescription: `Pro AV Mixer
+
+Vielseitiger, professionaller A/V Mischpult für Streaming, Konferenz, Contentproduction, u.v.m.
+
+Merkmale:
+
+3 Video Eingänge (Multiformat) HDMI
+
+Monitor - und Mix Ausgang (HDMI)
+
+USB 3.0 für Streaming direkt zum PC
+
+3 Audio-Eingänge mit Auto-Mix
+
+Automatisierte Übergänge, Split Screen, PiP
+
+Video Switcher
+
+Mietpreis: 50,- €`,
+    images: ['/images/pro-av-mixer.webp'],
+    pricePerUnit: 50,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Typ', value: 'AV Mixer' },
-      { label: 'Klasse', value: 'Pro' },
-      { label: 'Signale', value: 'Audio & Video' },
+      { label: 'Typ', value: 'A/V Mischpult' },
+      { label: 'Video Eingänge', value: '3 Video Eingänge (Multiformat) HDMI' },
+      { label: 'Video Ausgänge', value: 'Monitor - und Mix Ausgang (HDMI)' },
+      { label: 'USB', value: 'USB 3.0 für Streaming direkt zum PC' },
+      { label: 'Audio Eingänge', value: '3 Audio-Eingänge mit Auto-Mix' },
+      { label: 'Funktionen', value: 'Automatisierte Übergänge, Split Screen, PiP' },
+      { label: 'Video Switcher', value: 'Ja' },
     ],
   },
   {
     id: 'wireless-hdmi-funk-set',
     name: 'Wireless HDMI Funk-Set',
-    description: 'Drahtloses HDMI-Funk-Set für kabellose Übertragung von Audio- und Video-Signalen.',
-    images: ['/images/acer1-1920w.webp'],
-    pricePerUnit: 80,
+    description: 'Mit dem kabellosem HDMI Funkset WHD30M - 4K von celexon können Sie Bild und Ton ohne lästige Verkabelung vom Abspielgerät auf Ihren Projektor oder Display übertragen.',
+    detailDescription: `Wireless HDMI Funk-Set
+
+Mit dem kabellosem HDMI Funkset WHD30M - 4K von celexon können Sie Bild und Ton ohne lästige Verkabelung vom Abspielgerät auf Ihren Projektor oder Display übertragen.
+
+Merkmale:
+
+latenzfreie Übertragung von Video und Audio-Signal
+
+HDMI In / Out
+
+Auflösung bis 4K / UHD
+
+Reichweite max 30m
+
+inkl. Ladeschale
+
+Mietpreis: 25,- €`,
+    images: ['/images/hdmi_wireless.webp'],
+    pricePerUnit: 25,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Typ', value: 'Wireless HDMI' },
-      { label: 'Reichweite', value: 'bis 30m' },
-      { label: 'Auflösung', value: 'Full HD' },
+      { label: 'Modell', value: 'WHD30M - 4K (celexon)' },
+      { label: 'Übertragung', value: 'latenzfreie Übertragung von Video und Audio-Signal' },
+      { label: 'Anschlüsse', value: 'HDMI In / Out' },
+      { label: 'Auflösung', value: 'bis 4K / UHD' },
+      { label: 'Reichweite', value: 'max 30m' },
+      { label: 'Zubehör', value: 'inkl. Ladeschale' },
     ],
   },
 
@@ -2043,40 +2167,144 @@ Preis auf Anfrage`,
   {
     id: 'inverter-stromerzeuger-2kw',
     name: 'Inverter Stromerzeuger 2 kW',
-    description: 'Kompakter Inverter-Stromerzeuger mit 2 kW Leistung. Leise und sparsam für kleine Veranstaltungen.',
-    images: ['/images/hy3200si_1-1920w.webp'],
-    pricePerUnit: 60,
+    description: 'Das HY-2000Si ist ein kompaktes und leises Qualitätsaggregat von Hyundai. Dauerleistung 1.600 Watt.',
+    detailDescription: `Inverter Stromerzeuger 2 kW
+
+Das HY-2000Si ist ein kompaktes und leises Qualitätsaggregat von Hyundai. Dauerleistung 1.600 Watt.
+
+Merkmale:
+
+1-Zyl, 4-Takt Benzinmotor
+
+2 x 230V Schuko Steckdose
+
+50 Hz Schwankungsfrei (Invertertechnik)
+
+Laufgeräusch ca. 57 dB (max. 90 dB bei Volllast)
+
+3,8 Liter Tank (reicht bis zu 8 Std)
+
+Geräuschgedämmtes Gehäuse
+
+ECO Modus
+
+Gewicht: 20kg (Leergewicht)
+
+Wichtig: Bitte nur Super E5 tanken!
+
+Mietpreis: 35,- €`,
+    images: ['/images/hy2000_1.webp'],
+    pricePerUnit: 35,
     categorySlug: 'stromerzeuger',
     specs: [
-      { label: 'Leistung', value: '2 kW' },
-      { label: 'Typ', value: 'Inverter' },
-      { label: 'Vorteil', value: 'Leise & sparsam' },
+      { label: 'Modell', value: 'HY-2000Si (Hyundai)' },
+      { label: 'Dauerleistung', value: '1.600 Watt' },
+      { label: 'Motor', value: '1-Zyl, 4-Takt Benzinmotor' },
+      { label: 'Steckdosen', value: '2 x 230V Schuko Steckdose' },
+      { label: 'Frequenz', value: '50 Hz Schwankungsfrei (Invertertechnik)' },
+      { label: 'Laufgeräusch', value: 'ca. 57 dB (max. 90 dB bei Volllast)' },
+      { label: 'Tank', value: '3,8 Liter (reicht bis zu 8 Std)' },
+      { label: 'Gehäuse', value: 'Geräuschgedämmtes Gehäuse' },
+      { label: 'ECO Modus', value: 'Ja' },
+      { label: 'Gewicht', value: '20kg (Leergewicht)' },
+      { label: 'Kraftstoff', value: 'Super E5 (wichtig!)' },
     ],
   },
   {
     id: 'inverter-stromerzeuger-3-2kw',
     name: 'Inverter Stromerzeuger 3,2 kW',
-    description: 'Mittlerer Inverter-Stromerzeuger mit 3,2 kW Leistung. Ideal für mittlere Events.',
+    description: 'Leistungsstark und leise: Das Qualitäts-Aggregat HY-3200Si von Hyundai. Dauerleistung 2.800 Watt.',
+    detailDescription: `Inverter Stromerzeuger 3,2 kW
+
+Leistungsstark und leise: Das Qualitäts-Aggregat HY-3200Si von Hyundai. Dauerleistung 2.800 Watt.
+
+Merkmale:
+
+1-Zyl, 4-Takt Benzinmotor
+
+2 x 230V Schuko Steckdose
+
+3.200W Maximalleistung
+
+50Hz schwankungsfrei
+
+Laufgeräusch ca. 73dB (max. 96dB bei Volllast)
+
+7,8 Liter Tank (ca. 7h Betriebsdauer bei Teillast)
+
+ECO Modus
+
+Gewicht: 42kg (Leergewicht)
+
+Wichtig: Bitte nur Super E5 tanken!
+
+Mietpreis: 50,- €`,
     images: ['/images/hy3200si_1-1920w.webp'],
-    pricePerUnit: 80,
+    pricePerUnit: 50,
     categorySlug: 'stromerzeuger',
     specs: [
-      { label: 'Leistung', value: '3,2 kW' },
-      { label: 'Typ', value: 'Inverter' },
-      { label: 'Anwendung', value: 'Mittlere Events' },
+      { label: 'Modell', value: 'HY-3200Si (Hyundai)' },
+      { label: 'Dauerleistung', value: '2.800 Watt' },
+      { label: 'Maximalleistung', value: '3.200W' },
+      { label: 'Motor', value: '1-Zyl, 4-Takt Benzinmotor' },
+      { label: 'Steckdosen', value: '2 x 230V Schuko Steckdose' },
+      { label: 'Frequenz', value: '50Hz schwankungsfrei' },
+      { label: 'Laufgeräusch', value: 'ca. 73dB (max. 96dB bei Volllast)' },
+      { label: 'Tank', value: '7,8 Liter (ca. 7h Betriebsdauer bei Teillast)' },
+      { label: 'ECO Modus', value: 'Ja' },
+      { label: 'Gewicht', value: '42kg (Leergewicht)' },
+      { label: 'Kraftstoff', value: 'Super E5 (wichtig!)' },
     ],
   },
   {
     id: 'inverter-stromerzeuger-6kw',
     name: 'Inverter Stromerzeuger 6 kW',
-    description: 'Leistungsstarker Inverter-Stromerzeuger mit 6 kW Leistung. Für große Veranstaltungen.',
-    images: ['/images/hy3200si_1-1920w.webp'],
-    pricePerUnit: 120,
+    description: 'Mit 6,5 kW Maximalleistung genügt dieser leise und sparsame Stromerzeuger für die meisten Anwendungen im Freien. Dank Inverter Technologie können auch empfindliche Elektrogeräte betrieben werden.',
+    detailDescription: `Inverter Stromerzeuger 6 kW
+
+Mit 6,5 kW Maximalleistung genügt dieser leise und sparsame Stromerzeuger für die meisten Anwendungen im Freien. Dank Inverter Technologie können auch empfindliche Elektrogeräte betrieben werden.
+
+Merkmale:
+
+1-Zyl, 4-Takt Benzinmotor
+
+2 x 230V Schuko Steckdose
+
+1 x 230V CEE Steckdose
+
+50 Hz Schwankungsfrei
+
+Laufgeräusch ca. 65 dB
+
+18,5l Tank (7h Betriebsdauer bei Volllast)
+
+ECO Modus
+
+Elektrostart
+
+Gewicht 89 kg (Leergewicht)
+
+ACHTUNG: Bitte nur Super E5 tanken!
+
+Zum Transport ist ein geeigntes Fahrzeug nötig (Transporter/Anhänger), planen Sie bitte einen 2ten Helfer zum Verladen bei der Abholung ein. Die Betankung sollte nach dem Transport erfolgen.
+
+Mietpreis: 99,- €`,
+    images: ['/images/hyundai-invertergenerator-hy6500sei-d.webp'],
+    pricePerUnit: 99,
     categorySlug: 'stromerzeuger',
     specs: [
-      { label: 'Leistung', value: '6 kW' },
-      { label: 'Typ', value: 'Inverter' },
-      { label: 'Anwendung', value: 'Große Events' },
+      { label: 'Maximalleistung', value: '6,5 kW' },
+      { label: 'Motor', value: '1-Zyl, 4-Takt Benzinmotor' },
+      { label: 'Schuko Steckdosen', value: '2 x 230V Schuko Steckdose' },
+      { label: 'CEE Steckdose', value: '1 x 230V CEE Steckdose' },
+      { label: 'Frequenz', value: '50 Hz Schwankungsfrei' },
+      { label: 'Laufgeräusch', value: 'ca. 65 dB' },
+      { label: 'Tank', value: '18,5l (7h Betriebsdauer bei Volllast)' },
+      { label: 'ECO Modus', value: 'Ja' },
+      { label: 'Start', value: 'Elektrostart' },
+      { label: 'Gewicht', value: '89 kg (Leergewicht)' },
+      { label: 'Kraftstoff', value: 'Super E5 (wichtig!)' },
+      { label: 'Transport', value: 'Transporter/Anhänger nötig, 2. Helfer empfohlen' },
     ],
   },
 
@@ -2084,40 +2312,120 @@ Preis auf Anfrage`,
   {
     id: 'rednerpodest-drumriser',
     name: 'Rednerpodest / Drumriser',
-    description: 'Vielseitiges Podest für Redner oder als Drumriser für Schlagzeuger. Höhenverstellbar.',
+    description: 'Einfach zu transportierendes und aufzubauendes Podest für Innen und Außen (ebener Untergrund vorausgesetzt). Sogar in einem PKW zu transportieren.',
+    detailDescription: `Rednerpodest / Drumriser
+
+Einfach zu transportierendes und aufzubauendes Podest für Innen und Außen (ebener Untergrund vorausgesetzt). Sogar in einem PKW zu transportieren.
+
+Merkmale:
+
+Abmessungen: 2x2m, bestehend aus 4x1m Elementen
+
+Geniales, faltbares Ständersystem wahlweise 20 oder 40cm hoch (bitte bei Buchung angeben)
+
+Belastbarkeit: 500kg/m2
+
+Oberfläche: schwarz mit Anti-Rutschbeschichtung
+
+mit Skirt (schwarzer Stoff) zur Verkleidung der Front
+
+Gesamttransportgewicht: ca. 70kg
+
+Mietpreis: 70,- €`,
     images: ['/images/ixstage5-1920w.webp'],
-    pricePerUnit: 30,
+    pricePerUnit: 70,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
-      { label: 'Typ', value: 'Rednerpodest / Drumriser' },
-      { label: 'Anwendung', value: 'Redner / Schlagzeug' },
-      { label: 'Höhe', value: 'Verstellbar' },
+      { label: 'Abmessungen', value: '2x2m, bestehend aus 4x1m Elementen' },
+      { label: 'Ständersystem', value: 'Geniales, faltbares Ständersystem wahlweise 20 oder 40cm hoch (bitte bei Buchung angeben)' },
+      { label: 'Belastbarkeit', value: '500kg/m2' },
+      { label: 'Oberfläche', value: 'schwarz mit Anti-Rutschbeschichtung' },
+      { label: 'Skirt', value: 'mit Skirt (schwarzer Stoff) zur Verkleidung der Front' },
+      { label: 'Transportgewicht', value: 'ca. 70kg' },
+      { label: 'Anwendung', value: 'Innen und Außen (ebener Untergrund vorausgesetzt)' },
     ],
   },
   {
     id: 'buehne-4x3m',
     name: 'Bühne 4x3 m',
-    description: 'Modulare Bühne mit 4x3 Meter Grundfläche. Professionelle Bühnenkonstruktion.',
-    images: ['/images/ixstage5-1920w.webp'],
+    description: 'Mit unseren praktischen und sehr leicht zu transportierenden iX Stage Bühnenelementen lassen sich unterschiedliche Bühnen- und Podestgrößen realisieren. Die 4 x 3 m große Bühnenfläche reicht für DJs, Alleinunterhalter, kleine Ensembles, u.v.m.',
+    detailDescription: `Bühne 4x3 m
+
+Mit unseren praktischen und sehr leicht zu transportierenden iX Stage Bühnenelementen lassen sich unterschiedliche Bühnen- und Podestgrößen realisieren. Die 4 x 3 m große Bühnenfläche reicht für DJs, Alleinunterhalter, kleine Ensembles, u.v.m.
+
+Merkmale:
+
+12 Stck 1x1 m Stage Elemente
+
+Bühnenkonfiguration: z.B. 4 x 3 m, 6 x 2 m, etc.
+
+Höhe: 40cm
+
+Einfacher Aufbau dank Klappfüßen
+
+Belastbarkeit 500kg/m²
+
+strapzierfähige Siebdruckoberfläche
+
+Transportgewicht: ca. 200kg
+
+Mietpreis: 200,- €
+
+weitere Größen/Konfigurationen auf Anfrage`,
+    images: ['/images/drumriser2x2.webp'],
     pricePerUnit: 200,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
-      { label: 'Größe', value: '4x3 Meter' },
-      { label: 'Fläche', value: '12 m²' },
-      { label: 'Typ', value: 'Modular' },
+      { label: 'Elemente', value: '12 Stck 1x1 m Stage Elemente' },
+      { label: 'Bühnenkonfiguration', value: 'z.B. 4 x 3 m, 6 x 2 m, etc.' },
+      { label: 'Höhe', value: '40cm' },
+      { label: 'Aufbau', value: 'Einfacher Aufbau dank Klappfüßen' },
+      { label: 'Belastbarkeit', value: '500kg/m²' },
+      { label: 'Oberfläche', value: 'strapzierfähige Siebdruckoberfläche' },
+      { label: 'Transportgewicht', value: 'ca. 200kg' },
+      { label: 'Anwendung', value: 'DJs, Alleinunterhalter, kleine Ensembles, u.v.m.' },
     ],
   },
   {
     id: 'faltpavillion',
     name: 'Faltpavillion',
-    description: 'Praktischer Faltpavillion für Outdoor-Events. Schnell auf- und abbaubar.',
-    images: ['/images/ixstage5-1920w.webp'],
-    pricePerUnit: 150,
+    description: 'Mit 2 Personen ruck-zuck aufgebaut bietet dieser Faltpavillion Platz für Gäste, Buffet oder dient als Bühnenüberdachung.',
+    detailDescription: `Faltpavillion
+
+Mit 2 Personen ruck-zuck aufgebaut bietet dieser Faltpavillion Platz für Gäste, Buffet oder dient als Bühnenüberdachung.
+
+Merkmale:
+
+Abmessungen Grundfläche: 3x3m oder 3x6m
+
+faltbares, patentiertes Gestell
+
+Höhe verstellbar
+
+Max. Firsthöhe: 3,20m
+
+Auf Wunsch mit Seitenteilen
+
+Gewicht: ca. 40kg
+
+Mietpreis 3x3m: 39,- €
+
+Mietpreis 6x3m: 50,- €`,
+    images: ['/images/pavillion.webp'],
+    pricePerUnit: 39,
+    priceOptions: [
+      { label: '3x3m', price: 39 },
+      { label: '6x3m', price: 50 },
+    ],
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
-      { label: 'Typ', value: 'Faltpavillion' },
-      { label: 'Aufbau', value: 'Schnell' },
-      { label: 'Anwendung', value: 'Outdoor' },
+      { label: 'Abmessungen Grundfläche', value: '3x3m oder 3x6m' },
+      { label: 'Gestell', value: 'faltbares, patentiertes Gestell' },
+      { label: 'Höhe', value: 'verstellbar' },
+      { label: 'Max. Firsthöhe', value: '3,20m' },
+      { label: 'Seitenteile', value: 'Auf Wunsch mit Seitenteilen' },
+      { label: 'Gewicht', value: 'ca. 40kg' },
+      { label: 'Anwendung', value: 'Platz für Gäste, Buffet oder Bühnenüberdachung' },
     ],
   },
   {

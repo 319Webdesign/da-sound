@@ -153,29 +153,44 @@ export default function ProductList({ products }: ProductListProps) {
               {/* Preise und CTA */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-gray-100">
                 <div className="flex flex-col gap-1">
-                  {product.priceOptions && product.priceOptions.length > 0 ? (
-                    <div className="space-y-1">
-                      {product.priceOptions.map((option, idx) => (
-                        <div key={idx} className="text-sm">
-                          <span className="font-semibold text-gray-700">{option.label}:</span>{' '}
-                          <span className="text-lg font-bold text-primary">
-                            {option.price.toFixed(2).replace('.', ',')} €
-                          </span>
+                  {(() => {
+                    const priceSpec = product.specs?.find(s => s.label === 'Preis' && s.value === 'Auf Anfrage');
+                    const isPriceOnRequest = !!priceSpec;
+                    
+                    if (product.priceOptions && product.priceOptions.length > 0) {
+                      return (
+                        <div className="space-y-1">
+                          {product.priceOptions.map((option, idx) => (
+                            <div key={idx} className="text-sm">
+                              <span className="font-semibold text-gray-700">{option.label}:</span>{' '}
+                              <span className="text-lg font-bold text-primary">
+                                {option.price.toFixed(2).replace('.', ',')} €
+                              </span>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <>
-                      <div className="text-xl font-bold text-primary">
-                        {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor') ? 'Tag' : 'Stück'}
-                      </div>
-                      {product.pricePerPair && (
-                        <div className="text-sm text-gray-500">
-                          {product.pricePerPair.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor') ? 'Wochenende' : 'Paar'}
+                      );
+                    } else if (isPriceOnRequest) {
+                      return (
+                        <div className="text-xl font-bold text-primary">
+                          Preis auf Anfrage
                         </div>
-                      )}
-                    </>
-                  )}
+                      );
+                    } else {
+                      return (
+                        <>
+                          <div className="text-xl font-bold text-primary">
+                            {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor') ? 'Tag' : 'Stück'}
+                          </div>
+                          {product.pricePerPair && (
+                            <div className="text-sm text-gray-500">
+                              {product.pricePerPair.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor') ? 'Wochenende' : 'Paar'}
+                            </div>
+                          )}
+                        </>
+                      );
+                    }
+                  })()}
                 </div>
                 <div className="flex items-center gap-3">
                   <Link

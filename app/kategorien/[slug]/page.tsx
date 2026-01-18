@@ -63,6 +63,14 @@ export default async function CategoryPage({ params }: PageProps) {
       {categoryProducts.length > 0 && (
         <section className="py-16 md:py-20 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Rabattangebot für Stromerzeuger */}
+            {slug === 'stromerzeuger' && (
+              <div className="mb-8 bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                <p className="text-lg font-bold text-red-700">
+                  20% Rabatt auf den Stromerzeuger in Kombination mit Anmietung von PA/Licht
+                </p>
+              </div>
+            )}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Verfügbare Produkte

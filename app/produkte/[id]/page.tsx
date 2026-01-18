@@ -138,30 +138,50 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
               {/* Preis */}
               <div className="mb-6">
-                {product.priceOptions && product.priceOptions.length > 0 ? (
-                  <div>
-                    <div className="text-4xl font-bold text-primary mb-2">
-                      {product.priceOptions[0].price.toFixed(2).replace('.', ',')} € / Tag
-                    </div>
-                    <p className="text-sm text-gray-500">
-                      Alle Preise verstehen sich inkl. 19% MwSt.
-                    </p>
-                  </div>
-                ) : (
-                  <>
-                    <div className="text-4xl font-bold text-primary mb-2">
-                      {product.pricePerUnit.toFixed(2).replace('.', ',')} € / Tag
-                    </div>
-                    {product.pricePerPair && (
-                      <div className="text-lg text-gray-600 mb-2">
-                        {product.pricePerPair.toFixed(2).replace('.', ',')} € / Wochenende
+                {(() => {
+                  const priceSpec = product.specs?.find(s => s.label === 'Preis' && s.value === 'Auf Anfrage');
+                  const isPriceOnRequest = !!priceSpec;
+                  
+                  if (product.priceOptions && product.priceOptions.length > 0) {
+                    return (
+                      <div>
+                        <div className="text-4xl font-bold text-primary mb-2">
+                          {product.priceOptions[0].price.toFixed(2).replace('.', ',')} € / Tag
+                        </div>
+                        <p className="text-sm text-gray-500">
+                          Alle Preise verstehen sich inkl. 19% MwSt.
+                        </p>
                       </div>
-                    )}
-                    <p className="text-sm text-gray-500">
-                      Alle Preise verstehen sich inkl. 19% MwSt.
-                    </p>
-                  </>
-                )}
+                    );
+                  } else if (isPriceOnRequest) {
+                    return (
+                      <>
+                        <div className="text-4xl font-bold text-primary mb-2">
+                          Preis auf Anfrage
+                        </div>
+                        <p className="text-sm text-gray-500">
+                          Kontaktieren Sie uns für ein individuelles Angebot.
+                        </p>
+                      </>
+                    );
+                  } else {
+                    return (
+                      <>
+                        <div className="text-4xl font-bold text-primary mb-2">
+                          {product.pricePerUnit.toFixed(2).replace('.', ',')} € / Tag
+                        </div>
+                        {product.pricePerPair && (
+                          <div className="text-lg text-gray-600 mb-2">
+                            {product.pricePerPair.toFixed(2).replace('.', ',')} € / Wochenende
+                          </div>
+                        )}
+                        <p className="text-sm text-gray-500">
+                          Alle Preise verstehen sich inkl. 19% MwSt.
+                        </p>
+                      </>
+                    );
+                  }
+                })()}
               </div>
 
               {/* Quick-Facts */}
