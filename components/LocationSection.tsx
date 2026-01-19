@@ -53,7 +53,7 @@ export default function LocationSection() {
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <h2 className="text-3xl font-bold text-gray-900">
-                      Besuchen Sie uns in Pfungstadt
+                      So finden Sie uns!
                     </h2>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ export default function LocationSection() {
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900">
-                  Besuchen Sie uns in Pfungstadt
+                  So finden Sie uns!
                 </h2>
               </div>
             </div>

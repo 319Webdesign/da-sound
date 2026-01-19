@@ -36,21 +36,24 @@ export default function ContactSection() {
 
   // Leistungsspektrum Badges
   const services = [
-    'Musikanlage mieten',
-    'Beamer',
+    'Musikanlagen',
+    'Akku Lautsprecher',
+    'Beamer & Leinwand',
     'Lichteffekte',
+    'Theaterbeleuchtung',
     'Mikrofone',
     'DJ-Equipment',
-    'PA-Anlage',
-    'Beschallung',
-    'Event-Technik',
+    'PA-Anlagen',
+    'Konferenztechnik',
+    'Nebelmaschinen',
+    'Stromerzeuger',
   ];
 
   // Öffnungszeiten
   const openingHours = [
     { day: 'Montag', time: '09:30 - 18:00 Uhr', isOpen: true },
-    { day: 'Dienstag', time: '09:30 - 18:00 Uhr', isOpen: true },
-    { day: 'Mittwoch', time: 'Geschlossen', isOpen: false },
+    { day: 'Dienstag', time: 'geschlossen', isOpen: false },
+    { day: 'Mittwoch', time: 'geschlossen', isOpen: false },
     { day: 'Donnerstag', time: '09:30 - 18:00 Uhr', isOpen: true },
     { day: 'Freitag', time: '09:30 - 14:00 Uhr', isOpen: true },
     { day: 'Samstag', time: '10:00 - 14:00 Uhr', isOpen: true },
@@ -161,7 +164,7 @@ export default function ContactSection() {
               >
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-primary" />
-                  <span className="font-semibold text-gray-900">Öffnungszeiten</span>
+                  <span className="font-semibold text-gray-900">Öffnungszeiten Lager Pfungstadt</span>
                 </div>
                 {isMobileOpen ? (
                   <ChevronUp className="w-5 h-5 text-gray-500" />
@@ -215,7 +218,7 @@ export default function ContactSection() {
               <div className="bg-gray-50 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="w-5 h-5 text-primary" />
-                  <h3 className="text-lg font-semibold text-gray-900">Öffnungszeiten</h3>
+                  <h3 className="text-lg font-semibold text-gray-900">Öffnungszeiten Lager Pfungstadt</h3>
                 </div>
                 <div className="space-y-2">
                   {openingHours.map((item, index) => (
@@ -250,7 +253,7 @@ export default function ContactSection() {
             {/* Leistungsspektrum */}
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Unser Leistungsspektrum
+                Unser Mietangebot
               </h3>
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 {services.map((service, index) => (

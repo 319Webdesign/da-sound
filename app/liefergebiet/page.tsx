@@ -72,7 +72,7 @@ export default function LiefergebietPage() {
               Unser Liefergebiet
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
-              Professionelle Event-Technik direkt zu Ihnen geliefert – in Pfungstadt, Darmstadt und ganz Südhessen.
+              Professionelle Veranstaltungstechnik direkt zu Ihnen geliefert – in Pfungstadt, Darmstadt und ganz Südhessen.
             </p>
           </motion.div>
           
@@ -214,7 +214,7 @@ export default function LiefergebietPage() {
             className="bg-gradient-to-br from-primary/5 to-blue-50/50 rounded-xl p-8 md:p-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Wichtige Informationen zur Lieferung
+              Wichtige Informationen zum Lieferservice:
             </h2>
 
             <div className="space-y-6">
@@ -225,8 +225,10 @@ export default function LiefergebietPage() {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Lieferung & Aufbau</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Wir liefern die Technik direkt zu Ihrem Veranstaltungsort und übernehmen auf Wunsch 
-                    auch den kompletten Aufbau. So können Sie sich voll und ganz auf Ihr Event konzentrieren.
+                    Wir liefern die Technik direkt zum Veranstaltungsort und holen Sie dort auch wieder ab.
+                    Auf Wunsch übernehmen wir den kompletten Aufbau, inklusive betriebsfertiger
+                    Übergabe / Einweisung vor Ort. So können Sie sich voll und ganz auf Ihre Aufgaben
+                    konzentrieren.
                   </p>
                 </div>
               </div>
@@ -238,9 +240,10 @@ export default function LiefergebietPage() {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Lieferzeiten</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Die Lieferzeiten variieren je nach Entfernung. Im Kerngebiet (Pfungstadt, Darmstadt) 
-                    können wir meist innerhalb von 1-2 Stunden liefern. Für weiter entfernte Orte planen 
-                    wir die Lieferung individuell mit Ihnen.
+                    Die Zeiten für Lieferung und Abholung werden mit Ihnen und der Location im Vorfeld
+                    abgestimmt. Lieferungen erfolgen in der Regel am Veranstaltungstag, Abholungen am
+                    Folgetag jeweils zwischen 9-14 Uhr. Abholungen spätabends oder nachts sind im
+                    Rahmen der günstigen Lieferpauschalen nicht enthalten, aber gegen Aufpreis möglich.
                   </p>
                 </div>
               </div>
@@ -252,9 +255,9 @@ export default function LiefergebietPage() {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Außerhalb des Liefergebiets</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Auch wenn Ihre Stadt nicht in der Liste steht, kontaktieren Sie uns gerne. 
-                    Wir finden für fast jedes Event eine Lösung und können auch außerhalb unseres 
-                    Standard-Liefergebiets liefern.
+                    Auch wenn Ihr Veranstaltungsort nicht in der Liste stehen sollte, kontaktieren Sie uns
+                    gerne. Wir finden für fast jedes Event eine Lösung und können auch außerhalb unseres
+                    Standard-Liefergebiets zu individuellen Konditionen liefern.
                   </p>
                 </div>
               </div>

@@ -29,7 +29,7 @@ export default function CTASection() {
           >
             {/* Headline */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Event-Technik ohne Kopfschmerzen.
+              Veranstaltungstechnik ohne Kopfschmerzen.
             </h2>
 
             {/* Subtext */}

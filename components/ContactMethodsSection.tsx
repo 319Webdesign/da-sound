@@ -47,7 +47,7 @@ export default function ContactMethodsSection() {
               <h3 className="text-2xl font-bold text-white">WhatsApp</h3>
             </div>
             <p className="text-white/90 mb-4">
-              Schnelle Antworten und direkte Kommunikation
+              Die schnellste Möglichkeit, um uns zu erreichen. Erhalten Sie eine Antwort in wenigen Minuten.
             </p>
             <div className="flex items-center gap-2 text-white font-semibold justify-center md:justify-start">
               <span>Jetzt schreiben</span>
@@ -72,10 +72,10 @@ export default function ContactMethodsSection() {
               <h3 className="text-2xl font-bold text-white">Telefon</h3>
             </div>
             <p className="text-white/90 mb-4">
-              Rufen Sie uns direkt an
+              Rufen Sie uns an, tgl. zwischen 9-21 Uhr, außer an Sonn- und Feiertagen.
             </p>
             <div className="flex items-center gap-2 text-white font-semibold text-lg justify-center md:justify-start">
-              <span>{phoneNumber}</span>
+              <span>015735451130</span>
               <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
             </div>
           </motion.a>
@@ -97,7 +97,7 @@ export default function ContactMethodsSection() {
               <h3 className="text-2xl font-bold text-white">E-Mail</h3>
             </div>
             <p className="text-white/90 mb-4">
-              Schreiben Sie uns eine Nachricht
+              Schreiben Sie uns eine Nachricht, wir antworten innerhalb von 24 Stunden.
             </p>
             <div className="flex items-center gap-2 text-white font-semibold text-sm break-all justify-center md:justify-start">
               <span>{email}</span>

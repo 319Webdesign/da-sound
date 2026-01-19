@@ -10,8 +10,8 @@ import RentalCart from '@/components/RentalCart';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import ContactSection from '@/components/ContactSection';
-import ServiceDeliverySection from '@/components/ServiceDeliverySection';
 import ContactMethodsSection from '@/components/ContactMethodsSection';
+import FAQSection from '@/components/FAQSection';
 import { motion } from 'framer-motion';
 
 // Dynamic Import für Google Maps - Lazy Loading
@@ -73,9 +73,6 @@ export default function KontaktPage() {
         <ContactSection />
       </div>
 
-      {/* Wir liefern direkt zu Ihrem Event */}
-      <ServiceDeliverySection />
-
       {/* Anfahrt & Standort */}
       <Suspense fallback={
         <div className="py-16 md:py-24 bg-white">
@@ -87,58 +84,8 @@ export default function KontaktPage() {
         <LocationSection />
       </Suspense>
 
-      {/* FAQ / Häufige Fragen */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Häufige Fragen
-            </h2>
-            <p className="text-lg text-gray-600">
-              Antworten auf die am häufigsten gestellten Fragen
-            </p>
-          </motion.div>
-
-          <div className="space-y-4">
-            {[
-              {
-                question: 'Wie schnell kann ich eine Anfrage stellen?',
-                answer: 'Sie können uns jederzeit über WhatsApp, Telefon oder E-Mail kontaktieren. Wir antworten in der Regel innerhalb weniger Stunden, oft sogar sofort.',
-              },
-              {
-                question: 'Kann ich auch außerhalb der Öffnungszeiten anrufen?',
-                answer: 'Für Notfälle und dringende Anfragen erreichen Sie uns auch außerhalb der Öffnungszeiten über WhatsApp. Wir bemühen uns, so schnell wie möglich zu antworten.',
-              },
-              {
-                question: 'Wie läuft eine Beratung ab?',
-                answer: 'Wir besprechen mit Ihnen Ihre Anforderungen, die Anzahl der Teilnehmer, den Veranstaltungsort und Ihre Wünsche. Daraufhin erstellen wir Ihnen ein individuelles Angebot.',
-              },
-              {
-                question: 'Kann ich vor Ort vorbeikommen?',
-                answer: 'Ja, gerne! Bitte kontaktieren Sie uns vorher telefonisch oder per WhatsApp, damit wir sicherstellen können, dass jemand für Sie da ist.',
-              },
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-sm"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* FAQ / Häufige Fragen - von Hauptseite übernommen */}
+      <FAQSection />
 
       <Footer />
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { data } from '@/lib/data';
-import { MapPin, Clock, Users, Award, Heart, Zap, MessageCircle, Volume2, ArrowRight } from 'lucide-react';
+import { MapPin, Clock, Users, Award, Heart, Zap, MessageCircle, Volume2, ArrowRight, Eye } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
@@ -31,7 +31,7 @@ export default function UeberUnsPage() {
               Über da-sound
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
-              Professionelle Event-Technik aus Pfungstadt. Wir bringen Ihre Veranstaltung zum Klingen.
+              Professionelle Veranstaltungstechnik aus Pfungstadt. Wir machen ihr Event zum Erfolg.
             </p>
           </motion.div>
         </div>
@@ -70,36 +70,40 @@ export default function UeberUnsPage() {
               {/* Subline */}
               <div className="inline-block">
                 <span className="text-primary font-semibold text-lg">
-                  Individuelle Lösungen für Events bis 1000 Personen
+                  Individuelle Lösungen für Events bis 1.500 Personen
                 </span>
               </div>
 
               {/* Headline */}
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Professioneller Sound für Ihr Event in Südhessen
+                Equipment und Know-How für Ihr Event in Südhessen aus einer Hand
               </h2>
 
               {/* Fließtext */}
               <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
                 <p>
-                  Wir von da-sound setzen auf Qualität und individuelle Lösungen. Ob kleine Privatfeier, 
-                  mittelgroßes Firmenevent oder großes Stadtfest – wir passen unsere professionelle Veranstaltungstechnik 
-                  genau an Ihre Bedürfnisse an.
+                  Wir von da-sound setzen auf Qualität und Zuverlässigkeit. Von privaten Geburtstags-
+                  und Hochzeitsfeiern, über Firmenevents und Konferenzen, bis hin zu größeren
+                  Stadtfesten und Konzertveranstaltungen – wir passen unsere professionelle
+                  Veranstaltungstechnik Ihren Bedürfnissen an.
                 </p>
                 <p>
-                  Unser Fokus liegt auf bezahlbaren, hochwertigen Lösungen für Events bis zu 1000 Personen. 
-                  Wir verstehen, dass jedes Event einzigartig ist und benötigt maßgeschneiderte Technik – 
-                  von der kompletten Beschallung bis hin zu einzelnen Komponenten.
+                  Unser Fokus liegt dabei auf bezahlbaren und bedarfsgerechten Lösungen für Events von
+                  50 bis 1.500 Personen. Bei uns finden Sie bewährte und günstige Event-Pakete, wie auch
+                  maßgeschneiderte Lösungen, die ihr Event einzigartig und unvergesslich machen.
+                  Oder möchten Sie einfach einzelne Komponenten wie Lautsprecher, Mikrofone, LED
+                  Spots oder Lichteffekte mieten? – dann nutzen Sie unser umfassendes Dry-Hire Angebot
+                  an Ton- und Lichttechnik.
                 </p>
                 <p>
-                  Als Ihr regionaler Partner aus Pfungstadt und Darmstadt kennen wir die Region und bringen 
-                  die Technik direkt zu Ihnen – inklusive Aufbau und professioneller Betreuung vor Ort.
+                  Als Ihr regionaler Veranstaltungstechnik Partner aus Pfungstadt garantieren wir Ihnen
+                  regionale und zuverlässige Dienstleistungen zu fairen und transparenten Konditionen.
                 </p>
               </div>
 
               {/* Info-Boxen */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 justify-items-center lg:justify-items-start items-stretch">
-                {/* Bis 1000 Personen */}
+                {/* Bis 1.500 Personen */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -110,13 +114,13 @@ export default function UeberUnsPage() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto lg:mx-0">
                     <Users className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">Bis 1000 Personen</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Bis 1.500 Personen</h3>
                   <p className="text-sm text-gray-600 flex-grow">
-                    Beschallung für kleine und mittlere Events
+                    Beschallung & Beleuchtung für kleine und mittlere Events
                   </p>
                 </motion.div>
 
-                {/* Premium D.A.S. Audio */}
+                {/* Premium Equipment */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -127,13 +131,13 @@ export default function UeberUnsPage() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto lg:mx-0">
                     <Volume2 className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">Premium D.A.S. Audio</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Premium Equipment</h3>
                   <p className="text-sm text-gray-600 flex-grow">
-                    Exklusiv hochwertige Lautsprecher
+                    Hochwertige Lautsprecher Made in Europe
                   </p>
                 </motion.div>
 
-                {/* Regionaler Partner */}
+                {/* Regional stark */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -144,9 +148,9 @@ export default function UeberUnsPage() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto lg:mx-0">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">Regionaler Partner</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Regional stark</h3>
                   <p className="text-sm text-gray-600 flex-grow">
-                    Pfungstadt & Darmstadt
+                    Veranstaltungstechnik im Großraum Darmstadt
                   </p>
                 </motion.div>
               </div>
@@ -198,9 +202,9 @@ export default function UeberUnsPage() {
                 description: 'Wir arbeiten ausschließlich mit hochwertiger, professioneller Technik von führenden Herstellern.',
               },
               {
-                icon: Heart,
-                title: 'Leidenschaft',
-                description: 'Unsere Leidenschaft für Event-Technik spiegelt sich in jedem Projekt wider – von der Planung bis zur Umsetzung.',
+                icon: Eye,
+                title: 'Transparenz',
+                description: 'Unsere klare und faire Preispolitik gibt ihnen Planungssicherheit für ihr Event.',
               },
               {
                 icon: Users,
@@ -210,17 +214,17 @@ export default function UeberUnsPage() {
               {
                 icon: Zap,
                 title: 'Flexibilität',
-                description: 'Kurzfristige Änderungen? Kein Problem. Wir passen uns Ihren Bedürfnissen an und finden immer eine Lösung.',
+                description: 'Kurzfristige Änderungen, spontane Anfragen? – wir bieten Ihnen Lösungen, auch an Wochenenden.',
               },
               {
                 icon: MapPin,
                 title: 'Regional',
-                description: 'Wir sind in Pfungstadt zu Hause und kennen die Region. Schnelle Anlieferung und persönlicher Service inklusive.',
+                description: 'Wir sind in Pfungstadt zu Hause und kennen unsere Kunden. Kurze Wege, persönlicher Service, günstige Lieferpauschalen.',
               },
               {
                 icon: Award,
                 title: 'Erfahrung',
-                description: 'Jahrelange Erfahrung in der Event-Branche – von kleinen Privatfeiern bis hin zu großen Firmenveranstaltungen.',
+                description: 'Jahrelange Erfahrung in der Event-Branche – profitieren Sie von unserer Expertise.',
               },
             ].map((value, index) => {
               const IconComponent = value.icon;
@@ -263,12 +267,12 @@ export default function UeberUnsPage() {
               Unser Team
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Die Menschen hinter da-sound – Ihre Experten für professionelle Veranstaltungstechnik
+              Die Menschen hinter da-sound – für Sie vor Ort.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Platzhalter Teammitglied 1 */}
+            {/* Carsten Helfrich */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -282,17 +286,17 @@ export default function UeberUnsPage() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Max Mustermann
+                Carsten Helfrich
               </h3>
               <p className="text-primary font-semibold mb-3">
-                Geschäftsführer
+                Inhaber, Geschäftsführer
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                [Platzhalter: Kurze Beschreibung der Person, Expertise und Rolle im Team]
+                Verwaltung, Eventplanung, Audio Engineer, Laserschutzbeauftragter
               </p>
             </motion.div>
 
-            {/* Platzhalter Teammitglied 2 */}
+            {/* Demian Wörl */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -306,17 +310,17 @@ export default function UeberUnsPage() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Maria Musterfrau
+                Demian Wörl
               </h3>
               <p className="text-primary font-semibold mb-3">
-                Event-Technikerin
+                Mitarbeiter Logistik
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                [Platzhalter: Kurze Beschreibung der Person, Expertise und Rolle im Team]
+                Lagerverwaltung, Kommissionierung, Kundenbetreuung
               </p>
             </motion.div>
 
-            {/* Platzhalter Teammitglied 3 */}
+            {/* János Gede */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -330,13 +334,13 @@ export default function UeberUnsPage() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Thomas Beispiel
+                János Gede
               </h3>
               <p className="text-primary font-semibold mb-3">
-                Tontechniker
+                Event-Service
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                [Platzhalter: Kurze Beschreibung der Person, Expertise und Rolle im Team]
+                Auslieferungen, Veranstaltungstechniker, Service
               </p>
             </motion.div>
           </div>
@@ -358,6 +362,9 @@ export default function UeberUnsPage() {
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Einblicke in unsere erfolgreich umgesetzten Events und Veranstaltungen
+            </p>
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto mt-2">
+              (hier die Bilder aus dem Ordner Best Practice: mindestens 15 auswählen, Bildbeschreibungen folgen)
             </p>
           </motion.div>
 
@@ -467,86 +474,22 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      {/* Über uns & Vertrauen */}
+      {/* Partner-Logos */}
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* 1. Über uns Storytelling */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
-            className="mb-16 md:mb-20"
-          >
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 text-center">
-                Sound with Soul – Veranstaltungstechnik für Südhessen
-              </h2>
-              
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
-                {/* Text */}
-                <div className="flex-1 space-y-6 text-lg text-gray-700 leading-relaxed text-center md:text-left">
-                  <p>
-                    Wir bieten individuelle und bezahlbare Lösungen, damit Ihre Veranstaltung zum Erfolg wird. 
-                    Von der privaten Party bis zum Firmenevent mit 1.000 Personen setzen wir kompromisslos 
-                    auf High-End-Sound von D.A.S. Audio.
-                  </p>
-                  <p>
-                    Unsere Leidenschaft für professionelle Veranstaltungstechnik spiegelt sich in jedem Projekt wider. 
-                    Wir verstehen, dass jedes Event einzigartig ist und benötigt maßgeschneiderte Lösungen, 
-                    die perfekt auf Ihre Bedürfnisse zugeschnitten sind.
-                  </p>
-                </div>
-                
-                {/* D.A.S. Logo als Qualitätssiegel */}
-                <div className="flex-shrink-0">
-                  <div className="bg-gray-50 rounded-xl p-8 border-2 border-primary/10 shadow-sm">
-                    <div className="w-32 h-32 md:w-40 md:h-40 mx-auto bg-white rounded-lg flex items-center justify-center border border-gray-200 p-4">
-                      <Image
-                        src="/images/DASlogo-1920w.webp"
-                        alt="D.A.S. Audio Logo"
-                        width={200}
-                        height={200}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <p className="text-center text-sm text-gray-600 mt-4 font-medium">
-                      Unser Partner<br />für Premium-Sound
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* 2. Logo-Wall (Referenzen) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-8"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
-              Vertrauen namhafter Partner
+              Auszug unserer geschätzten Firmenkunden:
             </h3>
 
             {/* Infinite Logo Marquee Komponente */}
             <PartnerLogos />
-          </motion.div>
-
-          {/* 3. Lokaler Akzent */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center"
-          >
-            <p className="text-gray-600 text-lg italic">
-              Ihr regionaler Partner in Pfungstadt, Darmstadt und Umgebung.
-            </p>
           </motion.div>
         </div>
       </section>

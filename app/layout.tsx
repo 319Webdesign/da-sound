@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "da-sound Veranstaltungstechnik | Pfungstadt",
   description: "Professionelle Veranstaltungstechnik in Pfungstadt & Umgebung. Tontechnik, Lichttechnik und Event-Zubehör zum Mieten.",
-  keywords: "Veranstaltungstechnik, PA-Anlage, Tontechnik, Lichttechnik, Event-Technik, Pfungstadt",
+  keywords: "Veranstaltungstechnik, PA-Anlage, Tontechnik, Lichttechnik, Pfungstadt",
   icons: {
     icon: '/images/logo.svg',
     shortcut: '/images/logo.svg',
