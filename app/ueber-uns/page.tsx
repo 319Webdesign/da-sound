@@ -363,113 +363,44 @@ export default function UeberUnsPage() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Einblicke in unsere erfolgreich umgesetzten Events und Veranstaltungen
             </p>
-            <p className="text-sm text-gray-500 max-w-2xl mx-auto mt-2">
-              (hier die Bilder aus dem Ordner Best Practice: mindestens 15 auswählen, Bildbeschreibungen folgen)
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {/* Galerie Bild 1 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
-            >
-              <Image
-                src="/images/audiozenit-1920w.webp"
-                alt="Event-Referenz: Audiozenit Veranstaltung"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </motion.div>
-
-            {/* Galerie Bild 2 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
-            >
-              <Image
-                src="/images/palive2-1920w.webp"
-                alt="Event-Referenz: PA Live Veranstaltung"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </motion.div>
-
-            {/* Galerie Bild 3 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
-            >
-              <Image
-                src="/images/profx3-1920w.webp"
-                alt="Event-Referenz: Profx3 Veranstaltung"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </motion.div>
-
-            {/* Galerie Bild 4 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
-            >
-              <Image
-                src="/images/IMG-20250720-WA0049-1920w.webp"
-                alt="Event-Referenz: Veranstaltung"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </motion.div>
-
-            {/* Galerie Bild 5 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
-            >
-              <Image
-                src="/images/kls120_1-1920w.webp"
-                alt="Event-Referenz: KLS120 Veranstaltung"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </motion.div>
-
-            {/* Galerie Bild 6 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
-            >
-              <Image
-                src="/images/ixstage5-1920w.webp"
-                alt="Event-Referenz: IXStage5 Veranstaltung"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </motion.div>
+            {[
+              { src: '/images/best practice/bp1.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp2.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp3.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp4.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp5.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp6.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp7.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp8.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp9.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp10.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp11.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp12.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp13.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp14.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp15.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+            ].map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
