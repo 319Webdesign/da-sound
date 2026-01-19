@@ -48,6 +48,13 @@ export default function MobileNavigation() {
               Liefergebiet
             </Link>
             <Link
+              href="/booking"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-white hover:bg-gray-800 transition-colors py-4 px-6 border-b border-gray-800"
+            >
+              Booking
+            </Link>
+            <Link
               href="/kontakt"
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-medium text-white hover:bg-gray-800 transition-colors py-4 px-6"

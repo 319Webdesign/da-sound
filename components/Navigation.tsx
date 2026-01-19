@@ -12,6 +12,7 @@ export default function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/ueber-uns', label: 'Über uns' },
     { href: '/liefergebiet', label: 'Liefergebiet' },
+    { href: '/booking', label: 'Booking' },
     { href: '/kontakt', label: 'Kontakt' },
   ];
 
