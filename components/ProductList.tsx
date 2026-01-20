@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShoppingBag, ArrowRight, Zap, Users, Music, Home, CloudRain, Volume2, Bluetooth, Weight, Truck, Speech, BatteryMedium, SlidersVertical, Sparkles, MonitorCheck, Network, Wifi, WifiOff, Usb, Palette, Move, ShieldAlert, ChartBar, SignalHigh, Cable, Monitor, Hd, Sun, Contrast, HdmiPort } from 'lucide-react';
+import { ShoppingBag, ArrowRight, Zap, Users, Music, Home, CloudRain, Volume2, Bluetooth, Weight, Truck, Speech, BatteryMedium, Sliders, Sparkles, MonitorCheck, Network, Wifi, WifiOff, Usb, Palette, Move, ShieldAlert, BarChart3, SignalHigh, Cable, Monitor, Proportions, Sun, Contrast, HdmiPort } from 'lucide-react';
 import { useRentalCart } from '@/context/RentalCartContext';
 import type { Product } from '@/lib/products';
 
@@ -252,7 +252,7 @@ export default function ProductList({ products }: ProductListProps) {
                           // Mischpulte / Mikrofone
                           const labelLower = spec.label.toLowerCase();
                           if (labelLower.includes('channel')) {
-                            icon = <SlidersVertical className="w-5 h-5" />;
+                            icon = <Sliders className="w-5 h-5" />;
                             label = 'CHANNELS';
                           } else if (labelLower.includes('effect') || labelLower.includes('dsp')) {
                             icon = <Sparkles className="w-5 h-5" />;
@@ -340,7 +340,7 @@ export default function ProductList({ products }: ProductListProps) {
                             icon = <Zap className="w-5 h-5" />;
                             label = 'POWER';
                           } else if (labelLower.includes('nebelart') || labelLower.includes('bodennebel') || labelLower.includes('dunst') || labelLower.includes('shownebel') || labelLower.includes('kaltfunken') || labelLower.includes('fontäne')) {
-                            icon = <ChartBar className="w-5 h-5" />;
+                            icon = <BarChart3 className="w-5 h-5" />;
                             label = 'NEBELART';
                           } else if (labelLower.includes('nebelausstoß') || labelLower.includes('ausstoß') || labelLower.includes('menge')) {
                             icon = <SignalHigh className="w-5 h-5" />;
@@ -362,7 +362,7 @@ export default function ProductList({ products }: ProductListProps) {
                             icon = <Monitor className="w-5 h-5" />;
                             label = 'TYP';
                           } else if (labelLower.includes('auflösung') || labelLower.includes('resolution') || labelLower.includes('hd') || labelLower.includes('4k')) {
-                            icon = <Hd className="w-5 h-5" />;
+                            icon = <Proportions className="w-5 h-5" />;
                             label = 'HD';
                           } else if (labelLower.includes('helligkeit') || labelLower.includes('lumen') || labelLower.includes('ansi')) {
                             icon = <Sun className="w-5 h-5" />;
