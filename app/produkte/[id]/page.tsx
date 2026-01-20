@@ -143,10 +143,11 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   const isPriceOnRequest = !!priceSpec;
                   
                   if (product.priceOptions && product.priceOptions.length > 0) {
+                    const isSetProduct = product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge';
                     return (
                       <div>
                         <div className="text-4xl font-bold text-primary mb-2">
-                          {product.priceOptions[0].price.toFixed(2).replace('.', ',')} € / Tag
+                          {product.priceOptions[0].price.toFixed(2).replace('.', ',')} € / {isSetProduct ? 'Tag' : 'Stück'}
                         </div>
                         <p className="text-sm text-gray-500">
                           Alle Preise verstehen sich inkl. 19% MwSt.
@@ -165,14 +166,15 @@ export default async function ProductDetailPage({ params }: PageProps) {
                       </>
                     );
                   } else {
+                    const isSetProduct = product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge';
                     return (
                       <>
                         <div className="text-4xl font-bold text-primary mb-2">
-                          {product.pricePerUnit.toFixed(2).replace('.', ',')} € / Tag
+                          {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {isSetProduct ? 'Tag' : 'Stück'}
                         </div>
                         {product.pricePerPair && (
                           <div className="text-lg text-gray-600 mb-2">
-                            {product.pricePerPair.toFixed(2).replace('.', ',')} € / Wochenende
+                            {product.pricePerPair.toFixed(2).replace('.', ',')} € / {isSetProduct ? 'Wochenende' : 'Paar'}
                           </div>
                         )}
                         <p className="text-sm text-gray-500">
@@ -233,6 +235,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ProductTabs
+            productId={product.id}
             tabs={{
               beschreibung: product.detailDescription ? {
                 text: product.detailDescription,
@@ -351,6 +354,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             {crossSellingProducts.map((item) => {
               const crossProduct = getProductById(item.id);
               if (!crossProduct) return null;
+              const isSetProduct = item.id === 'sub-sat-set-bluetooth' || item.id === 'pa-set-small' || item.id === 'pa-set-medium' || item.id === 'pa-set-large' || item.id === 'pa-set-xlarge' || item.id === 'pa-set-premium' || item.id === 'pa-set-outdoor' || item.id === 'party-set-small' || item.id === 'party-set-medium' || item.id === 'party-set-white' || item.id === 'party-set-large' || item.id === 'party-set-xlarge';
               return (
                 <Link
                   key={item.id}
@@ -363,7 +367,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                         {item.name}
                       </h3>
                       <div className="text-lg font-bold text-primary">
-                        {item.price.toFixed(2).replace('.', ',')} € / Tag
+                        {item.price.toFixed(2).replace('.', ',')} € / {isSetProduct ? 'Tag' : 'Stück'}
                       </div>
                     </div>
                     <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all" />

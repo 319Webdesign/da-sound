@@ -113,19 +113,19 @@ export default function BookingPage() {
     const selectedAct = acts.find(act => act.id === formData.act);
     
     let message = 'Hallo, ich interessiere mich für ein Booking.\n\n';
-    message += '📅 *Datum:* ' + (formData.date || 'Nicht angegeben') + '\n';
-    message += '🎉 *Event-Art:* ' + (formData.eventType || 'Nicht angegeben') + '\n';
-    message += '📍 *Veranstaltungsort:* ' + (formData.location || 'Nicht angegeben') + '\n';
-    message += '🎵 *Gewünschter Act:* ' + (selectedAct?.title || formData.act || 'Nicht angegeben') + '\n';
+    message += '*Datum:* ' + (formData.date || 'Nicht angegeben') + '\n';
+    message += '*Event-Art:* ' + (formData.eventType || 'Nicht angegeben') + '\n';
+    message += '*Veranstaltungsort:* ' + (formData.location || 'Nicht angegeben') + '\n';
+    message += '*Gewünschter Act:* ' + (selectedAct?.title || formData.act || 'Nicht angegeben') + '\n';
     
     if (formData.duration) {
-      message += '⏱️ *Dauer:* ' + formData.duration + '\n';
+      message += '*Dauer:* ' + formData.duration + '\n';
     }
     
     message += '\n*Kontaktdaten:*\n';
-    message += '👤 *Name:* ' + (formData.name || 'Nicht angegeben') + '\n';
-    message += '📧 *E-Mail:* ' + (formData.email || 'Nicht angegeben') + '\n';
-    message += '📞 *Telefon:* ' + (formData.phone || 'Nicht angegeben') + '\n';
+    message += '*Name:* ' + (formData.name || 'Nicht angegeben') + '\n';
+    message += '*E-Mail:* ' + (formData.email || 'Nicht angegeben') + '\n';
+    message += '*Telefon:* ' + (formData.phone || 'Nicht angegeben') + '\n';
     
     if (formData.message) {
       message += '\n*Weitere Informationen:*\n' + formData.message;

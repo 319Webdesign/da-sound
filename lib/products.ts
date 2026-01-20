@@ -19,189 +19,169 @@ export const products: Product[] = [
     id: 'party-set-small',
     name: 'Party-Set SMALL',
     description: `Bestehend aus:
-1 x Aktives Lautsprechersystem mit 700W RMS
-12-Zoll Subwoofer
-2 Satelliten
-Bluetooth Verbindung direkt mit dem Handy
+1 x 2.1 Lautsprechersystem mit 12-Zoll Subwoofer
 2 x Lautsprecherstativ
-1 x LED Kompakt Licht-Set m. Stativ + Fernbedienung
-1 x Nebelmaschine (800W) + Fernbedienung
-Alle benötigten Anschlusskabel`,
+1 x LED Kompakt Licht-Set mit Stativ
+1 x Party-Nebelmaschine + Fernbedienung`,
     detailDescription: `Mit Freunden feiern? - Mit dem Party Set SMALL geht's ab.
 Für die spontane Party oder die Geburtstagsfeier - mit unserem kleinsten Set können bis zu 50 Gäste bestens unterhalten werden. Deine Playlist oder Spotify vom Smartphone kann kabellos über Bluetooth gespielt werden. Und das Beste: alles passt ganz easy in den Kofferraum eines Kleinwagens.
 
 Set bestehend aus:
-Aktives Lautsprechersystem:
-12-Zoll Subwoofer mit 500W RMS
-2 x Satellitenlautsprecher mit 150W RMS
-DSP mit 4 Klangpresets
-Bluetooth Empfänger zum direkten Streamen von Musik über Smartphone oder Tablet
-inkl. Transporttaschen
-2 x Lautsprecherstative
-1 x LED Licht-Set mit 2 leistungsstarken RGB Spots, 2 Multi-Lens LED Strahleneffekten, Fernbedienung
-1 x Lichtstativ
-1 x Party-Nebelmaschine m. Fernbedienung
-Alle benötigten Anschlusskabel
-Transportgewicht insgesamt ca. 40 kg`,
+1 x 2.1 Lautsprechersystem mit 12-Zoll Subwoofer
+2 x Lautsprecherstativ
+1 x LED Kompakt Licht-Set mit Stativ
+1 x Party-Nebelmaschine + Fernbedienung`,
     images: ['/images/partysetsmall.webp'],
     pricePerUnit: 80,
     pricePerPair: 120,
     categorySlug: 'party-sets-ton-licht',
     specs: [
-      { label: 'Personen', value: 'bis 70 (Indoor)' },
-      { label: 'Leistung', value: '500W RMS Sub + 2x 150W RMS Satelliten' },
-      { label: 'Transportgewicht', value: 'ca. 40 kg' },
+      { label: 'Personen', value: '1-50' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '700 W RMS (500W Sub + 100W Satelliten)' },
+      { label: 'Schalldruck', value: '128 dB' },
+      { label: 'Bluetooth', value: 'ja' },
+      { label: 'Gewicht', value: '45 kg' },
+      { label: 'Transport', value: 'PKW' },
     ],
   },
   {
     id: 'party-set-medium',
     name: 'Party-Set MEDIUM',
     description: `Bestehend aus:
-Profi PA System 2.1
-1 x Subwoofer 15-Zoll, 1.200W
-2 x Satelliten 400W 
-2 x Lautsprecherstative
+1 x Profi 2.1 Lautsprechersystem mit 15-Zoll Subwoofer
+2 x Lautsprecherstativ
 1 x Audiomischpult mit Bluetooth
-1 x Mikrofon mit Schalter, 10m Kabel
-1 x LED FX Scan Licht-Set m. Stativ + Fernbedienung
-1 x Nebelmaschine (800W) + Fernbedienung
-Alle benötigten Anschlusskabel`,
+1 x Mikrofon mit Schaltern (kabelgebunden)
+1 x LED Licht-Set mit Scannern & Stativ
+1 x Party-Nebelmaschine + Fernbedienung`,
     detailDescription: `Top-Sound und effektvolles Licht für deine nächste Feier.
 Wenn es mal so richtig schön werden soll: Das Party-Set MEDIUM ist die perfekte Wahl für Feierlichtkeiten aller Art bis ca. 100 Personen. Dabei ist alles einfach zu transportieren und auch für Laien problemlos anzuschließen.
 
 Set bestehend aus:
-2 x Aktive Lautsprecherbox 8/1 (400 Watt RMS)
-1 x Aktivsubwoofer 15-Zoll (1.200 Watt)
-2 x Lautsprecherstative
-1 x 2-Kanal Mischpult mit MP3 Player und Bluetooth
-1 x Aux-Kabel (Miniklinke)
-1 x Mikrofon mit Kabel
-1 x professionelles LED Licht-Set mit:
-4 leistungsstarken LED Spots
-1 dynamischen Strahleneffekt
-2 LED Scanner mit Farbwechsel, Gobo und Spiegelbewegung
-4 Strobe/UV Leds
-Stativ
-Funkfernbedienung
-1 x Nebelmaschine (1.500W) mit Fernbedienung
-alle benötigten Anschlusskabel
-Transportgewicht insgesamt ca. 85 kg`,
+1 x Profi 2.1 Lautsprechersystem mit 15-Zoll Subwoofer
+2 x Lautsprecherstativ
+1 x Audiomischpult mit Bluetooth
+1 x Mikrofon mit Schaltern (kabelgebunden)
+1 x LED Licht-Set mit Scannern & Stativ
+1 x Party-Nebelmaschine + Fernbedienung`,
     images: ['/images/partysetmedium.webp'],
     pricePerUnit: 140,
     pricePerPair: 200,
     categorySlug: 'party-sets-ton-licht',
     specs: [
-      { label: 'Personen', value: '100-120 (Indoor)' },
-      { label: 'Leistung', value: '1.200W Sub + 2x 400W RMS' },
-      { label: 'Transportgewicht', value: 'ca. 85 kg' },
+      { label: 'Personen', value: '1-100' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '2.000 W (1.200W Sub + 400W Tops)' },
+      { label: 'Schalldruck', value: '131 dB' },
+      { label: 'Bluetooth', value: 'ja' },
+      { label: 'Gewicht', value: '80 kg' },
+      { label: 'Transport', value: 'PKW' },
     ],
   },
   {
     id: 'party-set-white',
     name: 'Party-Set WHITE',
     description: `Bestehend aus:
-2 x Säulen-PA in weiß, 2.000W Bluetooth
-1 x Mikrofon mit Kabel
-1 x Licht-Set in weiß mit passendem Ständer für die  Lichtshow auf der Tanzfläche
-8 x LED Uplight in weiß zur stimmungsvollen Hintergrundbeleuchtung des Saales/Zeltes`,
+2 x PA Säule in weiß
+1 x Audiomischpult mit Bluetooth
+1 x Drahtloses Mikrofon
+1 x LED Licht-Set mit Laser & Stativ in weiß
+8 x Akku LED Uplights Ambientebeleuchtung in weiß`,
     detailDescription: `Party-Set "White Wedding"
 Für eine unvergessliche Hochzeitsfeier "ganz in weiß"
 Neben hochwertigem Sound und tollen Lichteffekte, stimmt bei diesem Paket auch die Optik. Alle Kompomenten (bis auf das Mikrofon), sind in weiß gehalten. Noch dazu sind die Komponenten einfach zu transportieren und auch für Laien kinderleicht aufzubauen und zu bedienen.
 
 Set bestehend aus:
-2 x Aktive Säulen PA in weiß mit je 1.000 W RMS
-Musikstreaming via Bluetooth von jedem Handy aus möglich (keine zusätzliche Verkabelung erforderlich)
-1 x Mikrofon mit Kabel
-1 x professionelles LED Licht-Set in weiß mit:
-2 leistungsstarken LED Spots
-2 dynamischen Derby Strahleneffekten
-4 Strobe/UV Leds
-Stativ
-Funkfernbedienung / Musikgesteuert
-8 x Akku LED Strahler in weiß zur effektvollen Hintergrund / Ambiente Beleuchtung des Saals / Zeltes
-Transport in einem normalen PKW möglich`,
+2 x PA Säule in weiß
+1 x Audiomischpult mit Bluetooth
+1 x Drahtloses Mikrofon
+1 x LED Licht-Set mit Laser & Stativ in weiß
+8 x Akku LED Uplights Ambientebeleuchtung in weiß`,
     images: ['/images/partysetwhite.webp'],
     pricePerUnit: 150,
     pricePerPair: 220,
     categorySlug: 'party-sets-ton-licht',
     specs: [
-      { label: 'Personen', value: '70-100 (max 120) (Indoor)' },
-      { label: 'Leistung', value: '2 x 1.000W RMS' },
-      { label: 'Farbe', value: 'Weiß' },
+      { label: 'Personen', value: '1-120' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '2.000 W' },
+      { label: 'Schalldruck', value: '127 dB' },
+      { label: 'Bluetooth', value: 'ja' },
+      { label: 'Gewicht', value: '95 kg' },
+      { label: 'Transport', value: 'PKW' },
     ],
   },
   {
     id: 'party-set-large',
     name: 'Party-Set LARGE',
     description: `Bestehend aus:
-2 x PA Subwoofer 15-Zoll 1.200W aktiv
-2 x PA Lautsprecher 12/1-Zoll 750W aktiv, bi-amped
+2 x 15-Zoll Subwoofer
+2 x 12-Zoll Topteile
 2 x Distanzstange
-1 x 2-Kanal Audiomixer mit Bluetooth
-1 x Funk-Mikrofon 
-1 x LED Pro-FX Lichtset mit Laser (inkl. Stativ)
-1 x Nebelmaschine 1,25 KW mit Timer-/Volumen-Controller
-Alle benötigten Anschlusskabel`,
+1 x Audiomischpult mit Bluetooth
+1 x Drahtloses Mikrofon
+1 x LED Pro Licht-Set mit Laser & Stativ
+1 x Profi Nebelmaschine + Fernbedienung`,
     detailDescription: `Beste Unterhaltung mit tollem Sound und effektvoller Lichtanlage.
 Dieses umfangreiche Set bietet hochwertige Komponenten für optimalen Sound & Light. Sie unterhalten hiermit mühelos bis zu 150 Gäste und dennoch ist alles in einem PKW Kombi zu transportieren und notfalls auch alleine problemlos aufzubauen.
 
 Set bestehend aus:
-2 x Aktive Lautsprecherbox (1.500 Watt max)
-2 x Aktiver Subwoofer 15-Zoll (1.200 Watt max)
-2 x Distanzrohre
-1 x 4-Kanal Audio-Mischpult inkl. Aux-Kabel für Smartphone/Laptop (Bluetooth-Adapter optional)
-1 x Funk-Mikrofon
-1 x LED Pro-FX Lichtset mit Laser, Strobe-Effekt inkl. Stativ + Fußcontroller  
-1 x Nebelmaschine 1,5 KW mit Volumen / Timer - Fernbedienung
-Alle benötigten Anschlusskabel
-Transportgewicht insgesamt ca. 120 kg`,
+2 x 15-Zoll Subwoofer
+2 x 12-Zoll Topteile
+2 x Distanzstange
+1 x Audiomischpult mit Bluetooth
+1 x Drahtloses Mikrofon
+1 x LED Pro Licht-Set mit Laser & Stativ
+1 x Profi Nebelmaschine + Fernbedienung`,
     images: ['/images/partysetlarge.webp'],
     pricePerUnit: 180,
     pricePerPair: 250,
     categorySlug: 'party-sets-ton-licht',
     specs: [
-      { label: 'Personen', value: 'bis 150 (nur Indoor)' },
-      { label: 'Leistung', value: '2 x 1.500W + 2 x 1.200W' },
-      { label: 'Transportgewicht', value: 'ca. 120 kg' },
+      { label: 'Personen', value: '1-150' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '3.900 W (2.400W Subs + 1.500W Tops)' },
+      { label: 'Schalldruck', value: '134 dB' },
+      { label: 'Bluetooth', value: 'ja' },
+      { label: 'Gewicht', value: '130 kg' },
+      { label: 'Transport', value: 'PKW Kombi / Van' },
     ],
   },
   {
     id: 'party-set-xlarge',
     name: 'Party-Set X-LARGE',
     description: `Bestehend aus:
-2 x PA Subwoofer 18-Zoll 2.000W aktiv
-2 x PA Lautsprecher 12/1-Zoll 1.000W aktiv, bi-amped
+2 x 18-Zoll Profi Subwoofer
+2 x 12-Zoll Profi Topteile
 2 x Distanzstange
-1 x 4-Kanal Audiomixer inkl. Aux-Kabel
-1 x Funk-Mikrofon
-2 x LED Pro-FX Lichtset mit Laser (inkl. Stativ)
-1 x Hazer (Dunstnebelmaschine) + Funkfernbedienung
-Alle benötigten Anschlusskabel`,
+1 x Audiomischpult mit Bluetooth
+1 x Drahtloses Mikrofon
+2 x LED Pro Licht-Set mit Laser & Stativ
+1 x Hazer / Dunstnebelmaschine + Funk-Fernbedienung`,
     detailDescription: `Das ultimative Set für die Mega-Party.
 Mit diesem Set sind Sie ganz weit vorne. Beste Soundqualität dank hochwertiger Lautsprecher, druckvolle Wiedergabe, die zum Tanzen animiert, sowie eine einzigartige Lightshow mit Lasereffekten. Glauben Sie nicht? - ist aber so!
 
 Set bestehend aus:
-2 x Profi PA Lautsprecherbox DAS Audio VANTEC 12-Zoll aktiv (1.100 Watt)
-2 x Profi PA Subwoofer DAS Audio VANTEC 18-Zoll (1.000 Watt)
-2 x Distanzrohre
-1 x MACKIE ProFX Mischpult m. Aux-Kabel und Bluetooth Adapter
-1 x Funkmikrofon für Moderation, Reden und Gesangseinlagen
-2 x LED PRO Lichtanlage mit insgesamt:
-4 LED PAR Spots Multicolor
-4 LED Derby Strahleneffekte
-2 Laser-Effekteinheiten
-Funk-Fernbedienung
-1 x Hazer (Dunstnebelgerät) für optimale Sichtbarkeit der Lichteffekte 
-Alle benötigten Anschlusskabel
-Transportgewicht insgesamt ca. 160 kg`,
-    images: ['/images/profx3-1920w.webp'],
+2 x 18-Zoll Profi Subwoofer
+2 x 12-Zoll Profi Topteile
+2 x Distanzstange
+1 x Audiomischpult mit Bluetooth
+1 x Drahtloses Mikrofon
+2 x LED Pro Licht-Set mit Laser & Stativ
+1 x Hazer / Dunstnebelmaschine + Funk-Fernbedienung`,
+    images: ['/images/partyset_xlarge.jpg'],
     pricePerUnit: 249,
     pricePerPair: 350,
     categorySlug: 'party-sets-ton-licht',
     specs: [
-      { label: 'Personen', value: 'bis 250 (nur Indoor)' },
-      { label: 'Leistung', value: '2 x 1.100W + 2 x 1.000W' },
-      { label: 'Transportgewicht', value: 'ca. 160 kg' },
+      { label: 'Personen', value: '1-250' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '6.000 W (4.000W Subs + 2.000W Tops)' },
+      { label: 'Schalldruck', value: '136 dB' },
+      { label: 'Bluetooth', value: 'ja' },
+      { label: 'Gewicht', value: '160 kg' },
+      { label: 'Transport', value: 'Transporter' },
     ],
   },
 

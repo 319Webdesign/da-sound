@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShoppingBag, ArrowRight, Zap, Users, Music } from 'lucide-react';
+import { ShoppingBag, ArrowRight, Zap, Users, Music, Home, CloudRain, Volume2, Bluetooth, Weight, Truck, Speech, BatteryMedium, SlidersVertical, Sparkles, MonitorCheck, Network, Wifi, WifiOff, Usb, Palette, Move, ShieldAlert, ChartBar, SignalHigh, Cable, Monitor, Hd, Sun, Contrast, HdmiPort } from 'lucide-react';
 import { useRentalCart } from '@/context/RentalCartContext';
 import type { Product } from '@/lib/products';
 
@@ -124,25 +124,282 @@ export default function ProductList({ products }: ProductListProps) {
                   </ul>
                 )}
 
-                {/* Specs */}
+                {/* Specs - Icon Grid */}
                 {product.specs && product.specs.length > 0 && (
-                  <div className="flex flex-wrap gap-4 mb-4">
+                  <div className="grid grid-cols-3 gap-3 mb-4">
                     {product.specs
-                      .filter((spec) => !(product.categorySlug === 'pa-anlagen' && spec.label === 'Personen'))
-                      .map((spec, idx) => {
-                        let icon = null;
-                        if (spec.label === 'Leistung') {
-                          icon = <Zap className="w-4 h-4" />;
-                        } else if (spec.label === 'Personen') {
-                          icon = <Users className="w-4 h-4" />;
-                        } else if (spec.label === 'Typ') {
-                          icon = <Music className="w-4 h-4" />;
+                      .filter((spec) => {
+                        // Filter basierend auf Kategorie - flexibel für verschiedene Label-Varianten
+                        const category = product.categorySlug;
+                        const isPartySet = product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge';
+                        const labelLower = spec.label.toLowerCase();
+                        
+                        if (isPartySet) {
+                          return ['Personen', 'Indoor', 'Leistung', 'Schalldruck', 'Bluetooth', 'Transport'].includes(spec.label);
                         }
                         
+                        if (category === 'pa-anlagen') {
+                          return ['Personen', 'Anwendung', 'Typ', 'Indoor', 'Outdoor', 'Akkulaufzeit', 'Laufzeit', 'Leistung', 'Schalldruck', 'Bluetooth', 'Gewicht', 'Transport'].includes(spec.label);
+                        }
+                        
+                        if (category === 'mischpulte-mikrofone') {
+                          return labelLower.includes('channel') || labelLower.includes('effects') || labelLower.includes('dsp') || labelLower.includes('touch') || labelLower.includes('display') || labelLower.includes('protokoll') || labelLower.includes('wifi') || labelLower.includes('usb') || spec.label === 'Gewicht';
+                        }
+                        
+                        if (category === 'statische-scheinwerfer-led-spots') {
+                          return labelLower.includes('leistung') || labelLower.includes('akku') || labelLower.includes('laufzeit') || spec.label === 'Indoor' || spec.label === 'Outdoor' || labelLower.includes('farb') || labelLower.includes('rgb') || labelLower.includes('sound') || labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx') || spec.label === 'Gewicht';
+                        }
+                        
+                        if (category === 'moving-heads') {
+                          return labelLower.includes('leistung') || labelLower.includes('pan') || labelLower.includes('tilt') || labelLower.includes('schutz') || spec.label === 'Indoor' || spec.label === 'Outdoor' || labelLower.includes('farb') || labelLower.includes('rgb') || labelLower.includes('sound') || labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx') || spec.label === 'Gewicht';
+                        }
+                        
+                        if (category === 'nebelmaschinen-buehneneffekte') {
+                          return labelLower.includes('leistung') || labelLower.includes('heiz') || labelLower.includes('nebelart') || labelLower.includes('nebelausstoß') || labelLower.includes('menge') || labelLower.includes('funk') || labelLower.includes('kabel') || labelLower.includes('fernbedienung') || spec.label === 'Gewicht';
+                        }
+                        
+                        if (category === 'medien-konferenztechnik') {
+                          return labelLower.includes('typ') || labelLower.includes('technologie') || labelLower.includes('auflösung') || labelLower.includes('helligkeit') || labelLower.includes('lumen') || labelLower.includes('kontrast') || labelLower.includes('hdmi') || labelLower.includes('vga') || labelLower.includes('eingang') || spec.label === 'Gewicht';
+                        }
+                        
+                        // Standard: alle Specs anzeigen außer Personen bei PA-Anlagen (wenn nicht explizit gefiltert)
+                        return true;
+                      })
+                      .map((spec, idx) => {
+                        const category = product.categorySlug;
+                        const isPartySet = product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge';
+                        let icon = null;
+                        let label = '';
+                        
+                        if (isPartySet) {
+                          // Party-Set spezifische Icons und Labels
+                          if (spec.label === 'Personen') {
+                            icon = <Users className="w-5 h-5" />;
+                            label = 'PERSONEN';
+                          } else if (spec.label === 'Indoor') {
+                            icon = <Home className="w-5 h-5" />;
+                            label = 'INDOOR';
+                          } else if (spec.label === 'Outdoor') {
+                            icon = <CloudRain className="w-5 h-5" />;
+                            label = 'OUTDOOR';
+                          } else if (spec.label === 'Leistung') {
+                            icon = <Zap className="w-5 h-5" />;
+                            label = 'POWER';
+                          } else if (spec.label === 'Schalldruck') {
+                            icon = <Volume2 className="w-5 h-5" />;
+                            label = 'SOUND';
+                          } else if (spec.label === 'Bluetooth') {
+                            icon = <Bluetooth className="w-5 h-5" />;
+                            label = 'BLUETOOTH';
+                          } else if (spec.label === 'Gewicht') {
+                            icon = <Weight className="w-5 h-5" />;
+                            label = 'WEIGHT';
+                          } else if (spec.label === 'Transport') {
+                            icon = <Truck className="w-5 h-5" />;
+                            const transportValue = spec.value.toLowerCase();
+                            if (transportValue.includes('pkw')) {
+                              label = 'PKW';
+                            } else if (transportValue.includes('kombi') || transportValue.includes('van')) {
+                              label = 'VAN';
+                            } else if (transportValue.includes('transporter')) {
+                              label = 'TRANSPORT';
+                            } else {
+                              label = 'TRANSPORT';
+                            }
+                          }
+                        } else if (category === 'pa-anlagen') {
+                          // PA-Anlagen / Lautsprecher
+                          const labelLower = spec.label.toLowerCase();
+                          if (spec.label === 'Personen') {
+                            icon = <Users className="w-5 h-5" />;
+                            label = 'PERSONEN';
+                          } else if (spec.label === 'Anwendung' || spec.label === 'Typ') {
+                            icon = <Music className="w-5 h-5" />;
+                            label = 'ANWENDUNG';
+                          } else if (spec.label === 'Indoor') {
+                            icon = <Home className="w-5 h-5" />;
+                            label = 'INDOOR';
+                          } else if (spec.label === 'Outdoor') {
+                            icon = <CloudRain className="w-5 h-5" />;
+                            label = 'OUTDOOR';
+                          } else if (spec.label === 'Akkulaufzeit' || spec.label === 'Laufzeit' || labelLower.includes('akku') || labelLower.includes('laufzeit')) {
+                            icon = <BatteryMedium className="w-5 h-5" />;
+                            label = 'AKKU';
+                          } else if (spec.label === 'Leistung' || labelLower.includes('leistung')) {
+                            icon = <Zap className="w-5 h-5" />;
+                            label = 'POWER';
+                          } else if (spec.label === 'Schalldruck' || labelLower.includes('schalldruck')) {
+                            icon = <Volume2 className="w-5 h-5" />;
+                            label = 'SOUND';
+                          } else if (spec.label === 'Bluetooth' || labelLower.includes('bluetooth')) {
+                            icon = <Bluetooth className="w-5 h-5" />;
+                            label = 'BLUETOOTH';
+                          } else if (spec.label === 'Gewicht' || labelLower.includes('gewicht')) {
+                            icon = <Weight className="w-5 h-5" />;
+                            label = 'WEIGHT';
+                          } else if (spec.label === 'Transport' || labelLower.includes('transport')) {
+                            icon = <Truck className="w-5 h-5" />;
+                            const transportValue = spec.value.toLowerCase();
+                            if (transportValue.includes('pkw')) {
+                              label = 'PKW';
+                            } else if (transportValue.includes('kombi') || transportValue.includes('van')) {
+                              label = 'VAN';
+                            } else {
+                              label = 'TRANSPORT';
+                            }
+                          }
+                        } else if (category === 'mischpulte-mikrofone') {
+                          // Mischpulte / Mikrofone
+                          const labelLower = spec.label.toLowerCase();
+                          if (labelLower.includes('channel')) {
+                            icon = <SlidersVertical className="w-5 h-5" />;
+                            label = 'CHANNELS';
+                          } else if (labelLower.includes('effect') || labelLower.includes('dsp')) {
+                            icon = <Sparkles className="w-5 h-5" />;
+                            label = 'EFFECTS';
+                          } else if (labelLower.includes('touch') || labelLower.includes('display')) {
+                            icon = <MonitorCheck className="w-5 h-5" />;
+                            label = 'DISPLAY';
+                          } else if (labelLower.includes('protokoll') || labelLower.includes('network')) {
+                            icon = <Network className="w-5 h-5" />;
+                            label = 'PROTOKOLL';
+                          } else if (labelLower.includes('wifi') || labelLower.includes('wireless')) {
+                            const wifiValue = spec.value.toLowerCase();
+                            icon = wifiValue.includes('ja') || wifiValue === 'yes' || wifiValue.includes('true') ? <Wifi className="w-5 h-5" /> : <WifiOff className="w-5 h-5" />;
+                            label = 'WIFI';
+                          } else if (labelLower.includes('usb')) {
+                            icon = <Usb className="w-5 h-5" />;
+                            label = 'USB';
+                          } else if (labelLower.includes('gewicht')) {
+                            icon = <Weight className="w-5 h-5" />;
+                            label = 'WEIGHT';
+                          }
+                        } else if (category === 'statische-scheinwerfer-led-spots') {
+                          // LED Spots / Lichteffekte
+                          const labelLower = spec.label.toLowerCase();
+                          if (labelLower.includes('leistung') || labelLower.includes('watt')) {
+                            icon = <Zap className="w-5 h-5" />;
+                            label = 'POWER';
+                          } else if (labelLower.includes('akku') || labelLower.includes('laufzeit')) {
+                            icon = <BatteryMedium className="w-5 h-5" />;
+                            label = 'AKKU';
+                          } else if (spec.label === 'Indoor') {
+                            icon = <Home className="w-5 h-5" />;
+                            label = 'INDOOR';
+                          } else if (spec.label === 'Outdoor') {
+                            icon = <CloudRain className="w-5 h-5" />;
+                            label = 'OUTDOOR';
+                          } else if (labelLower.includes('farb') || labelLower.includes('rgb')) {
+                            icon = <Palette className="w-5 h-5" />;
+                            label = 'FARBEN';
+                          } else if (labelLower.includes('sound') || labelLower.includes('light')) {
+                            icon = <Music className="w-5 h-5" />;
+                            label = 'SOUND';
+                          } else if (labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx')) {
+                            icon = <Wifi className="w-5 h-5" />;
+                            label = 'WIRELESS';
+                          } else if (labelLower.includes('gewicht')) {
+                            icon = <Weight className="w-5 h-5" />;
+                            label = 'WEIGHT';
+                          }
+                        } else if (category === 'moving-heads') {
+                          // Moving Heads
+                          const labelLower = spec.label.toLowerCase();
+                          if (labelLower.includes('leistung') || labelLower.includes('watt')) {
+                            icon = <Zap className="w-5 h-5" />;
+                            label = 'POWER';
+                          } else if (labelLower.includes('pan') || labelLower.includes('tilt') || labelLower.includes('movement')) {
+                            icon = <Move className="w-5 h-5" />;
+                            label = 'PAN/TILT';
+                          } else if (labelLower.includes('schutz') || labelLower.includes('klasse')) {
+                            icon = <ShieldAlert className="w-5 h-5" />;
+                            label = 'SCHUTZ';
+                          } else if (spec.label === 'Indoor') {
+                            icon = <Home className="w-5 h-5" />;
+                            label = 'INDOOR';
+                          } else if (spec.label === 'Outdoor') {
+                            icon = <CloudRain className="w-5 h-5" />;
+                            label = 'OUTDOOR';
+                          } else if (labelLower.includes('farb') || labelLower.includes('rgb')) {
+                            icon = <Palette className="w-5 h-5" />;
+                            label = 'FARBEN';
+                          } else if (labelLower.includes('sound') || labelLower.includes('light') || labelLower.includes('programme')) {
+                            icon = <Music className="w-5 h-5" />;
+                            label = 'SOUND';
+                          } else if (labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx')) {
+                            icon = <Wifi className="w-5 h-5" />;
+                            label = 'WIRELESS';
+                          } else if (labelLower.includes('gewicht')) {
+                            icon = <Weight className="w-5 h-5" />;
+                            label = 'WEIGHT';
+                          }
+                        } else if (category === 'nebelmaschinen-buehneneffekte') {
+                          // Nebelmaschine / Bühneneffekte
+                          const labelLower = spec.label.toLowerCase();
+                          if (labelLower.includes('leistung') || labelLower.includes('heiz') || labelLower.includes('aufnahme') || labelLower.includes('watt')) {
+                            icon = <Zap className="w-5 h-5" />;
+                            label = 'POWER';
+                          } else if (labelLower.includes('nebelart') || labelLower.includes('bodennebel') || labelLower.includes('dunst') || labelLower.includes('shownebel') || labelLower.includes('kaltfunken') || labelLower.includes('fontäne')) {
+                            icon = <ChartBar className="w-5 h-5" />;
+                            label = 'NEBELART';
+                          } else if (labelLower.includes('nebelausstoß') || labelLower.includes('ausstoß') || labelLower.includes('menge')) {
+                            icon = <SignalHigh className="w-5 h-5" />;
+                            label = 'AUSSTOSS';
+                          } else if (labelLower.includes('funk') || labelLower.includes('wireless')) {
+                            icon = <Wifi className="w-5 h-5" />;
+                            label = 'FUNK';
+                          } else if (labelLower.includes('kabel') || labelLower.includes('cable')) {
+                            icon = <Cable className="w-5 h-5" />;
+                            label = 'KABEL';
+                          } else if (labelLower.includes('gewicht')) {
+                            icon = <Weight className="w-5 h-5" />;
+                            label = 'WEIGHT';
+                          }
+                        } else if (category === 'medien-konferenztechnik') {
+                          // Beamer & Display
+                          const labelLower = spec.label.toLowerCase();
+                          if (labelLower.includes('typ') || labelLower.includes('technologie')) {
+                            icon = <Monitor className="w-5 h-5" />;
+                            label = 'TYP';
+                          } else if (labelLower.includes('auflösung') || labelLower.includes('resolution') || labelLower.includes('hd') || labelLower.includes('4k')) {
+                            icon = <Hd className="w-5 h-5" />;
+                            label = 'HD';
+                          } else if (labelLower.includes('helligkeit') || labelLower.includes('lumen') || labelLower.includes('ansi')) {
+                            icon = <Sun className="w-5 h-5" />;
+                            label = 'HELLIGKEIT';
+                          } else if (labelLower.includes('kontrast')) {
+                            icon = <Contrast className="w-5 h-5" />;
+                            label = 'KONTRAST';
+                          } else if (labelLower.includes('hdmi') || labelLower.includes('vga') || labelLower.includes('eingang') || labelLower.includes('anschluss')) {
+                            icon = <HdmiPort className="w-5 h-5" />;
+                            label = 'EINGÄNGE';
+                          } else if (labelLower.includes('gewicht')) {
+                            icon = <Weight className="w-5 h-5" />;
+                            label = 'WEIGHT';
+                          }
+                        } else {
+                          // Standard Icons für andere Produkte
+                          if (spec.label === 'Leistung') {
+                            icon = <Zap className="w-5 h-5" />;
+                            label = 'POWER';
+                          } else if (spec.label === 'Personen') {
+                            icon = <Users className="w-5 h-5" />;
+                            label = 'PERSONEN';
+                          } else if (spec.label === 'Typ') {
+                            icon = <Music className="w-5 h-5" />;
+                            label = 'TYPE';
+                          }
+                        }
+                        
+                        // Nur anzeigen, wenn Icon vorhanden
+                        if (!icon) return null;
+                        
                         return (
-                          <div key={idx} className="flex items-center gap-2 text-sm">
-                            {icon && <span className="text-primary">{icon}</span>}
-                            <span className="text-gray-600">{spec.value}</span>
+                          <div key={idx} className="flex items-center gap-2">
+                            <span className="text-primary">{icon}</span>
+                            <span className="text-xs text-gray-600 leading-tight">
+                              {spec.value}
+                            </span>
                           </div>
                         );
                       })}
@@ -180,11 +437,11 @@ export default function ProductList({ products }: ProductListProps) {
                       return (
                         <>
                           <div className="text-xl font-bold text-primary">
-                            {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor') ? 'Tag' : 'Stück'}
+                            {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge') ? 'Tag' : 'Stück'}
                           </div>
                           {product.pricePerPair && (
                             <div className="text-sm text-gray-500">
-                              {product.pricePerPair.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor') ? 'Wochenende' : 'Paar'}
+                              {product.pricePerPair.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge') ? 'Wochenende' : 'Paar'}
                             </div>
                           )}
                         </>
