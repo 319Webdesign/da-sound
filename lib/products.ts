@@ -11,6 +11,7 @@ export interface Product {
   specs?: { label: string; value: string }[];
   offerInfo?: string;
   priceOptions?: { label: string; price: number }[];
+  isUpgradeKit?: boolean; // Markiert Zusatzartikel/Upgrade-Kits
 }
 
 export const products: Product[] = [
@@ -190,403 +191,218 @@ Set bestehend aus:
     id: 'akku-lautsprecher-compact',
     name: 'Akku Lautsprecher Compact',
     description: 'Hochwertiger Akkulautsprecher mit Bluetooth von Electro Voice mit einer Batterielaufzeit von bis zu 12 Stunden. Optimal zur Übertragung von Playback- und Live-Musik wenn kein Stromanschluss vorhanden ist. Mit nur 7kg Gewicht ein echtes Leichtgewicht mit MEGA Sound.',
-    detailDescription: `AKKU Lautsprecher EV Everse 8
-Mobiler Sound immer und überall.
-Die akkubetriebene Electro-Voice Everse8 ist die perfekte Aktivbox zur mobilen Beschallung überall dort, wo kein Stromanschluss vorhanden ist. Dabei ist sie leicht zu transportieren und für die Größe sehr laut. Dank Schutzabdeckung sogar wetterfest!
-
-Technische Daten:
-Hoher Schalldruck bei 121 dB+
-6+ Stunden bei maximaler Leistung
-12+ Stunden @ 95 dB SPL
-Bluetooth 5.0 Audio Streaming und Koppeln von 2 Everse 8 zum Stereo-Paar
-Frequenzbereich 50 Hz – 20 kHz
-Abstrahlverhalten 100 x 100 Grad
-8-Zoll-Tieftöner mit SST-Anschluss
-1" Hochleistungs-Titankalotten-Hochtöner mit Neodym-Magnet und ferro-fluid-gekühlter Schwingspule
-4-Kanal-Mixer
-FX Sektion – Dynacord Digitaleffekte (Reverb, Chorus, Delay usw.)
-Delay-Funktion
-EQ – 3-Band-EQ an den Eingängen, 7-Band-Main-GEQ, 7-Band-PEQ, Low Shelf, High Shelf, Low Pass, High Pass
-2 XLR/TRS-Combo-Klinkeneingänge
-Einfach zu tragender Griff mit Soft-Touch-Gummi
-Leichtgewicht 7,6 kg
-witterungsbeständig nach IP43 mit der mitgelieferten wetterfesten Spritzschutzabdeckung (nur im Bluetooth Betrieb)`,
+    detailDescription: `Hochwertiger Akkulautsprecher mit Bluetooth von Electro Voice mit einer Batterielaufzeit von bis zu 12 Stunden. Optimal zur Übertragung von Playback- und Live-Musik wenn kein Stromanschluss vorhanden ist. Mit nur 7kg Gewicht ein echtes Leichtgewicht mit MEGA Sound.`,
     images: ['/images/akkuLautsprecherCompact.webp'],
     pricePerUnit: 30,
     pricePerPair: 50,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Typ', value: 'Akku-Lautsprecher' },
-      { label: 'Personen', value: 'bis 30' },
-      { label: 'Laufzeit', value: 'bis 12h' },
+      { label: 'Personen', value: '1-50' },
+      { label: 'Indoor', value: 'Indoor & Outdoor (IP44)' },
+      { label: 'Akkulaufzeit', value: '6-12h' },
+      { label: 'Schalldruck', value: '121 dB' },
+      { label: 'Bluetooth', value: 'Ja, Audio Streaming & Link' },
       { label: 'Gewicht', value: '7,6 kg' },
-      { label: 'Schalldruck', value: '121 dB+' },
-      { label: 'Bluetooth', value: '5.0' },
+      { label: 'Transport', value: 'Kleinwagen / PKW' },
     ],
   },
   {
     id: 'akku-lautsprecher-maxi',
     name: 'Akku Lautsprecher Maxi',
-    description: 'Der wohl berühmt und berüchtigste unter der Akku Lautsprechern jetzt bei uns im Verleih: Teufel Rockster XL. Unglaubliche Leistung bei gleichzeitig langer Akkulaufzeit von bis zu 20 Stunden. Neueste Bluetooth Technologie plus zahlreiche Eingänge mit EQ machen diese stattliche Box zum Allroundtalent.',
-    detailDescription: `AKKU Lautsprecher Maxi
-Kraftvolles Soundpaket für unterwegs.
-Die akkubetriebene Teufel ROCKSTER ist die angesagt Aktivbox für Partys on the Air, wo kein Stromanschluss vorhanden ist. Die gewaltige Basswiedergabe ist DJ-tauglich und kann selbst bei höheren Pegeln locker 6 Std ohne Aufladen durchpowern.
-
-Technische Daten:
-Hoher Schalldruck bis zu 131dB
-Akkulaufzeit ca. 6 Stunden bei hoher Leistung, 12+ Stunden bei niedrigeren Lautstärken (Hintergrundmusik)
-fortschrittliches Bluetooth 5.0 Audio Streaming, 2 Devices koppelbar
-Frequenzbereich 38 Hz – 20 kHz
-Abstrahlverhalten Omni
-15-Zoll-Tieftöner, Bassreflex
-1" Hochleistungs-Hochtöner
-2-Kanal-Mixer mit Crossfader
-3-Band-EQ 
-Robustes Gehäusedesign schützt optimal bei Transport
-Gewicht ca. 30kg`,
+    description: 'Der wohl berühmt und berüchtigste unter den Akku Lautsprechern jetzt bei uns im Verleih: Teufel Rockster XL. Unglaubliche Leistung bei gleichzeitig langer Akkulaufzeit von bis zu 12 Stunden. Neueste Bluetooth Technologie plus zahlreiche Eingänge mit EQ machen diese stattliche Box zum Allroundtalent.',
+    detailDescription: `Der wohl berühmt und berüchtigste unter den Akku Lautsprechern jetzt bei uns im Verleih: Teufel Rockster XL. Unglaubliche Leistung bei gleichzeitig langer Akkulaufzeit von bis zu 12 Stunden. Neueste Bluetooth Technologie plus zahlreiche Eingänge mit EQ machen diese stattliche Box zum Allroundtalent.`,
     images: ['/images/akkuLautsprecherMaxi.webp'],
     pricePerUnit: 40,
     pricePerPair: 70,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Typ', value: 'Akku-Lautsprecher' },
-      { label: 'Personen', value: 'bis 80' },
-      { label: 'Laufzeit', value: '6-12+ Stunden' },
-      { label: 'Gewicht', value: 'ca. 30 kg' },
-      { label: 'Schalldruck', value: 'bis 131 dB' },
-      { label: 'Bluetooth', value: '5.0' },
+      { label: 'Personen', value: '1-120' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Akkulaufzeit', value: '4-12h' },
+      { label: 'Schalldruck', value: '131 dB' },
+      { label: 'Bluetooth', value: 'Ja, 2 x Audio Streaming' },
+      { label: 'Gewicht', value: '30 kg' },
+      { label: 'Transport', value: 'Kombi / Van' },
     ],
   },
   {
     id: 'aktivlautsprecher-bluetooth',
     name: 'Aktivlautsprecher Bluetooth',
-    description: 'Der aktive Lautsprecher von DAS Audio (Made in Spain) überzeugt durch hohe Leistungsreserven (max. 1500W) und professionellen Klang. Das robuste Kunststoffgehäuse sorgt für ein transportfreundliches Gewicht. Auch als Monitorbox einsetzbar. Lautsprecherstativ inkl.',
-    detailDescription: `Aktiv Lautsprecher Bluetooth
-Solide 2-Wege Aktivlautsprecher mit Power ohne Ende
-Die Aktivboxen von D.A.S. Audio sind mit 12-Zoll Basslautsprecher und einem 1-Zoll Hochtöner bestückt. Die Endstufe leistet satte 750 Watt (RMS). Die beiden Lautsprecher lassen sich über Bluetooth koppeln, somit kann Musik vom Handy direkt in Stereo gestreamt werden.
-
-Technische Daten:
-12-Zoll (30cm) oder 15-Zoll Tieftonlautsprecher
-1-Zoll Hochtonhorn
-Leistung: 750 Watt RMS / 1.500 Watt MAX
-Max. Schalldruck: 130 dB
-Eingänge für Mikrofon/Line und Aux
-Bluetooth (mit Stereo-Koppelung)
-Gewicht: 17-26 kg / Stck (je nach Ausführung)`,
+    description: 'Der aktive Lautsprecher von DAS Audio (Made in Spain) überzeugt durch hohe Leistungsreserven und professionellen Klang. Das robuste Kunststoffgehäuse sorgt für ein transportfreundliches Gewicht. Auch als Monitorbox einsetzbar. Lautsprecherstativ inkl.',
+    detailDescription: `Der aktive Lautsprecher von DAS Audio (Made in Spain) überzeugt durch hohe Leistungsreserven und professionellen Klang. Das robuste Kunststoffgehäuse sorgt für ein transportfreundliches Gewicht. Auch als Monitorbox einsetzbar. Lautsprecherstativ inkl.`,
     images: ['/images/akkulautsprecherbt.webp'],
     pricePerUnit: 35,
     pricePerPair: 60,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Typ', value: 'Aktiv Bluetooth' },
-      { label: 'Personen', value: 'bis 200 (Sprache), bis 150 (Musik), bis 100 (Live)' },
-      { label: 'Anschlüsse', value: 'Bluetooth, XLR, Klinke' },
-      { label: 'Leistung', value: '750W RMS / 1.500W MAX' },
+      { label: 'Personen', value: '1-70 (Stck), 1-100 (Paar)' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '1.500W' },
       { label: 'Schalldruck', value: '130 dB' },
-      { label: 'Gewicht', value: '17-26 kg / Stck' },
+      { label: 'Bluetooth', value: '(bluetooth) Ja, Audio Streaming & Link' },
+      { label: 'Gewicht', value: '17,5kg' },
+      { label: 'Transport', value: 'Kleinwagen / PKW' },
     ],
   },
   {
     id: 'sub-sat-set-bluetooth',
     name: 'Sub-Sat Set Bluetooth',
-    description: 'Dieses kompakte aber kraftvolle 2.1 System besteht aus einem 12-Zoll Aktiv-Subwoofer mit 700W RMS Leistung (500W Sub + 2x 100W Satelliten). Es stehen verschiedene EQ Presets zur Verfügung, die Verbindung zu eurem Smartphone oder Tablet erfolgt via Bluetooth.',
-    detailDescription: `Sub-Sat Set Bluetooth
-Kompaktes 2.1 System mit kraftvollem Bass
-Dieses kompakte aber kraftvolle 2.1 System besteht aus einem 12-Zoll Aktiv-Subwoofer mit 700W RMS Leistung (500W Sub + 2x 100W Satelliten). Es stehen verschiedene EQ Presets zur Verfügung, die Verbindung zu eurem Smartphone oder Tablet erfolgt via Bluetooth.
-
-Technische Daten:
-12-Zoll (30cm) oder 15-Zoll Tieftonlautsprecher
-1-Zoll Hochtonhorn
-Leistung: 750 Watt RMS / 1.500 Watt MAX
-Max. Schalldruck: 130 dB
-Eingänge für Mikrofon/Line und Aux
-Bluetooth (mit Stereo-Koppelung)
-Gewicht: 17-26 kg / Stck (je nach Ausführung)`,
+    description: 'Dieses kompakte aber kraftvolle 2.1 System besteht aus einem 12-Zoll Aktiv-Subwoofer mit 700W RMS Leistung (500W Sub + 2x 100W Satelliten). Es stehen verschiedene EQ Presets zur Verfügung, die Verbindung zu eurem Smartphone oder Tablet erfolgt via Bluetooth. Inkl. Stative.',
+    detailDescription: `Dieses kompakte aber kraftvolle 2.1 System besteht aus einem 12-Zoll Aktiv-Subwoofer mit 700W RMS Leistung (500W Sub + 2x 100W Satelliten). Es stehen verschiedene EQ Presets zur Verfügung, die Verbindung zu eurem Smartphone oder Tablet erfolgt via Bluetooth. Inkl. Stative.`,
     images: ['/images/Sub-SatSet Bluetooth.webp'],
     pricePerUnit: 49,
     pricePerPair: 70,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Typ', value: 'Sub-Sat Set' },
-      { label: 'Personen', value: 'bis 200 (Sprache), bis 150 (Musik), bis 100 (Live)' },
-      { label: 'Anschlüsse', value: 'Bluetooth, XLR' },
-      { label: 'Leistung', value: '750W RMS / 1.500W MAX' },
-      { label: 'Schalldruck', value: '130 dB' },
-      { label: 'Gewicht', value: '17-26 kg / Stck' },
+      { label: 'Personen', value: '1-80' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '700W' },
+      { label: 'Schalldruck', value: '121,5 dB' },
+      { label: 'Bluetooth', value: '(bluetooth) Ja, Audio Streaming' },
+      { label: 'Gewicht', value: '31 kg' },
+      { label: 'Transport', value: 'Kleinwagen / PKW' },
     ],
   },
   {
     id: 'pa-saeule-bluetooth',
     name: 'PA Säule Bluetooth',
-    description: 'Das Altea-DUO-20 ist ein kompaktes und mit 2000W Power gleichzeitig sehr leistungsstarkes Beschallungssystem und lässt sich extrem einfach und schnell ohne weiteres Zubehör wie Stative oder Lautsprecherkabel montieren. Stecker in die Steckdose, fertig!',
-    detailDescription: `Säulen PA Bluetooth
-Universelles, kompaktes PA-System bis 100 Personen für Party, DJ und Live!
-Das leistungsstarke aktive Säulen PA-System der DAS Audio Altea Serie besticht durch hohe Pegelreserven, einfaches Handling und universelle Einsatzmöglichkeiten bei einem sehr breiten Abstrahlverhalten von 100°
-
-System bestehend aus:
-2 x 10-Zoll (25cm) Subwoofer, dient gleichzeitig als Sockel/Basis
-4 x 3-Zoll Neodym Mitteltöner PLUS 1-Zoll Druckkammertreiber
-Gleichmäßige Abstrahlung von 100° x 50°
-Class D Endstufe mit 1.000W RMS (2.000W Musikleistung)
-3 Eingänge (XLR, Klinke) und Bluetooth 
-Max System-Schalldruck: 127 dB
-24 Bit DSP-Steuerung mit Display und FIR Filter
-keine Verkabelung nötig, in die Steckdose, fertig
-Gesamtgewicht ca. 32 kg`,
+    description: 'Das Altea-DUO-20 ist ein kompaktes und mit 2000W Power gleichzeitig sehr leistungsstarkes Beschallungssystem mit dezenter Optik. Es lässt sich extrem einfach und schnell ohne weiteres Zubehör wie Stative oder Lautsprecherkabel montieren. Stecker in die Steckdose, fertig! Erhältlich in schwarz oder weiß.',
+    detailDescription: `Das Altea-DUO-20 ist ein kompaktes und mit 2000W Power gleichzeitig sehr leistungsstarkes Beschallungssystem mit dezenter Optik. Es lässt sich extrem einfach und schnell ohne weiteres Zubehör wie Stative oder Lautsprecherkabel montieren. Stecker in die Steckdose, fertig! Erhältlich in schwarz oder weiß.`,
     images: ['/images/PASaeuleBluetooth.webp'],
     pricePerUnit: 60,
     pricePerPair: 100,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Typ', value: 'PA Säule' },
-      { label: 'Personen', value: 'bis 70 (bis 100-120 mit 2 Säulen)' },
-      { label: 'Anschlüsse', value: 'Bluetooth, XLR, Klinke' },
-      { label: 'Leistung', value: '1.000W RMS / 2.000W Musikleistung' },
+      { label: 'Personen', value: '1-70 (Stck), 1-120 (Paar)' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '2.000W' },
       { label: 'Schalldruck', value: '127 dB' },
-      { label: 'Gewicht', value: 'ca. 32 kg' },
+      { label: 'Bluetooth', value: '(bluetooth) Ja, Audio Streaming & Link' },
+      { label: 'Gewicht', value: '31 kg' },
+      { label: 'Transport', value: 'Kleinwagen / PKW' },
     ],
   },
   {
     id: 'pa-set-small',
     name: 'PA Set SMALL',
-    description: 'Die Action 508A von DAS Audio sind kompakte aber sehr robuste Multifunktionslautsprecher. Mit bis zu 700W Leistung eignet sich das Set für Hintergrundmusik, Sprachbeschallung und Monitoranwendungen. Stative sind im Mietpreis enthalten.',
-    detailDescription: `PA Set Small
-Kompaktes und dezentes Lautsprecherset
-Mit den Action 508A des spanischen Herstellers DAS Audio haben wir 2 kompakte, universell einsetzbare Aktivlautsprecher zu einem Stereo-Set geschnürt, das optimal für Sprach- und Hintergrundbeschallung geeignet ist.
-
-Set besteht aus:
-2 x Aktivlautsprecher 
-8-Zoll (20 cm) Bass / 1-Zoll Hochtonhorn
-Leistung: 720 Watt (360 W RMS)
-Max. Schalldruck: 121 dB
-2 Eingangskanäle XLR oder Miniklinke
-EQ-Klangpresets
-2 x Lautsprecherstativ
-2 x XLR Anschlusskabel 10m`,
+    description: 'Die Action 508A von DAS Audio sind kompakte aber sehr robuste Multifunktionslautsprecher. Das Set eignet sich für Hintergrundmusik, Sprachbeschallung und Monitoranwendungen. Stative sind im Mietpreis enthalten.',
+    detailDescription: `Die Action 508A von DAS Audio sind kompakte aber sehr robuste Multifunktionslautsprecher. Das Set eignet sich für Hintergrundmusik, Sprachbeschallung und Monitoranwendungen. Stative sind im Mietpreis enthalten.`,
     images: ['/images/pasetsmall1.webp', '/images/pasetsmall2.webp'],
     pricePerUnit: 50,
     pricePerPair: 80,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Leistung', value: '720W (360W RMS)' },
-      { label: 'Personen', value: 'bis 100 (Sprache), bis 80 (Musik/Live)' },
-      { label: 'Typ', value: 'Aktiv' },
+      { label: 'Personen', value: '1-80' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '720W' },
       { label: 'Schalldruck', value: '121 dB' },
+      { label: 'Bluetooth', value: '(bluetooth) Nein, optional mit Upgrade Pack' },
+      { label: 'Gewicht', value: '29kg (inkl. Stative)' },
+      { label: 'Transport', value: 'Kleinwagen / PKW' },
     ],
   },
   {
     id: 'pa-set-medium',
     name: 'PA Set MEDIUM',
-    description: 'Dieses kompakte 2.1 Lautsprecher Set von DAS Audio kann problemlos in einem PKW transportiert werden und beschallt bis zu 100 Personen. Bestehend aus einem kräftigen 15er Subwoofer mit passenden aktiven Topteilen. Mit 2.000W Systemleistung eignet es sich perfekt für kleine bis mittlere Räume.',
-    detailDescription: `Lautsprecher Set M
-Leicht und kompakt aber GROß im Sound
-Die Altea Serie von DAS Audio - entwickelt und hergestellt in Spanien - ist eine kompakte aber kraftvolle PA-Anlage. Durch die eingebauten Verstärker und DSP sind Aufbau und Bedienung kein Problem. Das transportfreundliche Gewicht ermöglicht es auch einer einzelnen Person diese Anlage zu manövrieren und aufzubauen.
-
-Set bestehend aus je 2:
-Topteile DAS Audio Altea 408A:
-8-Zoll (20cm) Tief-/Mitteltonlautsprecher
-1-Zoll Hochtonhorn
-Leistung: 400 Watt RMS / 800W Max
-Max. Schalldruck: 123 dB
-Abstrahlwinkel: 90°x90°
-24-Bit-DSP mit 5 verschiedene EQ Presets
-FIR Filter
-2 regelbare Mic/Line Eingänge
-ABS Kunststoffgehäuse
-Gewicht: 13 kg
-Subwoofer DAS Audio Altea S15A:
-15" Langhub-Tieftonlautsprecher
-Leistung: 600W RMS / 1.200W Max
-Satte Basswiedergabe ab 40 Hz
-Max. Schalldruck: 131 dB 
-DSP-Steuerung mit variablen Trennfrequenzen
-Deep oder Loud Preset für wahlweise mehr Tiefgang oder druckvollere Wiedergabe
-solides Holzgehäuse mit widerstandsfähigem Strukturlack
-Gewicht: 30 kg`,
+    description: 'Dieses kompakte 2.1 Lautsprecher Set von DAS Audio kann problemlos in einem PKW transportiert werden und beschallt bis zu 100 Personen. Bestehend aus einem kräftigen 15er Subwoofer mit passenden aktiven Topteilen. Es eignet sich perfekt für kleine bis mittlere Räume, Bars/Kneipen und Tanzflächen Beschallung. Stative sind im Mietpreis enthalten.',
+    detailDescription: `Dieses kompakte 2.1 Lautsprecher Set von DAS Audio kann problemlos in einem PKW transportiert werden und beschallt bis zu 100 Personen. Bestehend aus einem kräftigen 15er Subwoofer mit passenden aktiven Topteilen. Es eignet sich perfekt für kleine bis mittlere Räume, Bars/Kneipen und Tanzflächen Beschallung. Stative sind im Mietpreis enthalten.`,
     images: ['/images/PaSetMedium.webp'],
     pricePerUnit: 90,
     pricePerPair: 120,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Leistung', value: '2.000W System (2x 400W + 2x 600W RMS)' },
-      { label: 'Personen', value: 'bis 150 (Sprache), bis 100 (Musik/Live)' },
-      { label: 'Typ', value: '2.1 Aktiv Set' },
-      { label: 'Schalldruck', value: '123 dB (Top) / 131 dB (Sub)' },
-      { label: 'Gewicht', value: '2x 13 kg + 2x 30 kg' },
+      { label: 'Personen', value: '1-100' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '2.000W' },
+      { label: 'Schalldruck', value: '131 dB' },
+      { label: 'Bluetooth', value: '(bluetooth) Nein, optional mit Upgrade Pack' },
+      { label: 'Gewicht', value: '60kg (inkl. Stative)' },
+      { label: 'Transport', value: 'Kleinwagen / PKW' },
     ],
   },
   {
     id: 'pa-set-large',
     name: 'PA Set LARGE',
-    description: 'Mit einer maximalen Systemleistung von 5.400W lassen sich mittlere Räume, kleine Hallen und Zelte adäquat beschallen. Wir empfehlen es für bis zu 150 Personen. Die 15er Subs spielen sehr definiert im Bassbereich, wodurch das Set auch hervorragend für Live-Sound geeignet ist.',
-    detailDescription: `Lautsprecher Set Large
-Universelles PA-System bis 150 Personen für Party, DJ und Live!
-Das leistungsstarke aktive PA-System der DAS Audio Altea Serie besticht durch hohe Pegelreserven, einfaches Handling und universelle Einsatzmöglichkeiten.
-
-Set bestehend aus:
-2 x 15-Zoll (40cm) Subwoofer mit 1.200W 
-2 x 12-Zoll (bi-amped) Aktivlautsprecher mit 1.500W
-Max System-Schalldruck: 134 dB
-DSP-Steuerung mit Display
-Stabiles Holz/ABS-Gehäuse mit robustem Frontgitter
-Subwoofer mit Transportrollen
-Schutzhüllen
-Distanzstangen
-Anschlusskabel
-Gesamtgewicht ca. 110 kg`,
+    description: 'Mit einer maximalen Systemleistung von 5.400W lassen sich mittlere Räume, kleine Säle und Clubs adäquat beschallen. Wir empfehlen es für bis zu 150 Personen. Die 15er Subs spielen sehr definiert im Bassbereich, wodurch das Set gleichermaßen für DJ Anwendungen und Live-Sound geeignet ist.',
+    detailDescription: `Mit einer maximalen Systemleistung von 5.400W lassen sich mittlere Räume, kleine Säle und Clubs adäquat beschallen. Wir empfehlen es für bis zu 150 Personen. Die 15er Subs spielen sehr definiert im Bassbereich, wodurch das Set gleichermaßen für DJ Anwendungen und Live-Sound geeignet ist.`,
     images: ['/images/PaSetLarge.webp'],
     pricePerUnit: 120,
     pricePerPair: 180,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Leistung', value: '5.400W System (2x 1.200W + 2x 1.500W)' },
-      { label: 'Personen', value: 'bis 150' },
-      { label: 'Typ', value: 'Aktiv + Sub' },
+      { label: 'Personen', value: '1-150' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '5.400W' },
       { label: 'Schalldruck', value: '134 dB' },
-      { label: 'Gewicht', value: 'ca. 110 kg' },
+      { label: 'Bluetooth', value: '(bluetooth) Nein, optional mit Upgrade Pack' },
+      { label: 'Gewicht', value: 'ca. 110kg' },
+      { label: 'Transport', value: 'Kombi / Van' },
     ],
   },
   {
     id: 'pa-set-xlarge',
     name: 'PA Set X-LARGE',
-    description: 'Für anspruchsvolle DJ- und Live-Anwendungen bis 250 Personen. Präzise und druckvolle Wiedergabe in allen Frequenzbereichen. Sie benötigen 2 Personen für den Aufbau und einen kleinen Kastenwagen oder Van zum Transport.',
-    detailDescription: `Lautsprecher Set X Large
-Universelles PA-System bis max 250 Personen für Party, DJ und Live!
-Das professionelle aktive PA-System von DAS Audio (Made in Spain) ist das Non-Plus-Ultra eines leistungsfähigen, mittleren PA Systems. Satte Bässe, kristallklare Höhen sorgen für einen ausgewogenen Sound für alle Andwendungsbereiche.
-
-Set bestehend aus je 2:
-Topteile DAS Audio VANTEC 12A:
-12-Zoll (25cm) Tieftonlautsprecher
-1,4-Zoll Hochtonhorn
-Leistung: 750W RMS / 1.500 Watt Peak
-Schalldruck: 135 dB Peak
-Abstrahlwinkel: 90°x50°
-DSP mit FIR Filtern
-Bluetooth Audio
-Gehäuse aus Birkenmultiplexholz mit widerstandsfähigem Strukturlack
-Gewicht: 21,5 kg
-Subwoofer DAS Audio VANTEC 18A:
-18" Langhub-Tieftonlautsprecher
-Leistung: 1.000W RMS / 2,000W Peak
-Satte Basswiedergabe ab 35 Hz (Deep Einstellung ab 30 Hz)
-Schalldruck: 134 dB Peak
-Eingebaute digitale Frequenzweiche, regelbar
-DSP-Steuerung 
-Massives Holzgehäuse mit widerstandsfähigem Strukturlack
-Gewicht: 40 kg`,
+    description: 'Für anspruchsvolle DJ- und Live-Anwendungen empfehlen wir dieses professionelle PA Set bis 250 Personen. Präzise und druckvolle Wiedergabe in allen Frequenzbereichen. Sie sollten für den Transport und Aufbau 2 Personen einplanen.',
+    detailDescription: `Für anspruchsvolle DJ- und Live-Anwendungen empfehlen wir dieses professionelle PA Set bis 250 Personen. Präzise und druckvolle Wiedergabe in allen Frequenzbereichen. Sie sollten für den Transport und Aufbau 2 Personen einplanen.`,
     images: ['/images/PaSetXLarge.webp'],
     pricePerUnit: 150,
     pricePerPair: 220,
     categorySlug: 'pa-anlagen',
-    offerInfo: 'Für noch mehr "POWER" kann das System durch 2 weitere 18er Subbässe erweitert werden. Damit lassen sich dann bis zu 300 Personen mit massivem Basspegel beschallen. Aufpreis für 2 weitere Subs: 70,- €',
+    offerInfo: 'Für noch mehr "POWER" kann das System durch 2 weitere 18er Subbässe erweitert werden. Damit lassen sich dann noch mehr Personen mit massivem Basspegel beschallen. Aufpreis für 2 weitere Subs: 70,- €',
     specs: [
-      { label: 'Leistung', value: '3.500W RMS (2x 750W + 2x 1.000W)' },
-      { label: 'Personen', value: 'bis 250 (bis 300 mit Erweiterung)' },
-      { label: 'Typ', value: 'Aktiv + Sub' },
-      { label: 'Schalldruck', value: '135 dB (Top) / 134 dB (Sub)' },
-      { label: 'Gewicht', value: '2x 21,5 kg + 2x 40 kg' },
+      { label: 'Personen', value: '1-250 (350 mit 4 Subs)' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '6.000W' },
+      { label: 'Schalldruck', value: '137 dB' },
+      { label: 'Bluetooth', value: '(bluetooth) Nein, optional mit Upgrade Pack' },
+      { label: 'Gewicht', value: 'ca. 140kg' },
+      { label: 'Transport', value: 'Transporter' },
     ],
   },
   {
     id: 'pa-set-premium',
     name: 'PA Set PREMIUM',
-    description: 'Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Designed and Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem Transportgewicht (passt spielen in einen PKW Kombi), lassen sich bis zu 250 Personen adäquat beschallen.',
-    detailDescription: `PA Set PREMIUM
-Dieses kompakte System überzeugt auf ganzer Linie!
-Die Lautsprecher der NeoLite Serie von Zenit Audio (Made in Germany) zeichnen sich durch maximalen Sound, bei minimaler Optik aus. Durch feines, digitales Processing gepaart mit extra ausgesuchten, hochwertigen Komponenten erreicht die PA ein audiophiles Klangbild, welches man sonst nur von HiFi Lautsprechern kennt.
-
-System bestehend aus:
-1 x Audio Zenit NLW 212 A
-Aktiver Systemsubwoofer mit 2 x 12 Zoll Hochleistungs Chassis
-2.500W + 800W + 800W RMS Class D Endstufe
-DSP 
-versorgt alle übrigen Systemkomponenten
-1 x Audio Zenit NLW 212
-Passiver Subwoofer mit 2 x 12 Zoll Hochleistungs Chassis
-2.000W RMS
-2 x Audio Zenit NL 208
-passiver High Performance PA Speaker mit 2 x 8 Zoll Tief/Mitteltöner + 1 Zoll Hochtonhorn
-600W RMS
-Abstrahlung: 90 x 60 Grad
-sehr schlankes und ansprechendes Design
-2 x Distanzstange 
-Komplette Verkabelung 
-Gesamtgewicht nur ca. 100 kg`,
+    description: 'Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportollen.',
+    detailDescription: `Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportollen.`,
     images: ['/images/pasetpremium2.webp', '/images/audiozenit-1920w.webp'],
     pricePerUnit: 180,
     pricePerPair: 250,
     categorySlug: 'pa-anlagen',
-    offerInfo: 'Für noch mehr "POWER" kann das System durch 2 weitere Doppel-12er Bässe erweitert werden. Mit 5kW RMS Bassleistung lassen sich dann bis zu 400 Personen mit massivem Basspegel beschallen. Aufpreis für 2 weitere Subs: 90,- €',
+    offerInfo: 'Für noch mehr "POWER" kann das System durch 2 weitere Doppel-12er Bässe erweitert werden. Mit 5kW RMS Bassleistung lassen sich dann noch mehr Personen mit massivem Basspegel beschallen. Aufpreis für 2 weitere Subs: 90,- €',
     specs: [
-      { label: 'Leistung', value: '4.100W RMS (2.500W + 800W + 800W + 2.000W + 1.200W)' },
-      { label: 'Personen', value: 'bis 250 (bis 400 mit Erweiterung)' },
-      { label: 'Typ', value: 'Premium Line Array' },
-      { label: 'Gewicht', value: 'ca. 100 kg' },
+      { label: 'Personen', value: '1-250 (350 mit 4 Subs)' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Leistung', value: '5.200W' },
+      { label: 'Schalldruck', value: '138,5 dB' },
+      { label: 'Bluetooth', value: '(bluetooth) Nein' },
+      { label: 'Gewicht', value: 'ca. 100kg' },
+      { label: 'Transport', value: 'Kombi / Van' },
     ],
   },
   {
     id: 'pa-set-outdoor',
     name: 'PA Set OUTDOOR',
     description: 'Wenn es größere Flächen im Außenbereich zu beschallen gilt, wo längere Strecken überbrückt werden müssen, empfehlen sich passive Lautsprecher, die mit einem einzigen Kabel anschließbar sind. Die spritzwasser-geschützten Lautsprecher halten auch Regen und Wind stand und sind somit auch bei ungünstigem Wetter einsetzbar. Das Set kann einfach durch weitere Lautsprecher erweitert werden.',
-    detailDescription: `PA Set Outdoor
-Arbeitstiere für Beschallungen aller Art im Freien
-Dieses Set eignet sich für alle Anwendungen im Freien, wo Aktivboxen aufgrund der eingebauten Elektronik nicht verwendet werden können. Die Boxen sind mit spritzwassergeschütztem Frontgitter und strapazierfähiger Oberfläche ausgestattet und halten somit auch mal einen Regenschauer aus. - Erweiterbar durch weitere Boxen -
-
-Technische Daten:
-Topteile:
-12-Zoll (30cm) oder 15-Zoll Tieftonlautsprecher
-1-Zoll Hochtonhorn
-Leistung: 500 (1.000) Watt
-Max. Schalldruck: 131 dB
-Sehr robuste Lautsprecherbox
-Spritzwassergeschütztes, stabiles Frontgitter
-Gewicht: 12,5 kg
-Endstufe:
-Leistung: 2 x 500W (8 Ohm) bei 2 Lautsprechern / 2x 1.000W (4 Ohm) bei 4 Lautsprechern.
-Lüfterkühlung
-Schutzschaltungen
-Gewicht: 14,5 kg`,
+    detailDescription: `Wenn es größere Flächen im Außenbereich zu beschallen gilt, wo längere Strecken überbrückt werden müssen, empfehlen sich passive Lautsprecher, die mit einem einzigen Kabel anschließbar sind. Die spritzwasser-geschützten Lautsprecher halten auch Regen und Wind stand und sind somit auch bei ungünstigem Wetter einsetzbar. Das Set kann einfach durch weitere Lautsprecher erweitert werden.`,
     images: ['/images/pasetoutdoor.webp'],
     pricePerUnit: 70,
     pricePerPair: 105,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Leistung', value: '2x 500W (8 Ohm) / 2x 1.000W (4 Ohm)' },
-      { label: 'Personen', value: 'bis 200 (Sprache), bis 150 (Musik), bis 100 (Live)' },
-      { label: 'Typ', value: 'Outdoor-geeignet' },
+      { label: 'Personen', value: '1-200 (500) Sprache' },
+      { label: 'Indoor', value: 'Indoor & Outdoor' },
+      { label: 'Leistung', value: '1.000W' },
       { label: 'Schalldruck', value: '131 dB' },
-      { label: 'Gewicht', value: '12,5 kg (Top) + 14,5 kg (Endstufe)' },
+      { label: 'Bluetooth', value: '(bluetooth) Nein' },
+      { label: 'Gewicht', value: 'ca. 45 kg (inkl. Zubehör)' },
+      { label: 'Transport', value: 'Kleinwagen / PKW' },
     ],
   },
   {
     id: 'profi-pa-line-array-event-26a',
     name: 'Profi PA / Line-Array Event 26A',
-    description: 'Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe. Sie benötigen 2 Personen für den Aufbau und einen kleinen Kastenwagen oder Minibus zum Transport.',
-    detailDescription: `Profi PA / Line-Array Event 26A
-Line Array D.A.S. Audio EVENT
-Das Universalgenie - skalierbares Line Array mit Pro Sound - Made in Spain
-Es ist kein Geheimnis mehr, der spanische Lautsprecherbauer D.A.S. Audio zählt mittlerweile zu den angesagten Brands in Europa. Mit dem EVENT 26A Line Array ist ein kompaktes aber klanglich überzeugendes System am Start, das auch Sie begeistern wird.
-
-Mögliche Konfigurationen:
-4 Tops / 2 Bässe: 250 bis max. 300 Personen
-8 Tops / 4 Bässe: 500 Personen
-12 Tops / 6 Bässe: 750 bis max. 1.000 Personen
-16 Tops / 8 Bässe: bis max. 1.500 Personen (nur auf Anfrage verfügbar)
-
-Technische Daten:
-Topteile Event 26A:
-2 x 6-Zoll Tief-/Mitteltonlautsprecher mit PhasePlug
-1 x 1,75-Zoll Hochtonhorn mit Waveformer
-Leistung: 400W RMS / 800W Peak
-Max. Schalldruck: 131 dB
-Abstrahlwinkel 100° horizontal (vertikal abhängig von der Anzahl der Einheiten)
-Gewicht: 16,5 kg
-Bässe Event 115A:
-Professioneller 15" Langhub-Tieftonlautsprecher
-Leistung: 600W RMS / 1.200W Peak
-Max Schalldruck: 131 dB
-Programierbare 24-Bit DSP mit FIR-Filterung
-Gewicht: 37 kg`,
+    description: 'Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe. Sie sollten für den Transport und Aufbau 2 Personen einplanen.',
+    detailDescription: `Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe. Sie sollten für den Transport und Aufbau 2 Personen einplanen.`,
     images: ['/images/paprofi1.webp', '/images/paprofi2.webp'],
     pricePerUnit: 225,
     categorySlug: 'pa-anlagen',
@@ -596,10 +412,13 @@ Gewicht: 37 kg`,
       { label: 'Set Large (12 Tops, 6 Bässe)', price: 500 },
     ],
     specs: [
-      { label: 'Typ', value: 'Line-Array System' },
-      { label: 'Personen', value: '250-1.500 (je nach Konfiguration)' },
-      { label: 'Leistung', value: '400W RMS (Top) / 600W RMS (Bass)' },
-      { label: 'Schalldruck', value: '131 dB' },
+      { label: 'Personen', value: '1-1.500 (je nach Konfiguration)' },
+      { label: 'Indoor', value: 'Indoor & Outdoor IP44' },
+      { label: 'Leistung', value: 'ab 3.200W' },
+      { label: 'Schalldruck', value: 'ab 131 dB' },
+      { label: 'Bluetooth', value: '(bluetooth) Nein' },
+      { label: 'Gewicht', value: 'ab 150 kg' },
+      { label: 'Transport', value: 'Transporter' },
       { label: 'Gewicht', value: '16,5 kg (Top) / 37 kg (Bass)' },
       { label: 'Outdoor', value: 'Ja (IP44)' },
     ],
@@ -2473,10 +2292,47 @@ Mietpreis 6x3m: 50,- €`,
       { label: 'Anwendung', value: 'Mikrofone' },
     ],
   },
+  
+  // Upgrade-Kits für PA-Anlagen
+  {
+    id: 'upgrade-kit-bluetooth-mixer',
+    name: 'Upgrade Kit: Mixer mit Bluetooth',
+    description: 'Audiomischpult mit Bluetooth-Funktion für kabellose Musikübertragung. Ideal als Upgrade für PA-Sets ohne Bluetooth.',
+    detailDescription: `Audiomischpult mit Bluetooth-Funktion für kabellose Musikübertragung. Ideal als Upgrade für PA-Sets ohne Bluetooth. Ermöglicht die drahtlose Übertragung von Musik von Smartphone, Tablet oder Laptop.`,
+    images: ['/images/mixer-bluetooth.webp'],
+    pricePerUnit: 15,
+    categorySlug: 'pa-anlagen',
+    isUpgradeKit: true,
+    specs: [
+      { label: 'Typ', value: 'Audiomischpult' },
+      { label: 'Bluetooth', value: 'Ja, Audio Streaming' },
+      { label: 'Kanäle', value: '4-8 Kanäle' },
+      { label: 'Eingänge', value: 'XLR, Klinke, Bluetooth' },
+    ],
+  },
+  {
+    id: 'upgrade-kit-mikrofon',
+    name: 'Upgrade Kit: Mikrofon',
+    description: 'Professionelles Mikrofon für Sprachbeschallung und Gesang. Ideal als Zusatz für PA-Sets.',
+    detailDescription: `Professionelles Mikrofon für Sprachbeschallung und Gesang. Ideal als Zusatz für PA-Sets. Kabelgebunden oder drahtlos verfügbar.`,
+    images: ['/images/mikrofon.webp'],
+    pricePerUnit: 10,
+    categorySlug: 'pa-anlagen',
+    isUpgradeKit: true,
+    specs: [
+      { label: 'Typ', value: 'Mikrofon' },
+      { label: 'Ausführung', value: 'Kabelgebunden oder Drahtlos' },
+      { label: 'Anwendung', value: 'Sprache, Gesang' },
+    ],
+  },
 ];
 
 export function getProductsByCategory(categorySlug: string): Product[] {
-  return products.filter(product => product.categorySlug === categorySlug);
+  return products.filter(product => product.categorySlug === categorySlug && !product.isUpgradeKit);
+}
+
+export function getUpgradeKitsByCategory(categorySlug: string): Product[] {
+  return products.filter(product => product.categorySlug === categorySlug && product.isUpgradeKit === true);
 }
 
 export function getProductById(id: string): Product | undefined {

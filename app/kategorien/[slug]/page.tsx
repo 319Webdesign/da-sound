@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getCategoryBySlug, getAllCategorySlugs } from '@/lib/categories';
-import { getProductsByCategory } from '@/lib/products';
+import { getProductsByCategory, getUpgradeKitsByCategory } from '@/lib/products';
 import { data } from '@/lib/data';
 import { MapPin, Clock } from 'lucide-react';
 import Link from 'next/link';
@@ -38,6 +38,7 @@ export default async function CategoryPage({ params }: PageProps) {
   }
 
   const categoryProducts = getProductsByCategory(slug);
+  const upgradeKits = getUpgradeKitsByCategory(slug);
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
@@ -80,6 +81,23 @@ export default async function CategoryPage({ params }: PageProps) {
               </p>
             </div>
             <ProductList products={categoryProducts} />
+          </div>
+        </section>
+      )}
+
+      {/* Upgrade-Kits / Zusatzartikel */}
+      {upgradeKits.length > 0 && (
+        <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Upgrade-Kits & Zusatzartikel
+              </h2>
+              <p className="text-gray-600">
+                Erweitern Sie Ihre PA-Anlage mit diesen optionalen Upgrade-Kits. Alle Preise verstehen sich inkl. 19% MwSt.
+              </p>
+            </div>
+            <ProductList products={upgradeKits} />
           </div>
         </section>
       )}
