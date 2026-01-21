@@ -43,6 +43,20 @@ export default function Navigation() {
                 const isActive = pathname === link.href || 
                   (link.href !== '/' && pathname?.startsWith(link.href));
                 
+                // Kontakt als Button stylen
+                if (link.href === '/kontakt') {
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      prefetch={true}
+                      className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-medium transition-colors text-base"
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                }
+                
                 return (
                   <Link
                     key={link.href}

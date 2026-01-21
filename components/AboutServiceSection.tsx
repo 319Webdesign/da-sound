@@ -21,6 +21,7 @@ import { data } from '@/lib/data';
 interface EventType {
   icon: React.ComponentType<{ className?: string }>;
   label: string;
+  mobileLabel?: string;
 }
 
 const eventTypes: EventType[] = [
@@ -29,7 +30,7 @@ const eventTypes: EventType[] = [
   { icon: Briefcase, label: 'Firmenevents' },
   { icon: Users, label: 'Stadtfeste' },
   { icon: Mic, label: 'Live-Konzerte' },
-  { icon: PartyPopper, label: 'Faschingsveranstaltungen' },
+  { icon: PartyPopper, label: 'Faschingsveranstaltungen', mobileLabel: 'Faschings-\nveranstaltungen' },
 ];
 
 const cities = [
@@ -84,7 +85,7 @@ export default function AboutServiceSection() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center lg:text-left">
                 Wir sind Experten für
               </h3>
-              <div className="grid grid-cols-2 gap-4 justify-items-center lg:justify-items-start">
+              <div className="grid grid-cols-2 gap-3 md:gap-4 justify-items-start">
                 {eventTypes.map((event, index) => {
                   const IconComponent = event.icon;
                   return (
@@ -94,14 +95,27 @@ export default function AboutServiceSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className="flex items-center gap-3 w-full justify-center lg:justify-start"
+                      className="flex items-center gap-2 md:gap-3 w-full justify-start"
                     >
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <CheckCircle2 className="w-5 h-5 text-primary" />
+                      <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                       </div>
-                      <div className="flex items-center gap-2">
-                        <IconComponent className="w-5 h-5 text-primary" />
-                        <span className="text-gray-900 font-medium">{event.label}</span>
+                      <div className="flex items-center gap-1.5 md:gap-2 min-w-0 flex-1">
+                        <IconComponent className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                        {event.mobileLabel ? (
+                          <>
+                            <span className="text-gray-900 font-medium text-sm md:text-base break-words leading-tight whitespace-pre-line md:hidden">
+                              {event.mobileLabel}
+                            </span>
+                            <span className="hidden md:inline text-gray-900 font-medium text-base leading-tight">
+                              {event.label}
+                            </span>
+                          </>
+                        ) : (
+                          <span className="text-gray-900 font-medium text-sm md:text-base break-words leading-tight">
+                            {event.label}
+                          </span>
+                        )}
                       </div>
                     </motion.div>
                   );

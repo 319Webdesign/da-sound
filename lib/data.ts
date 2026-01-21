@@ -61,6 +61,6 @@ export const data = {
     price: '49€',
     pricePeriod: '/ Tag',
     ctaText: 'Zur Produktseite',
-    productUrl: '/produkte/speech-100', // Dashboard: URL zur Produktseite
+    productUrl: '/produkte/speech-100-konferenzsystem', // Dashboard: URL zur Produktseite
   },
 };

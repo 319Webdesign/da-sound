@@ -82,7 +82,7 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
             </button>
             
             <Link
-              href="#kontakt"
+              href="/kontakt"
               className="group flex items-center justify-center gap-2 bg-white border-2 border-gray-200 hover:border-primary text-gray-900 hover:text-primary px-8 py-4 rounded-xl font-semibold transition-all text-lg"
             >
               <MessageCircle className="w-5 h-5" />
@@ -97,7 +97,7 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
             transition={{ delay: 0.4, duration: 0.5 }}
             className="pt-2"
           >
-            <GoogleRatingBadge />
+            <GoogleRatingBadge googleBusinessUrl="https://www.google.com/maps/place/?q=place_id:ChIJ5c3RqQ57vUcR790xWEv0vQo" />
           </motion.div>
         </motion.div>
 
