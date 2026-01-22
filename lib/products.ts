@@ -1058,7 +1058,7 @@ Beide Varianten eignen sich perfekt zur dekorativen Ausleuchtung von Räumen, G�
   {
     id: 'led-derby-effekt-mit-strobe',
     name: 'LED Derby Effekt mit Strobe',
-    description: 'Einfacher aber effektvoller Derby-Effekt, der Leben in die Bude bringt. Optimal für Partys kann dieser einfach auf den Boden oder Tisch gestellt werden und läuft dann soundgesteuert. Mehrere dieser Effekte sind via DMX synchronisierbar.',
+    description: 'Einfacher aber effektvoller Derby-Effekt, der Leben in die Bude bringt. Optimal für Partys kann dieser einfach auf den Boden oder Tisch gestellt werden und läuft dann soundgesteuert. Mehrere dieser Effekte lassen sich synchronisieren.',
     detailDescription: `LED Derby Lichteffekt
 Vielseitiger Strahleneffekt für kleine Tanzflächen/Räume mit Strobo-Funktion
 
@@ -1067,21 +1067,18 @@ Dieser coole und kompakte LED Effekt, bringt Bewegung und Dynamik auf jede Tanzf
     pricePerUnit: 15,
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'LED Derby Lichteffekt' },
-      { label: 'Linsen', value: '40 Linsen' },
-      { label: 'LEDs', value: '4 x 3 W Multicolor-LEDs' },
-      { label: 'Strobe-LEDs', value: '16 weiße SMD LEDs' },
-      { label: 'Programme', value: 'Automatikprogramme, Sound-to-Light Modus' },
-      { label: 'Steuerung', value: 'DMX-steuerbar oder Stand-Alone Betrieb' },
-      { label: 'Montage', value: 'Stehende oder hängende Montage' },
-      { label: 'Fernbedienung', value: 'Zur Programmsteuerung' },
-      { label: 'Gewicht', value: '2 kg' },
+      { label: 'Leistung', value: '4 x 3 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: 'RGB/W' },
+      { label: 'Soundsteuerung', value: 'Ja, eingeb. Mikrofon' },
+      { label: 'DMX', value: 'DMX' },
+      { label: 'Gewicht', value: '1,8 kg' },
     ],
   },
   {
     id: 'led-triple-flower',
     name: 'LED Triple Flower',
-    description: 'Wie der Derby ist auch die Flower ein klassischer Diskoeffekt. Hier gleich in 3-Facher Version mit drehenden Prismen und verschiedenen Farbwechseln. Die 3 x 30W COB LEDs haben ordentlich Lichtleistung und können somit auch große Räume / Tanzflächen füllen. Mehrere dieser Effekte können via DMX synchronisiert werden.',
+    description: 'Wie der Derby ist auch die Flower ein klassischer Diskoeffekt. Hier gleich in 3-Facher Version mit drehenden Prismen und verschiedenen Farbwechseln. Dank sehr hoher Lichtleistung auch für große Räume / Tanzflächen geeignet. Macht auch im Freien eine gute Figur.',
     detailDescription: `LED Triple Flower
 Heller und dynamischer Lichteffekt bringt Bewegung auf den Dancefloor
 
@@ -1090,20 +1087,18 @@ Dieser Multieffekt liefert beeindruckende raumfüllende Flowereffekte in Partyr�
     pricePerUnit: 22.5,
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'LED Triple Flower' },
-      { label: 'Prismen', value: '3 rotierende Prismen (Strahlenbündel)' },
-      { label: 'COB-LEDs', value: '3 x 30 Watt COB-LEDs' },
-      { label: 'SMD-LEDs', value: '132 SMD LEDs' },
-      { label: 'Programme', value: 'Automatikprogramme, Sound-to-Light Modus' },
-      { label: 'Steuerung', value: 'DMX-steuerbar oder Stand-Alone Betrieb' },
-      { label: 'Montage', value: 'Stehende oder hängende Montage' },
+      { label: 'Leistung', value: '3 x 30 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: 'RGB' },
+      { label: 'Soundsteuerung', value: 'Ja, eingeb. Mikrofon' },
+      { label: 'DMX', value: 'DMX' },
       { label: 'Gewicht', value: '4,5 kg' },
     ],
   },
   {
     id: 'mirror-ball-saturn-led-effekt',
     name: 'Mirror Ball / Saturn LED Effekt',
-    description: 'Angelehnt an eine Spiegelkugel bietet dieser beeindruckende Lichteffekt sich drehende Strahlenbündel, die den ganzen Raum erfüllen. Verschiedene Showprogramme oder ein statisch langsam drehender Effekt verzaubern die Gäste. Bei uns in weiß zu mieten, perfekt für Hochzeiten oder Motto-Partys.',
+    description: 'Angelehnt an eine Spiegelkugel bietet dieser beeindruckende Lichteffekt sich drehende Strahlenbündel, die den ganzen Raum erfüllen. Verschiedene Showprogramme oder ein statisch langsam drehender Effekt verzaubern die Gäste. Bei uns in weißem Gehäuse zu mieten, perfekt für Hochzeiten oder Motto-Partys. Passende Stative mit weißer Husse sind gegen Aufpreis erhältlich.',
     detailDescription: `Mirror Ball / Saturn LED Effekt
 Beeindruckender Lichteffekt angelehnt an Spiegelkugel
 Angelehnt an eine Spiegelkugel bietet dieser beeindruckende Lichteffekt sich drehende Strahlenbündel, die den ganzen Raum erfüllen. Verschiedene Showprogramme oder ein statisch langsam drehender Effekt verzaubern die Gäste. Bei uns in weiß zu mieten, perfekt für Hochzeiten oder Motto-Partys.
@@ -1118,11 +1113,12 @@ Optimal für Hochzeiten oder Motto-Partys`,
     pricePerUnit: 25,
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'Mirror Ball / Saturn LED' },
-      { label: 'Features', value: 'Drehende Strahlenbündel' },
-      { label: 'Programme', value: 'Verschiedene Showprogramme, statisch' },
-      { label: 'Farbe', value: 'Weiß' },
-      { label: 'Anwendung', value: 'Hochzeiten, Motto-Partys' },
+      { label: 'Leistung', value: '5 x 10 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: 'RGB/WA+UV' },
+      { label: 'Soundsteuerung', value: 'Ja, eingeb. Mikrofon' },
+      { label: 'DMX', value: 'DMX' },
+      { label: 'Gewicht', value: '4,1 kg' },
     ],
   },
   {
@@ -1141,28 +1137,19 @@ Der BT-Meteor des belgischen Herstellers Briteq ist ein wahrer Hingucker. Die kr
     ],
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'Moving Head LED' },
-      { label: 'Modell', value: 'BT-Meteor (Briteq)' },
-      { label: 'Spannungsversorgung', value: '100-240 V 50/60Hz' },
-      { label: 'Leistungsaufnahme', value: '160 Watt' },
-      { label: 'Pan/Tilt Movement', value: '540° / 270°' },
-      { label: 'Leuchtmittel', value: '100 Watt weiße LED (9000K Farbtemperatur)' },
-      { label: 'Abstrahlwinkel', value: '12° - 16°' },
-      { label: 'Goborad', value: '6 rotierenden Gobos (austauschbar)' },
-      { label: 'Farbrad', value: '8 Farben / weiß' },
-      { label: 'Prisma', value: 'Rotierendes 3-Facetten Prisma' },
-      { label: 'Programme', value: 'Automode und Sound-to-Light' },
-      { label: 'DMX Kanäle', value: '5, 11 und 14-Kanal Betrieb' },
-      { label: 'DMX Anschlüsse', value: '3pin-XLR male / female' },
-      { label: 'Stromanschlüsse', value: 'Neutrik® PowerCON®' },
-      { label: 'Abmessungen', value: '290 x 180 x 434 mm (Kopf in vertikaler Position)' },
-      { label: 'Gewicht', value: '8,36 kg' },
+      { label: 'Leistung', value: '100 W' },
+      { label: 'Pan/Tilt Range', value: '540° Pan / 270° Tilt' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: '8 Farben + weiß' },
+      { label: 'Soundsteuerung', value: 'Ja, eingeb. Mikrofon' },
+      { label: 'DMX', value: 'Stand-Alone/DMX' },
+      { label: 'Gewicht', value: '8,4 kg' },
     ],
   },
   {
     id: 'led-moving-head-beam-200w',
     name: 'LED Moving Head Beam 200W',
-    description: 'Sehr lichtstarker Moving Head BEAM mit einer 200W Hochleistungs-LED. Für große Bühnen / Hallen / Outdoor geeignet. Erzeugt beeindruckende Beam-Effekte oder breite Strahlenbündel dank der rotierenden Prismen. Es lassen sich mehrere Spots auch Stand-Alone synchroniseren, steuerbar über DMX oder das eingebaute Mikrofon (Sound-to-Light).',
+    description: 'Sehr lichtstarker Moving Head BEAM. Für große Bühnen / Hallen / Outdoor geeignet. Erzeugt beeindruckende Beam-Effekte oder breite Strahlenbündel dank der rotierenden Prismen. Es lassen sich mehrere Spots auch Stand-Alone synchroniseren, steuerbar über DMX oder das eingebaute Mikrofon (Sound-to-Light). Als Highlight bietet dieser Spot noch einen farbigen, programmierbaren LED Ring um die Linse.',
     detailDescription: `Moving Head BEAM
 Power auf Reichweite - die gebündelten Strahlen "zersägen" den Nachthimmel
 
@@ -1175,31 +1162,19 @@ Mit den 200W starken LED Moving Heads Beam von JB Systems erzeugen Sie atemberau
     ],
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'Moving Head BEAM' },
-      { label: 'Hersteller', value: 'JB Systems' },
-      { label: 'Spannungsversorgung', value: '100-240 V 50/60Hz' },
-      { label: 'Leistungsaufnahme', value: '285 Watt' },
-      { label: 'Pan/Tilt Movement', value: '540° / 270°' },
-      { label: 'Leuchtmittel', value: '200 Watt LED' },
-      { label: 'Abstrahlwinkel', value: '2,8°' },
-      { label: 'Helligkeit', value: 'bis zu 110.500 Lux auf 5m' },
-      { label: 'AURA LEDs', value: '36 pixelgesteuerte RGB LEDs' },
-      { label: 'Goborad', value: '13 Gobos' },
-      { label: 'Farbrad', value: '14 Farben + Multicolor' },
-      { label: 'Prismen', value: 'Rotierende 8-Facetten und 24-Facetten Prismen' },
-      { label: 'Dimmer', value: '0-100%' },
-      { label: 'Programme', value: 'Automode und Sound-to-Light' },
-      { label: 'DMX Kanäle', value: '5, 23 und 27-Kanal Betrieb' },
-      { label: 'DMX Anschlüsse', value: '3pin-XLR male / female' },
-      { label: 'Stromanschlüsse', value: 'Neutrik® PowerCON®' },
-      { label: 'Abmessungen', value: '330 x 245 x 453 mm (Kopf in vertikaler Position)' },
+      { label: 'Leistung', value: '200 W' },
+      { label: 'Pan/Tilt Range', value: '540° Pan / 270° Tilt' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: '14 Farben + weiß' },
+      { label: 'Soundsteuerung', value: 'Ja, eingeb. Mikrofon' },
+      { label: 'DMX', value: 'Stand-Alone/DMX' },
       { label: 'Gewicht', value: '14 kg' },
     ],
   },
   {
     id: 'led-moving-head-wash-7x40w',
     name: 'LED Moving Head WASH 7 x 40W',
-    description: 'Dank 7 leistungsstarker 40W LEDs gehört dieser Washer zu den helleren seiner Klasse. Die vielfältigen Farbkombinationen und der motorisierte ZOOM machen diesen Moving Head zu einem ambitionierten Werkzeug für Bühnen-, Theater- und Live-Events aller Art.',
+    description: 'Dank 7 leistungsstarker Qualitäts-LEDs gehört dieser Washer zu den helleren seiner Klasse. Die vielfältigen Farbkombinationen und der motorisierte ZOOM (5°-60°) machen diesen Moving Head zu einem ambitionierten Werkzeug für Bühnen-, Theater- und Live-Events aller Art.',
     detailDescription: `Moving Head Wash LED
 Ein Multitalent und Leisetreter für Bühne, DJ und Event
 
@@ -1212,23 +1187,19 @@ Der Challenger Wash von JB Systems ist ein universell einsetzbarer, heller Washe
     ],
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'Moving Head Wash LED' },
-      { label: 'Modell', value: 'Challenger Wash (JB Systems)' },
-      { label: 'Spannungsversorgung', value: 'AC 100 - 240 V, 50/60 Hz' },
-      { label: 'Stromanschluss', value: 'Neutrik® PowerCON® - 16 A in/out' },
-      { label: 'DMX Anschlüsse', value: '3pin-XLR & 5pin-XLR male / female' },
-      { label: 'Abstrahlwinkel', value: '5°-60°' },
-      { label: 'Leuchtmittel', value: '7 x 40 RGBW' },
-      { label: 'Lichtstärke', value: 'Lux 545 (@5m, beam 60°) - 14335 (@5m, beam 5°)' },
-      { label: 'DMX Modi', value: '5 / 15 oder 43 Kanäle' },
-      { label: 'Abmessungen', value: '417 x 292 x 244 mm' },
-      { label: 'Gewicht', value: '10 Kg' },
+      { label: 'Leistung', value: '7 x 40 W' },
+      { label: 'Pan/Tilt Range', value: '540° Pan / 270° Tilt' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: 'RGB/W' },
+      { label: 'Soundsteuerung', value: 'Ja, eingeb. Mikrofon' },
+      { label: 'DMX', value: 'Stand-Alone/DMX' },
+      { label: 'Gewicht', value: '10 kg' },
     ],
   },
   {
     id: 'jb-spyder-show-pattern-laser',
     name: 'JB Spyder Show- / Pattern Laser',
-    description: 'Der Spyder ist ein leistungsstarker RGB Laser, der verschiedene Muster (Patterns) und Punktprojektionen mit Mehrfachprismen realisieren kann. Dadurch wird ein raumfüllender Lasereffekt erzielt, der auch Stand-Alone und soundgesteuert ablaufen kann. Dieser Laser gehört zur Schutzklasse 3B und darf nur unter Einhaltung von Sicherheitsabstand etc. genutzt werden. Sie erhalten von uns eine entsprechende Einweisung.',
+    description: 'Der Spyder ist ein leistungsstarker RGB Laser, der verschiedene Muster (Patterns) und Punktprojektionen mit Mehrfachprismen realisieren kann. Dadurch wird ein raumfüllender Lasereffekt erzielt, der auch Stand-Alone und soundgesteuert ablaufen kann. Dieser Laser darf nur unter Einhaltung von Sicherheitsabstand etc. genutzt werden. Sie erhalten von uns eine entsprechende Einweisung. Um den Laser zu betreiben ist eine Sicherheitsunterweisung gem. OStrV oder die Anwesenheit eines Laserschutzbeauftragten erforderlich.',
     detailDescription: `RGB Showlaser von JB System
 Heller und dynamischer Lasereffekt bringt Bewegung auf den Dancefloor
 
@@ -1240,27 +1211,19 @@ Dieser Laser gehört zur Schutzklasse 3B und darf nur unter Einhaltung von Siche
     pricePerUnit: 25,
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'RGB Showlaser' },
-      { label: 'Hersteller', value: 'JB System' },
-      { label: 'Gesamtanschlusswert', value: '30 W' },
-      { label: 'Schutzart', value: 'IP20' },
-      { label: 'Stromanschluss', value: '230V / 50/60 Hz' },
-      { label: 'Laserklasse', value: 'Klasse 3B' },
-      { label: 'Laserfarbe', value: 'R/G/B' },
-      { label: 'Leistung Gesamt', value: '400 mW (Rot 110 mW + Grün 50 mW + Blau 160 mW)' },
-      { label: 'Lasermodul Rot (R)', value: '110 mW 650nm' },
-      { label: 'Lasermodul Grün (G)', value: '50 mW 532nm' },
-      { label: 'Lasermodul Blau (B)', value: '160 mW 445nm' },
-      { label: 'Ansteuerung', value: 'Stand-alone; Musiksteuerung über Mikrofon; DMX' },
-      { label: 'Gehäusefarbe', value: 'Schwarz' },
-      { label: 'Maße', value: '25,5 cm * 24,5 cm * 10,0 cm (L*B*H)' },
-      { label: 'Gewicht', value: '1,90 kg' },
+      { label: 'Leistung', value: '400 mW' },
+      { label: 'Schutzklasse', value: '3B*' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: 'RGB' },
+      { label: 'Soundsteuerung', value: 'Ja, eingeb. Mikrofon' },
+      { label: 'DMX', value: 'DMX' },
+      { label: 'Gewicht', value: '2 kg' },
     ],
   },
   {
     id: '2000mw-diodenlaser-showlaser',
-    name: '2.000 mW Diodenlaser Showlaser',
-    description: 'Für eine professionell anmutende Lasershow ist dieser reine Diodenlaser mit einem Output von 2 Watt die perfekte Wahl. Die Ansteuerung kann mit entsprechender Software oder einem einfachen DMX Controller im 5-Kanal-Modus erfolgen. Damit können sie die eingespeicherten Show-Programme abrufen. Dieser Laser gehört zur Schutzklasse 4 und darf nur unter Einhaltung von Sicherheitsabstand etc. genutzt werden. Sie erhalten von uns eine entsprechende, fachgerechte Einweisung.',
+    name: '2W Diodenlaser Showlaser',
+    description: 'Für eine professionell anmutende Lasershow ist dieser reine Diodenlaser mit einem Output von 2 Watt die perfekte Wahl. Die Ansteuerung kann mit entsprechender Software oder einem einfachen DMX Controller im 5-Kanal-Modus erfolgen. Damit können sie die eingespeicherten Show-Programme abrufen. Dieser Laser gehört zur Schutzklasse 4 und darf nur unter Einhaltung von Sicherheitsabstand etc. genutzt werden. Sie erhalten von uns eine entsprechende, fachgerechte Einweisung. Um den Laser zu betreiben ist eine Sicherheitsunterweisung gem. OStrV oder die Anwesenheit eines Laserschutzbeauftragten erforderlich.',
     detailDescription: `RGB Dioden Showlaser 2 Watt
 Für atemberaubende Laser-Shows mit dem "WOW" Effekt
 
@@ -1272,28 +1235,19 @@ Dieser Laser gehört zur Schutzklasse 4 und darf nur unter Aufsicht oder nach vo
     pricePerUnit: 50,
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'RGB Dioden Showlaser' },
-      { label: 'Hersteller', value: 'Laserworld' },
-      { label: 'Gesamtanschlusswert', value: '45 W' },
-      { label: 'Schutzart', value: 'IP4X' },
-      { label: 'Stromanschluss', value: 'Stromeinspeisung über P-Con (blau), Einbauversion Stromanschlusskabel mit Schutzkontaktstecker (mitgeliefert)' },
-      { label: 'Stromausgang', value: '1 x PowerCON (grau)' },
-      { label: 'Laserklasse', value: '4' },
-      { label: 'Laserfarbe', value: 'R/G/B' },
-      { label: 'Leistung Gesamt', value: '2W (Rot 500mW + Grün 500mW + Blau 1.400mW)' },
-      { label: 'Lasermodul Rot (R)', value: '500 mW 638nm' },
-      { label: 'Lasermodul Grün (G)', value: '500 mW 520nm' },
-      { label: 'Lasermodul Blau (B)', value: '1400 mW 450nm' },
-      { label: 'Ansteuerung', value: 'ILDA; DMX; ArtNet; Master/Slave Funktion; Stand-alone' },
-      { label: 'Gehäusefarbe', value: 'Schwarz' },
-      { label: 'Maße', value: 'Länge: 21 cm, Breite: 17 cm, Höhe: 14,5 cm' },
-      { label: 'Gewicht', value: '5,20 kg' },
+      { label: 'Leistung', value: '2.000 mW' },
+      { label: 'Schutzklasse', value: '4*' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: 'RGB' },
+      { label: 'Soundsteuerung', value: 'Nein' },
+      { label: 'DMX', value: 'DMX oder ShowNet' },
+      { label: 'Gewicht', value: '5,2 kg' },
     ],
   },
   {
     id: 'led-wasser-projektionseffekt',
     name: 'LED Wasser Projektionseffekt',
-    description: 'Der Wassereffekt verfügt über eine sehr helle 40W LED Lichtquelle und projiziert einen fließenden, einer Wasseroberfläche ähnelnden Schimmer an Wände und Decken. Ein toller Effekt für Bars und Clubs oder den Party-Keller. Wir empfehlen eine Abstand von mindestens 4 Metern zur bestrahlenden Fläche um eine großflächige Projektion zu erzielen.',
+    description: 'Der Wassereffekt verfügt über eine sehr helle LED Lichtquelle und projiziert einen fließenden, einer Wasseroberfläche ähnelnden Schimmer an Wände und Decken. Ein toller Effekt für Bars und Clubs oder den Party-Keller. Wir empfehlen einen Abstand von mindestens 4 Metern zur bestrahlenden Fläche, um eine großflächige Projektion zu erzielen.',
     detailDescription: `LED Wasser Projektionseffekt
 Fließender Wassereffekt für Wände und Decken
 Der Wassereffekt verfügt über eine sehr helle 40W LED Lichtquelle und projiziert einen fließenden, einer Wasseroberfläche ähnelnden Schimmer an Wände und Decken. Ein toller Effekt für Bars und Clubs oder den Party-Keller. Wir empfehlen eine Abstand von mindestens 4 Metern zur bestrahlenden Fläche um eine großflächige Projektion zu erzielen.
@@ -1308,12 +1262,12 @@ Empfohlener Abstand: mindestens 4 Meter zur bestrahlenden Fläche`,
     pricePerUnit: 30,
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'Wasser Projektion' },
-      { label: 'Leistung', value: '40W LED' },
-      { label: 'Effekt', value: 'Fließender, wasseroberflächenähnlicher Schimmer' },
-      { label: 'Anwendung', value: 'Bars, Clubs, Party-Keller' },
-      { label: 'Projektion', value: 'Wände und Decken' },
-      { label: 'Empfohlener Abstand', value: 'mindestens 4 Meter' },
+      { label: 'Leistung', value: '40 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: 'RGBW' },
+      { label: 'Soundsteuerung', value: 'Ja, eingeb. Mikrofon' },
+      { label: 'DMX', value: 'Stand-Alone / DMX' },
+      { label: 'Gewicht', value: '3,3 kg' },
     ],
   },
   {
@@ -1333,10 +1287,12 @@ Aufhängung: Anschlagmittel auf Anfrage`,
     pricePerUnit: 39,
     categorySlug: 'moving-heads',
     specs: [
-      { label: 'Typ', value: 'Spiegelkugel Set' },
-      { label: 'Größe', value: '50cm Durchmesser' },
-      { label: 'Inhalt', value: 'Kugel + Motor + BEAM Spot LED' },
-      { label: 'Aufhängung', value: 'Anschlagmittel auf Anfrage' },
+      { label: 'Leistung', value: '10 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Farbmischung', value: 'RGB' },
+      { label: 'Soundsteuerung', value: 'Ja, eingeb. Mikrofon' },
+      { label: 'DMX', value: 'Nein' },
+      { label: 'Gewicht', value: 'ca. 5 kg' },
     ],
   },
 
@@ -1344,8 +1300,8 @@ Aufhängung: Anschlagmittel auf Anfrage`,
   // Nebelmaschinen & Bühneneffekte
   {
     id: 'party-nebelmaschine-800w',
-    name: 'Party Nebelmaschine 800W',
-    description: 'Kompakte Nebelmaschine mit 800W Heizelement und einfacher ON / OFF Fernbedienung. Optimal für Hobby / Partylkeller, kleine Tanzflächen, Vereinsheim. Bringt die Strahlen ihrer Lichteffekt toll zur Geltung. Eine Tankfüllung ist im Mietpreis enthalten.',
+    name: 'Party Nebelmaschine',
+    description: 'Kompakte Nebelmaschine optimal für Hobby / Partykeller, kleine Tanzflächen, Vereinsheim. Bringt die Strahlen ihrer Lichteffekte toll zur Geltung. Eine Tankfüllung ist im Mietpreis enthalten. Dauernebelfunktion.',
     detailDescription: `Nebelmaschine Antari Z-800 MKII
 Der kompakte Nebler für Hobbykeller und Tanzfläche
 
@@ -1357,24 +1313,18 @@ Duftstoffe (z.B. Limette oder Kokos) auf Anfrage`,
     pricePerUnit: 20,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
-      { label: 'Modell', value: 'Antari Z-800 MKII' },
-      { label: 'Typ', value: 'Party Nebelmaschine' },
-      { label: 'Steuerung', value: 'Fernbedienung oder am Gerät selbst' },
-      { label: 'Heizleistung', value: '800 W' },
-      { label: 'Aufheizzeit', value: 'ca. 3 Minuten' },
-      { label: 'Tankinhalt', value: '0,8 Liter' },
-      { label: 'Ausstoßweite', value: 'ca. 5m' },
-      { label: 'Nebelmenge', value: 'ca. 300 m3/Min.' },
-      { label: 'Nebelfluid', value: 'Auf Wasserbasis' },
-      { label: 'Gewicht', value: '5,8 kg' },
-      { label: 'Inklusive', value: '1 Tankfüllung' },
-      { label: 'Zusatz', value: 'Duftstoffe (z.B. Limette oder Kokos) auf Anfrage' },
+      { label: 'Leistung', value: '800 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Nebelart', value: 'Shownebel' },
+      { label: 'Nebelausstoß', value: 'ca. 4m Ausstoßweite, 85 m3/min Nebelmenge' },
+      { label: 'Kabel', value: 'Kabelfernbedienung on/off' },
+      { label: 'Gewicht', value: '3,5 kg' },
     ],
   },
   {
     id: 'nebelmaschine-1500w',
-    name: 'Nebelmaschine 1.500W',
-    description: 'Leistungsstarke Nebelmaschine mit bis zu 8m Ausstoßweite geeignet für Bühnen, Dancefloors, Rauchsimulation / Dichtigkeitsprüfungen. Mit Volumen- / Timercontroller. Steuerbar auch per DMX. Eine Tankfüllung ist im Mietpreis enthalten.',
+    name: 'Pro Nebelmaschine',
+    description: 'Leistungsstarke Nebelmaschine geeignet für Bühnen, Dancefloors, Rauchsimulation / Dichtigkeitsprüfungen. Mit Volumen- / Timercontroller. Steuerbar auch per DMX. Eine Tankfüllung ist im Mietpreis enthalten.',
     detailDescription: `Nebelmaschine Antari Z-1200
 Discofeeling im Partykeller und Lichtzauber auf der Bühne
 
@@ -1386,24 +1336,18 @@ Duftstoffe (z.B. Limette oder Kokos) auf Anfrage`,
     pricePerUnit: 30,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
-      { label: 'Modell', value: 'Antari Z-1200' },
-      { label: 'Typ', value: 'Nebelmaschine' },
-      { label: 'Steuerung', value: 'Fernbedienung (Ausstoßmenge und Intervall einstellbar) oder DMX' },
-      { label: 'Heizleistung', value: '1.200 W' },
-      { label: 'Aufheizzeit', value: '5 Minuten' },
-      { label: 'Tankinhalt', value: '2,5 Liter' },
-      { label: 'Ausstoßweite', value: '7m' },
-      { label: 'Nebelmenge', value: 'ca. 600 m3/Min.' },
-      { label: 'Nebelfluid', value: 'Auf Wasserbasis' },
-      { label: 'Gewicht', value: '11,5 kg' },
-      { label: 'Inklusive', value: '1 Tankfüllung' },
-      { label: 'Zusatz', value: 'Duftstoffe (z.B. Limette oder Kokos) auf Anfrage' },
+      { label: 'Leistung', value: '1.250 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Nebelart', value: 'Shownebel' },
+      { label: 'Nebelausstoß', value: 'ca. 7m Ausstoßweite, 500 m3/min Nebelmenge' },
+      { label: 'Kabel', value: 'Kabelfernbedienung / DMX' },
+      { label: 'Gewicht', value: '10,5 kg' },
     ],
   },
   {
     id: 'vertikal-nebelmaschine-spray-fogger',
-    name: 'Vertikal Nebelmaschine / Spray Fogger',
-    description: 'Sehr leistungsstarke 3kW Nebelmaschine mit bis zu 15m Ausstoßhöhe und farbigen LEDs für einen spektakulären Bühneneffekt, wie man ihn von sehr teuren CO2 Geräten her kennt. Mit Funkfernbedienung. Steuerbar auch per DMX. Eine Tankfüllung mit Extrem Fluid ist im Mietpreis enthalten.',
+    name: 'Vertikal Nebelmaschine / Jet Steam',
+    description: 'Sehr leistungsstarke 3kW Nebelmaschine mit bis zu 15m Ausstoßhöhe und farbigen LEDs für einen spektakulären Bühneneffekt, wie man ihn von sehr teuren CO2 Geräten her kennt. Mit Funkfernbedienung. Steuerbar auch per DMX. Eine Tankfüllung mit Spezial-Fluid (extrem dicht, kurze Standzeit) ist im Mietpreis enthalten.',
     detailDescription: `Vertikal Nebelmaschine FOG 3.0
 Beeindruckender Nebeleffekt für Bühne und Outdoor
 
@@ -1414,23 +1358,19 @@ Inkl. 1 Tankfüllung mit Spezialfluid`,
     pricePerUnit: 40,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
-      { label: 'Modell', value: 'FOG 3.0' },
-      { label: 'Typ', value: 'Vertikal Nebelmaschine' },
-      { label: 'Steuerung', value: 'Funk-Fernbedienung oder DMX (6 Kanäle)' },
-      { label: 'Heizleistung', value: '3.100 W' },
-      { label: 'Aufheizzeit', value: '9 Minuten' },
-      { label: 'Tankinhalt', value: '3,8 Liter' },
-      { label: 'Ausstoßhöhe', value: '12-15m' },
-      { label: 'Features', value: 'Anordnung aus mehrfarbigen LEDs für einen beeindruckenden Show-Effekt' },
-      { label: 'Nebelfluid', value: 'Auf Wasserbasis' },
-      { label: 'Gewicht', value: '18 kg' },
-      { label: 'Inklusive', value: '1 Tankfüllung mit Spezialfluid' },
+      { label: 'Leistung', value: '3.100 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Outdoor', value: 'Ja' },
+      { label: 'Nebelart', value: 'Spezialnebel / CO2-Effekt' },
+      { label: 'Nebelausstoß', value: 'ca. 15m Ausstoßweite, 500 m3' },
+      { label: 'Funk', value: 'Funkfernbedienung / DMX' },
+      { label: 'Gewicht', value: '21,5 kg' },
     ],
   },
   {
     id: 'hazer',
     name: 'Hazer',
-    description: 'Anders als Nebelmaschinen erzeugt ein Hazer einen feinen, raumgreifenden Dunst. Dieser setzt Strahleneffekte wie Laser, Derby oder Moving Heads perfekt in Szene ohne aber den Raum einzunebeln. Die Steuerung erfolgt wahlweise per Funkfernbedienung oder DMX. Eine Tankfüllung ist im Mietpreis enthalten.',
+    description: 'Anders als Nebelmaschinen erzeugt ein Hazer einen feinen, raumgreifenden Dunst. Dieser setzt Strahleneffekte wie Laser, Derby oder Moving Heads perfekt in Szene, ohne aber den Raum einzunebeln. Eine Tankfüllung ist im Mietpreis enthalten, reicht für viele Stunden Dauer-Betrieb.',
     detailDescription: `HAZER - Dunstnebelgerät
 Für effektvolle Lightshows und Laserprojektionen unverzichtbar
 
@@ -1441,20 +1381,18 @@ Inkl. 1 Tankfüllung`,
     pricePerUnit: 40,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
-      { label: 'Typ', value: 'HAZER - Dunstnebelgerät' },
-      { label: 'Steuerung', value: 'Funk-Fernbedienung oder DMX' },
-      { label: 'Aufheizzeit', value: 'Kurze Aufheizzeit' },
-      { label: 'Tankinhalt', value: '2,8 Liter' },
-      { label: 'Ausstoßmenge', value: 'ca. 70 m3/Min.' },
-      { label: 'Spezialfluid', value: 'Auf Ölbasis' },
+      { label: 'Leistung', value: '350 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Nebelart', value: 'Dunst / Haze' },
+      { label: 'Nebelausstoß', value: 'ca. 70 m3 / min.' },
+      { label: 'Funk', value: 'Funkfernbedienung / DMX' },
       { label: 'Gewicht', value: '14 kg' },
-      { label: 'Inklusive', value: '1 Tankfüllung' },
     ],
   },
   {
     id: 'bodennebelmaschine',
     name: 'Bodennebelmaschine',
-    description: 'Dieses Nebelgerät erzeugt einen bodentiefen Nebelschleier ganz ohne gefährliches Trockeneis. Durch Ultraschall Zerstäubung wird der Nebel mit Wasser angereichert und somit schwerer aus Luft. Optimal für Hochzeiten, Theater / Musical oder die Halloween Party. Eine Tankfüllung mit Spezialfluid ist im Mietpreis enthalten. Sie benötigen 5l destilliertes Wasser.',
+    description: 'Dieses Nebelgerät erzeugt einen bodentiefen Nebelschleier ganz ohne gefährliches Trockeneis. Durch Ultraschall-Zerstäubung wird der Nebel mit Wasser angereichert und somit schwerer aus Luft. Optimal für Hochzeiten, Theater / Musical oder die Halloween Party. Eine Tankfüllung mit Spezialfluid ist im Mietpreis enthalten. Sie benötigen zusätzlich mindestens 5l destilliertes Wasser.',
     detailDescription: `Low Fog - Bodennebelmaschine
 Dichter Bodennebel für Tanzfläche, Bühne und Video.
 
@@ -1468,15 +1406,12 @@ WICHTIG: Bitte befolgen Sie die Aufbau-Anleitung und leeren Sie das Gerät sorgf
     pricePerUnit: 80,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
-      { label: 'Typ', value: 'Low Fog - Bodennebelmaschine' },
-      { label: 'Erzeugt', value: 'Bodennebel aus destilliertem Wasser und Fluid' },
-      { label: 'Aufheizzeit', value: 'Nur ca. 4 Minuten' },
-      { label: 'Nebelmenge', value: 'ca. 250 m³ pro Minute' },
-      { label: 'Spezialfluid', value: 'Mit Spezialfluid: Nebel löst sich auf bevor er nach oben steigt' },
-      { label: 'Gewicht', value: '38 kg' },
-      { label: 'Inklusive', value: '1 Tankfüllung Nebelfluid, Fernbedienung' },
-      { label: 'Benötigt', value: 'Destilliertes Wasser (muss von Ihnen eingefüllt und nach Gebrauch entleert werden)' },
-      { label: 'Hinweis', value: 'WICHTIG: Bitte befolgen Sie die Aufbau-Anleitung und leeren Sie das Gerät sorgfältig nach Benutzung!' },
+      { label: 'Leistung', value: '1.400 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Nebelart', value: 'Bodennebel' },
+      { label: 'Nebelausstoß', value: 'ca. 250 m3/min.' },
+      { label: 'Funk', value: 'Funkfernbedienung / DMX' },
+      { label: 'Gewicht', value: '14 kg' },
     ],
   },
   {
@@ -1499,15 +1434,13 @@ Das Spezialgranulat können Sie bei uns erwerben. Pro Beutel (200gr) 39,- €, r
     ],
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
-      { label: 'Typ', value: 'Kaltfunkenmaschine "Cold Spark"' },
-      { label: 'Steuerung', value: 'Funk-Fernbedienung oder DMX' },
-      { label: 'Leistungsaufnahme', value: '700 W' },
-      { label: 'Aufheizzeit', value: 'ca. 3 Minuten' },
-      { label: 'Tankinhalt für Granulat', value: '180g reicht für 5-7 Minuten Betriebsdauer' },
-      { label: 'Ausstoßhöhe', value: '2-5m einstellbar' },
-      { label: 'Verfahren', value: 'Patentiertes Kaltfunkenverfahren' },
+      { label: 'Leistung', value: '700 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Outdoor', value: 'Ja' },
+      { label: 'Nebelart', value: 'Kaltfunken-Fontäne' },
+      { label: 'Nebelausstoß', value: '2-5m hoch' },
+      { label: 'Funk', value: 'Funkfernbedienung / DMX' },
       { label: 'Gewicht', value: '7 kg' },
-      { label: 'Spezialgranulat', value: 'Bei uns erhältlich, 39,- € pro Beutel (200gr, ca. 8 min Fontäne)' },
     ],
   },
 
@@ -1515,127 +1448,113 @@ Das Spezialgranulat können Sie bei uns erwerben. Pro Beutel (200gr) 39,- €, r
   {
     id: 'lcd-dlp-beamer',
     name: 'LCD DLP Beamer',
-    description: 'Universeller Beamer mit einer herkömmlichen Lampe, aber enormer Helligkeit. Präsentationen, Videos und Bilder sind auch tagsüber (in geschlossenen Räumen) gut sichtbar.',
+    description: 'Standard Business-Beamer mit einer herkömmlichen Lampe, aber enormer Helligkeit. PowerPoint Präsentationen, Videos und Bilder sind auch tagsüber (in geschlossenen Räumen) gut sichtbar.',
     detailDescription: `LCD DLP Beamer
-Universeller Beamer mit enormer Helligkeit
-Universeller Beamer mit einer herkömmlichen Lampe, aber enormer Helligkeit. Präsentationen, Videos und Bilder sind auch tagsüber (in geschlossenen Räumen) gut sichtbar.
+Standard Business-Beamer mit enormer Helligkeit
+Standard Business-Beamer mit einer herkömmlichen Lampe, aber enormer Helligkeit. PowerPoint Präsentationen, Videos und Bilder sind auch tagsüber (in geschlossenen Räumen) gut sichtbar.
 
 Merkmale:
 4000 Ansi-Lumen max. Helligkeit
 DLP Beamer
 20.000:1 Kontrastverhältnis
-4:3 oder 16:9 Bildformate
-HD Auflösung (1280x720)
+HD-ready 720p (1280x720)
+HDMI, RS-232 Anschlüsse
 2,8 kg Gewicht`,
     images: ['/images/acer1-1920w (1).webp'],
     pricePerUnit: 30,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Technologie', value: 'DLP Beamer' },
-      { label: 'Helligkeit', value: '4000 Ansi-Lumen max.' },
-      { label: 'Kontrastverhältnis', value: '20.000:1' },
-      { label: 'Bildformate', value: '4:3 oder 16:9' },
-      { label: 'Auflösung', value: 'HD (1280x720)' },
-      { label: 'Gewicht', value: '2,8 kg' },
+      { label: 'Projector', value: 'LCD DLP' },
+      { label: 'HD', value: 'HD-ready 720p (1280x720)' },
+      { label: 'Sun', value: '4.000 AnsiLumen' },
+      { label: 'Contrast', value: '20.000 : 1' },
+      { label: 'Hdmi-port', value: 'HDMI, RS-232' },
+      { label: 'Weight', value: '2,8 kg' },
     ],
   },
   {
     id: 'laser-dlp-beamer',
     name: 'Laser DLP Beamer',
-    description: 'Dieser moderne und kompakte Tageslicht-Projektor eignet sich für universelle Anwendungen bis zu einer Bildbreite von 3 Metern in Full-HD Auflösung. Auch bei nicht abgedunkelter Umgebung in Innenräumen, kann der Beamer durch die helle Laserlichtquelle mit DLP Technologie überzeugen.',
+    description: 'Dieser kompakte Tageslicht-Projektor eignet sich für universelle Anwendungen bis zu einer Bildbreite von 3 Metern in Full-HD Auflösung. Durch seine 3D-Fähigkeit auch optimal für HeimKino geeignet. Auch bei kaum abgedunkelter Umgebung in Innenräumen, kann der Beamer überzeugen.',
     detailDescription: `Laser DLP Beamer
-Moderner und kompakter Tageslicht-Projektor
-Dieser moderne und kompakte Tageslicht-Projektor eignet sich für universelle Anwendungen bis zu einer Bildbreite von 3 Metern in Full-HD Auflösung.
-
-Auch bei nicht abgedunkelter Umgebung in Innenräumen, kann der Beamer durch die helle Laserlichtquelle mit DLP Technologie überzeugen.
+Kompakter Tageslicht-Projektor
+Dieser kompakte Tageslicht-Projektor eignet sich für universelle Anwendungen bis zu einer Bildbreite von 3 Metern in Full-HD Auflösung. Durch seine 3D-Fähigkeit auch optimal für HeimKino geeignet. Auch bei kaum abgedunkelter Umgebung in Innenräumen, kann der Beamer überzeugen.
 
 Merkmale:
 4500 Ansi-Lumen max. Helligkeit
 Laser DLP Beamer
 300.000:1 Kontrastverhältnis
-4:3 oder 16:9 Bildformate
+Full-HD 1.080p (1920x1080)
 3D aktiv
-Full-HD Auflösung
+HDMI 2.0 /1.4, VGA Anschlüsse
 5,5 kg Gewicht`,
     images: ['/images/beamer1-1920w.webp'],
     pricePerUnit: 50,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Technologie', value: 'Laser DLP Beamer' },
-      { label: 'Helligkeit', value: '4500 Ansi-Lumen max.' },
-      { label: 'Kontrastverhältnis', value: '300.000:1' },
-      { label: 'Bildformate', value: '4:3 oder 16:9' },
-      { label: 'Features', value: '3D aktiv' },
-      { label: 'Auflösung', value: 'Full-HD' },
-      { label: 'Bildbreite', value: 'bis zu 3 Metern' },
-      { label: 'Gewicht', value: '5,5 kg' },
+      { label: 'Projector', value: 'Laser DLP' },
+      { label: 'HD', value: 'Full-HD 1.080p (1920x1080)' },
+      { label: 'Sun', value: '4.500 AnsiLumen' },
+      { label: 'Contrast', value: '300.000 : 1' },
+      { label: 'Hdmi-port', value: 'HDMI 2.0 /1.4, VGA' },
+      { label: 'Weight', value: '5,5 kg' },
     ],
   },
   {
     id: 'laser-dlp-beamer-pro',
-    name: 'Laser DLP Beamer Pro',
-    description: 'Bei diesem Panasonic Projektor handelt es sich um einen fortschrittlichen und sehr hellen Laser-LCD Beamer. Trotz der enormen Helligkeit ist er kompakt und leicht.',
-    detailDescription: `Laser DLP Beamer Pro - Panasonic
+    name: 'Laser Beamer Pro',
+    description: 'Bei diesem Panasonic Projektor handelt es sich um einen fortschrittlichen und sehr hellen Laser-LCD Beamer. Trotz der enormen Helligkeit ist er kompakt und leicht. Ein mechanischer Lens-Shift ermöglicht die Positionierung des Beamers auch außerhalb der Mittelachse.',
+    detailDescription: `Laser Beamer Pro - Panasonic
 Fortschrittlicher und sehr heller Laser-LCD Beamer
-Bei diesem Panasonic Projektor handelt es sich um einen fortschrittlichen und sehr hellen Laser-LCD Beamer. Trotz der enormen Helligkeit ist er kompakt und leicht.
+Bei diesem Panasonic Projektor handelt es sich um einen fortschrittlichen und sehr hellen Laser-LCD Beamer. Trotz der enormen Helligkeit ist er kompakt und leicht. Ein mechanischer Lens-Shift ermöglicht die Positionierung des Beamers auch außerhalb der Mittelachse.
 
 Merkmale:
 6.200 Ansi-Lumen 
 Laser Lichtquelle
-1,6 Facher optischer ZOOM
-Lensshift für verzerrrungsfreie Projektion
+Mechanischer Lens-Shift
 3.000.000 : 1 Kontrastverhältnis
-WUXGA Auflösung (1.920 x 1.200 Bildpunkte)
-Bildformat 16:10
-nur 7 kg Gewicht`,
+WUXGA Auflösung (1920x1200)
+HDMI, VGA, RJ-45 Digital-IN Anschlüsse
+7 kg Gewicht`,
     images: ['/images/panasonic1-1920w.webp'],
     pricePerUnit: 100,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Hersteller', value: 'Panasonic' },
-      { label: 'Technologie', value: 'Laser-LCD Beamer' },
-      { label: 'Helligkeit', value: '6.200 Ansi-Lumen' },
-      { label: 'Lichtquelle', value: 'Laser' },
-      { label: 'Zoom', value: '1,6 Facher optischer ZOOM' },
-      { label: 'Lensshift', value: 'Für verzerrungsfreie Projektion' },
-      { label: 'Kontrastverhältnis', value: '3.000.000 : 1' },
-      { label: 'Auflösung', value: 'WUXGA (1.920 x 1.200 Bildpunkte)' },
-      { label: 'Bildformat', value: '16:10' },
-      { label: 'Gewicht', value: '7 kg' },
+      { label: 'Projector', value: 'Laser LCD' },
+      { label: 'HD', value: 'WUXGA (1920x1200)' },
+      { label: 'Sun', value: '6.200 AnsiLumen' },
+      { label: 'Contrast', value: '3.000.000 : 1' },
+      { label: 'Hdmi-port', value: 'HDMI, VGA, RJ-45 Digital-IN' },
+      { label: 'Weight', value: '7 kg' },
     ],
   },
   {
     id: '4k-laser-dlp-beamer',
-    name: '4K Laser DLP Beamer',
-    description: 'Dieser fortschrittliche 1-Chip DLP Beamer mit Laser Lichtquelle überzeugt durch eine amtliche Lichtleistung und 4K (UHD) Auflösung. Der weite Zoom Ratio von 1.46-2.93:1 sorgt für variable Positionierung.',
-    detailDescription: `4K Laser DLP Beamer
+    name: '4K Laser Beamer',
+    description: 'Dieser fortschrittliche 1-Chip DLP Beamer mit Laser Lichtquelle überzeugt durch eine amtliche Lichtleistung und sensationelle 4K (UHD) Auflösung. Der weite Zoom Ratio von 1.46-2.93:1 und ein manueller Lens-Shift sorgt für variable Positionierung. Flüsterleiser Betrieb im QuietMode (28dB).',
+    detailDescription: `4K Laser Beamer
 Fortschrittlicher 1-Chip DLP Beamer mit Laser Lichtquelle
-Dieser fortschrittliche 1-Chip DLP Beamer mit Laser Lichtquelle überzeugt durch eine amtliche Lichtleistung und 4K (UHD) Auflösung. Der weite Zoom Ratio von 1.46-2.93:1 sorgt für variable Positionierung.
+Dieser fortschrittliche 1-Chip DLP Beamer mit Laser Lichtquelle überzeugt durch eine amtliche Lichtleistung und sensationelle 4K (UHD) Auflösung. Der weite Zoom Ratio von 1.46-2.93:1 und ein manueller Lens-Shift sorgt für variable Positionierung. Flüsterleiser Betrieb im QuietMode (28dB).
 
 Merkmale:
 5.200 Ansi-Lumen 
 Laser Lichtquelle
-24/7 Dauerbetriebstauglich
-2 Facher optischer ZOOM
-Lensshift für verzerrungsfreie Projektion
+Manueller Lens-Shift
+Zoom Ratio 1.46-2.93:1
 20.000 : 1 Kontrastverhältnis
-UHD Auflösung (3.840 x 2.160 Bildpunkte)
-Bildformat 16:9
+4K/UHD Auflösung (3840x2160)
+2 x HDMI mit CEC
 16 kg Gewicht`,
     images: ['/images/frq50wangledrhigh-1920w.webp'],
     pricePerUnit: 150,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Technologie', value: '1-Chip DLP Beamer mit Laser' },
-      { label: 'Helligkeit', value: '5.200 Ansi-Lumen' },
-      { label: 'Lichtquelle', value: 'Laser' },
-      { label: 'Dauerbetrieb', value: '24/7 tauglich' },
-      { label: 'Zoom', value: '2 Facher optischer ZOOM (Ratio 1.46-2.93:1)' },
-      { label: 'Lensshift', value: 'Für verzerrungsfreie Projektion' },
-      { label: 'Kontrastverhältnis', value: '20.000 : 1' },
-      { label: 'Auflösung', value: 'UHD 4K (3.840 x 2.160 Bildpunkte)' },
-      { label: 'Bildformat', value: '16:9' },
-      { label: 'Gewicht', value: '16 kg' },
+      { label: 'Projector', value: '1 Chip Laser-DLP' },
+      { label: 'HD', value: '4K/UHD (3840x2160)' },
+      { label: 'Sun', value: '5.200 AnsiLumen' },
+      { label: 'Contrast', value: '20.000 : 1' },
+      { label: 'Hdmi-port', value: '2 x HDMI mit CEC' },
+      { label: 'Weight', value: '16 kg' },
     ],
   },
   {
@@ -1651,13 +1570,12 @@ Mietpreis: 200,- € (inkl. höhenverstellbarem Stativ)`,
     pricePerUnit: 200,
     categorySlug: 'medien-konferenztechnik',
     specs: [
-      { label: 'Größe', value: '65 Zoll' },
-      { label: 'Auflösung', value: '4K / UHD' },
-      { label: 'Typ', value: 'Signature Display' },
-      { label: 'Einsatz', value: '24/7 professionelle Anwendungen' },
-      { label: 'Anwendung', value: 'Konferenz, TV/Live-Übertragungen, Werbedisplay' },
-      { label: 'Ausrichtung', value: 'Quer- oder Hochformat' },
-      { label: 'Zubehör', value: 'Höhenverstellbarer Standfuß (optional mit Rollen)' },
+      { label: 'Projector', value: 'Digital Signage LCD Panel' },
+      { label: 'HD', value: '4K/UHD (3840x2160)' },
+      { label: 'Sun', value: '500 cd/m2' },
+      { label: 'Contrast', value: '5.000 : 1' },
+      { label: 'Hdmi-port', value: '3 HDMI' },
+      { label: 'Weight', value: '17,5 kg' },
     ],
   },
   {
@@ -2154,9 +2072,9 @@ Mietpreis 6x3m: 50,- €`,
   {
     id: 'alutruss-trilock-e-gl33',
     name: 'Alutruss Trilock E-GL33',
-    description: 'Professionelle Alutruss mit Trilock-System. Stabile Konstruktion für Licht- und Tontechnik.',
-    images: ['/images/stative.webp'],
-    pricePerUnit: 40,
+    description: '3-Punkt-Traverse aus Aluminium mit konischen Verbindern (je 1 Set inklusive). Festere Legierung für höhere Stabilität.',
+    images: ['/images/60302184a.jpg'],
+    pricePerUnit: 10,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Typ', value: 'Alutruss' },
@@ -2166,53 +2084,63 @@ Mietpreis 6x3m: 50,- €`,
   },
   {
     id: 'traversenlift-150kg',
-    name: 'Traversenlift 150Kg',
-    description: 'Elektrischer Traversenlift mit 150kg Tragkraft. Für sicheren Aufbau von Traversen.',
-    images: ['/images/stative.webp'],
-    pricePerUnit: 80,
+    name: 'Traversenlift 150kg',
+    description: 'Kompakter Traversenlift von Block & Block SIGMA 40 in schwarz.',
+    images: ['/images/sigma1.jpg'],
+    pricePerUnit: 40,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
-      { label: 'Typ', value: 'Traversenlift' },
-      { label: 'Tragkraft', value: '150 kg' },
-      { label: 'Antrieb', value: 'Elektrisch' },
+      { label: 'Zertifizierung', value: 'Made in EU (TÜV/GS geprüft)' },
+      { label: 'Max. Last', value: '150kg' },
+      { label: 'Winde', value: 'AL-KO Winde 350kg mit Lasthaltbremse' },
+      { label: 'Höhe', value: 'Höhenverstellbar, max. Höhe ca. 5m' },
+      { label: 'Aufnahme', value: 'inkl. verstellbare Aufnahme für Traversen' },
+      { label: 'Gewicht', value: '35kg' },
     ],
   },
   {
     id: 'lautsprecherstativ-21450',
     name: 'Lautsprecherstativ 21450',
-    description: 'Stabiles Lautsprecherstativ für PA-Anlagen. Höhenverstellbar und robust.',
-    images: ['/images/stative.webp'],
-    pricePerUnit: 25,
+    description: 'Leichte Boxen / Lautsprecher Stative mit 35mm Flansch im Paar mit praktischer Transporttasche. Höhenverstellbar von 1,2-1,8m, max. Traglast 40kg',
+    images: ['/images/km214-5.png'],
+    pricePerUnit: 10,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Typ', value: 'Lautsprecherstativ' },
       { label: 'Modell', value: '21450' },
-      { label: 'Anwendung', value: 'PA-Anlagen' },
+      { label: 'Flansch', value: '35mm' },
+      { label: 'Höhe', value: 'Höhenverstellbar von 1,2-1,8m' },
+      { label: 'Max. Traglast', value: '40kg' },
+      { label: 'Lieferumfang', value: 'Paar mit Transporttasche' },
     ],
   },
   {
     id: 'leuchtenstativ-24630',
     name: 'Leuchtenstativ 24630',
-    description: 'Professionelles Leuchtenstativ für Scheinwerfer und Moving Heads. Stabil und höhenverstellbar.',
-    images: ['/images/stative.webp'],
-    pricePerUnit: 20,
+    description: 'Das stabile Leuchtenstativ mit 35mm Flansch für die meisten Lichtleisten passend ist höhenverstellbar von 1,8-3m und zentrisch bis 20kg belastbar.',
+    images: ['/images/km24630.jpg'],
+    pricePerUnit: 8,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Typ', value: 'Leuchtenstativ' },
       { label: 'Modell', value: '24630' },
-      { label: 'Anwendung', value: 'Lichttechnik' },
+      { label: 'Flansch', value: '35mm' },
+      { label: 'Höhe', value: 'Höhenverstellbar von 1,8-3m' },
+      { label: 'Max. Belastung', value: 'Zentrisch bis 20kg' },
+      { label: 'Anwendung', value: 'Für die meisten Lichtleisten passend' },
     ],
   },
   {
     id: 'mikrofonstativ-21090',
     name: 'Mikrofonstativ 21090',
-    description: 'Zuverlässiges Mikrofonstativ für Studio und Live-Einsatz. Höhenverstellbar mit Teleskopstange.',
-    images: ['/images/stative.webp'],
-    pricePerUnit: 15,
+    description: 'Robustes und höhenverstellbares Mikrofonstativ mit Galgen.',
+    images: ['/images/km2109.jpg'],
+    pricePerUnit: 5,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Typ', value: 'Mikrofonstativ' },
       { label: 'Modell', value: '21090' },
+      { label: 'Ausstattung', value: 'Mit Galgen' },
       { label: 'Anwendung', value: 'Mikrofone' },
     ],
   },
