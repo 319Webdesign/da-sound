@@ -57,18 +57,18 @@ export default function RentalCategories() {
                     src={category.image}
                     alt={category.title}
                     fill
-                    className={category.image === '/images/event_array.png' 
+                    className={category.image === '/images/event_array.webp' 
                       ? 'object-contain object-left' 
                       : category.image === '/images/dm3_2-1920w.webp'
                       ? 'object-contain object-[center_30%]'
-                      : category.image === '/images/41700503g.jpg'
+                      : category.image === '/images/41700503g.webp'
                       ? 'object-cover object-bottom'
                       : 'object-contain object-center'}
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                     quality={75}
                     loading={index < 4 ? 'eager' : 'lazy'}
                     priority={index < 3}
-                    unoptimized={category.image === '/images/slxd4e86-1920w.webp' || category.image === '/images/z1200_1-1920w.webp' || category.image === '/images/event_array.png' || category.image === '/images/41700503g.jpg'}
+                    unoptimized={category.image === '/images/slxd4e86-1920w.webp' || category.image === '/images/z1200_1-1920w.webp' || category.image === '/images/event_array.webp' || category.image === '/images/41700503g.webp'}
                     onError={(e) => {
                       console.error('Failed to load image:', category.image, 'for category:', category.title);
                       const target = e.currentTarget as HTMLImageElement;

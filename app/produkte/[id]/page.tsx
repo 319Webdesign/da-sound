@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getProductById } from '@/lib/products';
+import { getAllProductIds, getProductById } from '@/lib/products';
 import { getCategoryBySlug } from '@/lib/categories';
 import { data } from '@/lib/data';
 import { MapPin, Clock, ArrowLeft, ArrowRight, Users, Bluetooth, Wrench, Volume2, Lightbulb, Cloud, Cable } from 'lucide-react';
@@ -22,7 +22,7 @@ interface PageProps {
 export const revalidate = 3600; // 1 Stunde - Preise können sich ändern
 
 export async function generateStaticParams() {
-  return [];
+  return getAllProductIds().map((id) => ({ id }));
 }
 
 export default async function ProductDetailPage({ params }: PageProps) {

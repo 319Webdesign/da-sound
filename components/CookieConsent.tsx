@@ -26,11 +26,40 @@ export default function CookieConsent() {
     // Prüfe ob bereits eine Entscheidung getroffen wurde
     const savedConsent = localStorage.getItem(STORAGE_KEY);
     if (!savedConsent) {
-      // Zeige nach 1.5 Sekunden
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, 1500);
-      return () => clearTimeout(timer);
+      let timer: ReturnType<typeof setTimeout> | null = null;
+      let observer: PerformanceObserver | null = null;
+      let shown = false;
+
+      const scheduleShow = () => {
+        if (shown) return;
+        shown = true;
+        timer = setTimeout(() => {
+          setIsVisible(true);
+        }, 2000);
+      };
+
+      // Zeige 2 Sekunden nach dem First Contentful Paint (FCP)
+      if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+        try {
+          observer = new PerformanceObserver((list) => {
+            const entries = list.getEntriesByName('first-contentful-paint');
+            if (entries.length > 0) {
+              observer?.disconnect();
+              scheduleShow();
+            }
+          });
+          observer.observe({ type: 'paint', buffered: true });
+        } catch {
+          scheduleShow();
+        }
+      } else {
+        scheduleShow();
+      }
+
+      return () => {
+        if (timer) clearTimeout(timer);
+        observer?.disconnect();
+      };
     } else {
       // Lade gespeicherte Präferenzen
       try {
@@ -110,7 +139,7 @@ export default function CookieConsent() {
           transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
           className="fixed bottom-6 left-6 z-50 max-w-md w-full sm:w-[420px]"
         >
-          <div className="relative bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 overflow-hidden">
+          <div className="relative bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 overflow-hidden min-h-[260px] sm:min-h-[280px] max-h-[80vh]">
             {/* Glassmorphism Effekt */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-white/40" />
             

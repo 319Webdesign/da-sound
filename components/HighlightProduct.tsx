@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import { Volume2, Bluetooth, Package, Zap, ArrowRight, Settings, Users, Headphones, Save, Vote, Cable } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { DEFAULT_BLUR_DATA_URL } from '@/lib/blurDataUrl';
 
 interface HighlightProductProps {
   title: string;
@@ -82,6 +83,8 @@ export default function HighlightProduct({
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                     quality={90}
                     priority
+                    placeholder="blur"
+                    blurDataURL={DEFAULT_BLUR_DATA_URL}
                     onError={(e) => {
                       console.error('Failed to load image:', image);
                       const target = e.currentTarget as HTMLImageElement;

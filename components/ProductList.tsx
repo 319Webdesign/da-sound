@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { ShoppingBag, ArrowRight, Zap, Users, Music, Home, CloudRain, CloudRainWind, Volume2, Bluetooth, Weight, Truck, Speech, BatteryMedium, SlidersVertical, Sparkles, MonitorCheck, Network, Wifi, WifiOff, Usb, Palette, Move, ShieldAlert, BarChart3, SignalHigh, Cable, Monitor, Maximize, Sun, Contrast, HdmiPort, GanttChart } from 'lucide-react';
 import { useRentalCart } from '@/context/RentalCartContext';
 import type { Product } from '@/lib/products';
+import { DEFAULT_BLUR_DATA_URL } from '@/lib/blurDataUrl';
 
 interface ProductListProps {
   products: Product[];
@@ -55,6 +56,8 @@ export default function ProductList({ products }: ProductListProps) {
                       sizes="(max-width: 768px) 50vw, 16vw"
                       quality={80}
                       loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={DEFAULT_BLUR_DATA_URL}
                     />
                   </div>
                   <div className={`relative rounded-lg overflow-hidden bg-white p-1 ${product.images[1]?.includes('audiozenit') ? 'aspect-[3/4]' : 'aspect-square'}`}>
@@ -66,6 +69,8 @@ export default function ProductList({ products }: ProductListProps) {
                       sizes="(max-width: 768px) 50vw, 16vw"
                       quality={80}
                       loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={DEFAULT_BLUR_DATA_URL}
                     />
                   </div>
                 </div>
@@ -80,6 +85,8 @@ export default function ProductList({ products }: ProductListProps) {
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       quality={85}
                       loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={DEFAULT_BLUR_DATA_URL}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-gray-400">

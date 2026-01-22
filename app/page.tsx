@@ -9,6 +9,7 @@ import TechHighlights from '@/components/TechHighlights';
 import RentalCategories from '@/components/RentalCategories';
 import AboutServiceSection from '@/components/AboutServiceSection';
 import dynamic from 'next/dynamic';
+import LazyRender from '@/components/LazyRender';
 
 // Dynamic Import für schwere Komponenten - Lazy Loading
 const GoogleReviewsSection = dynamic(
@@ -76,19 +77,27 @@ export default function HomePage() {
       </section>
 
       {/* Technik-Highlights */}
-      <TechHighlights />
+      <LazyRender minHeight="20rem">
+        <TechHighlights />
+      </LazyRender>
 
       {/* Kundenbewertungen */}
-      <GoogleReviewsSection />
+      <LazyRender minHeight="28rem">
+        <GoogleReviewsSection />
+      </LazyRender>
 
       {/* CTA Section */}
       <CTASection />
 
       {/* Dry-Hire vs. Service */}
-      <DryHireServiceSection />
+      <LazyRender minHeight="20rem">
+        <DryHireServiceSection />
+      </LazyRender>
 
       {/* FAQ Section */}
-      <FAQSection />
+      <LazyRender minHeight="22rem">
+        <FAQSection />
+      </LazyRender>
 
    
 

@@ -171,7 +171,7 @@ Set bestehend aus:
 1 x Drahtloses Mikrofon
 2 x LED Pro Licht-Set mit Laser & Stativ
 1 x Hazer / Dunstnebelmaschine + Funk-Fernbedienung`,
-    images: ['/images/partyset_xlarge.jpg'],
+    images: ['/images/partyset_xlarge.webp'],
     pricePerUnit: 249,
     pricePerPair: 350,
     categorySlug: 'party-sets-ton-licht',
@@ -2073,7 +2073,7 @@ Mietpreis 6x3m: 50,- €`,
     id: 'alutruss-trilock-e-gl33',
     name: 'Alutruss Trilock E-GL33',
     description: '3-Punkt-Traverse aus Aluminium mit konischen Verbindern (je 1 Set inklusive). Festere Legierung für höhere Stabilität.',
-    images: ['/images/60302184a.jpg'],
+    images: ['/images/60302184a.webp'],
     pricePerUnit: 10,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2086,7 +2086,7 @@ Mietpreis 6x3m: 50,- €`,
     id: 'traversenlift-150kg',
     name: 'Traversenlift 150kg',
     description: 'Kompakter Traversenlift von Block & Block SIGMA 40 in schwarz.',
-    images: ['/images/sigma1.jpg'],
+    images: ['/images/sigma1.webp'],
     pricePerUnit: 40,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2102,7 +2102,7 @@ Mietpreis 6x3m: 50,- €`,
     id: 'lautsprecherstativ-21450',
     name: 'Lautsprecherstativ 21450',
     description: 'Leichte Boxen / Lautsprecher Stative mit 35mm Flansch im Paar mit praktischer Transporttasche. Höhenverstellbar von 1,2-1,8m, max. Traglast 40kg',
-    images: ['/images/km214-5.png'],
+    images: ['/images/km214-5.webp'],
     pricePerUnit: 10,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2118,7 +2118,7 @@ Mietpreis 6x3m: 50,- €`,
     id: 'leuchtenstativ-24630',
     name: 'Leuchtenstativ 24630',
     description: 'Das stabile Leuchtenstativ mit 35mm Flansch für die meisten Lichtleisten passend ist höhenverstellbar von 1,8-3m und zentrisch bis 20kg belastbar.',
-    images: ['/images/km24630.jpg'],
+    images: ['/images/km24630.webp'],
     pricePerUnit: 8,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2134,7 +2134,7 @@ Mietpreis 6x3m: 50,- €`,
     id: 'mikrofonstativ-21090',
     name: 'Mikrofonstativ 21090',
     description: 'Robustes und höhenverstellbares Mikrofonstativ mit Galgen.',
-    images: ['/images/km2109.jpg'],
+    images: ['/images/km2109.webp'],
     pricePerUnit: 5,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2189,4 +2189,8 @@ export function getUpgradeKitsByCategory(categorySlug: string): Product[] {
 
 export function getProductById(id: string): Product | undefined {
   return products.find(product => product.id === id);
+}
+
+export function getAllProductIds(): string[] {
+  return products.map(product => product.id);
 }

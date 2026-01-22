@@ -11,7 +11,7 @@ Dieser Ordner enthält statische Assets für die da-sound Website.
 
 Assets in diesem Ordner können direkt über die URL referenziert werden:
 
-- `/images/hero-1.jpg` → `http://localhost:3000/images/hero-1.jpg`
+- `/images/hero-1.webp` → `http://localhost:3000/images/hero-1.webp`
 - `/videos/trailer.mp4` → `http://localhost:3000/videos/trailer.mp4`
 
 ### In Next.js Image Komponente:
@@ -20,7 +20,7 @@ Assets in diesem Ordner können direkt über die URL referenziert werden:
 import Image from 'next/image';
 
 <Image
-  src="/images/hero-1.jpg"
+  src="/images/hero-1.webp"
   alt="Beschreibung"
   width={800}
   height={600}
@@ -30,7 +30,7 @@ import Image from 'next/image';
 ### In normalen HTML-Tags:
 
 ```tsx
-<img src="/images/logo.png" alt="Logo" />
+<img src="/images/logo.webp" alt="Logo" />
 <video src="/videos/trailer.mp4" controls />
 ```
 
@@ -38,4 +38,4 @@ import Image from 'next/image';
 
 - **Großes Bild**: 1200x800px oder höher
 - **Kleine Bilder**: 600x400px oder höher
-- **Format**: JPG oder WebP für optimale Performance
+- **Format**: WebP für optimale Performance

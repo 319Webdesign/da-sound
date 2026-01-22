@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Volume2, Lightbulb, Cloud, Cable, Users, Home, CloudRain, Zap, Bluetooth, Weight, Truck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { DEFAULT_BLUR_DATA_URL } from '@/lib/blurDataUrl';
 
 // Icon-Mapping für Client-Komponente
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -56,6 +57,8 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                     quality={90}
                     priority={currentImageIndex === 0}
+                    placeholder="blur"
+                    blurDataURL={DEFAULT_BLUR_DATA_URL}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -125,6 +128,8 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
                   className="object-cover"
                   sizes="(max-width: 640px) 25vw, (max-width: 1024px) 25vw, 12.5vw"
                   quality={75}
+                  placeholder="blur"
+                  blurDataURL={DEFAULT_BLUR_DATA_URL}
                 />
               </button>
             ))}

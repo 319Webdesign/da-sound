@@ -31,7 +31,7 @@ export const categories: CategoryCard[] = [
     title: 'Party-Sets Ton&Licht',
     slug: 'party-sets-ton-licht',
     description: 'All-inclusive Pakete für ein gelungenes Event',
-    image: '/images/41700503g.jpg',
+    image: '/images/41700503g.webp',
     longDescription: 'Unsere Party-Sets bieten Ihnen eine komplette Eventlösung mit ausgewähltem Ton & Licht Equipment. Perfekt abgestimmt auf Ihre Veranstaltungsgröße und Anforderungen.',
     features: [
       'Musikanlagen mit eingebautem Verstärker',
@@ -49,7 +49,7 @@ export const categories: CategoryCard[] = [
     title: 'PA-Anlagen / Lautsprecher',
     slug: 'pa-anlagen',
     description: 'Druckvoller Sound für bis zu 1.500 Personen',
-    image: '/images/event_array.png',
+    image: '/images/event_array.webp',
     longDescription: 'Professionelle PA-Anlagen und Lautsprecher für Veranstaltungen jeder Größe. Von kompakten 2.1 Systemen für kleine Räume bis hin zu leistungsstarken Line Arrays für große Events.',
     features: [
       'Hochwertige Komponenten – Made in Europe -',
@@ -83,7 +83,7 @@ export const categories: CategoryCard[] = [
     title: 'Statische Scheinwerfer / LED Spots',
     slug: 'statische-scheinwerfer-led-spots',
     description: 'Energieeffiziente, kompakte Beleuchtungslösungen für Bühne & Tanzfläche',
-    image: '/images/briteq1.jpg',
+    image: '/images/briteq1.webp',
     longDescription: 'Moderne LED-Spots und statische Scheinwerfer für effiziente und flexible Beleuchtung. Sparsam im Stromverbrauch, leistungsstark in der Lichtausbeute.',
     features: [
       'Farbiges und weißes Licht',

@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { DEFAULT_BLUR_DATA_URL } from '@/lib/blurDataUrl';
 import GoogleRatingBadge from './GoogleRatingBadge';
 
 interface HeroProps {
@@ -22,10 +23,12 @@ interface HeroProps {
 
 export default function Hero({ headline, highlight, images, socialProof }: HeroProps) {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
   
   const speakerImage = images.find(img => img.type === 'speaker');
   const lightshowImage = images.find(img => img.type === 'lightshow');
   const liveEventImage = images.find(img => img.type === 'live-event');
+  const mainHeroImageId = lightshowImage?.id ?? speakerImage?.id ?? liveEventImage?.id ?? images[0]?.id;
 
   const scrollToRentalCategories = () => {
     if (typeof window !== 'undefined') {
@@ -34,8 +37,19 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
     }
   };
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(max-width: 768px)');
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
+  const mobileHeroImage = lightshowImage ?? speakerImage ?? liveEventImage ?? images[0];
+
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20 relative overflow-hidden">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20 relative overflow-hidden min-h-[70vh] md:min-h-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start relative">
         {/* Links: Content - 50% */}
         <motion.div
@@ -139,7 +153,9 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                     }}
                     sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
                     quality={85}
-                    priority
+                    priority={speakerImage.id === mainHeroImageId}
+                    placeholder="blur"
+                    blurDataURL={DEFAULT_BLUR_DATA_URL}
                     onError={(e) => {
                       console.error('Failed to load image:', speakerImage.url);
                       const target = e.currentTarget as HTMLImageElement;
@@ -182,6 +198,8 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                     sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
                     quality={85}
                     loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={DEFAULT_BLUR_DATA_URL}
                     onError={(e) => {
                       console.error('Failed to load image:', liveEventImage.url);
                       const target = e.currentTarget as HTMLImageElement;
@@ -224,7 +242,9 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                   }}
                   sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 50vw, 40vw"
                   quality={85}
-                  priority
+                  priority={lightshowImage.id === mainHeroImageId}
+                  placeholder="blur"
+                  blurDataURL={DEFAULT_BLUR_DATA_URL}
                   onError={(e) => {
                     console.error('Failed to load image:', lightshowImage.url);
                     const target = e.currentTarget as HTMLImageElement;
@@ -240,41 +260,29 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
             )}
           </div>
 
-          {/* Mobile: Kompakte 2x2 Ansicht */}
-          <div className="lg:hidden grid grid-cols-2 gap-3">
-            {images.map((image, index) => (
+          {/* Mobile: Einzelnes optimiertes Hero-Bild */}
+          {mobileHeroImage && (
+            <div className="lg:hidden">
               <motion.div
-                key={image.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
-                onMouseEnter={() => setHoveredImage(image.id)}
-                onMouseLeave={() => setHoveredImage(null)}
-                className={`relative rounded-3xl overflow-hidden border border-gray-100 bg-white/50 backdrop-blur-sm group cursor-pointer shadow-lg transition-all duration-500 ${
-                  image.type === 'live-event' ? 'col-span-2 aspect-[16/9]' : 'aspect-square'
-                }`}
-                style={{
-                  transform: hoveredImage === image.id 
-                    ? 'translateY(-4px) scale(1.02)' 
-                    : 'translateY(0) scale(1)',
-                }}
+                initial={isMobile ? false : { opacity: 0, y: 20 }}
+                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+                transition={isMobile ? undefined : { delay: 0.2, duration: 0.6 }}
+                className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-gray-100 bg-white/50 backdrop-blur-sm shadow-lg"
               >
                 <Image
-                  src={image.url}
-                  alt={image.alt}
+                  src={mobileHeroImage.url}
+                  alt={mobileHeroImage.alt}
                   fill
-                  className="object-cover transition-transform duration-700 ease-out"
-                  style={{
-                    transform: hoveredImage === image.id 
-                      ? 'scale(1.1)' 
-                      : 'scale(1)',
-                  }}
-                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   quality={85}
-                  priority={index === 0}
-                  loading={index === 0 ? 'eager' : 'lazy'}
+                  priority
+                  fetchPriority="high"
+                  loading="eager"
+                  placeholder="blur"
+                  blurDataURL={DEFAULT_BLUR_DATA_URL}
                   onError={(e) => {
-                    console.error('Failed to load image:', image.url);
+                    console.error('Failed to load image:', mobileHeroImage.url);
                     const target = e.currentTarget as HTMLImageElement;
                     target.style.opacity = '1';
                   }}
@@ -283,10 +291,9 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                     target.style.opacity = '1';
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
-            ))}
-          </div>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>
