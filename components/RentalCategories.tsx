@@ -52,17 +52,23 @@ export default function RentalCategories() {
                   className="group relative aspect-[4/5] rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer"
                 >
                 {/* Hintergrundbild */}
-                <div className="absolute inset-0 bg-gray-800">
+                <div className="absolute inset-0 bg-white overflow-hidden">
                   <Image
                     src={category.image}
                     alt={category.title}
                     fill
-                    className="object-cover object-center"
+                    className={category.image === '/images/event_array.png' 
+                      ? 'object-contain object-left' 
+                      : category.image === '/images/dm3_2-1920w.webp'
+                      ? 'object-contain object-[center_30%]'
+                      : category.image === '/images/41700503g.jpg'
+                      ? 'object-cover object-bottom'
+                      : 'object-contain object-center'}
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                     quality={75}
                     loading={index < 4 ? 'eager' : 'lazy'}
                     priority={index < 3}
-                    unoptimized={category.image === '/images/slxd4e86-1920w.webp' || category.image === '/images/z1200_1-1920w.webp'}
+                    unoptimized={category.image === '/images/slxd4e86-1920w.webp' || category.image === '/images/z1200_1-1920w.webp' || category.image === '/images/event_array.png' || category.image === '/images/41700503g.jpg'}
                     onError={(e) => {
                       console.error('Failed to load image:', category.image, 'for category:', category.title);
                       const target = e.currentTarget as HTMLImageElement;

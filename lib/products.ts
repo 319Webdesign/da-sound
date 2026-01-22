@@ -428,35 +428,32 @@ Set bestehend aus:
   {
     id: 'allen-heath-sq5',
     name: 'Allen & Heath SQ-5',
-    description: 'Digitales Mischpult der Extraklasse mit bis zu 48 Eingangskanälen. Logischer Workflow und ein großes Touch-Display erlauben eine intuitive Bedienung nach kurzer Einarbeitung.',
-    detailDescription: `Digitalmischpult Allen & Heath SQ5
+    description: 'Digitales Mischpult der Extraklasse mit internem 96kHz Processing. Logischer Workflow und ein großes Touch-Display erlauben eine intuitive Bedienung nach kurzer Einarbeitung.',
+    detailDescription: `Allen & Heath SQ-5
 Digitales Mischpult der Extraklasse
-Digitales Mischpult der Extraklasse mit bis zu 48 Eingangskanälen. Logischer Workflow und ein großes Touch-Display erlauben eine intuitive Bedienung nach kurzer Einarbeitung.
+Digitales Mischpult der Extraklasse mit internem 96kHz Processing. Logischer Workflow und ein großes Touch-Display erlauben eine intuitive Bedienung nach kurzer Einarbeitung.
 
 Technische Daten:
-Bis zu 48 Eingangskanäle (erweiterbar via Digital Snake)
-Großes Touch-Display
-96 kHz FPGA-Verarbeitung
-12 Mix Ausgänge (XLR)
-3 Stereo Matrix Ausgänge
-8 Effektblöke
-32×32 USB Audio Interface
-17 Motor Fader
-Im Flightcase
-Talkback Mikro
-Gewicht ca. 22 Kg (inkl. Flightcase)`,
+16/24/48 IN / 12 OUT
+8 FX Engines
+7" Touchdisplay
+S-Link via CAT5 Kabel
+Wifi ja mit ext. Router
+32 x 32 USB Interface, Multitrack USB Recording
+22 kg inkl. Flightcase`,
     images: ['/images/sq5c-1920w.webp'],
     pricePerUnit: 100,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'Allen & Heath' },
       { label: 'Typ', value: 'Digital Mixer' },
-      { label: 'Kanäle', value: 'Bis zu 48 Eingangskanäle (erweiterbar via Digital Snake)' },
-      { label: 'Display', value: 'Großes Touch-Display' },
-      { label: 'Workflow', value: 'Logischer Workflow, intuitive Bedienung' },
-      { label: 'Ausgänge', value: '12 Mix + 3 Matrix' },
-      { label: 'Effekte', value: '8 Blöcke' },
-      { label: 'Gewicht', value: 'ca. 22 kg (inkl. Flightcase)' },
+      { label: 'Channels', value: '16/24/48 IN / 12 OUT' },
+      { label: 'Effects', value: '8 FX Engines' },
+      { label: 'Display', value: '7" Touchdisplay' },
+      { label: 'Network', value: 'S-Link via CAT5 Kabel' },
+      { label: 'Wifi', value: 'ja mit ext. Router' },
+      { label: 'USB', value: '32 x 32 USB Interface, Multitrack USB Recording' },
+      { label: 'Gewicht', value: '22 kg inkl. Flightcase' },
     ],
   },
   {
@@ -465,17 +462,7 @@ Gewicht ca. 22 Kg (inkl. Flightcase)`,
     description: 'Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Über nur ein CAT5E Netzwerkabel können 24 Eingangskanäle und 12 Ausgangskanäle digital und störungsfrei von der Bühne zum Frontplatz übertragen werden. Inkl. 50m CAT5E Netzwerkkabel auf Trommel.',
     detailDescription: `Allen & Heath AR2412
 Digitale Stagebox / Bühnenverteilung
-Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Über nur ein CAT5E Netzwerkabel können 24 Eingangskanäle und 12 Ausgangskanäle digital und störungsfrei von der Bühne zum Frontplatz übertragen werden.
-
-Inkl. 50m CAT5E Netzwerkkabel auf Trommel.
-
-Technische Daten:
-24 Eingangskanäle
-12 Ausgangskanäle
-Digitale Übertragung via CAT5E Netzwerkkabel
-Störungsfreie Übertragung von der Bühne zum Frontplatz
-Kompatibel mit Allen & Heath Digital Mischpulten
-Inkl. 50m CAT5E Netzwerkkabel auf Trommel`,
+Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Über nur ein CAT5E Netzwerkabel können 24 Eingangskanäle und 12 Ausgangskanäle digital und störungsfrei von der Bühne zum Frontplatz übertragen werden. Inkl. 50m CAT5E Netzwerkkabel auf Trommel.`,
     images: ['/images/ar2412_1-1920w.webp'],
     pricePerUnit: 40,
     categorySlug: 'mischpulte-mikrofone',
@@ -500,17 +487,13 @@ Digitales Mischpult mit innovativer Bedienoberfläche
 Digitales Mischpult mit innovativer Bedienoberfläche. Fertige Presets für unterschiedliche Live- oder Recording Anwendungen machen dieses Mischpult zum professionellen Werkzeug auch für Laien. Die überragende Soundqualität wurde von den zum Industriestandard zählenden Yamaha Live Consolen übernommen.
 
 Technische Daten:
-16 Eingangskanäle (12xXLR, 4x XLR Kombibuchsen, Stereo Line-In Analog/Digital)
-8 Ausgänge XLR (Master L7R, 6x Mix/Aux)
-2 Multi-Effektprozessoren (Reverb, Delay, etc.)
-EQ und Dynamikprozessor pro Kanal
-Großes Multitouch-Display zur einfachen Bedienung
-9 präzise 100mm Fader (8x Channel / 1x Master)
-Fertige Presets für Live- und Recording Anwendungen
-Remote-Bedienung über Tablet oder Smartphone (Stagemix App)
-Mehrspur-Aufnahmemöglichkeit direkt auf USB-Stick 
-48/96 kHz Audio-Streaming über USB
-Soundqualität von Yamaha Live Consolen`,
+16 IN / 8 OUT
+2 FX Engines
+9" Touchdisplay
+DANTE
+Wifi ja mit ext. Router
+USB Audio Playback, USB Interface, Stereo USB Recording
+15 kg inkl. Flightcase`,
     images: ['/images/dm3_2-1920w.webp'],
     pricePerUnit: 70,
     priceOptions: [
@@ -521,14 +504,13 @@ Soundqualität von Yamaha Live Consolen`,
     specs: [
       { label: 'Hersteller', value: 'Yamaha' },
       { label: 'Typ', value: 'Digital Mixer' },
-      { label: 'Bedienoberfläche', value: 'Innovative Bedienoberfläche mit Multitouch-Display' },
-      { label: 'Presets', value: 'Fertige Presets für Live- und Recording Anwendungen' },
-      { label: 'Soundqualität', value: 'Yamaha Live Consolen Soundqualität' },
-      { label: 'Kanäle', value: '16 Eingangskanäle' },
-      { label: 'Eingänge', value: '12x XLR + 4x Kombi + Stereo' },
-      { label: 'Ausgänge', value: '8x XLR (Master + 6x Mix/Aux)' },
-      { label: 'Effekte', value: '2 Multi-Effektprozessoren' },
-      { label: 'Remote', value: 'Tablet/Smartphone (Stagemix App)' },
+      { label: 'Channels', value: '16 IN / 8 OUT' },
+      { label: 'Effects', value: '2 FX Engines' },
+      { label: 'Display', value: '9" Touchdisplay' },
+      { label: 'Network', value: 'DANTE' },
+      { label: 'Wifi', value: 'ja mit ext. Router' },
+      { label: 'USB', value: 'USB Audio Playback, USB Interface, Stereo USB Recording' },
+      { label: 'Gewicht', value: '15 kg inkl. Flightcase' },
     ],
   },
   {
@@ -537,17 +519,7 @@ Soundqualität von Yamaha Live Consolen`,
     description: 'Dante-fähige digitale Stagebox mit 16 Inputs und 8 Outputs. Kaskadierbar mit weiteren Einheiten. Die Signale werden somit störungsfrei von der Bühne zum Mischpult transportiert über ein CAT6E Netzwerkkabel, 50m Kabel sind im Mietpreis enthalten.',
     detailDescription: `Yamaha TIO-1608D
 Dante-fähige digitale Stagebox
-Dante-fähige digitale Stagebox mit 16 Inputs und 8 Outputs. Kaskadierbar mit weiteren Einheiten. Die Signale werden somit störungsfrei von der Bühne zum Mischpult transportiert über ein CAT6E Netzwerkkabel.
-
-50m CAT6E Netzwerkkabel sind im Mietpreis enthalten.
-
-Technische Daten:
-16 Inputs
-8 Outputs
-Dante-fähig
-Kaskadierbar mit weiteren Einheiten
-Störungsfreie Übertragung via CAT6E Netzwerkkabel
-Übertragung von der Bühne zum Mischpult`,
+Dante-fähige digitale Stagebox mit 16 Inputs und 8 Outputs. Kaskadierbar mit weiteren Einheiten. Die Signale werden somit störungsfrei von der Bühne zum Mischpult transportiert über ein CAT6E Netzwerkkabel, 50m Kabel sind im Mietpreis enthalten.`,
     images: ['/images/tio1608D-1920w.webp'],
     pricePerUnit: 35,
     categorySlug: 'mischpulte-mikrofone',
@@ -567,95 +539,80 @@ Störungsfreie Übertragung via CAT6E Netzwerkkabel
     id: 'dynacord-cms-1600-3',
     name: 'DYNACORD CMS 1600-3',
     description: 'Analoges Live Mischpult der Profiklasse. Bewährter "Dynacord Sound" mit 2 digitalen Effektgeräten und einem 4-Band EQ pro Kanal, sowie zusätzlichen Filtern machen dieses Mischpult zum Garant für einen guten, analogen Live Sound!',
-    detailDescription: `Dynacord CMS 1600-3
+    detailDescription: `DYNACORD CMS 1600-3
 Analoges Live Mischpult der Profiklasse
 Analoges Live Mischpult der Profiklasse. Bewährter "Dynacord Sound" mit 2 digitalen Effektgeräten und einem 4-Band EQ pro Kanal, sowie zusätzlichen Filtern machen dieses Mischpult zum Garant für einen guten, analogen Live Sound!
 
 Technische Daten:
-20 Eingangskanäle (12 Mic/Line, 4 Mic/Stereo-Line)
-4-Band EQ pro Kanal
-2 digitale Effektgeräte
-Zusätzliche Filter
-Voicing-Filter für präsente Vocals
-Low-Cut Filter, schaltbar
-2 Effektwege
-2 Aux-Wege
-2 Monitorwege
-11-Band Stereo-Summen-Equalizer
-ALPS Fader und Potentiometer
-Großes, kontraststarkes OLED-Display
-Gewicht: 18,5 kg (zzgl. Flightcase)`,
+16/20 IN / 4 OUT
+2 FX Engines
+OLED Display
+Network nein
+Wifi nein
+2x2 USB Interface
+22 kg inkl. Flightcase`,
     images: ['/images/cms1600_1-1920w.webp'],
     pricePerUnit: 60,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'DYNACORD' },
       { label: 'Typ', value: 'Analoges Live Mischpult' },
-      { label: 'Klasse', value: 'Profiklasse' },
-      { label: 'Sound', value: 'Bewährter Dynacord Sound' },
-      { label: 'Kanäle', value: '20 (12 Mic/Line, 4 Mic/Stereo-Line)' },
-      { label: 'EQ', value: '4-Band EQ pro Kanal' },
-      { label: 'Effekte', value: '2 digitale Effektgeräte' },
-      { label: 'Features', value: 'Zusätzliche Filter' },
-      { label: 'Gewicht', value: '18,5 kg (zzgl. Flightcase)' },
+      { label: 'Channels', value: '16/20 IN / 4 OUT' },
+      { label: 'Effects', value: '2 FX Engines' },
+      { label: 'Display', value: 'OLED Display' },
+      { label: 'Network', value: 'nein' },
+      { label: 'Wifi', value: 'nein' },
+      { label: 'USB', value: '2x2 USB Interface' },
+      { label: 'Gewicht', value: '22 kg inkl. Flightcase' },
     ],
   },
   {
     id: 'pioneer-djm-900-nexus',
     name: 'Pioneer DJM-900 Nexus',
-    description: 'Professionelles 4-Kanal DJ Mischpult. Vermietungn im Flightcase mit passenden Kabeln (USB / Netzwerk).',
-    detailDescription: `Pioneer DJM-900 NXS
+    description: 'Professionelles 4-Kanal DJ Mischpult. Vermietung im Flightcase mit passenden Kabeln (USB / Netzwerk).',
+    detailDescription: `Pioneer DJM-900 Nexus
 Professionelles 4-Kanal DJ Mischpult
 Professionelles 4-Kanal DJ Mischpult. Vermietung im Flightcase mit passenden Kabeln (USB / Netzwerk).
 
 Technische Daten:
-4-Kanal DJ Mischpult
-4 voll ausgestattete Kanäle (Line/Digital)
-Unabhängiger Send/Return
-4 Phono-Eingänge
-2 USB-Anschlüsse
-Digital-Effekte in Studioqualität (96kHz, 24bit)
-Kompatibel mit Traktor und Serato Pro
-Hochwertiger Cross-Fader
-Mikrofon-Eingang mit Talk-Over Funktion
-Kopfhörerausgang
-Vermietung im Flightcase
-Passende Kabel (USB / Netzwerk) im Lieferumfang`,
+4 Stereo-IN / 3 Stereo-OUT
+dig. Special FX
+Beat/FX Display
+Pioneer ProDJ Link
+Wifi nein
+4x4 USB Interface
+12,5 kg inkl. Flightcase`,
     images: ['/images/djm900_2-edae2eca-1920w.webp'],
     pricePerUnit: 60,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'Pioneer' },
       { label: 'Typ', value: '4-Kanal DJ Mischpult' },
-      { label: 'Kanäle', value: '4 voll ausgestattete Kanäle' },
-      { label: 'Eingänge', value: 'Line/Digital/Phono, 4x Phono, 2x USB' },
-      { label: 'Effekte', value: 'Digital-Effekte in Studioqualität (96kHz, 24bit)' },
-      { label: 'Kompatibilität', value: 'Traktor, Serato Pro' },
-      { label: 'Lieferumfang', value: 'Flightcase mit passenden Kabeln (USB / Netzwerk)' },
+      { label: 'Channels', value: '4 Stereo-IN / 3 Stereo-OUT' },
+      { label: 'Effects', value: 'dig. Special FX' },
+      { label: 'Display', value: 'Beat/FX Display' },
+      { label: 'Network', value: 'Pioneer ProDJ Link' },
+      { label: 'Wifi', value: 'nein' },
+      { label: 'USB', value: '4x4 USB Interface' },
+      { label: 'Gewicht', value: '12,5 kg inkl. Flightcase' },
     ],
   },
   {
     id: 'mackie-analog-mixer',
     name: 'Analoge MACKIE Mischpulte',
     description: 'Die ProFX Serie von Mackie zählt seit Jahren zu den zuverlässigsten und robusten Analog Mischpulten. Rauscharme Mikrofonvorverstärker und pegelfeste Summenverstärker sorgen für einen glasklaren Sound. Eingebaute Digitaleffekte und USB/Bluetooth Funktionalität.',
-    detailDescription: `Analoge Mischpulte von MACKIE ProFX Serie
-Zuverlässige und robuste Analog Mischpulte
+    detailDescription: `Analoge MACKIE Mischpulte
+Die ProFX Serie von Mackie
 Die ProFX Serie von Mackie zählt seit Jahren zu den zuverlässigsten und robusten Analog Mischpulten. Rauscharme Mikrofonvorverstärker und pegelfeste Summenverstärker sorgen für einen glasklaren Sound. Eingebaute Digitaleffekte und USB/Bluetooth Funktionalität.
 
-Features:
-4-12 Eingangskanäle (je nach Modell)
-Extrem rauscharme Mikrofonvorverstärker
-Pegelfeste Summenverstärker für glasklaren Sound
-Eingebaute Digitaleffekte (16 Effekten wie Reverb, Delay und Chorus)
-USB Audiointerface
-Bluetooth Funktionalität (je nach Modell)
-7 Band Grafik EQ für Summe oder Monitore (nur ProFX8 und ProFX12)
-1 Aux-Weg für Monitor
-2 bzw. 3 Band EQ pro Kanal
-Hi-Z Eingang für Gitarre/Bass
-100 Hz Low Cut Filter
-48V Phantomspeisung schaltbar
-Kopfhörerausgang`,
+Technische Daten:
+4-12 IN / 2 OUT
+1 Digital FX
+Display nein
+Network nein
+Wifi nein
+2x2 USB Interface
+ab 5 kg inkl. Koffer`,
     images: ['/images/E8734E62-1976-463C-8087-B75D6B73138C-1920w.webp'],
     pricePerUnit: 20,
     priceOptions: [
@@ -668,11 +625,13 @@ Kopfhörerausgang`,
       { label: 'Hersteller', value: 'MACKIE' },
       { label: 'Serie', value: 'ProFX Serie' },
       { label: 'Typ', value: 'Analog Mixer' },
-      { label: 'Varianten', value: '4-Kanal, 8-Kanal, 12-Kanal' },
-      { label: 'Vorverstärker', value: 'Rauscharme Mikrofonvorverstärker' },
-      { label: 'Summenverstärker', value: 'Pegelfeste Summenverstärker' },
-      { label: 'Effekte', value: 'Eingebaute Digitaleffekte (16 Effekte)' },
-      { label: 'Schnittstellen', value: 'USB/Bluetooth Funktionalität' },
+      { label: 'Channels', value: '4-12 IN / 2 OUT' },
+      { label: 'Effects', value: '1 Digital FX' },
+      { label: 'Display', value: 'nein' },
+      { label: 'Network', value: 'nein' },
+      { label: 'Wifi', value: 'nein' },
+      { label: 'USB', value: '2x2 USB Interface' },
+      { label: 'Gewicht', value: 'ab 5 kg inkl. Koffer' },
     ],
   },
   {
@@ -802,21 +761,19 @@ Profieinsatz geeignet`,
   {
     id: 'akku-spot-indoor-rgb',
     name: 'Akku Spot Indoor RGB',
-    description: 'Praktisches LED Akku Uplight zur stimmungsvollen Beleuchtung von Innenräumen, Bühnen, Wänden/Säulen. Die Spots können einzeln via Fernbedienung oder synchronisiert über Wireless DMX gesteuert werden. Die Akkulaufzeit beträgt je nach Intensität 5-10 Stunden.',
-    detailDescription: `LED Akku Uplight RGB
-Dekoratives Licht - auch ohne Kabelsalat
-Praktisches LED Akku Uplight zur stimmungsvollen Beleuchtung von Innenräumen, Bühnen, Wänden/Säulen. Die Spots können einzeln via Fernbedienung oder synchronisiert über Wireless DMX gesteuert werden. Die Akkulaufzeit beträgt je nach Intensität 5-10 Stunden.
+    description: 'Praktisches LED Akku Uplight zur stimmungsvollen Beleuchtung von Innenräumen, Ecken, Wänden/Säulen. Die Spots können einzeln via Fernbedienung oder synchronisiert über Wireless DMX gesteuert werden.',
+    detailDescription: `Akku Spot Indoor RGB
+Praktisches LED Akku Uplight
+Praktisches LED Akku Uplight zur stimmungsvollen Beleuchtung von Innenräumen, Ecken, Wänden/Säulen. Die Spots können einzeln via Fernbedienung oder synchronisiert über Wireless DMX gesteuert werden.
 
 Technische Daten:
-3 Hochleistungs-LEDs mit 3 Watt
-Stufenlose RGB Farbmischung
-5-10 Stunden Akkubetrieb (je nach Intensität)
-Statische Farben oder Automatikprogramme
-DMX-steuerbar oder Stand-Alone Betrieb
-Steuerung via Fernbedienung oder Wireless DMX
-sehr kompakte, robuste Bauweise 
-passive Kühlung, absolut Geräuschlos
-Gewicht nur 1,2 kg`,
+3 x 3 Watt
+5-10 h
+Indoor
+RGB
+ja, eingeb. Mikrofon
+Fernbedienung / Wireless DMX
+1,2 kg / Stck`,
     images: ['/images/akku-spot-indoor.webp'],
     pricePerUnit: 8,
     priceOptions: [
@@ -825,32 +782,31 @@ Gewicht nur 1,2 kg`,
     ],
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
-      { label: 'Typ', value: 'Akku Spot' },
-      { label: 'Farben', value: 'RGB' },
-      { label: 'Anwendung', value: 'Indoor' },
-      { label: 'Leistung', value: '3x 3W LEDs' },
-      { label: 'Laufzeit', value: '5-10 Stunden (je nach Intensität)' },
-      { label: 'Steuerung', value: 'Fernbedienung oder Wireless DMX' },
-      { label: 'Gewicht', value: '1,2 kg' },
+      { label: 'Leistung', value: '3 x 3 Watt' },
+      { label: 'Akkulaufzeit', value: '5-10 h' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Farbmischung', value: 'RGB' },
+      { label: 'Music', value: 'ja, eingeb. Mikrofon' },
+      { label: 'Wifi', value: 'Fernbedienung / Wireless DMX' },
+      { label: 'Gewicht', value: '1,2 kg / Stck' },
     ],
   },
   {
     id: 'akku-spot-outdoor-rgbw-ip65',
     name: 'Akku Spot Outdoor RGBW, IP65',
-    description: 'Mit 4 x 12W 4-in-1 LEDs ausgestattet, bietet dieses Uplight eine hohe Lichtleistung bei gleichzeitig kompakten und praktischen Abmessungen. Der Spot kann geneigt und mit dem mitgelieferten Diffus-Filter in der Abstrahlung angepasst werden. Betrieb ist Stand-Alone, via Fernbedienung oder Wireless DMX möglich. Wetterfest nach IP65, für Verwendung auch im Außenbereich.',
-    detailDescription: `Akku LED Uplight IP65 
-Schnell aufgebaut und lichtstark!
-Mit 4 x 12W 4-in-1 LEDs ausgestattet, bietet dieses Uplight eine hohe Lichtleistung bei gleichzeitig kompakten und praktischen Abmessungen. Der Spot kann geneigt und mit dem mitgelieferten Diffus-Filter in der Abstrahlung angepasst werden. Betrieb ist Stand-Alone, via Fernbedienung oder Wireless DMX möglich. Wetterfest nach IP65, für Verwendung auch im Außenbereich.
+    description: 'Mit 4-in-1 LEDs ausgestattet, bietet dieses Uplight eine hohe Lichtleistung bei gleichzeitig kompakten und praktischen Abmessungen. Der Spot kann geneigt und mit dem mitgelieferten Diffus-Filter in der Abstrahlung angepasst werden. Wetterfest nach IP65, für Verwendung auch im Außenbereich.',
+    detailDescription: `Akku Spot Outdoor RGBW, IP65
+Mit 4-in-1 LEDs ausgestattet
+Mit 4-in-1 LEDs ausgestattet, bietet dieses Uplight eine hohe Lichtleistung bei gleichzeitig kompakten und praktischen Abmessungen. Der Spot kann geneigt und mit dem mitgelieferten Diffus-Filter in der Abstrahlung angepasst werden. Wetterfest nach IP65, für Verwendung auch im Außenbereich.
 
 Technische Daten:
-4 Hochleistungs-LEDs mit 12 Watt (4-in-1 LEDs)
-RGBW LEDs mit flickerfreier Farbmischung
-Wetterfest Schutzklasse IP65
-Abstrahlwinkel durch Diffus-Filter (beiliegend) veränderbar
-Verschiedene Anstellwinkel, stufenlos justierbar
-Steuerung: Stand-Alone, Fernbedienung oder Wireless DMX
-lautlos
-Gewicht ca. 4 kg`,
+4 x 12 Watt
+6-12 h
+Indoor / Outdoor IP65
+RGB/W
+ja, eingeb. Mikrofon
+Fernbedienung / Wireless DMX
+3,8 kg / Stck`,
     images: ['/images/akku-spot-outdoor.webp'],
     pricePerUnit: 12.5,
     priceOptions: [
@@ -859,32 +815,30 @@ Gewicht ca. 4 kg`,
     ],
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
-      { label: 'Typ', value: 'Akku Spot' },
-      { label: 'Farben', value: 'RGBW' },
-      { label: 'Schutz', value: 'IP65' },
-      { label: 'Leistung', value: '4x 12W 4-in-1 LEDs' },
-      { label: 'Steuerung', value: 'Stand-Alone, Fernbedienung oder Wireless DMX' },
-      { label: 'Features', value: 'Geneigbar, Diffus-Filter, Wetterfest' },
-      { label: 'Gewicht', value: 'ca. 4 kg' },
+      { label: 'Leistung', value: '4 x 12 Watt' },
+      { label: 'Akkulaufzeit', value: '6-12 h' },
+      { label: 'Outdoor', value: 'Indoor / Outdoor IP65' },
+      { label: 'Farbmischung', value: 'RGB/W' },
+      { label: 'Music', value: 'ja, eingeb. Mikrofon' },
+      { label: 'Wifi', value: 'Fernbedienung / Wireless DMX' },
+      { label: 'Gewicht', value: '3,8 kg / Stck' },
     ],
   },
   {
     id: 'led-outdoor-fluter-ip65',
     name: 'LED Outdoor Fluter, IP65',
-    description: 'Lichtstarker Outdoor Fluter zum Beleuchten von Gebäudeteilen, Bäumen/Büschen, u.v.m. 16 Stck 8 Watt LEDs sorgen für den nötigen Output mit RGBW Farbmischung. Die Scheinwerfer können manuell über das Menü oder via DMX gesteuert werden. Sie sind wetterfest laut IP65.',
-    detailDescription: `Outdoor LED Spot / Fluter
-Wetterfeste und helle RGBW Scheinwerfer für Außenanwendungen
-Lichtstarker Outdoor Fluter zum Beleuchten von Gebäudeteilen, Bäumen/Büschen, u.v.m. 16 Stck 8 Watt LEDs sorgen für den nötigen Output mit RGBW Farbmischung. Die Scheinwerfer können manuell über das Menü oder via DMX gesteuert werden. Sie sind wetterfest laut IP65.
+    description: 'Lichtstarker Outdoor Fluter zum Beleuchten von Gebäudeteilen, Bäumen/Büschen, u.v.m. Gleich 16 LEDs sorgen für den nötigen Output und eine gleichmäßige Abstrahlung. Die Scheinwerfer können manuell über das Menü (Automatikprogramme) oder via DMX gesteuert werden. Sie sind wetterfest laut IP65.',
+    detailDescription: `LED Outdoor Fluter, IP65
+Lichtstarker Outdoor Fluter
+Lichtstarker Outdoor Fluter zum Beleuchten von Gebäudeteilen, Bäumen/Büschen, u.v.m. Gleich 16 LEDs sorgen für den nötigen Output und eine gleichmäßige Abstrahlung. Die Scheinwerfer können manuell über das Menü (Automatikprogramme) oder via DMX gesteuert werden. Sie sind wetterfest laut IP65.
 
 Technische Daten:
-16 Hochleistungs-LEDs mit 8 Watt
-Schutzklasse IP65
-Stufenlose RGBW Farbmischung
-Steuerung: Manuell über Menü oder via DMX
-Flache Bauweise 
-Abstrahlwinkel 19° (40° Feldwinkel)
-Konvektionsgekühlt
-Gewicht ca. 3,5 kg`,
+4 x 12 Watt
+Indoor / Outdoor IP65
+RGB/W
+nein
+manuell / DMX
+3,5 kg / Stck`,
     images: ['/images/led-outdoor-fluter.webp'],
     pricePerUnit: 15,
     priceOptions: [
@@ -893,14 +847,12 @@ Gewicht ca. 3,5 kg`,
     ],
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
-      { label: 'Typ', value: 'LED Fluter' },
-      { label: 'Schutz', value: 'IP65' },
-      { label: 'Anwendung', value: 'Outdoor' },
-      { label: 'Leistung', value: '16x 8W LEDs' },
-      { label: 'Farben', value: 'RGBW' },
-      { label: 'Abstrahlwinkel', value: '19° (40° Feldwinkel)' },
-      { label: 'Steuerung', value: 'Manuell über Menü oder via DMX' },
-      { label: 'Gewicht', value: 'ca. 3,5 kg' },
+      { label: 'Leistung', value: '4 x 12 Watt' },
+      { label: 'Outdoor', value: 'Indoor / Outdoor IP65' },
+      { label: 'Farbmischung', value: 'RGB/W' },
+      { label: 'Music', value: 'nein' },
+      { label: 'Wifi', value: 'manuell / DMX' },
+      { label: 'Gewicht', value: '3,5 kg / Stck' },
     ],
   },
   {
@@ -908,190 +860,162 @@ Gewicht ca. 3,5 kg`,
     name: 'LED Verfolgerspot Follow Spot',
     description: 'Mit 120W reinweißer LED genügt dieser Follow Spot für Theater- / Bühnenanwendung mittlerer Distanz. Redner, Künstler, Schauspieler setzen Sie so akzentvoll in Szene. Der Spot ermöglicht verschiedene Weißtöne (von 2.800 bis 5.000K), manueller Zoom und motorgesteuerte Iris/Blende und Dimmer. Inkl. Verfolgerstativ und Flightcase.',
     detailDescription: `LED Verfolgerspot Follow Spot
-Mit 120W reinweißer LED genügt dieser Follow Spot für Theater- / Bühnenanwendung mittlerer Distanz. Redner, Künstler, Schauspieler setzen Sie so akzentvoll in Szene. Der Spot ermöglicht verschiedene Weißtöne (von 2.800 bis 5.000K), manueller Zoom und motorgesteuerte Iris/Blende und Dimmer. Inkl. Verfolgerstativ und Flightcase.
+Mit 120W reinweißer LED
+Mit 120W reinweißer LED genügt dieser Follow Spot für Theater- / Bühnenanwendung mittlerer Distanz. Redner, Künstler, Schauspieler setzen Sie so akzentvoll in Szene. Der Spot ermöglicht verschiedene Weißtöne (von 2.800 bis 10.000K), manueller Zoom und motorgesteuerte Iris/Blende und Dimmer. Inkl. Verfolgerstativ und Flightcase.
 
-Mietpreis: 60,- €`,
+Technische Daten:
+120 Watt
+Indoor
+weiß, 2.800 – 10.000 K (5 Stufen)
+nein
+nein
+ca 10 kg inkl. Stativ`,
     images: ['/images/follow-sot.webp'],
     pricePerUnit: 60,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
-      { label: 'Typ', value: 'Follow Spot' },
-      { label: 'Technologie', value: 'LED' },
-      { label: 'Anwendung', value: 'Bühne' },
-      { label: 'Leistung', value: '120W reinweiß' },
-      { label: 'Farbtemperatur', value: '2.800 - 5.000K' },
-      { label: 'Features', value: 'Zoom, Iris/Blende, Dimmer' },
-      { label: 'Zubehör', value: 'Verfolgerstativ + Flightcase' },
+      { label: 'Leistung', value: '120 Watt' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Farbmischung', value: 'weiß, 2.800 – 10.000 K (5 Stufen)' },
+      { label: 'Music', value: 'nein' },
+      { label: 'Wifi', value: 'nein' },
+      { label: 'Gewicht', value: 'ca 10 kg inkl. Stativ' },
     ],
   },
   {
     id: 'led-pll-panel-power-strobe',
     name: 'LED PLL Panel / Power Strobe',
     description: 'Das mit insgesamt 480 LEDs ausgestattet Power Panel eignet sich dank einstellbarer Farbtemperatur (warm weiß / kalt weiß) für Foto, Video, Grundbeleuchtung oder als hochwertiges Stroboskop. Inkl. Stativ oder Theaterhaken.',
-    detailDescription: `eurolite High-Power LED Panel WW/CW
-Gleichmäßiges, flimmerfreies Licht mit stufenlos veränderbarer Farbtemperatur
+    detailDescription: `LED PLL Panel / Power Strobe
+Das mit insgesamt 480 LEDs ausgestattet Power Panel
 Das mit insgesamt 480 LEDs ausgestattet Power Panel eignet sich dank einstellbarer Farbtemperatur (warm weiß / kalt weiß) für Foto, Video, Grundbeleuchtung oder als hochwertiges Stroboskop. Inkl. Stativ oder Theaterhaken.
 
 Technische Daten:
-480 leistungsstarke LEDs (240 kaltweiß + 240 warmweiß)
-Variable Farbtemperatur 3200 K - 5600 K
-Einsatz als Foto-/Videolicht, Bühnenbeleuchtung oder Power-Stroboskop
-Frostfilter für homogenes und weiches Licht
-Blend- und Transportschutz durch 4 Torblenden
-Geräuschloser Betrieb durch Konvektionskühlung
-Dimmer elektronisch; Dimmergeschwindigkeit (Sprungantwort) einstellbar
-Ansteuerbar über DMX; Master/Slave Funktion
-Flimmerfrei
-Abstrahlwinkel 120°
-Sehr hoher Farbwiedergabeindex (CRI <90)
-Mit Montagebügel
-Stativ- oder Traversenmontage (Theaterhaken)
-Gewicht: ca. 12 kg`,
+480 x 0,5 W
+Indoor
+WW/CW, 3.200 – 5.600 K
+nein
+manuell / DMX
+12,5 kg`,
     images: ['/images/led-ppl.webp'],
     pricePerUnit: 30,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
-      { label: 'Typ', value: 'LED Panel' },
-      { label: 'Features', value: 'Stroboskop' },
-      { label: 'Leistung', value: 'High Power' },
-      { label: 'LEDs', value: '480 (240 CW + 240 WW)' },
-      { label: 'Farbtemperatur', value: '3.200K - 5.600K' },
-      { label: 'Abstrahlwinkel', value: '120°' },
-      { label: 'CRI', value: '<90' },
-      { label: 'Steuerung', value: 'DMX, Master/Slave' },
-      { label: 'Gewicht', value: 'ca. 12 kg' },
+      { label: 'Leistung', value: '480 x 0,5 W' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Farbmischung', value: 'WW/CW, 3.200 – 5.600 K' },
+      { label: 'Music', value: 'nein' },
+      { label: 'Wifi', value: 'manuell / DMX' },
+      { label: 'Gewicht', value: '12,5 kg' },
     ],
   },
   {
     id: 'party-lichtset-kompakt',
     name: 'Party Lichtset kompakt',
     description: 'Das KLS-120 ist ein ultrakompaktes Licht Set im Hosentaschenformat. Es besteht aus 2 farbigen LED Spots und 2 LED Derbys. Die Ansteuerung der Lichteffekte erfolgt soundgesteuert über das eingebaute Mikrofon. Stecker in die Steckdose, fertig. Inkl. Leuchtenstativ.',
-    detailDescription: `LED Party Lichtset KLS-120
-Komplette Lichtanlage im Hosentaschenformat
+    detailDescription: `Party Lichtset kompakt
+Das KLS-120 ist ein ultrakompaktes Licht Set
 Das KLS-120 ist ein ultrakompaktes Licht Set im Hosentaschenformat. Es besteht aus 2 farbigen LED Spots und 2 LED Derbys. Die Ansteuerung der Lichteffekte erfolgt soundgesteuert über das eingebaute Mikrofon. Stecker in die Steckdose, fertig. Inkl. Leuchtenstativ.
 
 Technische Daten:
-2 farbige LED Spots
-2 LED Derbys
-RGB Farbmischung
-Soundgesteuerte Ansteuerung über eingebautes Mikrofon
-Automatikprogramme
-DMX-steuerbar oder Stand-Alone Betrieb
-Ultrakompakt und leicht zu transportieren 
-Gewicht: ca. 9 kg inkl. Stativ`,
+4 x 3 W (Derbys) + 3 x 8 W (Spots)
+Indoor
+RGB/W
+ja, eingeb. Mikrofon
+Fernbedienung, DMX
+ca 12 kg inkl. Stativ`,
     images: ['/images/kls120_1-1920w.webp'],
     pricePerUnit: 25,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
-      { label: 'Typ', value: 'Lichtset' },
-      { label: 'Größe', value: 'Kompakt' },
-      { label: 'Anwendung', value: 'Party' },
-      { label: 'Spots', value: '2x mit je 3x 8W COB LEDs' },
-      { label: 'Derbys', value: '2x rotierend, 4x3W' },
-      { label: 'Farben', value: 'RGB' },
-      { label: 'Steuerung', value: 'DMX, Sound-to-Light, Automatik' },
-      { label: 'Gewicht', value: 'ca. 9 kg inkl. Stativ' },
+      { label: 'Leistung', value: '4 x 3 W (Derbys) + 3 x 8 W (Spots)' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Farbmischung', value: 'RGB/W' },
+      { label: 'Music', value: 'ja, eingeb. Mikrofon' },
+      { label: 'Wifi', value: 'Fernbedienung, DMX' },
+      { label: 'Gewicht', value: 'ca 12 kg inkl. Stativ' },
     ],
   },
   {
     id: 'led-pro-lichtbar-rgb',
     name: 'LED Pro Lichtbar RGB',
     description: 'Die KLS 902 Next von eurolite ist eine mit 4 lichtstarken RGB PAR Spots ausgestattete LED Bar. Sie wird zur farbigen Beleuchtung von Bühne, Live-Band oder Tanzflächen eingesetzt. Die Steuerung erfolgt wahlweise Stand-Alone via Fernbedienung oder per DMX. Wir bieten auch passende DMX Controller an. Inkl. Leuchtenstativ.',
-    detailDescription: `Eurolite LED Pro PAR-Lichtset KLS 902 Next
-LED Beleuchtung auf professionellem Niveau.
+    detailDescription: `LED Pro Lichtbar RGB
+Die KLS 902 Next von eurolite
 Die KLS 902 Next von eurolite ist eine mit 4 lichtstarken RGB PAR Spots ausgestattete LED Bar. Sie wird zur farbigen Beleuchtung von Bühne, Live-Band oder Tanzflächen eingesetzt. Die Steuerung erfolgt wahlweise Stand-Alone via Fernbedienung oder per DMX. Wir bieten auch passende DMX Controller an. Inkl. Leuchtenstativ.
 
 Technische Daten:
-4 lichtstarke RGB PAR Spots
-RGB Farbmischung
-Steuerung: Stand-Alone via Fernbedienung oder per DMX
-DMX Controller optional verfügbar
-Einsatz: Bühne, Live-Band, Tanzflächen
-Ultrakompakt und leicht zu transportieren 
-inkl. Leuchtenstativ
-Gewicht: ca. 14 kg (inkl. Stativ)`,
+5 x 7 W (pro Spot)
+Indoor
+RGB/W
+ja, eingeb. Mikrofon
+Fernbedienung, DMX
+ca. 17 kg inkl. Stativ`,
     images: ['/images/led-pro.webp'],
     pricePerUnit: 30,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
-      { label: 'Typ', value: 'LED Lichtbar' },
-      { label: 'Farben', value: 'RGB' },
-      { label: 'Klasse', value: 'Pro' },
-      { label: 'PAR Spots', value: '4x lichtstark RGB' },
-      { label: 'Steuerung', value: 'Stand-Alone via Fernbedienung oder DMX' },
-      { label: 'Anwendung', value: 'Bühne, Live-Band, Tanzflächen' },
-      { label: 'Zubehör', value: 'Leuchtenstativ, DMX Controller optional' },
-      { label: 'Gewicht', value: 'ca. 14 kg (inkl. Stativ)' },
+      { label: 'Leistung', value: '5 x 7 W (pro Spot)' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Farbmischung', value: 'RGB/W' },
+      { label: 'Music', value: 'ja, eingeb. Mikrofon' },
+      { label: 'Wifi', value: 'Fernbedienung, DMX' },
+      { label: 'Gewicht', value: 'ca. 17 kg inkl. Stativ' },
     ],
   },
   {
     id: 'led-effekt-bar-mit-scannern',
     name: 'LED Effekt Bar mit Scannern',
-    description: 'Mit dieser raumgreifenden Lichteffekt Leiste zaubern für ihre Gäste eine beeindruckende Light-Show. Gleich 4 unterschiedliche Effekte stehen in einem dennoch kompakten Querträger bereit. 4 farbige Spots, 4 UV LEDs, 2 Scanner mit beweglichen Spiegeln und 1 zentraler Derby Effekt. Gesteuert wird das ganze per Fernbedienung oder einfach im Sound-to-Light Modus mittels eingebautem Mikrofon. Inkl. Leuchtenstativ.',
-    detailDescription: `Eurolite LED Scan FX Lichtset
-Beeindruckend abwechslungsreiche Lightshow im Kompaktformat
-Mit dieser raumgreifenden Lichteffekt Leiste zaubern für ihre Gäste eine beeindruckende Light-Show. Gleich 4 unterschiedliche Effekte stehen in einem dennoch kompakten Querträger bereit. 4 farbige Spots, 4 UV LEDs, 2 Scanner mit beweglichen Spiegeln und 1 zentraler Derby Effekt. Gesteuert wird das ganze per Fernbedienung oder einfach im Sound-to-Light Modus mittels eingebautem Mikrofon. Inkl. Leuchtenstativ.
+    description: 'Mit diesem raumgreifenden Lichteffekt zaubern Sie für ihre Gäste eine beeindruckende Light-Show. Gleich 4 unterschiedliche Effekte stehen in einem dennoch kompakten Querträger bereit. 4 farbige Spots, 4 UV LEDs, 2 Scanner mit beweglichen Spiegeln und 1 zentraler Derby Effekt. Gesteuert wird das ganze per Fernbedienung oder einfach im Sound-to-Light Modus. Inkl. Leuchtenstativ.',
+    detailDescription: `LED Effekt Bar mit Scannern
+Mit diesem raumgreifenden Lichteffekt
+Mit diesem raumgreifenden Lichteffekt zaubern Sie für ihre Gäste eine beeindruckende Light-Show. Gleich 4 unterschiedliche Effekte stehen in einem dennoch kompakten Querträger bereit. 4 farbige Spots, 4 UV LEDs, 2 Scanner mit beweglichen Spiegeln und 1 zentraler Derby Effekt. Gesteuert wird das ganze per Fernbedienung oder einfach im Sound-to-Light Modus. Inkl. Leuchtenstativ.
 
 Technische Daten:
-4 farbige LED Spots
-1 zentraler Derby Effekt
-4 UV LEDs
-2 Scanner mit beweglichen Spiegeln
-RGB Farbmischung
-Steuerung: Fernbedienung oder Sound-to-Light Modus (eingebautes Mikrofon)
-DMX-steuerbar oder Stand-Alone Betrieb
-Ultrakompakt und leicht zu transportieren 
-inkl. Leuchtenstativ
-Gewicht: ca. 15 kg (inkl. Stativ)`,
+15 W (Scanner), 3 x 7 W (Spots), 2 x 3 W (Derby)
+Indoor
+RGB/W+UV
+ja, eingeb. Mikrofon
+Fernbedienung, DMX
+ca. 21 kg inkl. Stativ`,
     images: ['/images/led-spot-scanner.webp'],
     pricePerUnit: 40,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
-      { label: 'Typ', value: 'LED Effekt Bar' },
-      { label: 'Features', value: '4 unterschiedliche Effekte' },
-      { label: 'Anwendung', value: 'Lichtshow' },
-      { label: 'Spots', value: '4x farbige Spots' },
-      { label: 'Derby', value: '1x zentraler Derby Effekt' },
-      { label: 'Scanner', value: '2x mit beweglichen Spiegeln' },
-      { label: 'Zusatz', value: '4x UV LEDs' },
-      { label: 'Steuerung', value: 'Fernbedienung oder Sound-to-Light (eingebautes Mikrofon)' },
-      { label: 'Zubehör', value: 'Leuchtenstativ' },
-      { label: 'Gewicht', value: 'ca. 15 kg (inkl. Stativ)' },
+      { label: 'Leistung', value: '15 W (Scanner), 3 x 7 W (Spots), 2 x 3 W (Derby)' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Farbmischung', value: 'RGB/W+UV' },
+      { label: 'Music', value: 'ja, eingeb. Mikrofon' },
+      { label: 'Wifi', value: 'Fernbedienung, DMX' },
+      { label: 'Gewicht', value: 'ca. 21 kg inkl. Stativ' },
     ],
   },
   {
     id: 'high-power-led-effekt-bar-mit-laser',
     name: 'High-Power LED Effekt Bar mit Laser',
-    description: 'Die ultrahellen Spots und Derbys sorgen in Kombination mit dem zentralen Klasse 2B Laser für ein eindrucksvolles Lichtspektakel. Perfekt für DJs, Partys und Hochzeiten kann mit nur einer dieser Leisten eine komplette Tanzfläche bespielt werden. Die Ansteuerung erfolgt soundgesteuert oder via Fußleiste, die sich per Funk verbindet. Inkl. Leuchtenstativ.',
-    detailDescription: `Eurolite LED Pro-FX BAR mit Laser
-Die Lightshow zum Mitnehmen.
-Die ultrahellen Spots und Derbys sorgen in Kombination mit dem zentralen Klasse 2B Laser für ein eindrucksvolles Lichtspektakel. Perfekt für DJs, Partys und Hochzeiten kann mit nur einer dieser Leisten eine komplette Tanzfläche bespielt werden. Die Ansteuerung erfolgt soundgesteuert oder via Fußleiste, die sich per Funk verbindet. Inkl. Leuchtenstativ.
+    description: 'Die ultrahellen Spots und Derbys sorgen in Kombination mit dem zentralen Laser für ein eindrucksvolles Lichtspektakel. Perfekt für DJs, Partys und Hochzeiten kann mit nur einer dieser Leisten eine komplette Tanzfläche bespielt werden. Die Ansteuerung erfolgt soundgesteuert oder via Fußleiste, die sich per Funk verbindet. Inkl. Leuchtenstativ.',
+    detailDescription: `High-Power LED Effekt Bar mit Laser
+Die ultrahellen Spots und Derbys
+Die ultrahellen Spots und Derbys sorgen in Kombination mit dem zentralen Laser für ein eindrucksvolles Lichtspektakel. Perfekt für DJs, Partys und Hochzeiten kann mit nur einer dieser Leisten eine komplette Tanzfläche bespielt werden. Die Ansteuerung erfolgt soundgesteuert oder via Fußleiste, die sich per Funk verbindet. Inkl. Leuchtenstativ.
 
 Technische Daten:
-Ultrahelle LED Spots
-LED Derbys
-Klasse 2B Laser (zentral)
-abgestimmte Automatikprogramme
-Sound-to-Light Modus
-Steuerung: Soundgesteuert oder via Fußleiste (Funkverbindung)
-DMX-steuerbar oder Stand-Alone Betrieb
-Ultrakompakt und leicht zu transportieren 
-inkl. Leuchtenstativ
-Gewicht: ca. 12,5 kg (inkl. Stativ)`,
+6 x 6 W (Spots), 6 x 2 W (Derby)
+Indoor
+RGB+UV
+ja, eingeb. Mikrofon
+Fernbedienung, DMX
+ca. 18 kg inkl. Stativ`,
     images: ['/images/led-spot-laser.webp'],
     pricePerUnit: 45,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
-      { label: 'Typ', value: 'LED Effekt Bar' },
-      { label: 'Features', value: 'Laser' },
-      { label: 'Leistung', value: 'High Power' },
-      { label: 'Spots', value: 'Ultrahelle LED Spots' },
-      { label: 'Derbys', value: 'LED Derbys' },
-      { label: 'Laser', value: 'Klasse 2B (zentral)' },
-      { label: 'Anwendung', value: 'DJs, Partys, Hochzeiten' },
-      { label: 'Steuerung', value: 'Soundgesteuert oder via Fußleiste (Funkverbindung)' },
-      { label: 'Zubehör', value: 'Leuchtenstativ' },
-      { label: 'Gewicht', value: 'ca. 12,5 kg (inkl. Stativ)' },
+      { label: 'Leistung', value: '6 x 6 W (Spots), 6 x 2 W (Derby)' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Farbmischung', value: 'RGB+UV' },
+      { label: 'Music', value: 'ja, eingeb. Mikrofon' },
+      { label: 'Wifi', value: 'Fernbedienung, DMX' },
+      { label: 'Schutzklasse', value: '2M' },
+      { label: 'Gewicht', value: 'ca. 18 kg inkl. Stativ' },
     ],
   },
   {

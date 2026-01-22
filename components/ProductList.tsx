@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShoppingBag, ArrowRight, Zap, Users, Music, Home, CloudRain, Volume2, Bluetooth, Weight, Truck, Speech, BatteryMedium, Sliders, Sparkles, MonitorCheck, Network, Wifi, WifiOff, Usb, Palette, Move, ShieldAlert, BarChart3, SignalHigh, Cable, Monitor, Maximize, Sun, Contrast, HdmiPort } from 'lucide-react';
+import { ShoppingBag, ArrowRight, Zap, Users, Music, Home, CloudRain, CloudRainWind, Volume2, Bluetooth, Weight, Truck, Speech, BatteryMedium, Sliders, Sparkles, MonitorCheck, Network, Wifi, WifiOff, Usb, Palette, Move, ShieldAlert, BarChart3, SignalHigh, Cable, Monitor, Maximize, Sun, Contrast, HdmiPort } from 'lucide-react';
 import { useRentalCart } from '@/context/RentalCartContext';
 import type { Product } from '@/lib/products';
 
@@ -147,7 +147,7 @@ export default function ProductList({ products }: ProductListProps) {
                         }
                         
                         if (category === 'statische-scheinwerfer-led-spots') {
-                          return labelLower.includes('leistung') || labelLower.includes('akku') || labelLower.includes('laufzeit') || spec.label === 'Indoor' || spec.label === 'Outdoor' || labelLower.includes('farb') || labelLower.includes('rgb') || labelLower.includes('sound') || labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx') || spec.label === 'Gewicht';
+                          return labelLower.includes('leistung') || labelLower.includes('watt') || labelLower.includes('akku') || labelLower.includes('laufzeit') || spec.label === 'Indoor' || spec.label === 'Outdoor' || labelLower.includes('farb') || labelLower.includes('rgb') || labelLower.includes('palette') || labelLower.includes('farbmischung') || labelLower.includes('sound') || labelLower.includes('light') || labelLower.includes('music') || labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx') || labelLower.includes('wifi') || labelLower.includes('gewicht') || labelLower.includes('schutzklasse');
                         }
                         
                         if (category === 'moving-heads') {
@@ -283,21 +283,24 @@ export default function ProductList({ products }: ProductListProps) {
                           } else if (labelLower.includes('akku') || labelLower.includes('laufzeit')) {
                             icon = <BatteryMedium className="w-5 h-5" />;
                             label = 'AKKU';
-                          } else if (spec.label === 'Indoor') {
+                          } else if (spec.label === 'Indoor' || (labelLower.includes('indoor') && !labelLower.includes('outdoor'))) {
                             icon = <Home className="w-5 h-5" />;
                             label = 'INDOOR';
-                          } else if (spec.label === 'Outdoor') {
-                            icon = <CloudRain className="w-5 h-5" />;
+                          } else if (spec.label === 'Outdoor' || labelLower.includes('outdoor') || labelLower.includes('ip44') || labelLower.includes('ip65')) {
+                            icon = <CloudRainWind className="w-5 h-5" />;
                             label = 'OUTDOOR';
-                          } else if (labelLower.includes('farb') || labelLower.includes('rgb')) {
+                          } else if (labelLower.includes('farb') || labelLower.includes('rgb') || labelLower.includes('palette') || labelLower.includes('farbmischung')) {
                             icon = <Palette className="w-5 h-5" />;
                             label = 'FARBEN';
-                          } else if (labelLower.includes('sound') || labelLower.includes('light')) {
+                          } else if (labelLower.includes('sound') || labelLower.includes('light') || labelLower.includes('music')) {
                             icon = <Music className="w-5 h-5" />;
                             label = 'SOUND';
-                          } else if (labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx')) {
+                          } else if (labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx') || labelLower.includes('wifi')) {
                             icon = <Wifi className="w-5 h-5" />;
-                            label = 'WIRELESS';
+                            label = 'WIFI';
+                          } else if (labelLower.includes('schutzklasse') || labelLower.includes('schutz')) {
+                            icon = <ShieldAlert className="w-5 h-5" />;
+                            label = 'SCHUTZ';
                           } else if (labelLower.includes('gewicht')) {
                             icon = <Weight className="w-5 h-5" />;
                             label = 'WEIGHT';
