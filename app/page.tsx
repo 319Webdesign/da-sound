@@ -11,11 +11,11 @@ import AboutServiceSection from '@/components/AboutServiceSection';
 import dynamic from 'next/dynamic';
 
 // Dynamic Import für schwere Komponenten - Lazy Loading
-const CustomerReviewsSection = dynamic(
-  () => import('@/components/CustomerReviewsSection'),
+const GoogleReviewsSection = dynamic(
+  () => import('@/components/GoogleReviewsSection'),
   { 
     loading: () => <div className="h-96 bg-white" />, // Placeholder während des Ladens
-    ssr: true 
+    ssr: false // Client-side only, da es fetch verwendet
   }
 );
 import CTASection from '@/components/CTASection';
@@ -79,7 +79,7 @@ export default function HomePage() {
       <TechHighlights />
 
       {/* Kundenbewertungen */}
-      <CustomerReviewsSection />
+      <GoogleReviewsSection />
 
       {/* CTA Section */}
       <CTASection />
