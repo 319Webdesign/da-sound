@@ -8,10 +8,11 @@ import {
   Zap,
   Speaker,
   Lightbulb,
-  ArrowRight,
+  ShoppingBag,
 } from 'lucide-react';
 import Image from 'next/image';
 import { data } from '@/lib/data';
+import { useRentalCart } from '@/context/RentalCartContext';
 
 interface TechSpec {
   label: string;
@@ -27,6 +28,7 @@ interface TechHighlight {
   isNew?: boolean;
   isSpecial?: boolean; // Für Stromerzeuger mit Ratgeber
   productUrl?: string;
+  productId: string; // ID für Warenkorb
 }
 
 const techHighlights: TechHighlight[] = [
@@ -37,10 +39,12 @@ const techHighlights: TechHighlight[] = [
     specs: [
       { label: '200-1.500 Personen' },
       { label: 'Line Array' },
+      { label: 'wetterfest IP44' },
       { label: 'Made in Europe' },
     ],
-    image: '/images/palive2-1920w.webp',
+    image: '/images/images highlights/event_4er.png',
     imageAlt: 'Profi-PA von D.A.S. Audio',
+    productId: 'profi-pa-das-audio',
   },
   {
     id: 2,
@@ -49,11 +53,13 @@ const techHighlights: TechHighlight[] = [
     specs: [
       { label: '4K UHD Auflösung' },
       { label: '1-Chip Laser DLP Technik' },
-      { label: '5.200 Ansi Lumen' },
+      { label: '5.200 Ansi-Lumen' },
+      { label: '2-Fache ZOOM Optik' },
     ],
     image: '/images/acer1-1920w.webp',
     imageAlt: '4K Beamer von Panasonic',
     isNew: true,
+    productId: '4k-beamer-panasonic',
   },
   {
     id: 3,
@@ -63,22 +69,26 @@ const techHighlights: TechHighlight[] = [
       { label: 'Dezente Optik' },
       { label: '1.000W RMS' },
       { label: 'Bluetooth' },
+      { label: 'in schwarz und weiß erhältlich' },
     ],
-    image: '/images/audiozenit-1920w.webp',
+    image: '/images/images highlights/alteaduo.png',
     imageAlt: 'Universell einsetzbare PA-Säulen',
+    productId: 'pa-saeulen',
   },
   {
     id: 4,
     icon: Zap,
-    title: 'Stromerzeuger bis 6,5kW',
+    title: 'Cold Spark Indoorfeuerwerk',
     specs: [
-      { label: 'Outdoor' },
-      { label: 'Invertertechnik' },
-      { label: 'Geräuschgedämmt' },
+      { label: 'ungefährliche Kaltfunken' },
+      { label: 'Fontäne 2-5m' },
+      { label: 'spektakulärer Effekt' },
+      { label: 'beliebt für Hochzeiten' },
     ],
-    image: '/images/hy3200si_1-1920w.webp',
-    imageAlt: 'Stromerzeuger bis 6,5kW',
+    image: '/images/images highlights/Kopie von coldspark2.jpg',
+    imageAlt: 'Cold Spark Indoorfeuerwerk',
     isSpecial: true,
+    productId: 'cold-spark-indoorfeuerwerk',
   },
 ];
 
@@ -100,7 +110,7 @@ export default function TechHighlights() {
             Technik-Highlights
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Unsere Top-Geräte für Ihre Veranstaltung – professionelle Technik in Premium-Qualität
+            Ausgesuchte Top-Geräte aus unserem Sortiment – professionelle Technik für Ihre Veranstaltung
           </p>
         </motion.div>
 
@@ -131,7 +141,14 @@ export default function TechHighlights() {
 
 function TechCard({ product, index }: { product: TechHighlight; index: number }) {
   const IconComponent = product.icon;
-  const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(`Hallo, ich interessiere mich für: ${product.title}`)}`;
+  const { addItem } = useRentalCart();
+
+  const handleAddToCart = () => {
+    addItem({
+      id: product.productId,
+      name: product.title,
+    });
+  };
 
   return (
     <motion.div
@@ -161,7 +178,7 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
             src={product.image}
             alt={product.imageAlt || product.title}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-500"
+            className={`${product.id === 1 || product.id === 3 ? 'object-contain' : 'object-cover'} group-hover:scale-110 transition-transform duration-500`}
             sizes="(max-width: 768px) 280px, (max-width: 1024px) 25vw, 250px"
             quality={75}
             loading="lazy"
@@ -202,16 +219,14 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
       {/* Spacer um CTA nach unten zu drücken */}
       <div className="flex-grow"></div>
 
-      {/* CTA Link - fest unten */}
-      <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-2 text-primary font-semibold text-sm hover:text-primary-dark transition-colors group/cta mt-auto pt-4 border-t border-gray-100"
+      {/* CTA Button - Zum Warenkorb hinzufügen */}
+      <button
+        onClick={handleAddToCart}
+        className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg mt-auto text-sm"
       >
-        Details & Mietanfrage
-        <ArrowRight className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform" />
-      </a>
+        <ShoppingBag className="w-4 h-4" />
+        Zum Warenkorb
+      </button>
     </motion.div>
   );
 }

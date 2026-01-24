@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 
 interface ReviewCardProps {
@@ -11,12 +11,17 @@ interface ReviewCardProps {
 }
 
 export default function ReviewCard({ authorName, rating, text, time }: ReviewCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   // Konvertiere Unix-Timestamp zu lesbarem Datum
   const reviewDate = new Date(time * 1000).toLocaleDateString('de-DE', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   });
+
+  // Prüfe, ob der Text lang genug ist, um einen "Mehr lesen"-Button zu zeigen
+  const isLongText = text.length > 150;
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full flex flex-col">
@@ -43,9 +48,21 @@ export default function ReviewCard({ authorName, rating, text, time }: ReviewCar
       </div>
 
       {/* Rezensionstext */}
-      <p className="text-gray-700 text-sm leading-relaxed line-clamp-3 flex-grow">
-        {text}
-      </p>
+      <div className="flex-grow">
+        <p className={`text-gray-700 text-sm leading-relaxed transition-all duration-300 ${!isExpanded && isLongText ? 'line-clamp-3' : ''}`}>
+          {text}
+        </p>
+        
+        {/* Mehr lesen / Weniger anzeigen Button */}
+        {isLongText && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-2 text-blue-600 hover:text-blue-700 text-sm font-semibold transition-colors"
+          >
+            {isExpanded ? 'Weniger anzeigen' : 'Mehr lesen'}
+          </button>
+        )}
+      </div>
     </div>
   );
 }

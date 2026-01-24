@@ -21,22 +21,22 @@ export const data = {
   heroImages: [
     {
       id: 1,
-      url: '/images/palive2-1920w.webp',
-      alt: 'Professionelles Lautsprecher-Array',
+      url: '/images/images start/start1.jpg',
+      alt: 'Professionelle Veranstaltungstechnik',
       type: 'speaker' as const,
       position: 'A' as const,
     },
     {
       id: 2,
-      url: '/images/chorkonzert-1920w.webp',
-      alt: 'Lichtshow mit Moving Heads',
+      url: '/images/images start/start3.jpg',
+      alt: 'Event-Equipment',
       type: 'lightshow' as const,
       position: 'B' as const,
     },
     {
       id: 3,
-      url: '/images/IMG-20250720-WA0049-1920w.webp',
-      alt: 'Live-Event mit Publikum',
+      url: '/images/images start/start2.jpg',
+      alt: 'Veranstaltungstechnik in Aktion',
       type: 'live-event' as const,
       position: 'C' as const,
     },

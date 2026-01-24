@@ -8,17 +8,8 @@ import ExpertiseSection from '@/components/ExpertiseSection';
 import TechHighlights from '@/components/TechHighlights';
 import RentalCategories from '@/components/RentalCategories';
 import AboutServiceSection from '@/components/AboutServiceSection';
-import dynamic from 'next/dynamic';
 import LazyRender from '@/components/LazyRender';
-
-// Dynamic Import für schwere Komponenten - Lazy Loading
-const GoogleReviewsSection = dynamic(
-  () => import('@/components/GoogleReviewsSection'),
-  { 
-    loading: () => <div className="h-96 bg-white" />, // Placeholder während des Ladens
-    ssr: false // Client-side only, da es fetch verwendet
-  }
-);
+import GoogleReviewsSection from '@/components/GoogleReviewsSection';
 import CTASection from '@/components/CTASection';
 import DryHireServiceSection from '@/components/DryHireServiceSection';
 import FAQSection from '@/components/FAQSection';

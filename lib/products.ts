@@ -39,7 +39,7 @@ Set bestehend aus:
     specs: [
       { label: 'Personen', value: '1-50' },
       { label: 'Indoor', value: 'Indoor' },
-      { label: 'Leistung', value: '700 W RMS (500W Sub + 100W Satelliten)' },
+      { label: 'Leistung', value: '700 W' },
       { label: 'Schalldruck', value: '128 dB' },
       { label: 'Bluetooth', value: 'ja' },
       { label: 'Gewicht', value: '45 kg' },
@@ -73,7 +73,7 @@ Set bestehend aus:
     specs: [
       { label: 'Personen', value: '1-100' },
       { label: 'Indoor', value: 'Indoor' },
-      { label: 'Leistung', value: '2.000 W (1.200W Sub + 400W Tops)' },
+      { label: 'Leistung', value: '2.000 W' },
       { label: 'Schalldruck', value: '131 dB' },
       { label: 'Bluetooth', value: 'ja' },
       { label: 'Gewicht', value: '80 kg' },
@@ -142,7 +142,7 @@ Set bestehend aus:
     specs: [
       { label: 'Personen', value: '1-150' },
       { label: 'Indoor', value: 'Indoor' },
-      { label: 'Leistung', value: '3.900 W (2.400W Subs + 1.500W Tops)' },
+      { label: 'Leistung', value: '3.900 W' },
       { label: 'Schalldruck', value: '134 dB' },
       { label: 'Bluetooth', value: 'ja' },
       { label: 'Gewicht', value: '130 kg' },
@@ -178,7 +178,7 @@ Set bestehend aus:
     specs: [
       { label: 'Personen', value: '1-250' },
       { label: 'Indoor', value: 'Indoor' },
-      { label: 'Leistung', value: '6.000 W (4.000W Subs + 2.000W Tops)' },
+      { label: 'Leistung', value: '6.000 W' },
       { label: 'Schalldruck', value: '136 dB' },
       { label: 'Bluetooth', value: 'ja' },
       { label: 'Gewicht', value: '160 kg' },
@@ -853,6 +853,31 @@ manuell / DMX
       { label: 'Music', value: 'nein' },
       { label: 'Wifi', value: 'manuell / DMX' },
       { label: 'Gewicht', value: '3,5 kg / Stck' },
+    ],
+  },
+  {
+    id: 'theatre-spot-led',
+    name: 'Theatre Spot LED',
+    description: 'Standard Stufenlinsen Scheinwerfer mit sparsamer 100W LED (vergleichbar mit 1.000W Halogenlampe), Farbton warmweiß. Perfekt zur frontalen Ausleuchtung von Bühnen. Manuell einstellbarer Zoom-Bereich.',
+    detailDescription: `Theatre Spot LED
+Standard Stufenlinsen Scheinwerfer mit sparsamer LED
+Standard Stufenlinsen Scheinwerfer mit sparsamer 100W LED (vergleichbar mit 1.000W Halogenlampe), Farbton warmweiß. Perfekt zur frontalen Ausleuchtung von Bühnen. Manuell einstellbarer Zoom-Bereich.
+
+Technische Daten:
+100 Watt LED
+Indoor
+warmweiß
+manueller Zoom
+DMX-Steuerung möglich`,
+    images: ['/images/briteq1.webp'],
+    pricePerUnit: 25,
+    categorySlug: 'statische-scheinwerfer-led-spots',
+    specs: [
+      { label: 'Leistung', value: '100 Watt LED' },
+      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Farbton', value: 'warmweiß' },
+      { label: 'Zoom', value: 'manuell einstellbar' },
+      { label: 'Steuerung', value: 'DMX-Steuerung möglich' },
     ],
   },
   {

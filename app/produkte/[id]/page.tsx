@@ -298,6 +298,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Punktuelle Beleuchtung von Flächen, Wänden, Vorhängen oder Objekten wo Kabel nur stören würden'
                   : product.id === 'led-outdoor-fluter-ip65'
                   ? 'Beleuchtung von Gebäuden oder Objekten im Freien, Festzelten (natürlich auch in Innenräumen anwendbar)'
+                  : product.id === 'theatre-spot-led'
+                  ? 'Frontale Ausleuchtung von Bühnen für Theater, Konzerte und Events\nPerfekt für professionelle Bühnenproduktionen\nTheateraufführungen und Konzertbühnen\nHochzeiten und Corporate Events'
                   : product.id === 'led-pll-panel-power-strobe'
                   ? 'Gleichmäßige Ausleuchtung von Wänden, Bühnen, Objekten für Foto- / Film und Theaterproduktionen\nEinsetzbar als Hochleistungs-Stroboskop'
                   : product.id === 'party-lichtset-kompakt'
