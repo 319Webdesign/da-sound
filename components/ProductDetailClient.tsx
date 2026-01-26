@@ -44,7 +44,11 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
         if (!loadedImages.has(index)) {
           const img = new window.Image();
           img.src = images[index];
-          setLoadedImages((prev) => new Set([...prev, index]));
+          setLoadedImages((prev) => {
+            const newSet = new Set(prev);
+            newSet.add(index);
+            return newSet;
+          });
         }
       });
     };
