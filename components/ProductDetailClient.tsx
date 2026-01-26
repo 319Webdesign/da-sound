@@ -1,10 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Volume2, Lightbulb, Cloud, Cable, Users, Home, CloudRain, Zap, Bluetooth, Weight, Truck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { DEFAULT_BLUR_DATA_URL } from '@/lib/blurDataUrl';
 
 // Icon-Mapping für Client-Komponente
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -21,6 +20,7 @@ interface ProductImageSliderProps {
 
 export function ProductImageSlider({ images, productName }: ProductImageSliderProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -34,9 +34,23 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
     setCurrentImageIndex(index);
   };
 
-  // Preload next and previous images
-  const nextIndex = (currentImageIndex + 1) % images.length;
-  const prevIndex = (currentImageIndex - 1 + images.length) % images.length;
+  // Preload adjacent images
+  useEffect(() => {
+    const preloadImages = () => {
+      const nextIndex = (currentImageIndex + 1) % images.length;
+      const prevIndex = (currentImageIndex - 1 + images.length) % images.length;
+      
+      [nextIndex, prevIndex].forEach((index) => {
+        if (!loadedImages.has(index)) {
+          const img = new window.Image();
+          img.src = images[index];
+          setLoadedImages((prev) => new Set([...prev, index]));
+        }
+      });
+    };
+    
+    preloadImages();
+  }, [currentImageIndex, images, loadedImages]);
 
   return (
       <div>
@@ -44,30 +58,6 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
         <div className="relative aspect-[4/3] max-h-[500px] rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm">
           {images.length > 0 ? (
             <>
-              {/* Preload next and previous images */}
-              <div className="hidden">
-                {images[nextIndex] && (
-                  <Image
-                    src={images[nextIndex]}
-                    alt=""
-                    width={800}
-                    height={600}
-                    quality={85}
-                    priority={false}
-                  />
-                )}
-                {images[prevIndex] && (
-                  <Image
-                    src={images[prevIndex]}
-                    alt=""
-                    width={800}
-                    height={600}
-                    quality={85}
-                    priority={false}
-                  />
-                )}
-              </div>
-
               <AnimatePresence mode="sync">
                 <motion.div
                   key={currentImageIndex}
@@ -83,11 +73,11 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
                     fill
                     className="object-contain p-2 md:p-4"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                    quality={85}
-                    priority={currentImageIndex === 0}
-                    placeholder="blur"
-                    blurDataURL={DEFAULT_BLUR_DATA_URL}
-                    loading={currentImageIndex === 0 ? 'eager' : 'lazy'}
+                    quality={75}
+                    {...(currentImageIndex === 0 
+                      ? { priority: true } 
+                      : { loading: 'lazy' }
+                    )}
                   />
                 </motion.div>
               </AnimatePresence>

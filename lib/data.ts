@@ -21,21 +21,21 @@ export const data = {
   heroImages: [
     {
       id: 1,
-      url: '/images/images start/start1.jpg',
+      url: '/images/images start/start1.webp',
       alt: 'Professionelle Veranstaltungstechnik',
       type: 'speaker' as const,
       position: 'A' as const,
     },
     {
       id: 2,
-      url: '/images/images start/start3.jpg',
+      url: '/images/images start/start3.webp',
       alt: 'Event-Equipment',
       type: 'lightshow' as const,
       position: 'B' as const,
     },
     {
       id: 3,
-      url: '/images/images start/start2.jpg',
+      url: '/images/images start/start2.webp',
       alt: 'Veranstaltungstechnik in Aktion',
       type: 'live-event' as const,
       position: 'C' as const,

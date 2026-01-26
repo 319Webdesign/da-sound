@@ -261,7 +261,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 text: product.detailDescription,
               } : undefined,
               bildergalerie: {
-                images: product.images || [],
+                images: product.images && product.images.length > 1 ? product.images.slice(1) : [],
               },
               anwendung: {
                 text: product.id === 'party-set-small' 
