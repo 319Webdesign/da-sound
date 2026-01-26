@@ -34,31 +34,60 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
     setCurrentImageIndex(index);
   };
 
+  // Preload next and previous images
+  const nextIndex = (currentImageIndex + 1) % images.length;
+  const prevIndex = (currentImageIndex - 1 + images.length) % images.length;
+
   return (
-      <div className="space-y-4">
+      <div>
         {/* Hauptbild */}
-        <div className="relative aspect-square rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm">
+        <div className="relative aspect-[4/3] max-h-[500px] rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm">
           {images.length > 0 ? (
             <>
-              <AnimatePresence mode="wait">
+              {/* Preload next and previous images */}
+              <div className="hidden">
+                {images[nextIndex] && (
+                  <Image
+                    src={images[nextIndex]}
+                    alt=""
+                    width={800}
+                    height={600}
+                    quality={85}
+                    priority={false}
+                  />
+                )}
+                {images[prevIndex] && (
+                  <Image
+                    src={images[prevIndex]}
+                    alt=""
+                    width={800}
+                    height={600}
+                    quality={85}
+                    priority={false}
+                  />
+                )}
+              </div>
+
+              <AnimatePresence mode="sync">
                 <motion.div
                   key={currentImageIndex}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="relative w-full h-full"
+                  transition={{ duration: 0.15 }}
+                  className="relative w-full h-full flex items-center justify-center"
                 >
                   <Image
                     src={images[currentImageIndex]}
                     alt={`${productName} - Bild ${currentImageIndex + 1}`}
                     fill
-                    className="object-contain p-4 md:p-8"
+                    className="object-contain p-2 md:p-4"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                    quality={90}
+                    quality={85}
                     priority={currentImageIndex === 0}
                     placeholder="blur"
                     blurDataURL={DEFAULT_BLUR_DATA_URL}
+                    loading={currentImageIndex === 0 ? 'eager' : 'lazy'}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -83,21 +112,10 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
                 </>
               )}
 
-              {/* Bild-Indikatoren */}
+              {/* Bild-Counter oben rechts */}
               {images.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                  {images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => goToImage(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentImageIndex
-                          ? 'bg-primary w-6'
-                          : 'bg-white/60 hover:bg-white/80'
-                      }`}
-                      aria-label={`Bild ${index + 1} anzeigen`}
-                    />
-                  ))}
+                <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1.5 rounded-full text-sm font-semibold z-10 backdrop-blur-sm">
+                  {currentImageIndex + 1} / {images.length}
                 </div>
               )}
             </>
@@ -107,34 +125,6 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
             </div>
           )}
         </div>
-
-        {/* Thumbnails */}
-        {images.length > 1 && (
-          <div className="grid grid-cols-4 gap-2">
-            {images.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => goToImage(index)}
-                className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-all ${
-                  index === currentImageIndex
-                    ? 'border-primary shadow-md'
-                    : 'border-gray-200 hover:border-gray-300'
-                }`}
-              >
-                <Image
-                  src={image}
-                  alt={`${productName} - Thumbnail ${index + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 25vw, (max-width: 1024px) 25vw, 12.5vw"
-                  quality={75}
-                  placeholder="blur"
-                  blurDataURL={DEFAULT_BLUR_DATA_URL}
-                />
-              </button>
-            ))}
-          </div>
-        )}
       </div>
   );
 }
@@ -144,12 +134,8 @@ interface ProductTabsProps {
     beschreibung?: {
       text: string;
     };
-    lieferumfang?: {
-      items: Array<{
-        iconName: string;
-        label: string;
-        description: string;
-      }>;
+    bildergalerie?: {
+      images: string[];
     };
     anwendung?: {
       text: string;
@@ -159,11 +145,12 @@ interface ProductTabsProps {
     };
   };
   productId?: string;
+  productName?: string;
 }
 
-export function ProductTabs({ tabs, productId }: ProductTabsProps) {
-  const [activeTab, setActiveTab] = useState<'beschreibung' | 'lieferumfang' | 'anwendung' | 'technischeDetails'>(
-    tabs.beschreibung ? 'beschreibung' : 'lieferumfang'
+export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsProps) {
+  const [activeTab, setActiveTab] = useState<'beschreibung' | 'bildergalerie' | 'anwendung' | 'technischeDetails'>(
+    tabs.beschreibung ? 'beschreibung' : 'bildergalerie'
   );
 
   return (
@@ -182,16 +169,18 @@ export function ProductTabs({ tabs, productId }: ProductTabsProps) {
             Beschreibung
           </button>
         )}
-        <button
-          onClick={() => setActiveTab('lieferumfang')}
-          className={`px-6 py-3 font-semibold transition-colors border-b-2 ${
-            activeTab === 'lieferumfang'
-              ? 'text-primary border-primary'
-              : 'text-gray-600 border-transparent hover:text-gray-900'
-          }`}
-        >
-          Lieferumfang
-        </button>
+        {tabs.bildergalerie && (
+          <button
+            onClick={() => setActiveTab('bildergalerie')}
+            className={`px-6 py-3 font-semibold transition-colors border-b-2 ${
+              activeTab === 'bildergalerie'
+                ? 'text-primary border-primary'
+                : 'text-gray-600 border-transparent hover:text-gray-900'
+            }`}
+          >
+            Bildergalerie
+          </button>
+        )}
         <button
           onClick={() => setActiveTab('anwendung')}
           className={`px-6 py-3 font-semibold transition-colors border-b-2 ${
@@ -233,30 +222,16 @@ export function ProductTabs({ tabs, productId }: ProductTabsProps) {
             </motion.div>
           )}
 
-          {activeTab === 'lieferumfang' && tabs.lieferumfang && (
+          {activeTab === 'bildergalerie' && tabs.bildergalerie && (
             <motion.div
-              key="lieferumfang"
+              key="bildergalerie"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {tabs.lieferumfang.items.map((item, index) => {
-                  const IconComponent = iconMap[item.iconName] || Volume2;
-                  return (
-                    <div
-                      key={index}
-                      className="flex flex-col items-center text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-all"
-                    >
-                      <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                        <IconComponent className="w-8 h-8 text-primary" />
-                      </div>
-                      <h4 className="font-semibold text-gray-900 mb-2">{item.label}</h4>
-                      <p className="text-sm text-gray-600">{item.description}</p>
-                    </div>
-                  );
-                })}
+              <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200">
+                <ProductImageSlider images={tabs.bildergalerie.images} productName={productName} />
               </div>
             </motion.div>
           )}

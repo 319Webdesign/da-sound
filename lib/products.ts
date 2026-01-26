@@ -32,7 +32,16 @@ Set bestehend aus:
 2 x Lautsprecherstativ
 1 x LED Kompakt Licht-Set mit Stativ
 1 x Party-Nebelmaschine + Fernbedienung`,
-    images: ['/images/partysetsmall.webp'],
+    images: [
+      '/images/partysetsmall.webp',
+      '/images/partysetSMALL/antariz800.jpg',
+      '/images/partysetSMALL/antariz8002.jpg',
+      '/images/partysetSMALL/kls120_1.jpg',
+      '/images/partysetSMALL/kls120_2.jpg',
+      '/images/partysetSMALL/kls120_3.jpg',
+      '/images/partysetSMALL/molly4.jpg',
+      '/images/partysetSMALL/molly5.jpg',
+    ],
     pricePerUnit: 80,
     pricePerPair: 120,
     categorySlug: 'party-sets-ton-licht',

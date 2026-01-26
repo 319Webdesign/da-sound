@@ -11,6 +11,7 @@ import RentalCart from '@/components/RentalCart';
 import { ProductImageSlider, ProductTabs } from '@/components/ProductDetailClient';
 import OpeningHours from '@/components/OpeningHours';
 import AddToCartButton from '@/components/AddToCartButton';
+import { DEFAULT_BLUR_DATA_URL } from '@/lib/blurDataUrl';
 
 interface PageProps {
   params: Promise<{
@@ -117,8 +118,26 @@ export default async function ProductDetailPage({ params }: PageProps) {
       <section className="py-8 md:py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Links: Bilderslider */}
-            <ProductImageSlider images={product.images || []} productName={product.name} />
+            {/* Links: Einzelnes Produktbild */}
+            <div className="relative aspect-square rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm">
+              {product.images && product.images.length > 0 ? (
+                <Image
+                  src={product.images[0]}
+                  alt={product.name}
+                  fill
+                  className="object-contain p-4 md:p-8"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+                  quality={90}
+                  priority
+                  placeholder="blur"
+                  blurDataURL={DEFAULT_BLUR_DATA_URL}
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-gray-400">
+                  <Volume2 className="w-24 h-24" />
+                </div>
+              )}
+            </div>
 
             {/* Rechts: Verkaufs-Box */}
             <div className="lg:sticky lg:top-8 lg:self-start">
@@ -236,12 +255,13 @@ export default async function ProductDetailPage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ProductTabs
             productId={product.id}
+            productName={product.name}
             tabs={{
               beschreibung: product.detailDescription ? {
                 text: product.detailDescription,
               } : undefined,
-              lieferumfang: {
-                items: lieferumfang,
+              bildergalerie: {
+                images: product.images || [],
               },
               anwendung: {
                 text: product.id === 'party-set-small' 
