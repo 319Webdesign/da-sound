@@ -25,7 +25,7 @@ const LocationSection = dynamic(
         </div>
       </div>
     ),
-    ssr: true 
+    ssr: false,
   }
 );
 

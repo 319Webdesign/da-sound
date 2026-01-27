@@ -11,6 +11,7 @@ import RentalCart from '@/components/RentalCart';
 import { ProductImageSlider, ProductTabs } from '@/components/ProductDetailClient';
 import OpeningHours from '@/components/OpeningHours';
 import AddToCartButton from '@/components/AddToCartButton';
+import AufbauLegendTooltip from '@/components/AufbauLegendTooltip';
 import { DEFAULT_BLUR_DATA_URL } from '@/lib/blurDataUrl';
 
 interface PageProps {
@@ -39,11 +40,21 @@ export default async function ProductDetailPage({ params }: PageProps) {
   // Verwende detailDescription für Detailseite, sonst description
   const detailText = product.detailDescription || product.description;
 
-  // Beispiel-Daten für Party-Set (kann später aus Produkt-Daten kommen)
+  const aufbauSchwierigkeitMap: Record<string, string> = {
+    'party-set-small': 'Einfach',
+    'party-set-medium': 'Machbar',
+    'party-set-white': 'Einfach',
+    'party-set-large': 'Machbar',
+    'party-set-xlarge': 'Machbar',
+    'pa-set-medium': 'Machbar',
+    'pa-set-large': 'Machbar',
+    'pa-set-xlarge': 'Machbar',
+  };
+
   const quickFacts = {
     personen: product.specs?.find(s => s.label === 'Personen')?.value || 'bis 70',
     bluetooth: detailText?.toLowerCase().includes('bluetooth') || false,
-    aufbauSchwierigkeit: 'Einfach', // Kann später aus Produkt-Daten kommen
+    aufbauSchwierigkeit: aufbauSchwierigkeitMap[product.id] ?? 'Einfach', // Kann später aus Produkt-Daten kommen
   };
 
   // Lieferumfang aus Beschreibung extrahieren oder definieren
@@ -234,7 +245,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
                       <Wrench className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <div className="text-sm text-gray-600">Aufbau-Schwierigkeit</div>
+                      <div className="flex items-center gap-1 text-sm text-gray-600">
+                        <span>Aufbau-Schwierigkeit</span>
+                        <AufbauLegendTooltip />
+                      </div>
                       <div className="font-semibold text-gray-900">{quickFacts.aufbauSchwierigkeit}</div>
                     </div>
                   </div>
