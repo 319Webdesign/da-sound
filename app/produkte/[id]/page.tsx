@@ -99,6 +99,14 @@ export default async function ProductDetailPage({ params }: PageProps) {
     { id: 'akku-spot-indoor-rgb', name: 'Zusätzliche Akku-Strahler', price: 20 },
   ];
 
+  const galleryImages =
+    product.galleryImages && product.galleryImages.length > 0
+      ? product.galleryImages
+      : product.images && product.images.length > 1
+      ? product.images.slice(1)
+      : [];
+  const galleryTab = galleryImages.length > 0 ? { images: galleryImages } : undefined;
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
       {/* Header / Navigation */}
@@ -270,17 +278,15 @@ export default async function ProductDetailPage({ params }: PageProps) {
       {/* Tabs Section */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ProductTabs
-            productId={product.id}
-            productName={product.name}
-            tabs={{
-              beschreibung: product.detailDescription ? {
-                text: product.detailDescription,
-              } : undefined,
-              bildergalerie: {
-                images: product.images && product.images.length > 1 ? product.images.slice(1) : [],
-              },
-              anwendung: {
+            <ProductTabs
+              productId={product.id}
+              productName={product.name}
+              tabs={{
+                beschreibung: product.detailDescription ? {
+                  text: product.detailDescription,
+                } : undefined,
+                bildergalerie: galleryTab,
+                anwendung: {
                 text: product.id === 'party-set-small' 
                   ? 'Partys, Geburtstagsfeiern, Studentenpartys, Weihnachtsfeier, etc.\nFür max 70 Personen (Indoor)'
                   : product.id === 'party-set-medium'

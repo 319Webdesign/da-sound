@@ -4,6 +4,7 @@ export interface Product {
   description: string; // Kurze Beschreibung für Produktkarten
   detailDescription?: string; // Lange, detaillierte Beschreibung für Detailseite
   images: string[];
+  galleryImages?: string[];
   pricePerUnit: number;
   pricePerPair?: number;
   categorySlug: string;
@@ -949,6 +950,13 @@ ja, eingeb. Mikrofon
 Fernbedienung / Wireless DMX
 1,2 kg / Stck`,
     images: ['/images/akku-spot-indoor.webp'],
+    galleryImages: [
+      '/images/akku spot indoor rgb/41700501c.webp',
+      '/images/akku spot indoor rgb/41700503c.webp',
+      '/images/akku spot indoor rgb/41700503d.webp',
+      '/images/akku spot indoor rgb/ledbackground.webp',
+      '/images/akku spot indoor rgb/tl3.webp',
+    ],
     pricePerUnit: 8,
     priceOptions: [
       { label: 'Einzeln', price: 8 },
@@ -982,6 +990,11 @@ ja, eingeb. Mikrofon
 Fernbedienung / Wireless DMX
 3,8 kg / Stck`,
     images: ['/images/akku-spot-outdoor.webp'],
+    galleryImages: [
+      '/images/akku spot outdoor rgbw/akku up.webp',
+      '/images/akku spot outdoor rgbw/beamz4.webp',
+      '/images/akku spot outdoor rgbw/up4_1.webp',
+    ],
     pricePerUnit: 12.5,
     priceOptions: [
       { label: 'Einzeln', price: 12.5 },
@@ -1014,6 +1027,11 @@ nein
 manuell / DMX
 3,5 kg / Stck`,
     images: ['/images/led-outdoor-fluter.webp'],
+    galleryImages: [
+      '/images/led outdoor fluter/starcolor1.webp',
+      '/images/led outdoor fluter/starcolor2.webp',
+      '/images/led outdoor fluter/starcolor3.webp',
+    ],
     pricePerUnit: 15,
     priceOptions: [
       { label: 'Einzeln', price: 15 },
@@ -1044,6 +1062,12 @@ warmweiß
 manueller Zoom
 DMX-Steuerung möglich`,
     images: ['/images/briteq1.webp'],
+    galleryImages: [
+      '/images/theatre spot led/briteq1.webp',
+      '/images/theatre spot led/briteq2.webp',
+      '/images/theatre spot led/briteq3.webp',
+      '/images/theatre spot led/bt100mz.webp',
+    ],
     pricePerUnit: 25,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
@@ -1070,6 +1094,12 @@ nein
 nein
 ca 10 kg inkl. Stativ`,
     images: ['/images/follow-sot.webp'],
+    galleryImages: [
+      '/images/led follow spot/follow.webp',
+      '/images/led follow spot/follow1.webp',
+      '/images/led follow spot/follow2.webp',
+      '/images/led follow spot/pfe250.webp',
+    ],
     pricePerUnit: 60,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
@@ -1097,6 +1127,11 @@ nein
 manuell / DMX
 12,5 kg`,
     images: ['/images/led-ppl.webp'],
+    galleryImages: [
+      '/images/led pll panel/pll480_1.webp',
+      '/images/led pll panel/pll480_2.webp',
+      '/images/led pll panel/pll480_3.webp',
+    ],
     pricePerUnit: 30,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
@@ -1124,6 +1159,13 @@ ja, eingeb. Mikrofon
 Fernbedienung, DMX
 ca 12 kg inkl. Stativ`,
     images: ['/images/kls120_1-1920w.webp'],
+    galleryImages: [
+      '/images/party lichtset kompakt/kls120_1.webp',
+      '/images/party lichtset kompakt/kls120_2.webp',
+      '/images/party lichtset kompakt/kls120_3.webp',
+      '/images/party lichtset kompakt/kls120_4.webp',
+      '/images/party lichtset kompakt/kls120_5.webp',
+    ],
     pricePerUnit: 25,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
@@ -1151,6 +1193,11 @@ ja, eingeb. Mikrofon
 Fernbedienung, DMX
 ca. 17 kg inkl. Stativ`,
     images: ['/images/led-pro.webp'],
+    galleryImages: [
+      '/images/led pro lichtbar RGB/kls902_1.webp',
+      '/images/led pro lichtbar RGB/kls902_2.webp',
+      '/images/led pro lichtbar RGB/kls902_3.webp',
+    ],
     pricePerUnit: 30,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
@@ -1178,6 +1225,13 @@ ja, eingeb. Mikrofon
 Fernbedienung, DMX
 ca. 21 kg inkl. Stativ`,
     images: ['/images/led-spot-scanner.webp'],
+    galleryImages: [
+      '/images/led effekt bar mit scannern/klsscan_1.webp',
+      '/images/led effekt bar mit scannern/klsscan_2.webp',
+      '/images/led effekt bar mit scannern/klsscan_3.webp',
+      '/images/led effekt bar mit scannern/klsscan_4.webp',
+      '/images/led effekt bar mit scannern/klsscan_5.webp',
+    ],
     pricePerUnit: 40,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
@@ -1205,6 +1259,12 @@ ja, eingeb. Mikrofon
 Fernbedienung, DMX
 ca. 18 kg inkl. Stativ`,
     images: ['/images/led-spot-laser.webp'],
+    galleryImages: [
+      '/images/high power led effekt bar mit laser/51741091a.webp',
+      '/images/high power led effekt bar mit laser/51741091g.webp',
+      '/images/high power led effekt bar mit laser/kls_controller.webp',
+      '/images/high power led effekt bar mit laser/profx3.webp',
+    ],
     pricePerUnit: 45,
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
@@ -1263,6 +1323,11 @@ Vielseitiger Strahleneffekt für kleine Tanzflächen/Räume mit Strobo-Funktion
 
 Dieser coole und kompakte LED Effekt, bringt Bewegung und Dynamik auf jede Tanzfläche. Über 48 Linsen werden verschieden farbige LED Strahlen durch den Raum geschleudert. Die zusätzlichen weißen Strobe-LEDs sorgen für eine abwechslungsreiche Lightshow.`,
     images: ['/images/led-derby.webp'],
+    galleryImages: [
+      '/images/led derby effekt/led+derby.webp',
+      '/images/led derby effekt/ledderby.webp',
+      '/images/led derby effekt/ledderby2.webp',
+    ],
     pricePerUnit: 15,
     categorySlug: 'moving-heads',
     specs: [
@@ -1283,6 +1348,12 @@ Heller und dynamischer Lichteffekt bringt Bewegung auf den Dancefloor
 
 Dieser Multieffekt liefert beeindruckende raumfüllende Flowereffekte in Partyräumen, kleineren Clubs und mehr. Die drei rotierenden Prismen und 132 SMD-LEDs erzeugen flickerfreie Farbmischungen, Lauflichter und Strobe-Effekte, die im Soundmodus automatisch zur Musik passen.`,
     images: ['/images/led-flower.webp'],
+    galleryImages: [
+      '/images/led triple flower/flower1.webp',
+      '/images/led triple flower/flower2.webp',
+      '/images/led triple flower/flower3.webp',
+      '/images/led triple flower/flower4.webp',
+    ],
     pricePerUnit: 22.5,
     categorySlug: 'moving-heads',
     specs: [
@@ -1309,6 +1380,12 @@ Statisch langsam drehender Effekt
 Farbe: Weiß
 Optimal für Hochzeiten oder Motto-Partys`,
     images: ['/images/mirror-ball.webp'],
+    galleryImages: [
+      '/images/mirror ball/51741088a.webp',
+      '/images/mirror ball/51741088h.webp',
+      '/images/mirror ball/51741088k.webp',
+      '/images/mirror ball/51741088zx.webp',
+    ],
     pricePerUnit: 25,
     categorySlug: 'moving-heads',
     specs: [
@@ -1329,6 +1406,12 @@ Immer einen kühlen Kopf bewahren - mit LED Moving Heads kein Problem.
 
 Der BT-Meteor des belgischen Herstellers Briteq ist ein wahrer Hingucker. Die kraftvolle 100W LED wird durch die hochwertige Optik in idealerweise in Szene gesetzt. Helle, durchsetzungsfähige Farben und ruckelfreie Bewegungen zeichnen dieses Moving Head aus.`,
     images: ['/images/moving-head-spot.webp'],
+    galleryImages: [
+      '/images/led moving head spot/27827_5.webp',
+      '/images/led moving head spot/bt-meteor_back_6hr.webp',
+      '/images/led moving head spot/bt-meteor_front_5hr.webp',
+      '/images/led moving head spot/bt-meteor_front_6hr.webp',
+    ],
     pricePerUnit: 30,
     priceOptions: [
       { label: 'Einzeln', price: 30 },
@@ -1354,6 +1437,13 @@ Power auf Reichweite - die gebündelten Strahlen "zersägen" den Nachthimmel
 
 Mit den 200W starken LED Moving Heads Beam von JB Systems erzeugen Sie atemberaubende Lichtshows auf großen Bühnen, Hallen oder Outdoor. Ein farbiger LED Ring (AURA-Effekt) sorgt für zusätzliche Begeisterung.`,
     images: ['/images/moving-head-beam.webp'],
+    galleryImages: [
+      '/images/led moving head beam/27827_5.webp',
+      '/images/led moving head beam/beam1.webp',
+      '/images/led moving head beam/beam2.webp',
+      '/images/led moving head beam/challenger beam 2.webp',
+      '/images/led moving head beam/challenger-beam-fx-13.webp',
+    ],
     pricePerUnit: 39,
     priceOptions: [
       { label: 'Einzeln', price: 39 },
@@ -1379,6 +1469,11 @@ Ein Multitalent und Leisetreter für Bühne, DJ und Event
 
 Der Challenger Wash von JB Systems ist ein universell einsetzbarer, heller Washer, der dank eingebauter Automatikprogramme für DJs / Party ebenso geeignet ist, wie für anspruchsvolle Bühnenanwendungen.`,
     images: ['/images/challenger1-1920w.webp'],
+    galleryImages: [
+      '/images/led moving head wash/challenger1.webp',
+      '/images/led moving head wash/challenger2.webp',
+      '/images/led moving head wash/challenger3.webp',
+    ],
     pricePerUnit: 39,
     priceOptions: [
       { label: 'Einzeln', price: 39 },
@@ -1407,6 +1502,12 @@ Dieser kompakte Showlaser liefert beeindruckende raumfüllende Lasereffekte auf 
 WICHTIG - Sicherheitshinweis:
 Dieser Laser gehört zur Schutzklasse 3B und darf nur unter Einhaltung von Sicherheitsabstand etc. genutzt werden. Sie erhalten von uns eine entsprechende Einweisung.`,
     images: ['/images/spyder1-1920w.webp'],
+    galleryImages: [
+      '/images/JB spyder show laser/spyder-rgb-laser-back-6hr.webp',
+      '/images/JB spyder show laser/spyder-rgb-laser-front-5hr.webp',
+      '/images/JB spyder show laser/spyder-rgb-laser-fx-1.webp',
+      '/images/JB spyder show laser/spyder-rgb-laser-fx-2.webp',
+    ],
     pricePerUnit: 25,
     categorySlug: 'moving-heads',
     specs: [
@@ -1431,6 +1532,13 @@ Dieser professionelle 2 Watt Diodenlaser von Laserworld liefert erstklassige Las
 WICHTIG - Sicherheitshinweis:
 Dieser Laser gehört zur Schutzklasse 4 und darf nur unter Aufsicht oder nach vorheriger Unterweisung durch einen Laserschutzbeauftragten betrieben werden. Sie erhalten von uns eine entsprechende, fachgerechte Einweisung.`,
     images: ['/images/ds2000_1-1920w.webp'],
+    galleryImages: [
+      '/images/laserworld 2000mW Diodenlaser/ds2000_1.webp',
+      '/images/laserworld 2000mW Diodenlaser/ds2000_2.webp',
+      '/images/laserworld 2000mW Diodenlaser/ds2000_3.webp',
+      '/images/laserworld 2000mW Diodenlaser/ds2000_4.webp',
+      '/images/laserworld 2000mW Diodenlaser/ds2000_5.webp',
+    ],
     pricePerUnit: 50,
     categorySlug: 'moving-heads',
     specs: [
@@ -1458,6 +1566,12 @@ Projektion an Wände und Decken
 Einsatz: Bars, Clubs, Party-Keller
 Empfohlener Abstand: mindestens 4 Meter zur bestrahlenden Fläche`,
     images: ['/images/wf40_1-1920w.webp'],
+    galleryImages: [
+      '/images/led wassereffekt/wf40_1.webp',
+      '/images/led wassereffekt/wf40_2.webp',
+      '/images/led wassereffekt/wf40_3.webp',
+      '/images/led wassereffekt/wf40_4.webp',
+    ],
     pricePerUnit: 30,
     categorySlug: 'moving-heads',
     specs: [
@@ -1483,6 +1597,11 @@ Motor für Rotation
 Leistungsstarker BEAM Spot LED
 Aufhängung: Anschlagmittel auf Anfrage`,
     images: ['/images/sk3-1920w.webp'],
+    galleryImages: [
+      '/images/spiegelkugel set/sk1.webp',
+      '/images/spiegelkugel set/sk2.webp',
+      '/images/spiegelkugel set/sk3.webp',
+    ],
     pricePerUnit: 39,
     categorySlug: 'moving-heads',
     specs: [
@@ -1509,6 +1628,11 @@ Lichteffekte kommen erst durch eine Nebelmaschine richtig zur Geltung. Unsere kl
 Inkl. 1 Tankfüllung
 Duftstoffe (z.B. Limette oder Kokos) auf Anfrage`,
     images: ['/images/antariz800-1920w.webp'],
+    galleryImages: [
+      '/images/party nebelmaschine/antariz800.webp',
+      '/images/party nebelmaschine/antariz8002.webp',
+      '/images/party nebelmaschine/parl45.webp',
+    ],
     pricePerUnit: 20,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
@@ -1532,6 +1656,11 @@ Die professionelle Nebelmaschine mit 1.200W Heizleistung sorgt für kräftigen N
 Inkl. 1 Tankfüllung
 Duftstoffe (z.B. Limette oder Kokos) auf Anfrage`,
     images: ['/images/z1200_1-1920w.webp'],
+    galleryImages: [
+      '/images/nebelmaschine 1,5kw/fog2.webp',
+      '/images/nebelmaschine 1,5kw/fogger img.webp',
+      '/images/nebelmaschine 1,5kw/z1200.webp',
+    ],
     pricePerUnit: 30,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
@@ -1554,6 +1683,12 @@ Ein 3kW Hochleistungsgerät für einen CO2-artigen Nebeleffekt verleiht jeder B�
 
 Inkl. 1 Tankfüllung mit Spezialfluid`,
     images: ['/images/WhatsApp-Image-2025-07-02-at-13.46.33-1920w.webp'],
+    galleryImages: [
+      '/images/vertical spray fogger/vfog3_1.webp',
+      '/images/vertical spray fogger/WhatsApp Image 2025-07-02 at 13.46.27 (1).webp',
+      '/images/vertical spray fogger/WhatsApp Image 2025-07-02 at 13.46.27.webp',
+      '/images/vertical spray fogger/WhatsApp Image 2025-07-02 at 13.46.33.webp',
+    ],
     pricePerUnit: 40,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
@@ -1577,6 +1712,11 @@ Erzeugt feinen, gleichmäßigen und lichtdurchlässigen Dunst ohne Nebelwolken u
 
 Inkl. 1 Tankfüllung`,
     images: ['/images/hz350-1920w.webp'],
+    galleryImages: [
+      '/images/hazer/51702685a.webp',
+      '/images/hazer/51702685c.webp',
+      '/images/hazer/hz350action.webp',
+    ],
     pricePerUnit: 40,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
@@ -1602,6 +1742,11 @@ Destilliertes Wasser muss von Ihnen eingefüllt und nach Gebrauch entleert werde
 
 WICHTIG: Bitte befolgen Sie die Aufbau-Anleitung und leeren Sie das Gerät sorgfältig nach Benutzung!`,
     images: ['/images/wlf1-1920w.webp'],
+    galleryImages: [
+      '/images/bodennebelmaschine/h2fog_1.webp',
+      '/images/bodennebelmaschine/h2fog_2.webp',
+      '/images/bodennebelmaschine/h2fog_4.webp',
+    ],
     pricePerUnit: 80,
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
@@ -1626,6 +1771,13 @@ Mietpreis: 50,- € / Stck
 
 Das Spezialgranulat können Sie bei uns erwerben. Pro Beutel (200gr) 39,- €, reicht für ca. 8 Minuten Fontäne.`,
     images: ['/images/coldspark3-1920w.webp'],
+    galleryImages: [
+      '/images/cold spark kaltfunkenmaschine/coldspark.webp',
+      '/images/cold spark kaltfunkenmaschine/coldspark2.webp',
+      '/images/cold spark kaltfunkenmaschine/coldspark3.webp',
+      '/images/cold spark kaltfunkenmaschine/coldspark4.webp',
+      '/images/cold spark kaltfunkenmaschine/Screenshot 2025-07-28 111311.webp',
+    ],
     pricePerUnit: 50,
     priceOptions: [
       { label: 'Einzeln', price: 50 },
@@ -1660,6 +1812,7 @@ HD-ready 720p (1280x720)
 HDMI, RS-232 Anschlüsse
 2,8 kg Gewicht`,
     images: ['/images/acer1-1920w (1).webp'],
+    galleryImages: ['/images/acer1-1920w (1).webp'],
     pricePerUnit: 30,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1688,6 +1841,12 @@ Full-HD 1.080p (1920x1080)
 HDMI 2.0 /1.4, VGA Anschlüsse
 5,5 kg Gewicht`,
     images: ['/images/beamer1-1920w.webp'],
+    galleryImages: [
+      '/images/laser dlp beamer/beamer2.webp',
+      '/images/laser dlp beamer/dlp1.webp',
+      '/images/laser dlp beamer/dlp2.webp',
+      '/images/laser dlp beamer/dlp3.webp',
+    ],
     pricePerUnit: 50,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1716,6 +1875,11 @@ WUXGA Auflösung (1920x1200)
 HDMI, VGA, RJ-45 Digital-IN Anschlüsse
 7 kg Gewicht`,
     images: ['/images/panasonic1-1920w.webp'],
+    galleryImages: [
+      '/images/laser dlp beamer PRO/panasonic1.webp',
+      '/images/laser dlp beamer PRO/panasonic2.webp',
+      '/images/laser dlp beamer PRO/panasonic3.webp',
+    ],
     pricePerUnit: 100,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1745,6 +1909,12 @@ Zoom Ratio 1.46-2.93:1
 2 x HDMI mit CEC
 16 kg Gewicht`,
     images: ['/images/frq50wangledrhigh-1920w.webp'],
+    galleryImages: [
+      '/images/4K laser dlp beamer/frq5060w_side_control_high.webp',
+      '/images/4K laser dlp beamer/frq50w_front_high.webp',
+      '/images/4K laser dlp beamer/frq50w_top_high.webp',
+      '/images/4K laser dlp beamer/frq50wangledrhigh.webp',
+    ],
     pricePerUnit: 150,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1766,6 +1936,12 @@ Unsere 4K / UHD Mediendisplays sind für professionelle Anwendungen (24/7) geeig
 
 Mietpreis: 200,- € (inkl. höhenverstellbarem Stativ)`,
     images: ['/images/displayportrait-1920w.webp'],
+    galleryImages: [
+      '/images/4K signature display/celexstand.webp',
+      '/images/4K signature display/displayportrait.webp',
+      '/images/4K signature display/LH6541UHS-B1AG(30).webp',
+      '/images/4K signature display/LH6541UHS-B1AG(73).webp',
+    ],
     pricePerUnit: 200,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1787,6 +1963,11 @@ Fortschrittliche Tischmikrofone / Sprechstellen für Konferenzen mit mehreren Te
 
 Preis auf Anfrage`,
     images: ['/images/speech100-1920w (1).webp'],
+    galleryImages: [
+      '/images/speech 100 konferenzsystem/speech100.webp',
+      '/images/speech 100 konferenzsystem/speech100c.webp',
+      '/images/speech 100 konferenzsystem/speech100m.webp',
+    ],
     pricePerUnit: 9999,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1826,6 +2007,13 @@ inkl. Flighcase
 
 Mietpreis: 99,- €`,
     images: ['/images/leinwannd4m.webp'],
+    galleryImages: [
+      '/images/leinwand/celexon1.webp',
+      '/images/leinwand/celexon2.webp',
+      '/images/leinwand/celexon3.webp',
+      '/images/leinwand/celexon4.webp',
+      '/images/leinwand/leinwand_2m.webp',
+    ],
     pricePerUnit: 99,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1866,6 +2054,13 @@ inkl. Flightcase
 
 Mietpreis: 50,- €`,
     images: ['/images/leinwand3m.webp'],
+    galleryImages: [
+      '/images/leinwand/celexon1.webp',
+      '/images/leinwand/celexon2.webp',
+      '/images/leinwand/celexon3.webp',
+      '/images/leinwand/celexon4.webp',
+      '/images/leinwand/leinwand_2m.webp',
+    ],
     pricePerUnit: 50,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1902,6 +2097,13 @@ Einfacher und schneller Aufbau
 
 Mietpreis: 25,- €`,
     images: ['/images/leinwand_2m.webp'],
+    galleryImages: [
+      '/images/leinwand/celexon1.webp',
+      '/images/leinwand/celexon2.webp',
+      '/images/leinwand/celexon3.webp',
+      '/images/leinwand/celexon4.webp',
+      '/images/leinwand/leinwand_2m.webp',
+    ],
     pricePerUnit: 25,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1923,6 +2125,7 @@ Stabiles Stativ für einen Beamer oder Laptop. Neigungswinkel und Höhe verstell
 
 Mietpreis: 5,- €`,
     images: ['/images/beamerstand.webp'],
+    galleryImages: ['/images/stativ für projektor laptop/beamerstand.webp'],
     pricePerUnit: 5,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1957,6 +2160,11 @@ Video Switcher
 
 Mietpreis: 50,- €`,
     images: ['/images/pro-av-mixer.webp'],
+    galleryImages: [
+      '/images/pro av mixer/vr-1hd_left_gal.webp',
+      '/images/pro av mixer/vr-1hd_rear_gal.webp',
+      '/images/pro av mixer/vr-1hd_top_gal.webp',
+    ],
     pricePerUnit: 50,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -1991,6 +2199,7 @@ inkl. Ladeschale
 
 Mietpreis: 25,- €`,
     images: ['/images/hdmi_wireless.webp'],
+    galleryImages: ['/images/wireless HDMI set/hdmi_wireless.webp'],
     pricePerUnit: 25,
     categorySlug: 'medien-konferenztechnik',
     specs: [
@@ -2034,6 +2243,11 @@ Wichtig: Bitte nur Super E5 tanken!
 
 Mietpreis: 35,- €`,
     images: ['/images/hy2000_1.webp'],
+    galleryImages: [
+      '/images/Inverter Stromerzeuger 2 kW/hy2000_1.webp',
+      '/images/Inverter Stromerzeuger 2 kW/hy2000_2.webp',
+      '/images/Inverter Stromerzeuger 2 kW/hy2000_3.webp',
+    ],
     pricePerUnit: 35,
     categorySlug: 'stromerzeuger',
     specs: [
@@ -2080,6 +2294,11 @@ Wichtig: Bitte nur Super E5 tanken!
 
 Mietpreis: 50,- €`,
     images: ['/images/hy3200si_1-1920w.webp'],
+    galleryImages: [
+      '/images/Inverter Stromerzeuger 3,2 kW/hy3200_1.webp',
+      '/images/Inverter Stromerzeuger 3,2 kW/hy3200_2.webp',
+      '/images/Inverter Stromerzeuger 3,2 kW/hy3200_3.webp',
+    ],
     pricePerUnit: 50,
     categorySlug: 'stromerzeuger',
     specs: [
@@ -2130,6 +2349,10 @@ Zum Transport ist ein geeigntes Fahrzeug nötig (Transporter/Anhänger), planen 
 
 Mietpreis: 99,- €`,
     images: ['/images/hyundai-invertergenerator-hy6500sei-d.webp'],
+    galleryImages: [
+      '/images/Inverter Stromerzeuger 6 kW/hy6500_3.webp',
+      '/images/Inverter Stromerzeuger 6 kW/hyundai-invertergenerator-hy6500sei-d.webp',
+    ],
     pricePerUnit: 99,
     categorySlug: 'stromerzeuger',
     specs: [
@@ -2173,6 +2396,14 @@ Gesamttransportgewicht: ca. 70kg
 
 Mietpreis: 70,- €`,
     images: ['/images/ixstage5-1920w.webp'],
+    galleryImages: [
+      '/images/bühne ix stage/drumriser2x2.webp',
+      '/images/bühne ix stage/ixstage1.webp',
+      '/images/bühne ix stage/ixstage2.webp',
+      '/images/bühne ix stage/ixstage4.webp',
+      '/images/bühne ix stage/ixstage5.webp',
+      '/images/bühne ix stage/ixstage6.webp',
+    ],
     pricePerUnit: 70,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2213,6 +2444,14 @@ Mietpreis: 200,- €
 
 weitere Größen/Konfigurationen auf Anfrage`,
     images: ['/images/drumriser2x2.webp'],
+    galleryImages: [
+      '/images/bühne ix stage/drumriser2x2.webp',
+      '/images/bühne ix stage/ixstage1.webp',
+      '/images/bühne ix stage/ixstage2.webp',
+      '/images/bühne ix stage/ixstage4.webp',
+      '/images/bühne ix stage/ixstage5.webp',
+      '/images/bühne ix stage/ixstage6.webp',
+    ],
     pricePerUnit: 200,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2252,6 +2491,7 @@ Mietpreis 3x3m: 39,- €
 
 Mietpreis 6x3m: 50,- €`,
     images: ['/images/pavillion.webp'],
+    galleryImages: ['/images/pavillion/pavillion.webp'],
     pricePerUnit: 39,
     priceOptions: [
       { label: '3x3m', price: 39 },
@@ -2273,6 +2513,7 @@ Mietpreis 6x3m: 50,- €`,
     name: 'Alutruss Trilock E-GL33',
     description: '3-Punkt-Traverse aus Aluminium mit konischen Verbindern (je 1 Set inklusive). Festere Legierung für höhere Stabilität.',
     images: ['/images/60302184a.webp'],
+    galleryImages: ['/images/60302184a.webp'],
     pricePerUnit: 10,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2286,6 +2527,7 @@ Mietpreis 6x3m: 50,- €`,
     name: 'Traversenlift 150kg',
     description: 'Kompakter Traversenlift von Block & Block SIGMA 40 in schwarz.',
     images: ['/images/sigma1.webp'],
+    galleryImages: ['/images/sigma1.webp'],
     pricePerUnit: 40,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2302,6 +2544,7 @@ Mietpreis 6x3m: 50,- €`,
     name: 'Lautsprecherstativ 21450',
     description: 'Leichte Boxen / Lautsprecher Stative mit 35mm Flansch im Paar mit praktischer Transporttasche. Höhenverstellbar von 1,2-1,8m, max. Traglast 40kg',
     images: ['/images/km214-5.webp'],
+    galleryImages: ['/images/km214-5.webp'],
     pricePerUnit: 10,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2318,6 +2561,7 @@ Mietpreis 6x3m: 50,- €`,
     name: 'Leuchtenstativ 24630',
     description: 'Das stabile Leuchtenstativ mit 35mm Flansch für die meisten Lichtleisten passend ist höhenverstellbar von 1,8-3m und zentrisch bis 20kg belastbar.',
     images: ['/images/km24630.webp'],
+    galleryImages: ['/images/km24630.webp'],
     pricePerUnit: 8,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
@@ -2334,6 +2578,7 @@ Mietpreis 6x3m: 50,- €`,
     name: 'Mikrofonstativ 21090',
     description: 'Robustes und höhenverstellbares Mikrofonstativ mit Galgen.',
     images: ['/images/km2109.webp'],
+    galleryImages: ['/images/km2109.webp'],
     pricePerUnit: 5,
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
