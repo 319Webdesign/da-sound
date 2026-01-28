@@ -3,7 +3,7 @@ export const data = {
   highlight: '',
   openingHours: {
     monday: 'Montag: 09:30 - 18:00 Uhr',
-    tuesday: 'Dienstag: 09:30 - 18:00 Uhr',
+    tuesday: 'Dienstag: Geschlossen',
     wednesday: 'Mittwoch: Geschlossen',
     thursday: 'Donnerstag: 09:30 - 18:00 Uhr',
     friday: 'Freitag: 09:30 - 14:00 Uhr',

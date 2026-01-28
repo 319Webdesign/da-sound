@@ -49,6 +49,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'pa-set-medium': 'Machbar',
     'pa-set-large': 'Machbar',
     'pa-set-xlarge': 'Machbar',
+    'pa-set-premium': 'Machbar',
+    'pa-set-outdoor': 'Machbar',
+    'profi-pa-line-array-event-26a': 'Komplex',
   };
 
   const quickFacts = {
