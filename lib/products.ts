@@ -333,7 +333,12 @@ Set bestehend aus:
     name: 'PA Säule Bluetooth',
     description: 'Das Altea-DUO-20 ist ein kompaktes und mit 2000W Power gleichzeitig sehr leistungsstarkes Beschallungssystem mit dezenter Optik. Es lässt sich extrem einfach und schnell ohne weiteres Zubehör wie Stative oder Lautsprecherkabel montieren. Stecker in die Steckdose, fertig! Erhältlich in schwarz oder weiß.',
     detailDescription: `Das Altea-DUO-20 ist ein kompaktes und mit 2000W Power gleichzeitig sehr leistungsstarkes Beschallungssystem mit dezenter Optik. Es lässt sich extrem einfach und schnell ohne weiteres Zubehör wie Stative oder Lautsprecherkabel montieren. Stecker in die Steckdose, fertig! Erhältlich in schwarz oder weiß.`,
-    images: ['/images/PASaeuleBluetooth.webp'],
+    images: [
+      '/images/PASaeuleBluetooth.webp',
+      '/images/pa-säulebluetooth/DAS10435063.webp',
+      '/images/pa-säulebluetooth/duo2.webp',
+      '/images/pa-säulebluetooth/duo3.webp',
+    ],
     pricePerUnit: 60,
     pricePerPair: 100,
     categorySlug: 'pa-anlagen',
@@ -352,7 +357,13 @@ Set bestehend aus:
     name: 'PA Set SMALL',
     description: 'Die Action 508A von DAS Audio sind kompakte aber sehr robuste Multifunktionslautsprecher. Das Set eignet sich für Hintergrundmusik, Sprachbeschallung und Monitoranwendungen. Stative sind im Mietpreis enthalten.',
     detailDescription: `Die Action 508A von DAS Audio sind kompakte aber sehr robuste Multifunktionslautsprecher. Das Set eignet sich für Hintergrundmusik, Sprachbeschallung und Monitoranwendungen. Stative sind im Mietpreis enthalten.`,
-    images: ['/images/pasetsmall1.webp', '/images/pasetsmall2.webp'],
+    images: [
+      '/images/pasetsmall1.webp',
+      '/images/pasetsmall2.webp',
+      '/images/pa set SMALL/a508_1.webp',
+      '/images/pa set SMALL/a508_2.webp',
+      '/images/pa set SMALL/km214-5.webp',
+    ],
     pricePerUnit: 50,
     pricePerPair: 80,
     categorySlug: 'pa-anlagen',
@@ -371,7 +382,12 @@ Set bestehend aus:
     name: 'PA Set MEDIUM',
     description: 'Dieses kompakte 2.1 Lautsprecher Set von DAS Audio kann problemlos in einem PKW transportiert werden und beschallt bis zu 100 Personen. Bestehend aus einem kräftigen 15er Subwoofer mit passenden aktiven Topteilen. Es eignet sich perfekt für kleine bis mittlere Räume, Bars/Kneipen und Tanzflächen Beschallung. Stative sind im Mietpreis enthalten.',
     detailDescription: `Dieses kompakte 2.1 Lautsprecher Set von DAS Audio kann problemlos in einem PKW transportiert werden und beschallt bis zu 100 Personen. Bestehend aus einem kräftigen 15er Subwoofer mit passenden aktiven Topteilen. Es eignet sich perfekt für kleine bis mittlere Räume, Bars/Kneipen und Tanzflächen Beschallung. Stative sind im Mietpreis enthalten.`,
-    images: ['/images/PaSetMedium.webp'],
+    images: [
+      '/images/PaSetMedium.webp',
+      '/images/pa set MEDIUM/altea15a_1.webp',
+      '/images/pa set MEDIUM/altea15a_2.webp',
+      '/images/pa set MEDIUM/altea408a.webp',
+    ],
     pricePerUnit: 90,
     pricePerPair: 120,
     categorySlug: 'pa-anlagen',
@@ -390,7 +406,13 @@ Set bestehend aus:
     name: 'PA Set LARGE',
     description: 'Mit einer maximalen Systemleistung von 5.400W lassen sich mittlere Räume, kleine Säle und Clubs adäquat beschallen. Wir empfehlen es für bis zu 150 Personen. Die 15er Subs spielen sehr definiert im Bassbereich, wodurch das Set gleichermaßen für DJ Anwendungen und Live-Sound geeignet ist.',
     detailDescription: `Mit einer maximalen Systemleistung von 5.400W lassen sich mittlere Räume, kleine Säle und Clubs adäquat beschallen. Wir empfehlen es für bis zu 150 Personen. Die 15er Subs spielen sehr definiert im Bassbereich, wodurch das Set gleichermaßen für DJ Anwendungen und Live-Sound geeignet ist.`,
-    images: ['/images/PaSetLarge.webp'],
+    images: [
+      '/images/PaSetLarge.webp',
+      '/images/pa set LARGE/altea15a_1.webp',
+      '/images/pa set LARGE/altea15a_2.webp',
+      '/images/pa set LARGE/altea712a.webp',
+      '/images/pa set LARGE/clubset.webp',
+    ],
     pricePerUnit: 120,
     pricePerPair: 180,
     categorySlug: 'pa-anlagen',
@@ -409,7 +431,15 @@ Set bestehend aus:
     name: 'PA Set X-LARGE',
     description: 'Für anspruchsvolle DJ- und Live-Anwendungen empfehlen wir dieses professionelle PA Set bis 250 Personen. Präzise und druckvolle Wiedergabe in allen Frequenzbereichen. Sie sollten für den Transport und Aufbau 2 Personen einplanen.',
     detailDescription: `Für anspruchsvolle DJ- und Live-Anwendungen empfehlen wir dieses professionelle PA Set bis 250 Personen. Präzise und druckvolle Wiedergabe in allen Frequenzbereichen. Sie sollten für den Transport und Aufbau 2 Personen einplanen.`,
-    images: ['/images/PaSetXLarge.webp'],
+    images: [
+      '/images/PaSetXLarge.webp',
+      '/images/pa set X-LARGE/Set_XL2.webp',
+      '/images/pa set X-LARGE/vantec12a_1.webp',
+      '/images/pa set X-LARGE/vantec12a_2.webp',
+      '/images/pa set X-LARGE/vantec18a_1.webp',
+      '/images/pa set X-LARGE/vantec18a_2.webp',
+      '/images/pa set X-LARGE/vantec18a_3.webp',
+    ],
     pricePerUnit: 150,
     pricePerPair: 220,
     categorySlug: 'pa-anlagen',
@@ -429,7 +459,14 @@ Set bestehend aus:
     name: 'PA Set PREMIUM',
     description: 'Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportollen.',
     detailDescription: `Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportollen.`,
-    images: ['/images/pasetpremium2.webp', '/images/audiozenit-1920w.webp'],
+    images: [
+      '/images/pasetpremium2.webp',
+      '/images/audiozenit-1920w.webp',
+      '/images/pa set PREMIUM/audiozenit.webp',
+      '/images/pa set PREMIUM/nl_208_1.webp',
+      '/images/pa set PREMIUM/nlw_212_A_front.webp',
+      '/images/pa set PREMIUM/nlw_212_A_rueck.webp',
+    ],
     pricePerUnit: 180,
     pricePerPair: 250,
     categorySlug: 'pa-anlagen',
@@ -449,7 +486,13 @@ Set bestehend aus:
     name: 'PA Set OUTDOOR',
     description: 'Wenn es größere Flächen im Außenbereich zu beschallen gilt, wo längere Strecken überbrückt werden müssen, empfehlen sich passive Lautsprecher, die mit einem einzigen Kabel anschließbar sind. Die spritzwasser-geschützten Lautsprecher halten auch Regen und Wind stand und sind somit auch bei ungünstigem Wetter einsetzbar. Das Set kann einfach durch weitere Lautsprecher erweitert werden.',
     detailDescription: `Wenn es größere Flächen im Außenbereich zu beschallen gilt, wo längere Strecken überbrückt werden müssen, empfehlen sich passive Lautsprecher, die mit einem einzigen Kabel anschließbar sind. Die spritzwasser-geschützten Lautsprecher halten auch Regen und Wind stand und sind somit auch bei ungünstigem Wetter einsetzbar. Das Set kann einfach durch weitere Lautsprecher erweitert werden.`,
-    images: ['/images/pasetoutdoor.webp'],
+    images: [
+      '/images/pasetoutdoor.webp',
+      '/images/pa set OUTDOOR/SetP.webp',
+      '/images/pa set OUTDOOR/speakonNL4short.webp',
+      '/images/pa set OUTDOOR/vantec12a_1.webp',
+      '/images/pa set OUTDOOR/XPS2000.webp',
+    ],
     pricePerUnit: 70,
     pricePerPair: 105,
     categorySlug: 'pa-anlagen',
@@ -468,7 +511,15 @@ Set bestehend aus:
     name: 'Profi PA / Line-Array Event 26A',
     description: 'Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe. Sie sollten für den Transport und Aufbau 2 Personen einplanen.',
     detailDescription: `Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe. Sie sollten für den Transport und Aufbau 2 Personen einplanen.`,
-    images: ['/images/paprofi1.webp', '/images/paprofi2.webp'],
+    images: [
+      '/images/paprofi1.webp',
+      '/images/paprofi2.webp',
+      '/images/line array event 26a/event_2er.webp',
+      '/images/line array event 26a/EVENT-115A.webp',
+      '/images/line array event 26a/EVENT26A.webp',
+      '/images/line array event 26a/event26large.webp',
+      '/images/line array event 26a/eventframe.webp',
+    ],
     pricePerUnit: 225,
     categorySlug: 'pa-anlagen',
     priceOptions: [
@@ -506,7 +557,12 @@ S-Link via CAT5 Kabel
 Wifi ja mit ext. Router
 32 x 32 USB Interface, Multitrack USB Recording
 22 kg inkl. Flightcase`,
-    images: ['/images/sq5c-1920w.webp'],
+    images: [
+      '/images/sq5c-1920w.webp',
+      '/images/allen heath sq5/sq5c.webp',
+      '/images/allen heath sq5/sq5d.webp',
+      '/images/allen heath sq5/sq5h.webp',
+    ],
     pricePerUnit: 100,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
@@ -528,7 +584,10 @@ Wifi ja mit ext. Router
     detailDescription: `Allen & Heath AR2412
 Digitale Stagebox / Bühnenverteilung
 Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Über nur ein CAT5E Netzwerkabel können 24 Eingangskanäle und 12 Ausgangskanäle digital und störungsfrei von der Bühne zum Frontplatz übertragen werden. Inkl. 50m CAT5E Netzwerkkabel auf Trommel.`,
-    images: ['/images/ar2412_1-1920w.webp'],
+    images: [
+      '/images/ar2412_1-1920w.webp',
+      '/images/allen heath ar2412/ar2412.webp',
+    ],
     pricePerUnit: 40,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
@@ -559,7 +618,13 @@ DANTE
 Wifi ja mit ext. Router
 USB Audio Playback, USB Interface, Stereo USB Recording
 15 kg inkl. Flightcase`,
-    images: ['/images/dm3_2-1920w.webp'],
+    images: [
+      '/images/dm3_2-1920w.webp',
+      '/images/yamaha dm3/dm3_1.webp',
+      '/images/yamaha dm3/dm3_2.webp',
+      '/images/yamaha dm3/dm3_3.webp',
+      '/images/yamaha dm3/dm3_4.webp',
+    ],
     pricePerUnit: 70,
     priceOptions: [
       { label: 'DM-3 Standard', price: 70 },
@@ -585,7 +650,10 @@ USB Audio Playback, USB Interface, Stereo USB Recording
     detailDescription: `Yamaha TIO-1608D
 Dante-fähige digitale Stagebox
 Dante-fähige digitale Stagebox mit 16 Inputs und 8 Outputs. Kaskadierbar mit weiteren Einheiten. Die Signale werden somit störungsfrei von der Bühne zum Mischpult transportiert über ein CAT6E Netzwerkkabel, 50m Kabel sind im Mietpreis enthalten.`,
-    images: ['/images/tio1608D-1920w.webp'],
+    images: [
+      '/images/tio1608D-1920w.webp',
+      '/images/yamaha tio1608D/tio1608D.webp',
+    ],
     pricePerUnit: 35,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
@@ -616,7 +684,13 @@ Network nein
 Wifi nein
 2x2 USB Interface
 22 kg inkl. Flightcase`,
-    images: ['/images/cms1600_1-1920w.webp'],
+    images: [
+      '/images/cms1600_1-1920w.webp',
+      '/images/dynacord cms1600/cms1600_1.webp',
+      '/images/dynacord cms1600/cms1600_2.webp',
+      '/images/dynacord cms1600/cms1600_3.webp',
+      '/images/dynacord cms1600/cms1600_4.webp',
+    ],
     pricePerUnit: 60,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
@@ -647,7 +721,12 @@ Pioneer ProDJ Link
 Wifi nein
 4x4 USB Interface
 12,5 kg inkl. Flightcase`,
-    images: ['/images/djm900_2-edae2eca-1920w.webp'],
+    images: [
+      '/images/djm900_2-edae2eca-1920w.webp',
+      '/images/pioneer djm900nx/djm900_1.webp',
+      '/images/pioneer djm900nx/djm900_2-edae2eca.webp',
+      '/images/pioneer djm900nx/djm900_3.webp',
+    ],
     pricePerUnit: 60,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
@@ -678,7 +757,12 @@ Network nein
 Wifi nein
 2x2 USB Interface
 ab 5 kg inkl. Koffer`,
-    images: ['/images/E8734E62-1976-463C-8087-B75D6B73138C-1920w.webp'],
+    images: [
+      '/images/E8734E62-1976-463C-8087-B75D6B73138C-1920w.webp',
+      '/images/mackie profx serie/profx12.webp',
+      '/images/mackie profx serie/profx6v3.webp',
+      '/images/mackie profx serie/profx8side.webp',
+    ],
     pricePerUnit: 20,
     priceOptions: [
       { label: '4-Kanal', price: 20 },
@@ -713,7 +797,14 @@ Wahlweise für Gesang/Sprache (Shure Beta58a)
 Oder Instrument, Amp, Blasinstrumente (Shure SM-57)
 Inkl. Mikrofonständer von König & Meyer
 Inkl. 10m XLR Kabel`,
-    images: ['/images/micstandset-1920w.webp'],
+    images: [
+      '/images/micstandset-1920w.webp',
+      '/images/shure mikrofon set/miccable_1.webp',
+      '/images/shure mikrofon set/miccable_2.webp',
+      '/images/shure mikrofon set/micstandset.webp',
+      '/images/shure mikrofon set/Screenshot 2026-01-15 104617.webp',
+      '/images/shure mikrofon set/sm57set.webp',
+    ],
     pricePerUnit: 10,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
@@ -744,7 +835,14 @@ Technische Daten:
 4 x Snare/Tom Clipmikros (Beyerdynamic TG D58)
 2 x Kondensatormikro (Lewitt LCL40) für Hi Hat / Overhead
 Inkl. Stativen und XLR Kabeln`,
-    images: ['/images/3A8023FD-AB53-4131-800A-A54D3D9CAEF8-1920w.webp'],
+    images: [
+      '/images/3A8023FD-AB53-4131-800A-A54D3D9CAEF8-1920w.webp',
+      '/images/mikrofon set drums/drums_micset.webp',
+      '/images/mikrofon set drums/lct040.webp',
+      '/images/mikrofon set drums/sm57set.webp',
+      '/images/mikrofon set drums/stagebox6.webp',
+      '/images/mikrofon set drums/tgd58.webp',
+    ],
     pricePerUnit: 45,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
@@ -773,7 +871,12 @@ Wahlweise mit Handsender oder Headset / Kopfbügelmikrofon
 Saubere und störungsfreie Übertragung
 Varianten: Handmikrofon oder Headset mit Taschensender
 Anwendung: Ansprachen, Reden, Moderation und Konferenzen`,
-    images: ['/images/beyertg550-c1a0fc40-1920w.webp'],
+    images: [
+      '/images/beyertg550-c1a0fc40-1920w.webp',
+      '/images/funkmikrofon moderation/beyertg500h.webp',
+      '/images/funkmikrofon moderation/beyertg500r.webp',
+      '/images/funkmikrofon moderation/beyertg550.webp',
+    ],
     pricePerUnit: 25,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
@@ -806,7 +909,13 @@ Dynamische, rauscharme Audioqualität
 Mehrere Funkstrecken parallel betreibbar
 Varianten: Handmikrofon oder Taschensender mit Kopfbügelmikrofon (Nieren- oder Kugelcharakteristik)
 Profieinsatz geeignet`,
-    images: ['/images/slxd4e86-1920w (1).webp'],
+    images: [
+      '/images/slxd4e86-1920w (1).webp',
+      '/images/profi funkmikrofon shure slxd/slxd1.webp',
+      '/images/profi funkmikrofon shure slxd/slxd2_beta58.webp',
+      '/images/profi funkmikrofon shure slxd/slxd24.webp',
+      '/images/profi funkmikrofon shure slxd/slxd4e86.webp',
+    ],
     pricePerUnit: 40,
     categorySlug: 'mischpulte-mikrofone',
     specs: [
