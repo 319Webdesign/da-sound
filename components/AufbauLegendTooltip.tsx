@@ -23,12 +23,18 @@ const LEGEND = [
   },
 ];
 
-export default function AufbauLegendTooltip() {
+interface AufbauLegendTooltipProps {
+  label?: string;
+}
+
+export default function AufbauLegendTooltip({ label = 'Aufbau-Schwierigkeit' }: AufbauLegendTooltipProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openTooltip = () => setIsOpen(true);
   const closeTooltip = () => setIsOpen(false);
   const toggleTooltip = () => setIsOpen((prev) => !prev);
+
+  const legendLabel = label || 'Aufbau-Schwierigkeit';
 
   return (
     <div
@@ -44,7 +50,7 @@ export default function AufbauLegendTooltip() {
         }}
         className="flex items-center justify-center w-5 h-5 text-gray-400 hover:text-gray-500 transition-colors"
         aria-expanded={isOpen}
-        aria-label="Legende Aufbau-Schwierigkeit anzeigen"
+        aria-label={`Legende ${legendLabel} anzeigen`}
       >
         <HelpCircle className="w-4 h-4" />
       </button>
@@ -61,7 +67,7 @@ export default function AufbauLegendTooltip() {
           >
             <div className="px-4 py-3 border-b border-gray-100">
               <p className="text-xs uppercase tracking-wider font-semibold text-gray-500">
-                Legende Aufbau-Schwierigkeit
+                Legende {legendLabel}
               </p>
             </div>
             <div className="px-4 py-3 space-y-2">

@@ -468,7 +468,7 @@ export default function ContactSection() {
                   className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white py-4 px-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>Direkt mit Maik chatten (WhatsApp)</span>
+                  <span>Direkt mit DA-Sound chatten (WhatsApp)</span>
                 </a>
               </div>
             </div>

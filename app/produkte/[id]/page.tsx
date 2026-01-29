@@ -40,6 +40,21 @@ export default async function ProductDetailPage({ params }: PageProps) {
   // Verwende detailDescription für Detailseite, sonst description
   const detailText = product.detailDescription || product.description;
 
+  const setProductIds = new Set([
+    'sub-sat-set-bluetooth',
+    'pa-set-small',
+    'pa-set-medium',
+    'pa-set-large',
+    'pa-set-xlarge',
+    'pa-set-premium',
+    'pa-set-outdoor',
+    'party-set-small',
+    'party-set-medium',
+    'party-set-white',
+    'party-set-large',
+    'party-set-xlarge',
+  ]);
+
   const aufbauSchwierigkeitMap: Record<string, string> = {
     'party-set-small': 'Einfach',
     'party-set-medium': 'Machbar',
@@ -53,6 +68,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'pa-set-outdoor': 'Machbar',
     'profi-pa-line-array-event-26a': 'Komplex',
   };
+
+  const isSetProduct = setProductIds.has(product.id);
+  const quickFactLabel = isSetProduct ? 'Aufbau-Schwierigkeit' : 'Bedienung';
 
   const quickFacts = {
     personen: product.specs?.find(s => s.label === 'Personen')?.value || 'bis 70',
@@ -207,7 +225,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
                       </>
                     );
                   } else {
-                    const isSetProduct = product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge';
                     return (
                       <>
                         <div className="text-4xl font-bold text-primary mb-2">
@@ -257,8 +274,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     </div>
                     <div>
                       <div className="flex items-center gap-1 text-sm text-gray-600">
-                        <span>Aufbau-Schwierigkeit</span>
-                        <AufbauLegendTooltip />
+                        <span>{quickFactLabel}</span>
+                        <AufbauLegendTooltip label={quickFactLabel} />
                       </div>
                       <div className="font-semibold text-gray-900">{quickFacts.aufbauSchwierigkeit}</div>
                     </div>
@@ -399,7 +416,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             {crossSellingProducts.map((item) => {
               const crossProduct = getProductById(item.id);
               if (!crossProduct) return null;
-              const isSetProduct = item.id === 'sub-sat-set-bluetooth' || item.id === 'pa-set-small' || item.id === 'pa-set-medium' || item.id === 'pa-set-large' || item.id === 'pa-set-xlarge' || item.id === 'pa-set-premium' || item.id === 'pa-set-outdoor' || item.id === 'party-set-small' || item.id === 'party-set-medium' || item.id === 'party-set-white' || item.id === 'party-set-large' || item.id === 'party-set-xlarge';
+              const isSetProduct = setProductIds.has(item.id);
               return (
                 <Link
                   key={item.id}

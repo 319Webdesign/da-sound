@@ -84,6 +84,13 @@
   transform-style: preserve-3d;
 }
 
+@media (max-width: 768px) {
+  .animate-marquee,
+  .animate-marquee-smooth {
+    animation: none !important;
+  }
+}
+
 .pause-animation {
   animation-play-state: paused !important;
 }

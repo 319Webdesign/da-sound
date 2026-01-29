@@ -110,7 +110,7 @@ export default function HighlightProduct({
             {/* Badge */}
             <div className="flex justify-center lg:justify-start">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-xs md:text-sm font-semibold bg-primary text-white uppercase tracking-wide">
-                Highlight der Woche
+                Highlight des Monats
               </span>
             </div>
 

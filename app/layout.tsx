@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "da-sound Veranstaltungstechnik | Pfungstadt",
   description: "Professionelle Veranstaltungstechnik in Pfungstadt & Umgebung. Tontechnik, Lichttechnik und Event-Zubehör zum Mieten.",
   keywords: "Veranstaltungstechnik, PA-Anlage, Tontechnik, Lichttechnik, Pfungstadt",
+  language: "de-DE",
   icons: {
     icon: '/images/logo.svg',
     shortcut: '/images/logo.svg',
@@ -35,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`overflow-x-hidden ${inter.variable}`}>
+    <html lang={metadata.language ?? "de-DE"} className={`overflow-x-hidden ${inter.variable}`}>
       <body className="overflow-x-hidden w-full font-sans">
         <ClientProviders>{children}</ClientProviders>
       </body>

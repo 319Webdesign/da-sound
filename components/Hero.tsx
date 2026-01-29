@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { DEFAULT_BLUR_DATA_URL } from '@/lib/blurDataUrl';
 import GoogleRatingBadge from './GoogleRatingBadge';
 
@@ -23,8 +23,6 @@ interface HeroProps {
 
 export default function Hero({ headline, highlight, images, socialProof }: HeroProps) {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-  
   const speakerImage = images.find(img => img.type === 'speaker');
   const lightshowImage = images.find(img => img.type === 'lightshow');
   const liveEventImage = images.find(img => img.type === 'live-event');
@@ -36,15 +34,6 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
       rentalSection?.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const mq = window.matchMedia('(max-width: 768px)');
-    const update = () => setIsMobile(mq.matches);
-    update();
-    mq.addEventListener('change', update);
-    return () => mq.removeEventListener('change', update);
-  }, []);
 
   const mobileHeroImage = lightshowImage ?? speakerImage ?? liveEventImage ?? images[0];
 
@@ -262,37 +251,35 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
 
           {/* Mobile: Einzelnes optimiertes Hero-Bild */}
           {mobileHeroImage && (
-            <div className="lg:hidden">
-              <motion.div
-                initial={isMobile ? false : { opacity: 0, y: 20 }}
-                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
-                transition={isMobile ? undefined : { delay: 0.2, duration: 0.6 }}
-                className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-gray-100 bg-white/50 backdrop-blur-sm shadow-lg"
-              >
-                <Image
-                  src={mobileHeroImage.url}
-                  alt={mobileHeroImage.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={85}
-                  priority
-                  fetchPriority="high"
-                  loading="eager"
-                  placeholder="blur"
-                  blurDataURL={DEFAULT_BLUR_DATA_URL}
-                  onError={(e) => {
-                    console.error('Failed to load image:', mobileHeroImage.url);
-                    const target = e.currentTarget as HTMLImageElement;
-                    target.style.opacity = '1';
-                  }}
-                  onLoad={(e) => {
-                    const target = e.currentTarget as HTMLImageElement;
-                    target.style.opacity = '1';
-                  }}
-                />
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="lg:hidden relative aspect-[16/9] rounded-3xl overflow-hidden border border-gray-100 bg-white/50 backdrop-blur-sm shadow-lg"
+            >
+              <Image
+                src={mobileHeroImage.url}
+                alt={mobileHeroImage.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={85}
+                priority
+                fetchPriority="high"
+                loading="eager"
+                placeholder="blur"
+                blurDataURL={DEFAULT_BLUR_DATA_URL}
+                onError={(e) => {
+                  console.error('Failed to load image:', mobileHeroImage.url);
+                  const target = e.currentTarget as HTMLImageElement;
+                  target.style.opacity = '1';
+                }}
+                onLoad={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  target.style.opacity = '1';
+                }}
+              />
+            </motion.div>
           )}
         </motion.div>
       </div>

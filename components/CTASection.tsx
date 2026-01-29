@@ -63,7 +63,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
-            className="space-y-4 flex flex-col items-center lg:items-stretch"
+            className="space-y-6 lg:space-y-4 flex flex-col items-center lg:items-stretch"
           >
             {/* WhatsApp Box - Desktop zuerst, Mobile zweite */}
             <motion.a
@@ -71,7 +71,7 @@ export default function CTASection() {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
-              className="group relative block bg-green-600/20 border-2 border-green-500/30 rounded-2xl p-6 hover:border-green-500 transition-all duration-300 overflow-hidden order-2 lg:order-1 w-full max-w-md lg:max-w-none"
+            className="group relative block bg-green-600/20 border-2 border-green-500/30 rounded-2xl p-6 hover:border-green-500 transition-all duration-300 overflow-hidden order-2 lg:order-1 w-full max-w-md lg:max-w-none mt-6 lg:mt-0"
             >
               {/* Neon-Glow Effekt */}
               <motion.div
