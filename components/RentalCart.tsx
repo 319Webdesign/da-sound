@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useMemo } from 'react';
+import { motion, AnimatePresence, type MotionProps } from 'framer-motion';
 import { ShoppingBag, X, MessageCircle, Mail, Trash2 } from 'lucide-react';
 import { useRentalCart } from '@/context/RentalCartContext';
 import { data } from '@/lib/data';
@@ -9,6 +9,8 @@ import { data } from '@/lib/data';
 export default function RentalCart() {
   const { items, removeItem, getTotalCount, isAnimating } = useRentalCart();
   const [isOpen, setIsOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const totalCount = getTotalCount();
 
@@ -36,14 +38,41 @@ export default function RentalCart() {
     return `mailto:info@da-sound.de?subject=Mietanfrage&body=${encodeURIComponent(body)}`;
   }, [items]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const desktopQuery = window.matchMedia('(min-width: 1024px)');
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const updateDesktop = () => setIsDesktop(desktopQuery.matches);
+    const updateMotion = () => setPrefersReducedMotion(motionQuery.matches);
+
+    updateDesktop();
+    updateMotion();
+
+    desktopQuery.addEventListener('change', updateDesktop);
+    motionQuery.addEventListener('change', updateMotion);
+
+    return () => {
+      desktopQuery.removeEventListener('change', updateDesktop);
+      motionQuery.removeEventListener('change', updateMotion);
+    };
+  }, []);
+
+  const shouldAnimate = isDesktop && !prefersReducedMotion;
+  const applyMotion = (config?: MotionProps) => (shouldAnimate && config ? config : {});
+
   return (
     <>
       {/* Floating Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 z-40 w-16 h-16 rounded-full bg-primary hover:bg-primary-dark text-white shadow-xl hover:shadow-2xl transition-all flex items-center justify-center group"
-        animate={isAnimating ? { scale: [1, 1.2, 1] } : {}}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+        {...applyMotion(
+          isAnimating
+            ? { animate: { scale: [1, 1.2, 1] }, transition: { duration: 0.6, ease: 'easeOut' } }
+            : undefined
+        )}
         aria-label="Warenkorb öffnen"
       >
         <ShoppingBag className="w-7 h-7" />
@@ -51,8 +80,7 @@ export default function RentalCart() {
         {/* Badge mit Anzahl */}
         {totalCount > 0 && (
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            {...applyMotion({ initial: { scale: 0 }, animate: { scale: 1 }, transition: { duration: 0.2 } })}
             className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center"
           >
             {totalCount > 99 ? '99+' : totalCount}
@@ -66,19 +94,19 @@ export default function RentalCart() {
           <>
             {/* Backdrop */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              {...applyMotion({ initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } })}
               onClick={() => setIsOpen(false)}
               className="fixed inset-0 bg-black/50 z-50"
             />
 
             {/* Panel */}
             <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+              {...applyMotion({
+                initial: { x: '100%' },
+                animate: { x: 0 },
+                exit: { x: '100%' },
+                transition: { type: 'spring', damping: 30, stiffness: 300 },
+              })}
               className="fixed top-0 right-0 h-full w-full max-w-[350px] bg-white shadow-2xl z-50 flex flex-col"
             >
               {/* Header */}
@@ -105,9 +133,11 @@ export default function RentalCart() {
                     {items.map((item) => (
                       <motion.div
                         key={item.id}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
+                        {...applyMotion({
+                          initial: { opacity: 0, x: 20 },
+                          animate: { opacity: 1, x: 0 },
+                          exit: { opacity: 0, x: -20 },
+                        })}
                         className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
                       >
                         <div className="flex-1">

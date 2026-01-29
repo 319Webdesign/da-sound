@@ -16,16 +16,24 @@ import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import OpeningHours from '@/components/OpeningHours';
+import { fetchGoogleReviews, type ReviewsResponse } from '@/lib/reviews';
 
 // ISR: Incremental Static Regeneration für bessere Performance
 export const revalidate = 60;
 
-export default function HomePage() {
+export default async function HomePage() {
   const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich habe eine Anfrage bezüglich Ihrer Veranstaltungstechnik.')}`;
   
   // Sicherstellen, dass die Seite gerendert wird
   if (!data) {
     return null;
+  }
+
+  let reviewsData: ReviewsResponse | null = null;
+  try {
+    reviewsData = await fetchGoogleReviews();
+  } catch (error) {
+    console.error('Google Reviews nicht verfügbar:', error);
   }
 
   return (
@@ -73,9 +81,7 @@ export default function HomePage() {
       </LazyRender>
 
       {/* Kundenbewertungen */}
-      <LazyRender minHeight="28rem">
-        <GoogleReviewsSection />
-      </LazyRender>
+      <GoogleReviewsSection reviewsData={reviewsData} />
 
       {/* CTA Section */}
       <CTASection />

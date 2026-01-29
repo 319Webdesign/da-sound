@@ -15,26 +15,50 @@ export default function LazyRender({ children, minHeight = '18rem' }: LazyRender
     if (typeof window === 'undefined') return;
 
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    if (!isMobile) {
+    const reduceQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let observer: IntersectionObserver | null = null;
+
+    const updateReduce = () => {
+      if (reduceQuery.matches) {
+        setIsVisible(true);
+        observer?.disconnect();
+        observer = null;
+      }
+    };
+
+    updateReduce();
+
+    if (!isMobile || reduceQuery.matches) {
       setIsVisible(true);
-      return;
+      reduceQuery.addEventListener('change', updateReduce);
+      return () => reduceQuery.removeEventListener('change', updateReduce);
     }
 
     const node = containerRef.current;
-    if (!node) return;
+    if (!node) {
+      reduceQuery.addEventListener('change', updateReduce);
+      return () => reduceQuery.removeEventListener('change', updateReduce);
+    }
 
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
       (entries) => {
         if (entries[0]?.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
+          observer?.disconnect();
+          observer = null;
         }
       },
-      { rootMargin: '200px 0px' }
+      { rootMargin: '120px 0px' }
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+
+    reduceQuery.addEventListener('change', updateReduce);
+
+    return () => {
+      observer?.disconnect();
+      reduceQuery.removeEventListener('change', updateReduce);
+    };
   }, []);
 
   return (
