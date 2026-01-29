@@ -60,6 +60,6 @@ export default function GoogleRatingBadge({
       <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors">
         {rating}/5 {reviewCount}
       </span>
-    </motion.a>
+    </a>
   );
 }
