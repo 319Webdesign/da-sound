@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 
 interface GoogleRatingBadgeProps {
@@ -15,14 +14,10 @@ export default function GoogleRatingBadge({
   googleBusinessUrl = 'https://g.page/r/YOUR_GOOGLE_REVIEWS_LINK',
 }: GoogleRatingBadgeProps) {
   return (
-    <motion.a
+    <a
       href={googleBusinessUrl}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.4, duration: 0.5 }}
-      whileHover={{ scale: 1.05 }}
       className="group inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-gray-200/50 rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-all duration-300"
     >
       {/* Google Logo */}

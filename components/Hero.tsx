@@ -55,6 +55,9 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
 
   const shouldAnimate = isDesktop && !prefersReducedMotion;
   const applyMotion = (config: MotionProps) => (shouldAnimate ? config : {});
+  const heroImageQuality = isDesktop ? 85 : 60;
+  const mobileHeroImageQuality = isDesktop ? 85 : 55;
+  const heroMinHeightClass = isDesktop ? 'min-h-[70vh]' : 'min-h-[50vh]';
 
   const scrollToRentalCategories = () => {
     if (typeof window !== 'undefined') {
@@ -64,7 +67,9 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20 relative overflow-hidden min-h-[70vh] md:min-h-0">
+    <section
+      className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20 relative overflow-hidden ${heroMinHeightClass} md:min-h-0`}
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start relative">
         {/* Links: Content - 50% */}
         <motion.div
@@ -144,31 +149,31 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                         : 'translateY(0) scale(1)',
                     }}
                   >
-                    <Image
-                      src={speakerImage.url}
-                      alt={speakerImage.alt}
-                      fill
-                      className="object-cover transition-transform duration-700 ease-out"
-                      style={{
-                        transform: hoveredImage === speakerImage.id 
-                          ? 'scale(1.1)' 
-                          : 'scale(1)',
-                      }}
-                      sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
-                      quality={85}
-                      priority={speakerImage.id === mainHeroImageId}
-                      placeholder="blur"
-                      blurDataURL={DEFAULT_BLUR_DATA_URL}
-                      onError={(e) => {
-                        console.error('Failed to load image:', speakerImage.url);
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.style.opacity = '1';
-                      }}
-                      onLoad={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.style.opacity = '1';
-                      }}
-                    />
+              <Image
+                src={speakerImage.url}
+                alt={speakerImage.alt}
+                fill
+                className="object-cover transition-transform duration-700 ease-out"
+                style={{
+                  transform: hoveredImage === speakerImage.id 
+                    ? 'scale(1.1)' 
+                    : 'scale(1)',
+                }}
+                sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
+                quality={heroImageQuality}
+                priority={speakerImage.id === mainHeroImageId}
+                placeholder="blur"
+                blurDataURL={DEFAULT_BLUR_DATA_URL}
+                onError={(e) => {
+                  console.error('Failed to load image:', speakerImage.url);
+                  const target = e.currentTarget as HTMLImageElement;
+                  target.style.opacity = '1';
+                }}
+                onLoad={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  target.style.opacity = '1';
+                }}
+              />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </motion.div>
                 )}
@@ -186,31 +191,31 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                         : 'translateY(0) scale(1)',
                     }}
                   >
-                    <Image
-                      src={liveEventImage.url}
-                      alt={liveEventImage.alt}
-                      fill
-                      className="object-cover transition-transform duration-700 ease-out"
-                      style={{
-                        transform: hoveredImage === liveEventImage.id 
-                          ? 'scale(1.1)' 
-                          : 'scale(1)',
-                      }}
-                      sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
-                      quality={85}
-                      loading="lazy"
-                      placeholder="blur"
-                      blurDataURL={DEFAULT_BLUR_DATA_URL}
-                      onError={(e) => {
-                        console.error('Failed to load image:', liveEventImage.url);
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.style.opacity = '1';
-                      }}
-                      onLoad={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.style.opacity = '1';
-                      }}
-                    />
+                <Image
+                  src={liveEventImage.url}
+                  alt={liveEventImage.alt}
+                  fill
+                  className="object-cover transition-transform duration-700 ease-out"
+                  style={{
+                    transform: hoveredImage === liveEventImage.id 
+                      ? 'scale(1.1)' 
+                      : 'scale(1)',
+                  }}
+                  sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
+                  quality={heroImageQuality}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={DEFAULT_BLUR_DATA_URL}
+                  onError={(e) => {
+                    console.error('Failed to load image:', liveEventImage.url);
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.opacity = '1';
+                  }}
+                  onLoad={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.opacity = '1';
+                  }}
+                />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </motion.div>
                 )}
@@ -229,31 +234,31 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                       : 'translateY(0) scale(1)',
                   }}
                 >
-                  <Image
-                    src={lightshowImage.url}
-                    alt={lightshowImage.alt}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out"
-                    style={{
-                      transform: hoveredImage === lightshowImage.id 
-                        ? 'scale(1.1)' 
-                        : 'scale(1)',
-                    }}
-                    sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 50vw, 40vw"
-                    quality={85}
-                    priority={lightshowImage.id === mainHeroImageId}
-                    placeholder="blur"
-                    blurDataURL={DEFAULT_BLUR_DATA_URL}
-                    onError={(e) => {
-                      console.error('Failed to load image:', lightshowImage.url);
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.style.opacity = '1';
-                    }}
-                    onLoad={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.style.opacity = '1';
-                    }}
-                  />
+                    <Image
+                      src={lightshowImage.url}
+                      alt={lightshowImage.alt}
+                      fill
+                      className="object-cover transition-transform duration-700 ease-out"
+                      style={{
+                        transform: hoveredImage === lightshowImage.id 
+                          ? 'scale(1.1)' 
+                          : 'scale(1)',
+                      }}
+                      sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 50vw, 40vw"
+                      quality={heroImageQuality}
+                      priority={lightshowImage.id === mainHeroImageId}
+                      placeholder="blur"
+                      blurDataURL={DEFAULT_BLUR_DATA_URL}
+                      onError={(e) => {
+                        console.error('Failed to load image:', lightshowImage.url);
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.style.opacity = '1';
+                      }}
+                      onLoad={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.style.opacity = '1';
+                      }}
+                    />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </motion.div>
               )}
@@ -271,7 +276,7 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                quality={85}
+                quality={mobileHeroImageQuality}
                 priority
                 fetchPriority="high"
                 loading="eager"
