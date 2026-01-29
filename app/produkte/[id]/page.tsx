@@ -118,7 +118,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
   ];
 
   const galleryImages =
-    product.galleryImages && product.galleryImages.length > 0
+    product.isUpgradeKit
+      ? []
+      : product.galleryImages && product.galleryImages.length > 0
       ? product.galleryImages
       : product.images && product.images.length > 1
       ? product.images.slice(1)

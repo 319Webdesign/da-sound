@@ -171,10 +171,6 @@ export default function BookingPage() {
       newErrors.email = 'Bitte geben Sie eine gültige E-Mail-Adresse ein';
     }
 
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Bitte geben Sie Ihre Telefonnummer ein';
-    }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -540,7 +536,7 @@ export default function BookingPage() {
               {/* Telefon */}
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                  Telefonnummer *
+                  Telefonnummer (optional)
                 </label>
                 <input
                   type="tel"
