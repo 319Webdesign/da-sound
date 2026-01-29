@@ -4,10 +4,19 @@ import { products } from '@/lib/products';
 
 const SITE_URL = 'https://da-sound.de';
 
+type SitemapChangefreq =
+  | 'always'
+  | 'hourly'
+  | 'daily'
+  | 'weekly'
+  | 'monthly'
+  | 'yearly'
+  | 'never';
+
 const staticRoutes: {
   path: string;
   priority: number;
-  changefreq: MetadataRoute.SitemapEntry['changefreq'];
+  changefreq: SitemapChangefreq;
 }[] = [
   { path: '/', priority: 1, changefreq: 'daily' },
   { path: '/kontakt', priority: 0.9, changefreq: 'weekly' },
