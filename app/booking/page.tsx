@@ -80,7 +80,7 @@ export default function BookingPage() {
       description: 'Last night a DJ saved my life! Wir arbeiten mit zwei professionellen und engagierten DJs zusammen, die garantiert auch für ihr Event den passenden Sound finden.',
       price: 'Preisspanne 350-900€',
       icon: Music,
-      image: '/images/palive2-1920w.webp',
+      image: '/images/images booking/dj.webp',
     },
     {
       id: 'solo-musician',
@@ -88,7 +88,7 @@ export default function BookingPage() {
       description: 'Dezente Klaviermusik zum Essen, Partysongs zum Feiern oder unterhaltsame Tanzmusik - mit Solomusiker sind sie maximal flexibel. Geringer Platzbedarf, problemlose Kontrolle der Lautstärke. Optimal für z.B. Privatfeiern und Events aller Art mit geringerem Budget.',
       price: 'Preisspanne 550-1.000€',
       icon: Volume2,
-      image: '/images/best practice/bp1.webp',
+      image: '/images/images booking/solo.webp',
     },
     {
       id: 'country-oldie-band',
@@ -96,7 +96,7 @@ export default function BookingPage() {
       description: 'Für die Firmen- oder Mottoparty, für Westernbarbeques, Oldtimertreffen, u.v.m. empfiehlt sich unsere C&O Band - in flexiblen Besetzungen, je nach Eventgröße und Budget. Authentische Countrymusic und stimmungsvolle Pop/Rock Klassiker erwarten ihre Gäste.',
       price: 'Preisspanne 1.000-2.000€',
       icon: Users,
-      image: '/images/chorkonzert-1920w.webp',
+      image: '/images/images booking/countryband.webp',
     },
     {
       id: 'party-event-band',
@@ -104,7 +104,7 @@ export default function BookingPage() {
       description: 'Für die gehobenen Ansprüche und das echte "Live-Music" Erlebnis, vermitteln wir ihnen eine professionelle 3-5 köpfige Band mit erfahrenen Musiker/innen. Das Repertoire reicht von Pop&Rock über Soul&Disco bis hin zu fetzigen Party-Krachern.',
       price: 'Preisspanne 2.500€-5.000€',
       icon: Music,
-      image: '/images/best practice/bp2.webp',
+      image: '/images/images booking/partyband.webp',
     },
   ];
 

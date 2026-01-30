@@ -12,6 +12,7 @@ export interface Product {
   specs?: { label: string; value: string }[];
   offerInfo?: string;
   priceOptions?: { label: string; price: number }[];
+  priceUnitLabel?: string; // z. B. "Paar" statt "Stück"
   isUpgradeKit?: boolean; // Markiert Zusatzartikel/Upgrade-Kits
 }
 
@@ -2546,6 +2547,10 @@ Mietpreis 6x3m: 50,- €`,
     images: ['/images/km214-5.webp'],
     galleryImages: ['/images/km214-5.webp'],
     pricePerUnit: 10,
+    priceOptions: [
+      { label: 'Paar', price: 10 },
+    ],
+    priceUnitLabel: 'Paar',
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Typ', value: 'Lautsprecherstativ' },

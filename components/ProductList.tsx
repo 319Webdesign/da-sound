@@ -444,7 +444,7 @@ export default function ProductList({ products }: ProductListProps) {
                       return (
                         <>
                           <div className="text-xl font-bold text-primary">
-                            {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge') ? 'Tag' : 'Stück'}
+                            {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {product.priceUnitLabel ?? ((product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge') ? 'Tag' : 'Stück')}
                           </div>
                           {product.pricePerPair && (
                             <div className="text-sm text-gray-500">
