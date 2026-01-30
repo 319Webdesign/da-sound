@@ -61,6 +61,7 @@ export default function BookingPage() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const eventTypes = [
     'Hochzeit',
@@ -177,6 +178,7 @@ export default function BookingPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(null);
 
     if (!validateForm()) {
       return;
@@ -184,14 +186,19 @@ export default function BookingPage() {
 
     setIsSubmitting(true);
 
-    // Simuliere API-Aufruf
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const res = await fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json().catch(() => ({}));
 
-    setIsSubmitting(false);
-    setIsSuccess(true);
+      if (!res.ok) {
+        throw new Error(data.error || 'Anfrage konnte nicht gesendet werden.');
+      }
 
-    // Formular zurücksetzen nach 5 Sekunden
-    setTimeout(() => {
+      setIsSuccess(true);
       setFormData({
         date: '',
         eventType: '',
@@ -203,8 +210,12 @@ export default function BookingPage() {
         phone: '',
         message: '',
       });
-      setIsSuccess(false);
-    }, 5000);
+      setTimeout(() => setIsSuccess(false), 5000);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Ein Fehler ist aufgetreten. Bitte später erneut versuchen.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -383,6 +394,16 @@ export default function BookingPage() {
                 <p className="text-green-800 font-medium">
                   Vielen Dank! Ihre Anfrage wurde erfolgreich versendet. Wir melden uns schnellstmöglich bei Ihnen.
                 </p>
+              </motion.div>
+            )}
+            {submitError && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-6 p-4 bg-red-50 border-2 border-red-200 rounded-lg flex items-center gap-3"
+              >
+                <XCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                <p className="text-red-800 font-medium">{submitError}</p>
               </motion.div>
             )}
 

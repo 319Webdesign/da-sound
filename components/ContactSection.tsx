@@ -30,6 +30,7 @@ export default function ContactSection() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [selectedService, setSelectedService] = useState<string>('');
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [currentDay, setCurrentDay] = useState<string>('');
@@ -109,6 +110,7 @@ export default function ContactSection() {
   // Formular absenden
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(null);
 
     if (!validateForm()) {
       return;
@@ -116,21 +118,27 @@ export default function ContactSection() {
 
     setIsSubmitting(true);
 
-    // Simuliere API-Aufruf
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json().catch(() => ({}));
 
-    // Hier würde normalerweise die E-Mail versendet werden
-    // z.B. via API Route: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
+      if (!res.ok) {
+        throw new Error(data.error || 'Nachricht konnte nicht gesendet werden.');
+      }
 
-    setIsSubmitting(false);
-    setIsSuccess(true);
-
-    // Formular zurücksetzen
-    setTimeout(() => {
+      setIsSuccess(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
       setSelectedService('');
-      setIsSuccess(false);
-    }, 5000);
+      setTimeout(() => setIsSuccess(false), 5000);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Ein Fehler ist aufgetreten. Bitte später erneut versuchen.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Input-Änderungen
@@ -306,6 +314,16 @@ export default function ContactSection() {
                     <p className="text-green-800 font-medium">
                       Vielen Dank! Ihre Nachricht wurde erfolgreich versendet. Wir melden uns schnellstmöglich bei Ihnen.
                     </p>
+                  </motion.div>
+                )}
+                {submitError && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="mb-6 p-4 bg-red-50 border-2 border-red-200 rounded-lg"
+                  >
+                    <p className="text-red-800 font-medium">{submitError}</p>
                   </motion.div>
                 )}
               </AnimatePresence>
