@@ -31,7 +31,6 @@ export default function Hero({ headline, highlight, images, socialProof, googleB
   const lightshowImage = images.find(img => img.type === 'lightshow');
   const liveEventImage = images.find(img => img.type === 'live-event');
   const mainHeroImageId = lightshowImage?.id ?? speakerImage?.id ?? liveEventImage?.id ?? images[0]?.id;
-  const mobileHeroImage = lightshowImage ?? speakerImage ?? liveEventImage ?? images[0];
   void socialProof;
 
   useEffect(() => {
@@ -58,7 +57,6 @@ export default function Hero({ headline, highlight, images, socialProof, googleB
   const shouldAnimate = isDesktop && !prefersReducedMotion;
   const applyMotion = (config: MotionProps) => (shouldAnimate ? config : {});
   const heroImageQuality = isDesktop ? 85 : 60;
-  const mobileHeroImageQuality = isDesktop ? 85 : 55;
   const heroMinHeightClass = isDesktop ? 'min-h-[70vh]' : 'min-h-[50vh]';
 
   const scrollToRentalCategories = () => {
@@ -132,11 +130,10 @@ export default function Hero({ headline, highlight, images, socialProof, googleB
           {...applyMotion({ initial: { opacity: 0, x: 30 }, animate: { opacity: 1, x: 0 }, transition: { duration: 0.6, ease: 'easeOut' } })}
           className="relative w-full z-0"
         >
-          {isDesktop && (
-            <motion.div
-              {...applyMotion({ initial: { opacity: 0, scale: 0.95 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.5, ease: 'easeOut' } })}
-              className="grid grid-cols-2 gap-4"
-            >
+          <motion.div
+            {...applyMotion({ initial: { opacity: 0, scale: 0.95 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.5, ease: 'easeOut' } })}
+            className="grid grid-cols-2 gap-3 sm:gap-4"
+          >
               <div className="flex flex-col gap-4">
                 {/* Oben: Lautsprecher */}
                 {speakerImage && (
@@ -265,37 +262,6 @@ export default function Hero({ headline, highlight, images, socialProof, googleB
                 </motion.div>
               )}
             </motion.div>
-          )}
-
-          {!isDesktop && mobileHeroImage && (
-            <motion.div
-              {...applyMotion({ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { delay: 0.2, duration: 0.6 } })}
-              className="lg:hidden relative aspect-[16/9] rounded-3xl overflow-hidden border border-gray-100 bg-white/50 backdrop-blur-sm shadow-lg"
-            >
-              <Image
-                src={mobileHeroImage.url}
-                alt={mobileHeroImage.alt}
-                fill
-                className="object-cover"
-                sizes="100vw"
-                quality={mobileHeroImageQuality}
-                priority={true}
-                fetchPriority="high"
-                loading="eager"
-                placeholder="blur"
-                blurDataURL={DEFAULT_BLUR_DATA_URL}
-                onError={(e) => {
-                  console.error('Failed to load image:', mobileHeroImage.url);
-                  const target = e.currentTarget as HTMLImageElement;
-                  target.style.opacity = '1';
-                }}
-                onLoad={(e) => {
-                  const target = e.currentTarget as HTMLImageElement;
-                  target.style.opacity = '1';
-                }}
-              />
-            </motion.div>
-          )}
         </motion.div>
       </div>
     </section>
