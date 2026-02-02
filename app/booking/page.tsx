@@ -95,7 +95,7 @@ export default function BookingPage() {
       id: 'country-oldie-band',
       title: 'Country & Oldie Band',
       description: 'Für die Firmen- oder Mottoparty, für Westernbarbeques, Oldtimertreffen, u.v.m. empfiehlt sich unsere C&O Band - in flexiblen Besetzungen, je nach Eventgröße und Budget. Authentische Countrymusic und stimmungsvolle Pop/Rock Klassiker erwarten ihre Gäste.',
-      price: 'Preisspanne 1.000-2.000€',
+      price: 'Preisspanne 1.000-2.500€',
       icon: Users,
       image: '/images/images booking/countryband.webp',
     },
@@ -336,12 +336,12 @@ export default function BookingPage() {
                   className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
                   {/* Bild */}
-                  <div className="relative h-48 md:h-56 overflow-hidden">
+                  <div className="relative h-64 md:h-80 overflow-hidden bg-gray-100">
                     <Image
                       src={act.image}
                       alt={act.title}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-contain object-center group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />

@@ -1,29 +1,35 @@
 import { Star, ExternalLink } from 'lucide-react';
 import ReviewCard from './ReviewCard';
+import AufbauLegendTooltip from './AufbauLegendTooltip';
 import type { ReviewsResponse } from '@/lib/reviews';
 
 interface GoogleReviewsSectionProps {
   reviewsData?: ReviewsResponse | null;
+  /** Von Server übergeben – kein API-Key im Frontend */
+  googleBusinessUrl?: string;
 }
 
-export default function GoogleReviewsSection({ reviewsData }: GoogleReviewsSectionProps) {
+const DEFAULT_GOOGLE_BUSINESS_URL = 'https://www.google.com/maps/place/?q=place_id:ChIJ5c3RqQ57vUcR790xWEv0vQo';
+
+export default function GoogleReviewsSection({ reviewsData, googleBusinessUrl }: GoogleReviewsSectionProps) {
   if (!reviewsData || !reviewsData.reviews || reviewsData.reviews.length === 0) {
     return null;
   }
 
   const { reviews, rating, user_ratings_total } = reviewsData;
   const displayReviews = reviews.slice(0, 3);
-  const googleBusinessUrl =
-    process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL ||
-    'https://www.google.com/maps/place/?q=place_id:ChIJ5c3RqQ57vUcR790xWEv0vQo';
+  const linkUrl = googleBusinessUrl || DEFAULT_GOOGLE_BUSINESS_URL;
 
   return (
     <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Einfach gemietet. Begeisternd gefeiert.
-          </h2>
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+              Einfach gemietet. Begeisternd gefeiert.
+            </h2>
+            <AufbauLegendTooltip label="Aufbau-Schwierigkeit" />
+          </div>
 
           <div className="flex flex-col items-center gap-4 mb-8">
             <div className="flex items-center gap-2">
@@ -50,7 +56,7 @@ export default function GoogleReviewsSection({ reviewsData }: GoogleReviewsSecti
           </div>
 
           <a
-            href={googleBusinessUrl}
+            href={linkUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"

@@ -69,12 +69,11 @@ export default function AboutServiceSection() {
             <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
               <p>
                 Wir bieten Ihnen nicht nur hochwertige Veranstaltungstechnik zum Mieten, sondern auf
-                Wunsch auch einen umfassenden Full-Service für Ihre Events. Unser Lieferservice
-                optionaler bringt die komplette Technik direkt zu Ihnen – inklusive betriebsfertiger
+                Wunsch auch einen umfassenden Full-Service für Ihre Events. Unser optionaler Lieferservice bringt die komplette Technik direkt zu Ihnen – inklusive betriebsfertiger
                 Übergabe.
               </p>
               <p>
-                Ob für ihre private Familienfeier, ein Vereinsfest oder Firmenevent: Wir stellen Ihnen
+                Ob für eine private Familienfeier, ein Vereinsfest oder Firmenevent: Wir stellen Ihnen
                 maßgeschneiderte Lösungen zusammen und sorgen dafür, dass Ihre Veranstaltung
                 reibungslos verläuft.
               </p>

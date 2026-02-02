@@ -189,6 +189,12 @@ export default function Footer() {
                 Impressum
               </Link>
               <Link
+                href="/agb"
+                className="text-slate-500 hover:text-primary transition-colors"
+              >
+                AGB
+              </Link>
+              <Link
                 href="/datenschutz"
                 className="text-slate-500 hover:text-primary transition-colors"
               >

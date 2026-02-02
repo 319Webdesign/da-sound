@@ -19,9 +19,11 @@ interface HeroProps {
     position: 'A' | 'B' | 'C';
   }>;
   socialProof: { eventsCount: number; region: string };
+  /** Von Server übergeben – kein API-Key im Frontend */
+  googleBusinessUrl?: string;
 }
 
-export default function Hero({ headline, highlight, images, socialProof }: HeroProps) {
+export default function Hero({ headline, highlight, images, socialProof, googleBusinessUrl }: HeroProps) {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
   const [isDesktop, setIsDesktop] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -121,7 +123,7 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
             {...applyMotion({ initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 }, transition: { delay: 0.4, duration: 0.5 } })}
             className="pt-2"
           >
-            <GoogleRatingBadge googleBusinessUrl="https://www.google.com/maps/place/?q=place_id:ChIJ5c3RqQ57vUcR790xWEv0vQo" />
+            <GoogleRatingBadge googleBusinessUrl={googleBusinessUrl || 'https://www.google.com/maps/place/?q=place_id:ChIJ5c3RqQ57vUcR790xWEv0vQo'} />
           </motion.div>
         </motion.div>
 
@@ -275,9 +277,9 @@ export default function Hero({ headline, highlight, images, socialProof }: HeroP
                 alt={mobileHeroImage.alt}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="100vw"
                 quality={mobileHeroImageQuality}
-                priority
+                priority={true}
                 fetchPriority="high"
                 loading="eager"
                 placeholder="blur"

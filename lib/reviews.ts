@@ -50,7 +50,8 @@ export async function fetchGoogleReviews(): Promise<ReviewsResponse> {
 
     const data = await response.json();
     if (data.reviews && data.reviews.length > 0) {
-      reviews = data.reviews.map(normalizeReview);
+      const all = data.reviews.map(normalizeReview);
+      reviews = all.filter((r: Review) => r.rating >= 4).slice(0, 6);
       rating = data.rating ?? 0;
       user_ratings_total = data.userRatingCount ?? 0;
     }
@@ -78,7 +79,8 @@ export async function fetchGoogleReviews(): Promise<ReviewsResponse> {
     }
 
     const result = oldData.result;
-    reviews = (result.reviews || []).map(normalizeReview);
+    const all = (result.reviews || []).map(normalizeReview);
+    reviews = all.filter((r) => r.rating >= 4).slice(0, 6);
     rating = result.rating ?? 0;
     user_ratings_total = result.user_ratings_total ?? 0;
   }

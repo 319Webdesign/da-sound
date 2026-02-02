@@ -9,8 +9,19 @@ import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
-import ContactSection from '@/components/ContactSection';
 import ContactMethodsSection from '@/components/ContactMethodsSection';
+
+const ContactSection = dynamic(
+  () => import('@/components/ContactSection'),
+  {
+    loading: () => (
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="h-96 rounded-2xl bg-gray-100 animate-pulse" />
+      </div>
+    ),
+    ssr: true,
+  }
+);
 import FAQSection from '@/components/FAQSection';
 import { motion } from 'framer-motion';
 

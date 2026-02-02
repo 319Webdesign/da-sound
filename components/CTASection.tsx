@@ -34,8 +34,8 @@ export default function CTASection() {
 
             {/* Subtext */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Kurzentschlossen? Technik-Ausfall? Bei uns erreichst du 7 Tage die Woche echte
-              Experten aus Pfungstadt. Wir lassen dich nicht im Stich.
+            Kurzentschlossen? Technik-Ausfall? Bei uns erreichen Sie 7 Tage die Woche echte
+            Experten aus Pfungstadt. Wir lassen Sie nicht im Stich.
             </p>
 
             {/* Badge: Jetzt Online & Erreichbar */}

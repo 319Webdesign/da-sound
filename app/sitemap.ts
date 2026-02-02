@@ -21,10 +21,11 @@ const staticRoutes: {
   { path: '/', priority: 1, changefreq: 'daily' },
   { path: '/kontakt', priority: 0.9, changefreq: 'weekly' },
   { path: '/booking', priority: 0.8, changefreq: 'weekly' },
+  { path: '/ueber-uns', priority: 0.85, changefreq: 'weekly' },
   { path: '/datenschutz', priority: 0.7, changefreq: 'monthly' },
   { path: '/impressum', priority: 0.7, changefreq: 'monthly' },
+  { path: '/agb', priority: 0.7, changefreq: 'monthly' },
   { path: '/liefergebiet', priority: 0.7, changefreq: 'monthly' },
-  { path: '/ueber-uns', priority: 0.7, changefreq: 'monthly' },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

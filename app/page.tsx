@@ -8,23 +8,83 @@ import ExpertiseSection from '@/components/ExpertiseSection';
 import TechHighlights from '@/components/TechHighlights';
 import RentalCategories from '@/components/RentalCategories';
 import AboutServiceSection from '@/components/AboutServiceSection';
+import dynamic from 'next/dynamic';
 import LazyRender from '@/components/LazyRender';
-import GoogleReviewsSection from '@/components/GoogleReviewsSection';
 import CTASection from '@/components/CTASection';
+import { fetchGoogleReviews, type ReviewsResponse } from '@/lib/reviews';
+
+const GoogleReviewsSection = dynamic(
+  () => import('@/components/GoogleReviewsSection'),
+  {
+    loading: () => (
+      <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="h-64 md:h-80 rounded-2xl bg-gray-100 animate-pulse" />
+        </div>
+      </section>
+    ),
+    ssr: true,
+  }
+);
 import DryHireServiceSection from '@/components/DryHireServiceSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import OpeningHours from '@/components/OpeningHours';
-import { fetchGoogleReviews, type ReviewsResponse } from '@/lib/reviews';
-
 // ISR: Incremental Static Regeneration für bessere Performance
 export const revalidate = 60;
 
+const SITE_URL = 'https://da-sound.de';
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'da-sound Veranstaltungstechnik',
+      url: SITE_URL,
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/images/logo.svg` },
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': `${SITE_URL}/#localbusiness`,
+      name: 'da-sound PA-Verleih & Veranstaltungstechnik',
+      image: `${SITE_URL}/images/logo.svg`,
+      url: SITE_URL,
+      telephone: '+49-157-35451130',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Wormser Str. 23',
+        addressLocality: 'Pfungstadt',
+        postalCode: '64319',
+        addressRegion: 'Hessen',
+        addressCountry: 'DE',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 49.8032823,
+        longitude: 8.5901795,
+      },
+      openingHoursSpecification: [
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '09:30', closes: '18:00' },
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Thursday', opens: '09:30', closes: '18:00' },
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '09:30', closes: '14:00' },
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '10:00', closes: '14:00' },
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday', opens: '12:00', closes: '15:00' },
+      ],
+      sameAs: [],
+      parentOrganization: { '@id': `${SITE_URL}/#organization` },
+    },
+  ],
+};
+
 export default async function HomePage() {
   const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich habe eine Anfrage bezüglich Ihrer Veranstaltungstechnik.')}`;
-  
-  // Sicherstellen, dass die Seite gerendert wird
+  const googleBusinessUrl =
+    process.env.GOOGLE_BUSINESS_URL ||
+    'https://www.google.com/maps/place/?q=place_id:ChIJ5c3RqQ57vUcR790xWEv0vQo';
+
   if (!data) {
     return null;
   }
@@ -38,6 +98,10 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       {/* Header / Navigation */}
       <Navigation />
 
@@ -47,6 +111,7 @@ export default async function HomePage() {
         highlight="Einfach gemietet"
         images={data.heroImages}
         socialProof={data.socialProof}
+        googleBusinessUrl={googleBusinessUrl}
       />
 
       {/* Unsere Expertise */}
@@ -81,7 +146,7 @@ export default async function HomePage() {
       </LazyRender>
 
       {/* Kundenbewertungen */}
-      <GoogleReviewsSection reviewsData={reviewsData} />
+      <GoogleReviewsSection reviewsData={reviewsData} googleBusinessUrl={googleBusinessUrl} />
 
       {/* CTA Section */}
       <CTASection />

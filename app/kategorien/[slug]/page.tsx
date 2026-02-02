@@ -29,6 +29,25 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const category = getCategoryBySlug(slug);
+  if (!category) return {};
+  const title = `${category.title} mieten`;
+  const description =
+    category.longDescription ||
+    `${category.title} – ${category.description} da-sound Veranstaltungstechnik Pfungstadt.`;
+  return {
+    title,
+    description,
+    openGraph: {
+      title: `${title} | da-sound`,
+      description,
+      url: `https://da-sound.de/kategorien/${slug}`,
+    },
+  };
+}
+
 export default async function CategoryPage({ params }: PageProps) {
   const { slug } = await params;
   const category = getCategoryBySlug(slug);

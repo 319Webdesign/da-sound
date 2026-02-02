@@ -150,7 +150,7 @@ export default function ProductList({ products }: ProductListProps) {
                         }
                         
                         if (category === 'mischpulte-mikrofone') {
-                          return labelLower.includes('channel') || labelLower.includes('input') || labelLower.includes('output') || labelLower.includes('effect') || labelLower.includes('dsp') || labelLower.includes('touch') || labelLower.includes('display') || labelLower.includes('protokoll') || labelLower.includes('network') || labelLower.includes('wifi') || labelLower.includes('wireless') || labelLower.includes('usb') || spec.label === 'Gewicht' || labelLower === 'weight';
+                          return labelLower.includes('channel') || labelLower.includes('input') || labelLower.includes('output') || labelLower.includes('effect') || labelLower.includes('dsp') || labelLower.includes('touch') || labelLower.includes('display') || labelLower.includes('protokoll') || labelLower.includes('network') || labelLower.includes('wifi') || labelLower.includes('wireless') || labelLower.includes('bluetooth') || labelLower.includes('usb') || spec.label === 'Gewicht' || labelLower === 'weight';
                         }
                         
                         if (category === 'statische-scheinwerfer-led-spots') {
@@ -270,6 +270,9 @@ export default function ProductList({ products }: ProductListProps) {
                           } else if (labelLower.includes('protokoll') || labelLower.includes('network')) {
                             icon = <Network className="w-5 h-5" />;
                             label = 'PROTOKOLL';
+                          } else if (labelLower.includes('bluetooth')) {
+                            icon = <Bluetooth className="w-5 h-5" />;
+                            label = 'BLUETOOTH';
                           } else if (labelLower.includes('wifi') || labelLower.includes('wireless')) {
                             const wifiValue = spec.value.toLowerCase();
                             icon = wifiValue.includes('ja') || wifiValue === 'yes' || wifiValue.includes('true') || wifiValue.includes('ja') ? <Wifi className="w-5 h-5" /> : <WifiOff className="w-5 h-5" />;
@@ -302,9 +305,18 @@ export default function ProductList({ products }: ProductListProps) {
                           } else if (labelLower.includes('sound') || labelLower.includes('light') || labelLower.includes('music') || labelLower.includes('sound-to-light') || labelLower.includes('soundsteuerung')) {
                             icon = <Music className="w-5 h-5" />;
                             label = 'SOUND';
-                          } else if (labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx') || labelLower.includes('wifi')) {
-                            icon = <Wifi className="w-5 h-5" />;
-                            label = 'WIFI';
+                          } else if (labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx') || labelLower.includes('wifi') || labelLower.includes('steuerung')) {
+                            const noWifiProductIds = ['led-outdoor-fluter-ip65', 'theatre-spot-led', 'led-verfolgerspot-follow-spot', 'led-pll-panel-power-strobe'];
+                            const steuerungVal = (spec.value || '').toLowerCase();
+                            const isNoWifiProduct = noWifiProductIds.includes(product.id);
+                            const isNoWifiValue = steuerungVal.includes('nein') || steuerungVal.includes('manuell') || steuerungVal.includes('dmx') || steuerungVal.includes('nur manuell');
+                            if (isNoWifiProduct && isNoWifiValue) {
+                              icon = <WifiOff className="w-5 h-5" />;
+                              label = (spec.value || 'DMX').toUpperCase();
+                            } else {
+                              icon = <Wifi className="w-5 h-5" />;
+                              label = 'WIFI';
+                            }
                           } else if (labelLower.includes('gewicht') || labelLower === 'weight') {
                             icon = <Weight className="w-5 h-5" />;
                             label = 'WEIGHT';
@@ -334,8 +346,8 @@ export default function ProductList({ products }: ProductListProps) {
                             icon = <Music className="w-5 h-5" />;
                             label = 'SOUND';
                           } else if (labelLower.includes('fernbedienung') || labelLower.includes('wireless') || labelLower.includes('dmx') || labelLower.includes('wifi')) {
-                            icon = <Wifi className="w-5 h-5" />;
-                            label = 'WIFI';
+                            icon = <WifiOff className="w-5 h-5" />;
+                            label = product.id === '2000mw-diodenlaser-showlaser' ? 'DMX' : 'STAND-ALONE / DMX';
                           } else if (labelLower.includes('gewicht') || labelLower === 'weight') {
                             icon = <Weight className="w-5 h-5" />;
                             label = 'WEIGHT';
@@ -422,13 +434,14 @@ export default function ProductList({ products }: ProductListProps) {
                     const isPriceOnRequest = !!priceSpec;
                     
                     if (product.priceOptions && product.priceOptions.length > 0) {
+                      const priceSuffix = product.priceUnitLabel === 'Tag' ? ' / Tag' : '';
                       return (
                         <div className="space-y-1">
                           {product.priceOptions.map((option, idx) => (
                             <div key={idx} className="text-sm">
                               <span className="font-semibold text-gray-700">{option.label}:</span>{' '}
                               <span className="text-lg font-bold text-primary">
-                                {option.price.toFixed(2).replace('.', ',')} €
+                                {option.price.toFixed(2).replace('.', ',')} €{priceSuffix}
                               </span>
                             </div>
                           ))}
@@ -444,11 +457,11 @@ export default function ProductList({ products }: ProductListProps) {
                       return (
                         <>
                           <div className="text-xl font-bold text-primary">
-                            {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {product.priceUnitLabel ?? ((product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge') ? 'Tag' : 'Stück')}
+                            {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {product.priceUnitLabel ?? ((product.id === 'akku-lautsprecher-compact' || product.id === 'akku-lautsprecher-maxi' || product.id === 'aktivlautsprecher-bluetooth' || product.id === 'pa-saeule-bluetooth' || product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge') ? 'Tag' : 'Stück')}
                           </div>
                           {product.pricePerPair && (
                             <div className="text-sm text-gray-500">
-                              {product.pricePerPair.toFixed(2).replace('.', ',')} € / {(product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge') ? 'Wochenende' : 'Paar'}
+                              {product.pricePerPair.toFixed(2).replace('.', ',')} € / {(product.id === 'akku-lautsprecher-compact' || product.id === 'akku-lautsprecher-maxi' || product.id === 'aktivlautsprecher-bluetooth' || product.id === 'pa-saeule-bluetooth' || product.id === 'sub-sat-set-bluetooth' || product.id === 'pa-set-small' || product.id === 'pa-set-medium' || product.id === 'pa-set-large' || product.id === 'pa-set-xlarge' || product.id === 'pa-set-premium' || product.id === 'pa-set-outdoor' || product.id === 'party-set-small' || product.id === 'party-set-medium' || product.id === 'party-set-white' || product.id === 'party-set-large' || product.id === 'party-set-xlarge') ? 'Wochenende' : 'Paar'}
                             </div>
                           )}
                         </>

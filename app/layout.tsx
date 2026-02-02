@@ -11,14 +11,45 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const SITE_URL = "https://da-sound.de";
+
 export const metadata: Metadata = {
-  title: "da-sound Veranstaltungstechnik | Pfungstadt",
-  description: "Professionelle Veranstaltungstechnik in Pfungstadt & Umgebung. Tontechnik, Lichttechnik und Event-Zubehör zum Mieten.",
-  keywords: "Veranstaltungstechnik, PA-Anlage, Tontechnik, Lichttechnik, Pfungstadt",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Veranstaltungstechnik & DJ in Pfungstadt & Darmstadt – da-sound",
+    template: "%s | da-sound Veranstaltungstechnik",
+  },
+  description:
+    "Professionelle Veranstaltungstechnik in Pfungstadt & Darmstadt. Tontechnik, Lichttechnik, PA-Anlagen und Event-Zubehör zum Mieten. Einfach gemietet.",
+  keywords: [
+    "Veranstaltungstechnik",
+    "PA-Anlage",
+    "Tontechnik",
+    "Lichttechnik",
+    "Pfungstadt",
+    "Darmstadt",
+    "Event-Technik",
+    "Equipment mieten",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: SITE_URL,
+    siteName: "da-sound Veranstaltungstechnik",
+    title: "Veranstaltungstechnik & DJ in Pfungstadt & Darmstadt – da-sound",
+    description:
+      "Professionelle Veranstaltungstechnik in Pfungstadt & Darmstadt. Tontechnik, Lichttechnik und Event-Zubehör zum Mieten.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Veranstaltungstechnik & DJ in Pfungstadt & Darmstadt – da-sound",
+    description: "Professionelle Veranstaltungstechnik in Pfungstadt & Darmstadt. Einfach gemietet.",
+  },
+  alternates: { canonical: SITE_URL },
   icons: {
-    icon: '/images/logo.svg',
-    shortcut: '/images/logo.svg',
-    apple: '/images/logo.svg',
+    icon: "/images/logo.svg",
+    shortcut: "/images/logo.svg",
+    apple: "/images/logo.svg",
   },
 };
 

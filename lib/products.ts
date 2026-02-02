@@ -64,7 +64,7 @@ Set bestehend aus:
 1 x Profi 2.1 Lautsprechersystem mit 15-Zoll Subwoofer
 2 x Lautsprecherstativ
 1 x Audiomischpult mit Bluetooth
-1 x Mikrofon mit Schaltern (kabelgebunden)
+1 x Mikrofon mit Schalter (kabelgebunden)
 1 x LED Licht-Set mit Scannern & Stativ
 1 x Party-Nebelmaschine + Fernbedienung`,
     detailDescription: `Top-Sound und effektvolles Licht für deine nächste Feier.
@@ -74,7 +74,7 @@ Set bestehend aus:
 1 x Profi 2.1 Lautsprechersystem mit 15-Zoll Subwoofer
 2 x Lautsprecherstativ
 1 x Audiomischpult mit Bluetooth
-1 x Mikrofon mit Schaltern (kabelgebunden)
+1 x Mikrofon mit Schalter (kabelgebunden)
 1 x LED Licht-Set mit Scannern & Stativ
 1 x Party-Nebelmaschine + Fernbedienung`,
     images: [
@@ -129,8 +129,8 @@ Set bestehend aus:
       '/images/partysetWHITE/PXL_20241108_170016200.MP.webp',
       '/images/partysetWHITE/stagestand.webp',
     ],
-    pricePerUnit: 150,
-    pricePerPair: 220,
+    pricePerUnit: 170,
+    pricePerPair: 230,
     categorySlug: 'party-sets-ton-licht',
     specs: [
       { label: 'Personen', value: '1-120' },
@@ -246,7 +246,7 @@ Set bestehend aus:
       '/images/akku lautsprecher kompakt/ev8_3.webp',
     ],
     pricePerUnit: 30,
-    pricePerPair: 50,
+    pricePerPair: 45,
     categorySlug: 'pa-anlagen',
     specs: [
       { label: 'Personen', value: '1-50' },
@@ -270,7 +270,7 @@ Set bestehend aus:
       '/images/akku lautsprecher maxi/rockster3.webp',
     ],
     pricePerUnit: 40,
-    pricePerPair: 70,
+    pricePerPair: 60,
     categorySlug: 'pa-anlagen',
     specs: [
       { label: 'Personen', value: '1-120' },
@@ -293,7 +293,7 @@ Set bestehend aus:
       '/images/aktiv lautsprecher bluetooth/altea2.webp',
     ],
     pricePerUnit: 35,
-    pricePerPair: 60,
+    pricePerPair: 52.50,
     categorySlug: 'pa-anlagen',
     specs: [
       { label: 'Personen', value: '1-70 (Stck), 1-100 (Paar)' },
@@ -342,7 +342,7 @@ Set bestehend aus:
       '/images/pa-säulebluetooth/duo3.webp',
     ],
     pricePerUnit: 60,
-    pricePerPair: 100,
+    pricePerPair: 90,
     categorySlug: 'pa-anlagen',
     specs: [
       { label: 'Personen', value: '1-70 (Stck), 1-120 (Paar)' },
@@ -511,6 +511,7 @@ Set bestehend aus:
   {
     id: 'profi-pa-line-array-event-26a',
     name: 'Profi PA / Line-Array Event 26A',
+    priceUnitLabel: 'Tag',
     description: 'Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe. Sie sollten für den Transport und Aufbau 2 Personen einplanen.',
     detailDescription: `Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe. Sie sollten für den Transport und Aufbau 2 Personen einplanen.`,
     images: [
@@ -566,6 +567,7 @@ Wifi ja mit ext. Router
       '/images/allen heath sq5/sq5h.webp',
     ],
     pricePerUnit: 100,
+    priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'Allen & Heath' },
@@ -591,6 +593,7 @@ Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Üb
       '/images/allen heath ar2412/ar2412.webp',
     ],
     pricePerUnit: 40,
+    priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'Allen & Heath' },
@@ -628,6 +631,7 @@ USB Audio Playback, USB Interface, Stereo USB Recording
       '/images/yamaha dm3/dm3_4.webp',
     ],
     pricePerUnit: 70,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: 'DM-3 Standard', price: 70 },
       { label: 'DM-3 Dante', price: 90 },
@@ -657,6 +661,7 @@ Dante-fähige digitale Stagebox mit 16 Inputs und 8 Outputs. Kaskadierbar mit we
       '/images/yamaha tio1608D/tio1608D.webp',
     ],
     pricePerUnit: 35,
+    priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'Yamaha' },
@@ -694,6 +699,7 @@ Wifi nein
       '/images/dynacord cms1600/cms1600_4.webp',
     ],
     pricePerUnit: 60,
+    priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'DYNACORD' },
@@ -729,7 +735,8 @@ Wifi nein
       '/images/pioneer djm900nx/djm900_2-edae2eca.webp',
       '/images/pioneer djm900nx/djm900_3.webp',
     ],
-    pricePerUnit: 60,
+    pricePerUnit: 50,
+    priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'Pioneer' },
@@ -766,6 +773,7 @@ ab 5 kg inkl. Koffer`,
       '/images/mackie profx serie/profx8side.webp',
     ],
     pricePerUnit: 20,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: '4-Kanal', price: 20 },
       { label: '8-Kanal', price: 25 },
@@ -773,6 +781,7 @@ ab 5 kg inkl. Koffer`,
     ],
     categorySlug: 'mischpulte-mikrofone',
     specs: [
+      { label: 'Bluetooth', value: 'Ja, nur ProFX6' },
       { label: 'Hersteller', value: 'MACKIE' },
       { label: 'Serie', value: 'ProFX Serie' },
       { label: 'Typ', value: 'Analog Mixer' },
@@ -808,6 +817,7 @@ Inkl. 10m XLR Kabel`,
       '/images/shure mikrofon set/sm57set.webp',
     ],
     pricePerUnit: 10,
+    priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'Shure' },
@@ -846,6 +856,7 @@ Inkl. Stativen und XLR Kabeln`,
       '/images/mikrofon set drums/tgd58.webp',
     ],
     pricePerUnit: 45,
+    priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Typ', value: 'Drum-Mikrofon Set' },
@@ -880,6 +891,7 @@ Anwendung: Ansprachen, Reden, Moderation und Konferenzen`,
       '/images/funkmikrofon moderation/beyertg550.webp',
     ],
     pricePerUnit: 25,
+    priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Typ', value: 'Funkmikrofon' },
@@ -894,13 +906,11 @@ Anwendung: Ansprachen, Reden, Moderation und Konferenzen`,
   },
   {
     id: 'profi-funkmikrofon-shure-slxd2',
-    name: 'Profi Funkmikrofon Shure SLXD2',
-    description: 'Shure stellt mit den neuen SLXD Funkstrecken zuverlässige Arbeitstiere für den Bühneneinsatz zur Verfügung. Erstklassige Übertragungssicherheit in Kombination mit dynamischer, rauscharmer Audioqualität sind für den Profieinsatz gewährleistet. Mehrere Funkstrecken lassen sich parallel betreiben. Wahlweise auch mit Taschensender und Kopfbügelmikrofon (Nieren- oder Kugelcharakteristik). Batterien (AA) sind nicht im Mietpreis enthalten.',
-    detailDescription: `Profi Funkmikrofon Shure SLXD2
+    name: 'Profi Funkmikrofon Shure SLXD',
+    description: 'Shure stellt mit den neuen SLXD Funkstrecken zuverlässige Arbeitstiere für den Bühneneinsatz zur Verfügung. Erstklassige Übertragungssicherheit in Kombination mit dynamischer, rauscharmer Audioqualität sind für den Profieinsatz gewährleistet. Mehrere Funkstrecken lassen sich parallel betreiben. Wahlweise mit Beta58A oder Beta86 Kapsel. Auch mit Taschensender und Kopfbügelmikrofon (Nieren- oder Kugelcharakteristik) oder Lavaliermikrofon erhältlich. Batterien (AA) sind nicht im Mietpreis enthalten.',
+    detailDescription: `Profi Funkmikrofon Shure SLXD
 Zuverlässige Arbeitstiere für den Bühneneinsatz
-Shure stellt mit den neuen SLXD Funkstrecken zuverlässige Arbeitstiere für den Bühneneinsatz zur Verfügung. Erstklassige Übertragungssicherheit in Kombination mit dynamischer, rauscharmer Audioqualität sind für den Profieinsatz gewährleistet. Mehrere Funkstrecken lassen sich parallel betreiben.
-
-Wahlweise auch mit Taschensender und Kopfbügelmikrofon (Nieren- oder Kugelcharakteristik).
+Shure stellt mit den neuen SLXD Funkstrecken zuverlässige Arbeitstiere für den Bühneneinsatz zur Verfügung. Erstklassige Übertragungssicherheit in Kombination mit dynamischer, rauscharmer Audioqualität sind für den Profieinsatz gewährleistet. Mehrere Funkstrecken lassen sich parallel betreiben. Wahlweise mit Beta58A oder Beta86 Kapsel. Auch mit Taschensender und Kopfbügelmikrofon (Nieren- oder Kugelcharakteristik) oder Lavaliermikrofon erhältlich.
 
 Batterien (AA) sind nicht im Mietpreis enthalten.
 
@@ -909,7 +919,7 @@ Shure SLXD Funkstrecken
 Erstklassige Übertragungssicherheit
 Dynamische, rauscharme Audioqualität
 Mehrere Funkstrecken parallel betreibbar
-Varianten: Handmikrofon oder Taschensender mit Kopfbügelmikrofon (Nieren- oder Kugelcharakteristik)
+Varianten: Beta58A oder Beta86 Kapsel, Taschensender mit Kopfbügelmikrofon (Nieren- oder Kugelcharakteristik) oder Lavaliermikrofon
 Profieinsatz geeignet`,
     images: [
       '/images/slxd4e86-1920w (1).webp',
@@ -919,6 +929,7 @@ Profieinsatz geeignet`,
       '/images/profi funkmikrofon shure slxd/slxd4e86.webp',
     ],
     pricePerUnit: 40,
+    priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
       { label: 'Hersteller', value: 'Shure' },
@@ -959,6 +970,7 @@ Fernbedienung / Wireless DMX
       '/images/akku spot indoor rgb/tl3.webp',
     ],
     pricePerUnit: 8,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: 'Einzeln', price: 8 },
       { label: '4er Set', price: 30 },
@@ -997,6 +1009,7 @@ Fernbedienung / Wireless DMX
       '/images/akku spot outdoor rgbw/up4_1.webp',
     ],
     pricePerUnit: 12.5,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: 'Einzeln', price: 12.5 },
       { label: '4er Set', price: 40 },
@@ -1034,6 +1047,7 @@ manuell / DMX
       '/images/led outdoor fluter/starcolor3.webp',
     ],
     pricePerUnit: 15,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: 'Einzeln', price: 15 },
       { label: '4er Set', price: 50 },
@@ -1051,10 +1065,10 @@ manuell / DMX
   {
     id: 'theatre-spot-led',
     name: 'Theatre Spot LED',
-    description: 'Standard Stufenlinsen Scheinwerfer mit sparsamer 100W LED (vergleichbar mit 1.000W Halogenlampe), Farbton warmweiß. Perfekt zur frontalen Ausleuchtung von Bühnen. Manuell einstellbarer Zoom-Bereich.',
+    description: 'Standard Stufenlinsen Scheinwerfer mit sparsamer 100W LED (vergleichbar mit 1.000W Halogenlampe), Farbton warmweiß. Perfekt zur frontalen Ausleuchtung von Bühnen. Manuell einstellbarer Zoom-Bereich. Zur Steuerung wird ein DMX Controller benötigt.',
     detailDescription: `Theatre Spot LED
 Standard Stufenlinsen Scheinwerfer mit sparsamer LED
-Standard Stufenlinsen Scheinwerfer mit sparsamer 100W LED (vergleichbar mit 1.000W Halogenlampe), Farbton warmweiß. Perfekt zur frontalen Ausleuchtung von Bühnen. Manuell einstellbarer Zoom-Bereich.
+Standard Stufenlinsen Scheinwerfer mit sparsamer 100W LED (vergleichbar mit 1.000W Halogenlampe), Farbton warmweiß. Perfekt zur frontalen Ausleuchtung von Bühnen. Manuell einstellbarer Zoom-Bereich. Zur Steuerung wird ein DMX Controller benötigt.
 
 Technische Daten:
 100 Watt LED
@@ -1070,12 +1084,14 @@ DMX-Steuerung möglich`,
       '/images/theatre spot led/bt100mz.webp',
     ],
     pricePerUnit: 25,
+    priceUnitLabel: 'Tag',
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
       { label: 'Leistung', value: '100 Watt LED' },
       { label: 'Indoor', value: 'Indoor' },
       { label: 'Farbton', value: 'warmweiß' },
       { label: 'Zoom', value: 'manuell einstellbar' },
+      { label: 'Wifi', value: 'DMX' },
       { label: 'Steuerung', value: 'DMX-Steuerung möglich' },
     ],
   },
@@ -1102,13 +1118,14 @@ ca 10 kg inkl. Stativ`,
       '/images/led follow spot/pfe250.webp',
     ],
     pricePerUnit: 60,
+    priceUnitLabel: 'Tag',
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
       { label: 'Leistung', value: '120 Watt' },
       { label: 'Indoor', value: 'Indoor' },
       { label: 'Farbmischung', value: 'weiß, 2.800 – 10.000 K (5 Stufen)' },
       { label: 'Music', value: 'nein' },
-      { label: 'Wifi', value: 'nein' },
+      { label: 'Wifi', value: 'nur manuell' },
       { label: 'Gewicht', value: 'ca 10 kg inkl. Stativ' },
     ],
   },
@@ -1134,6 +1151,7 @@ manuell / DMX
       '/images/led pll panel/pll480_3.webp',
     ],
     pricePerUnit: 30,
+    priceUnitLabel: 'Tag',
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
       { label: 'Leistung', value: '480 x 0,5 W' },
@@ -1168,6 +1186,7 @@ ca 12 kg inkl. Stativ`,
       '/images/party lichtset kompakt/kls120_5.webp',
     ],
     pricePerUnit: 25,
+    priceUnitLabel: 'Tag',
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
       { label: 'Leistung', value: '4 x 3 W (Derbys) + 3 x 8 W (Spots)' },
@@ -1200,6 +1219,7 @@ ca. 17 kg inkl. Stativ`,
       '/images/led pro lichtbar RGB/kls902_3.webp',
     ],
     pricePerUnit: 30,
+    priceUnitLabel: 'Tag',
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
       { label: 'Leistung', value: '5 x 7 W (pro Spot)' },
@@ -1234,6 +1254,7 @@ ca. 21 kg inkl. Stativ`,
       '/images/led effekt bar mit scannern/klsscan_5.webp',
     ],
     pricePerUnit: 40,
+    priceUnitLabel: 'Tag',
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
       { label: 'Leistung', value: '15 W (Scanner), 3 x 7 W (Spots), 2 x 3 W (Derby)' },
@@ -1267,6 +1288,7 @@ ca. 18 kg inkl. Stativ`,
       '/images/high power led effekt bar mit laser/profx3.webp',
     ],
     pricePerUnit: 45,
+    priceUnitLabel: 'Tag',
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
       { label: 'Leistung', value: '6 x 6 W (Spots), 6 x 2 W (Derby)' },
@@ -1301,9 +1323,10 @@ Variante 2: IP44 Lichterkette LED warmweiß
 Beide Varianten eignen sich perfekt zur dekorativen Ausleuchtung von Räumen, Gärten, Zelten oder Veranstaltungsorten.`,
     images: ['/images/led-kette.webp'],
     pricePerUnit: 10,
+    priceUnitLabel: 'Tag',
     priceOptions: [
-      { label: 'Pro Strang', price: 10 },
-      { label: '2er Set', price: 15 },
+      { label: 'Einzeln', price: 10 },
+      { label: '4er Set', price: 30 },
     ],
     categorySlug: 'statische-scheinwerfer-led-spots',
     specs: [
@@ -1330,6 +1353,7 @@ Dieser coole und kompakte LED Effekt, bringt Bewegung und Dynamik auf jede Tanzf
       '/images/led derby effekt/ledderby2.webp',
     ],
     pricePerUnit: 15,
+    priceUnitLabel: 'Tag',
     categorySlug: 'moving-heads',
     specs: [
       { label: 'Leistung', value: '4 x 3 W' },
@@ -1356,6 +1380,7 @@ Dieser Multieffekt liefert beeindruckende raumfüllende Flowereffekte in Partyr�
       '/images/led triple flower/flower4.webp',
     ],
     pricePerUnit: 22.5,
+    priceUnitLabel: 'Tag',
     categorySlug: 'moving-heads',
     specs: [
       { label: 'Leistung', value: '3 x 30 W' },
@@ -1388,6 +1413,7 @@ Optimal für Hochzeiten oder Motto-Partys`,
       '/images/mirror ball/51741088zx.webp',
     ],
     pricePerUnit: 25,
+    priceUnitLabel: 'Tag',
     categorySlug: 'moving-heads',
     specs: [
       { label: 'Leistung', value: '5 x 10 W' },
@@ -1414,6 +1440,7 @@ Der BT-Meteor des belgischen Herstellers Briteq ist ein wahrer Hingucker. Die kr
       '/images/led moving head spot/bt-meteor_front_6hr.webp',
     ],
     pricePerUnit: 30,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: 'Einzeln', price: 30 },
       { label: '2er Set (im Flightcase)', price: 50 },
@@ -1446,6 +1473,7 @@ Mit den 200W starken LED Moving Heads Beam von JB Systems erzeugen Sie atemberau
       '/images/led moving head beam/challenger-beam-fx-13.webp',
     ],
     pricePerUnit: 39,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: 'Einzeln', price: 39 },
       { label: '2er Set (im Flightcase)', price: 60 },
@@ -1476,6 +1504,7 @@ Der Challenger Wash von JB Systems ist ein universell einsetzbarer, heller Washe
       '/images/led moving head wash/challenger3.webp',
     ],
     pricePerUnit: 39,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: 'Einzeln', price: 39 },
       { label: '2er Set (im Flightcase)', price: 60 },
@@ -1510,6 +1539,7 @@ Dieser Laser gehört zur Schutzklasse 3B und darf nur unter Einhaltung von Siche
       '/images/JB spyder show laser/spyder-rgb-laser-fx-2.webp',
     ],
     pricePerUnit: 25,
+    priceUnitLabel: 'Tag',
     categorySlug: 'moving-heads',
     specs: [
       { label: 'Leistung', value: '400 mW' },
@@ -1541,6 +1571,7 @@ Dieser Laser gehört zur Schutzklasse 4 und darf nur unter Aufsicht oder nach vo
       '/images/laserworld 2000mW Diodenlaser/ds2000_5.webp',
     ],
     pricePerUnit: 50,
+    priceUnitLabel: 'Tag',
     categorySlug: 'moving-heads',
     specs: [
       { label: 'Leistung', value: '2.000 mW' },
@@ -1548,7 +1579,7 @@ Dieser Laser gehört zur Schutzklasse 4 und darf nur unter Aufsicht oder nach vo
       { label: 'Indoor', value: 'Ja' },
       { label: 'Farbmischung', value: 'RGB' },
       { label: 'Soundsteuerung', value: 'Nein' },
-      { label: 'DMX', value: 'DMX oder ShowNet' },
+      { label: 'DMX', value: 'DMX' },
       { label: 'Gewicht', value: '5,2 kg' },
     ],
   },
@@ -1574,6 +1605,7 @@ Empfohlener Abstand: mindestens 4 Meter zur bestrahlenden Fläche`,
       '/images/led wassereffekt/wf40_4.webp',
     ],
     pricePerUnit: 30,
+    priceUnitLabel: 'Tag',
     categorySlug: 'moving-heads',
     specs: [
       { label: 'Leistung', value: '40 W' },
@@ -1604,6 +1636,7 @@ Aufhängung: Anschlagmittel auf Anfrage`,
       '/images/spiegelkugel set/sk3.webp',
     ],
     pricePerUnit: 39,
+    priceUnitLabel: 'Tag',
     categorySlug: 'moving-heads',
     specs: [
       { label: 'Leistung', value: '10 W' },
@@ -1634,7 +1667,8 @@ Duftstoffe (z.B. Limette oder Kokos) auf Anfrage`,
       '/images/party nebelmaschine/antariz8002.webp',
       '/images/party nebelmaschine/parl45.webp',
     ],
-    pricePerUnit: 20,
+    pricePerUnit: 22.50,
+    priceUnitLabel: 'Tag',
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
       { label: 'Leistung', value: '800 W' },
@@ -1663,6 +1697,7 @@ Duftstoffe (z.B. Limette oder Kokos) auf Anfrage`,
       '/images/nebelmaschine 1,5kw/z1200.webp',
     ],
     pricePerUnit: 30,
+    priceUnitLabel: 'Tag',
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
       { label: 'Leistung', value: '1.250 W' },
@@ -1691,6 +1726,7 @@ Inkl. 1 Tankfüllung mit Spezialfluid`,
       '/images/vertical spray fogger/WhatsApp Image 2025-07-02 at 13.46.33.webp',
     ],
     pricePerUnit: 40,
+    priceUnitLabel: 'Tag',
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
       { label: 'Leistung', value: '3.100 W' },
@@ -1719,6 +1755,7 @@ Inkl. 1 Tankfüllung`,
       '/images/hazer/hz350action.webp',
     ],
     pricePerUnit: 40,
+    priceUnitLabel: 'Tag',
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
       { label: 'Leistung', value: '350 W' },
@@ -1749,6 +1786,7 @@ WICHTIG: Bitte befolgen Sie die Aufbau-Anleitung und leeren Sie das Gerät sorgf
       '/images/bodennebelmaschine/h2fog_4.webp',
     ],
     pricePerUnit: 80,
+    priceUnitLabel: 'Tag',
     categorySlug: 'nebelmaschinen-buehneneffekte',
     specs: [
       { label: 'Leistung', value: '1.400 W' },
@@ -1780,6 +1818,7 @@ Das Spezialgranulat können Sie bei uns erwerben. Pro Beutel (200gr) 39,- €, r
       '/images/cold spark kaltfunkenmaschine/Screenshot 2025-07-28 111311.webp',
     ],
     pricePerUnit: 50,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: 'Einzeln', price: 50 },
       { label: 'Paar', price: 80 },
@@ -1815,6 +1854,7 @@ HDMI, RS-232 Anschlüsse
     images: ['/images/acer1-1920w (1).webp'],
     galleryImages: ['/images/acer1-1920w (1).webp'],
     pricePerUnit: 30,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Projector', value: 'LCD DLP' },
@@ -1849,6 +1889,7 @@ HDMI 2.0 /1.4, VGA Anschlüsse
       '/images/laser dlp beamer/dlp3.webp',
     ],
     pricePerUnit: 50,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Projector', value: 'Laser DLP' },
@@ -1882,6 +1923,7 @@ HDMI, VGA, RJ-45 Digital-IN Anschlüsse
       '/images/laser dlp beamer PRO/panasonic3.webp',
     ],
     pricePerUnit: 100,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Projector', value: 'Laser LCD' },
@@ -1917,6 +1959,7 @@ Zoom Ratio 1.46-2.93:1
       '/images/4K laser dlp beamer/frq50wangledrhigh.webp',
     ],
     pricePerUnit: 150,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Projector', value: '1 Chip Laser-DLP' },
@@ -1944,6 +1987,7 @@ Mietpreis: 200,- € (inkl. höhenverstellbarem Stativ)`,
       '/images/4K signature display/LH6541UHS-B1AG(73).webp',
     ],
     pricePerUnit: 200,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Projector', value: 'Digital Signage LCD Panel' },
@@ -1970,6 +2014,7 @@ Preis auf Anfrage`,
       '/images/speech 100 konferenzsystem/speech100m.webp',
     ],
     pricePerUnit: 9999,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Typ', value: 'Konferenzsystem' },
@@ -2016,6 +2061,7 @@ Mietpreis: 99,- €`,
       '/images/leinwand/leinwand_2m.webp',
     ],
     pricePerUnit: 99,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Projektionsfläche', value: '400 x 258 cm (sichtbares Bild)' },
@@ -2063,6 +2109,7 @@ Mietpreis: 50,- €`,
       '/images/leinwand/leinwand_2m.webp',
     ],
     pricePerUnit: 50,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Projektionsfläche', value: '300 x 188 cm (sichtbares Bild)' },
@@ -2106,6 +2153,7 @@ Mietpreis: 25,- €`,
       '/images/leinwand/leinwand_2m.webp',
     ],
     pricePerUnit: 25,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Projektionsfläche', value: 'ca. 2m x 1,8m' },
@@ -2128,6 +2176,7 @@ Mietpreis: 5,- €`,
     images: ['/images/beamerstand.webp'],
     galleryImages: ['/images/stativ für projektor laptop/beamerstand.webp'],
     pricePerUnit: 5,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Typ', value: 'Stativ' },
@@ -2167,6 +2216,7 @@ Mietpreis: 50,- €`,
       '/images/pro av mixer/vr-1hd_top_gal.webp',
     ],
     pricePerUnit: 50,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Typ', value: 'A/V Mischpult' },
@@ -2202,6 +2252,7 @@ Mietpreis: 25,- €`,
     images: ['/images/hdmi_wireless.webp'],
     galleryImages: ['/images/wireless HDMI set/hdmi_wireless.webp'],
     pricePerUnit: 25,
+    priceUnitLabel: 'Tag',
     categorySlug: 'medien-konferenztechnik',
     specs: [
       { label: 'Modell', value: 'WHD30M - 4K (celexon)' },
@@ -2250,6 +2301,7 @@ Mietpreis: 35,- €`,
       '/images/Inverter Stromerzeuger 2 kW/hy2000_3.webp',
     ],
     pricePerUnit: 35,
+    priceUnitLabel: 'Tag',
     categorySlug: 'stromerzeuger',
     specs: [
       { label: 'Modell', value: 'HY-2000Si (Hyundai)' },
@@ -2301,6 +2353,7 @@ Mietpreis: 50,- €`,
       '/images/Inverter Stromerzeuger 3,2 kW/hy3200_3.webp',
     ],
     pricePerUnit: 50,
+    priceUnitLabel: 'Tag',
     categorySlug: 'stromerzeuger',
     specs: [
       { label: 'Modell', value: 'HY-3200Si (Hyundai)' },
@@ -2355,6 +2408,7 @@ Mietpreis: 99,- €`,
       '/images/Inverter Stromerzeuger 6 kW/hyundai-invertergenerator-hy6500sei-d.webp',
     ],
     pricePerUnit: 99,
+    priceUnitLabel: 'Tag',
     categorySlug: 'stromerzeuger',
     specs: [
       { label: 'Maximalleistung', value: '6,5 kW' },
@@ -2406,6 +2460,7 @@ Mietpreis: 70,- €`,
       '/images/bühne ix stage/ixstage6.webp',
     ],
     pricePerUnit: 70,
+    priceUnitLabel: 'Tag',
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Abmessungen', value: '2x2m, bestehend aus 4x1m Elementen' },
@@ -2454,6 +2509,7 @@ weitere Größen/Konfigurationen auf Anfrage`,
       '/images/bühne ix stage/ixstage6.webp',
     ],
     pricePerUnit: 200,
+    priceUnitLabel: 'Tag',
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Elemente', value: '12 Stck 1x1 m Stage Elemente' },
@@ -2494,6 +2550,7 @@ Mietpreis 6x3m: 50,- €`,
     images: ['/images/pavillion.webp'],
     galleryImages: ['/images/pavillion/pavillion.webp'],
     pricePerUnit: 39,
+    priceUnitLabel: 'Tag',
     priceOptions: [
       { label: '3x3m', price: 39 },
       { label: '6x3m', price: 50 },
@@ -2516,6 +2573,7 @@ Mietpreis 6x3m: 50,- €`,
     images: ['/images/60302184a.webp'],
     galleryImages: ['/images/60302184a.webp'],
     pricePerUnit: 10,
+    priceUnitLabel: 'Tag',
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Typ', value: 'Alutruss' },
@@ -2530,6 +2588,7 @@ Mietpreis 6x3m: 50,- €`,
     images: ['/images/sigma1.webp'],
     galleryImages: ['/images/sigma1.webp'],
     pricePerUnit: 40,
+    priceUnitLabel: 'Tag',
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Zertifizierung', value: 'Made in EU (TÜV/GS geprüft)' },
@@ -2547,7 +2606,7 @@ Mietpreis 6x3m: 50,- €`,
     images: ['/images/km214-5.webp'],
     galleryImages: ['/images/km214-5.webp'],
     pricePerUnit: 10,
-    priceUnitLabel: 'Paar',
+    priceUnitLabel: 'Tag',
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Typ', value: 'Lautsprecherstativ' },
@@ -2565,6 +2624,7 @@ Mietpreis 6x3m: 50,- €`,
     images: ['/images/km24630.webp'],
     galleryImages: ['/images/km24630.webp'],
     pricePerUnit: 8,
+    priceUnitLabel: 'Tag',
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Typ', value: 'Leuchtenstativ' },
@@ -2582,6 +2642,7 @@ Mietpreis 6x3m: 50,- €`,
     images: ['/images/km2109.webp'],
     galleryImages: ['/images/km2109.webp'],
     pricePerUnit: 5,
+    priceUnitLabel: 'Tag',
     categorySlug: 'buehlenpodeste-traversen',
     specs: [
       { label: 'Typ', value: 'Mikrofonstativ' },
@@ -2594,20 +2655,34 @@ Mietpreis 6x3m: 50,- €`,
   // Upgrade-Kits für PA-Anlagen
   {
     id: 'upgrade-kit-mixer-mikrofon',
-    name: 'Upgrade Kit: Mixer + Mikrofon',
+    name: 'Upgrade Kit',
     description:
-      'Mixer und Mikrofon zusammen als Upgrade für Ihre PA-Anlage. Kombiniert Bluetooth-Mixing und Sprache/Gesang in einem Paket – nur 20 € extra.',
-    detailDescription: `Das Upgrade Kit vereint ein kompaktes Bluetooth-Audiomischpult mit einem professionellen Mikrofon. Perfekt, um PA-Sets ohne Streaming oder Gesangsmikrofon zu ergänzen – alles zusammen für nur 20 € zusätzlich.`,
+      'Für alle PA-Sets geeignet: Audio-Mischpult und kabelgebundes Mikrofon. Bluetooth Audio Streaming oder schließen Sie Ihren Laptop mit dem beiliegenden Aux-Kabel an.',
+    detailDescription: `Für alle PA-Sets geeignet: Audio-Mischpult und kabelgebundes Mikrofon. Bluetooth Audio Streaming oder schließen Sie Ihren Laptop mit dem beiliegenden Aux-Kabel an.`,
     images: ['/images/upgrade.png'],
     galleryImages: ['/images/upgrade.png', '/images/mixer-bluetooth.webp', '/images/mikrofon.webp'],
     pricePerUnit: 20,
+    priceUnitLabel: 'Tag',
     categorySlug: 'pa-anlagen',
     isUpgradeKit: true,
     specs: [
-      { label: 'Inhalt', value: 'Bluetooth-Mixer + Mikrofon' },
-      { label: 'Typ', value: 'Audiomischpult & Gesangsmikrofon' },
       { label: 'Bluetooth', value: 'Ja, Audio Streaming' },
-      { label: 'Anwendung', value: 'Sprache, Gesang, Musik' },
+    ],
+  },
+  {
+    id: 'upgrade-kit-wireless',
+    name: 'Upgrade Kit Wireless',
+    description:
+      'Für alle PA-Sets geeignet: Audio-Mischpult mit drahtlosem Mikrofon (1 Batteriesatz inklusive).',
+    detailDescription: `Für alle PA-Sets geeignet: Audio-Mischpult mit drahtlosem Mikrofon (1 Batteriesatz inklusive).`,
+    images: ['/images/upgrade.png'],
+    galleryImages: ['/images/upgrade.png', '/images/mixer-bluetooth.webp', '/images/mikrofon.webp'],
+    pricePerUnit: 30,
+    priceUnitLabel: 'Tag',
+    categorySlug: 'pa-anlagen',
+    isUpgradeKit: true,
+    specs: [
+      { label: 'Bluetooth', value: 'Ja, Audio Streaming' },
     ],
   },
 ];

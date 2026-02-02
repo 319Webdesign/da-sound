@@ -76,7 +76,7 @@ export default function UeberUnsPage() {
 
               {/* Headline */}
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Equipment und Know-How für Ihr Event in Südhessen aus einer Hand
+                Equipment und Know-How für Ihr Event in Südhessen.
               </h2>
 
               {/* Fließtext */}
@@ -97,7 +97,7 @@ export default function UeberUnsPage() {
                 </p>
                 <p>
                   Als Ihr regionaler Veranstaltungstechnik Partner aus Pfungstadt garantieren wir Ihnen
-                  regionale und zuverlässige Dienstleistungen zu fairen und transparenten Konditionen.
+                 zuverlässige Dienstleistungen zu fairen und transparenten Konditionen.
                 </p>
               </div>
 
@@ -253,99 +253,101 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      {/* Team Sektion */}
-      <section className="py-16 md:py-20 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Unser Team
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Die Menschen hinter da-sound – für Sie vor Ort.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Carsten Helfrich */}
+      {/* Team Sektion – vorübergehend ausgeblendet; zum Einblenden "false" durch "true" ersetzen */}
+      {false && (
+        <section className="py-16 md:py-20 lg:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-center"
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12 md:mb-16"
             >
-              <div className="relative mb-6 w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200 border-4 border-primary/10">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Users className="w-16 h-16 text-gray-400" />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Carsten Helfrich
-              </h3>
-              <p className="text-primary font-semibold mb-3">
-                Inhaber, Geschäftsführer
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Verwaltung, Eventplanung, Audio Engineer, Laserschutzbeauftragter
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                Unser Team
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Die Menschen hinter da-sound – für Sie vor Ort.
               </p>
             </motion.div>
 
-            {/* Demian Wörl */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="relative mb-6 w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200 border-4 border-primary/10">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Users className="w-16 h-16 text-gray-400" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+              {/* Carsten Helfrich */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-center"
+              >
+                <div className="relative mb-6 w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200 border-4 border-primary/10">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Users className="w-16 h-16 text-gray-400" />
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Demian Wörl
-              </h3>
-              <p className="text-primary font-semibold mb-3">
-                Mitarbeiter Logistik
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Lagerverwaltung, Kommissionierung, Kundenbetreuung
-              </p>
-            </motion.div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Carsten Helfrich
+                </h3>
+                <p className="text-primary font-semibold mb-3">
+                  Inhaber, Geschäftsführer
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Verwaltung, Eventplanung, Audio Engineer, Laserschutzbeauftragter
+                </p>
+              </motion.div>
 
-            {/* János Gede */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-center"
-            >
-              <div className="relative mb-6 w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200 border-4 border-primary/10">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Users className="w-16 h-16 text-gray-400" />
+              {/* Demian Wörl */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-center"
+              >
+                <div className="relative mb-6 w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200 border-4 border-primary/10">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Users className="w-16 h-16 text-gray-400" />
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                János Gede
-              </h3>
-              <p className="text-primary font-semibold mb-3">
-                Event-Service
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Auslieferungen, Veranstaltungstechniker, Service
-              </p>
-            </motion.div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Demian Wörl
+                </h3>
+                <p className="text-primary font-semibold mb-3">
+                  Mitarbeiter Logistik
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Lagerverwaltung, Kommissionierung, Kundenbetreuung
+                </p>
+              </motion.div>
+
+              {/* János Gede */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-center"
+              >
+                <div className="relative mb-6 w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200 border-4 border-primary/10">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Users className="w-16 h-16 text-gray-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  János Gede
+                </h3>
+                <p className="text-primary font-semibold mb-3">
+                  Event-Service
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Auslieferungen, Veranstaltungstechniker, Service
+                </p>
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Referenzen / Gallery */}
       <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
@@ -367,21 +369,14 @@ export default function UeberUnsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
-              { src: '/images/best practice/bp1.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp2.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp3.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp4.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp5.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp6.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp7.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp8.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp9.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp10.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp11.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp12.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp13.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp25.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp30.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp26.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp23.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp18.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp19.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
+              { src: '/images/best practice/bp17.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
               { src: '/images/best practice/bp14.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
-              { src: '/images/best practice/bp15.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
             ].map((image, index) => (
               <motion.div
                 key={index}

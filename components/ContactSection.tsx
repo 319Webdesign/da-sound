@@ -93,9 +93,7 @@ export default function ContactSection() {
       newErrors.email = 'Bitte geben Sie eine gültige E-Mail-Adresse ein';
     }
 
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Bitte geben Sie Ihre Telefonnummer ein';
-    } else if (!/^[\d\s\-\+\(\)]+$/.test(formData.phone)) {
+    if (formData.phone.trim() && !/^[\d\s\-\+\(\)]+$/.test(formData.phone)) {
       newErrors.phone = 'Bitte geben Sie eine gültige Telefonnummer ein';
     }
 
@@ -285,7 +283,7 @@ export default function ContactSection() {
               <div className="flex items-start gap-3 justify-center lg:justify-start">
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">da-sound Veranstaltungstechnik</p>
+                  <p className="font-semibold text-gray-900 mb-1">da-sound PA-Verleih & Veranstaltungstechnik</p>
                   <p className="text-gray-700">
                     Wormser Str. 23<br />
                     64319 Pfungstadt
@@ -417,7 +415,7 @@ export default function ContactSection() {
                           : 'text-gray-500 peer-focus:text-primary'
                       }`}
                     >
-                      Telefonnummer *
+                      Telefonnummer (optional)
                     </label>
                   </div>
                   {errors.phone && (

@@ -20,11 +20,32 @@ interface PageProps {
   }>;
 }
 
-// ISR: Incremental Static Regeneration fÃƒÂ¼r Produktseiten
-export const revalidate = 3600; // 1 Stunde - Preise kÃƒÂ¶nnen sich ÃƒÂ¤ndern
+// ISR: Incremental Static Regeneration für Produktseiten
+export const revalidate = 3600; // 1 Stunde – Preise können sich ändern
 
 export async function generateStaticParams() {
   return getAllProductIds().map((id) => ({ id }));
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { id } = await params;
+  const product = getProductById(id);
+  if (!product) return {};
+  const title = `${product.name} mieten`;
+  const description =
+    product.detailDescription?.slice(0, 155) ||
+    product.description?.slice(0, 155) ||
+    `${product.name} – Veranstaltungstechnik mieten bei da-sound Pfungstadt.`;
+  return {
+    title,
+    description: description + (description.length >= 155 ? '…' : ''),
+    openGraph: {
+      title: `${title} | da-sound`,
+      description,
+      url: `https://da-sound.de/produkte/${id}`,
+      images: product.images?.[0] ? [`https://da-sound.de${product.images[0]}`] : undefined,
+    },
+  };
 }
 
 export default async function ProductDetailPage({ params }: PageProps) {
@@ -37,10 +58,14 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   const category = getCategoryBySlug(product.categorySlug);
 
-  // Verwende detailDescription fÃƒÂ¼r Detailseite, sonst description
+  // Verwende detailDescription für Detailseite, sonst description
   const detailText = product.detailDescription || product.description;
 
   const setProductIds = new Set([
+    'akku-lautsprecher-compact',
+    'akku-lautsprecher-maxi',
+    'aktivlautsprecher-bluetooth',
+    'pa-saeule-bluetooth',
     'sub-sat-set-bluetooth',
     'pa-set-small',
     'pa-set-medium',
@@ -144,7 +169,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const quickFacts = {
     personen: product.specs?.find(s => s.label === 'Personen')?.value || 'bis 70',
     bluetooth: detailText?.toLowerCase().includes('bluetooth') || false,
-    aufbauSchwierigkeit: aufbauSchwierigkeitMap[product.id] ?? 'Einfach', // Kann spÃƒÂ¤ter aus Produkt-Daten kommen
+    aufbauSchwierigkeit: aufbauSchwierigkeitMap[product.id] ?? 'Einfach', // Kann später aus Produkt-Daten kommen
   };
 
   // Lieferumfang aus Beschreibung extrahieren oder definieren
@@ -162,7 +187,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
       items.push({ iconName: 'Cloud', label: 'Nebel', description: 'Nebelmaschine' });
     }
     if (desc.includes('kabel') || desc.includes('anschluss')) {
-      items.push({ iconName: 'Cable', label: 'Kabel', description: 'Alle benÃƒÂ¶tigten Anschlusskabel' });
+      items.push({ iconName: 'Cable', label: 'Kabel', description: 'Alle benötigten Anschlusskabel' });
     }
     
     // Fallback falls nichts gefunden wird
@@ -171,7 +196,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
         { iconName: 'Volume2', label: 'Lautsprecher', description: 'Aktives Lautsprechersystem' },
         { iconName: 'Lightbulb', label: 'Licht', description: 'LED Kompakt Licht-Set' },
         { iconName: 'Cloud', label: 'Nebel', description: 'Nebelmaschine' },
-        { iconName: 'Cable', label: 'Kabel', description: 'Alle benÃƒÂ¶tigten Anschlusskabel' },
+        { iconName: 'Cable', label: 'Kabel', description: 'Alle benötigten Anschlusskabel' },
       ];
     }
     
@@ -182,8 +207,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   // Cross-Selling Produkte
   const crossSellingProducts = [
-    { id: 'funkmikrofon-sprache-moderation', name: 'Funkmikrofon fÃƒÂ¼r Reden', price: 35 },
-    { id: 'akku-spot-indoor-rgb', name: 'ZusÃƒÂ¤tzliche Akku-Strahler', price: 20 },
+    { id: 'funkmikrofon-sprache-moderation', name: 'Funkmikrofon für Reden', price: 35 },
+    { id: 'akku-spot-indoor-rgb', name: 'Zusätzliche Akku-Strahler', price: 20 },
   ];
 
   const galleryImages =
@@ -279,7 +304,16 @@ export default async function ProductDetailPage({ params }: PageProps) {
                         <div className="text-4xl font-bold text-primary mb-2">
                           {product.priceOptions[0].price.toFixed(2).replace('.', ',')} € / {priceLabel}
                         </div>
-                        <p className="text-sm text-gray-500">
+                        {product.priceOptions.length > 1 && (
+                          <div className="space-y-1 mt-2 text-lg text-gray-700">
+                            {product.priceOptions.slice(1).map((option, idx) => (
+                              <div key={idx}>
+                                {option.label}: {option.price.toFixed(2).replace('.', ',')} € / {priceLabel}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        <p className="text-sm text-gray-500 mt-2">
                           Alle Preise verstehen sich inkl. 19% MwSt.
                         </p>
                       </div>
@@ -377,100 +411,100 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 bildergalerie: galleryTab,
                 anwendung: {
                 text: product.id === 'party-set-small' 
-                  ? 'Partys, Geburtstagsfeiern, Studentenpartys, Weihnachtsfeier, etc.\nFÃƒÂ¼r max 70 Personen (Indoor)'
+                  ? 'Partys, Geburtstagsfeiern, Studentenpartys, Weihnachtsfeier, etc.\nFür max 70 Personen (Indoor)'
                   : product.id === 'party-set-medium'
-                  ? 'Partys, Geburtstagsfeiern, Studentenpartys, Weihnachtsfeier, Hochzeiten, DJs\nFÃƒÂ¼r 100-120 Personen (Indoor)'
+                  ? 'Partys, Geburtstagsfeiern, Studentenpartys, Weihnachtsfeier, Hochzeiten, DJs\nFür 100-120 Personen (Indoor)'
                   : product.id === 'party-set-white'
-                  ? 'Hochzeiten, Motto-Partys, Firmenevents, Weihnachtsfeier, auch fÃƒÂ¼r DJs geeignet\nEmpfohlen fÃƒÂ¼r 70-100 (max 120) Personen (Indoor)'
+                  ? 'Hochzeiten, Motto-Partys, Firmenevents, Weihnachtsfeier, auch für DJs geeignet\nEmpfohlen für 70-100 (max 120) Personen (Indoor)'
                   : product.id === 'party-set-large'
-                  ? 'Hochzeitsfeier, Partys, runde Geburtstage und groÃƒÂŸe Familienfeiern, Studentenpartys, Firmenevents (Sommerfest, Weihnachtsfeier)\nBis zu 150 Personen (nur Indoor)'
+                  ? 'Hochzeitsfeier, Partys, runde Geburtstage und große Familienfeiern, Studentenpartys, Firmenevents (Sommerfest, Weihnachtsfeier)\nBis zu 150 Personen (nur Indoor)'
                   : product.id === 'party-set-xlarge'
-                  ? 'Hochzeitsfeier, Partys, runde Geburtstage und groÃƒÂŸe Familienfeiern, Studentenpartys, Firmenevents (Sommerfest, Weihnachtsfeier), kleine Zeltveranstaltungen (Kerb)\nBis zu 250 Personen (nur Indoor)'
+                  ? 'Hochzeitsfeier, Partys, runde Geburtstage und große Familienfeiern, Studentenpartys, Firmenevents (Sommerfest, Weihnachtsfeier), kleine Zeltveranstaltungen (Kerb)\nBis zu 250 Personen (nur Indoor)'
                   : product.id === 'akku-lautsprecher-compact'
-                  ? 'Mobiler Akku-Lautsprecher fÃƒÂ¼r StraÃƒÂŸenmusik, Trauungen, SchulauffÃƒÂ¼hrungen, Konferenzen, Gottesdienste, Sportveranstaltungen, PrÃƒÂ¤sentationen oder Grillpartys - ÃƒÂ¼berall dort, wo kein Stromanschluss vorhanden oder die Verlegung von Kabeln nicht mÃƒÂ¶glich ist. Wetterfest bei Verwendung der Schutzabdeckung.'
+                  ? 'Mobiler Akku-Lautsprecher für Straßenmusik, Trauungen, Schulaufführungen, Konferenzen, Gottesdienste, Sportveranstaltungen, Präsentationen oder Grillpartys - überall dort, wo kein Stromanschluss vorhanden oder die Verlegung von Kabeln nicht möglich ist. Wetterfest bei Verwendung der Schutzabdeckung.'
                   : product.id === 'akku-lautsprecher-maxi'
-                  ? 'Sehr leistungsstarker Akku-Lautsprecher fÃƒÂ¼r StraÃƒÂŸenmusik, Trauungen, SchulauffÃƒÂ¼hrungen, Sportveranstaltungen, Grill- und Gartenpartys - ÃƒÂ¼berall dort, wo kein Stromanschluss vorhanden oder die Verlegung von Kabeln nicht mÃƒÂ¶glich ist.'
+                  ? 'Sehr leistungsstarker Akku-Lautsprecher für Straßenmusik, Trauungen, Schulaufführungen, Sportveranstaltungen, Grill- und Gartenpartys - überall dort, wo kein Stromanschluss vorhanden oder die Verlegung von Kabeln nicht möglich ist.'
                   : product.id === 'aktivlautsprecher-bluetooth'
-                  ? 'Anwendung (bei 2 Stck):\nSprachbeschallung bis max. 200 Personen\nPlayback Musikbeschallung bis max. 150 Personen mit mittlerem Basspegel\nLive-Musik akustisch fÃƒÂ¼r bis zu 100 Personen'
+                  ? 'Anwendung (bei 2 Stck):\nSprachbeschallung bis max. 200 Personen\nPlayback Musikbeschallung bis max. 150 Personen mit mittlerem Basspegel\nLive-Musik akustisch für bis zu 100 Personen'
                   : product.id === 'sub-sat-set-bluetooth'
-                  ? 'Anwendung (bei 2 Stck):\nSprachbeschallung bis max. 200 Personen\nPlayback Musikbeschallung bis max. 150 Personen mit mittlerem Basspegel\nLive-Musik akustisch fÃƒÂ¼r bis zu 100 Personen'
+                  ? 'Anwendung (bei 2 Stck):\nSprachbeschallung bis max. 200 Personen\nPlayback Musikbeschallung bis max. 150 Personen mit mittlerem Basspegel\nLive-Musik akustisch für bis zu 100 Personen'
                   : product.id === 'pa-saeule-bluetooth'
-                  ? 'PA-System fÃƒÂ¼r Hochzeiten, Corporate Events, Konferenz, kleine Ensembles und DJs\nUniversell einsetzbar fÃƒÂ¼r Beschallungen bis ca. 70 Personen (100-120 Personen mit 2 SÃƒÂ¤ulen)\nSehr gute SprachverstÃƒÂ¤ndlichkeit\nAuch in weiÃƒÂŸ verfÃƒÂ¼gbar fÃƒÂ¼r eine noch dezentere Optik, White Weddings, etc.'
+                  ? 'PA-System für Hochzeiten, Corporate Events, Konferenz, kleine Ensembles und DJs\nUniversell einsetzbar für Beschallungen bis ca. 70 Personen (100-120 Personen mit 2 Säulen)\nSehr gute Sprachverständlichkeit\nAuch in weiß verfügbar für eine noch dezentere Optik, White Weddings, etc.'
                   : product.id === 'pa-set-small'
                   ? 'Sprachbeschallung bis max. 100 Personen\nMusikbeschallung bis max. 80 Personen mit geringem Basspegel\nLive-Musik akustisch / dezent bis max. 80 Personen'
                   : product.id === 'pa-set-medium'
-                  ? 'Sprachbeschallung bis max. 150 Personen\nLive-Musik (akustisch / dezent) bis max. 100 Personen mit mittlerem Basspegel\nDruckvolle Playbackmusik Beschallung bis ca. 100 Personen in geschlossenen RÃƒÂ¤umen'
+                  ? 'Sprachbeschallung bis max. 150 Personen\nLive-Musik (akustisch / dezent) bis max. 100 Personen mit mittlerem Basspegel\nDruckvolle Playbackmusik Beschallung bis ca. 100 Personen in geschlossenen Räumen'
                   : product.id === 'pa-set-large'
-                  ? 'PA-System fÃƒÂ¼r Live-Bands, DJs, Clubs und Events aller Art\nUniversell einsetzbar fÃƒÂ¼r Beschallungen bis ca. 150 Personen'
+                  ? 'PA-System für Live-Bands, DJs, Clubs und Events aller Art\nUniversell einsetzbar für Beschallungen bis ca. 150 Personen'
                   : product.id === 'pa-set-xlarge'
-                  ? 'PA-System fÃƒÂ¼r Live-Bands, DJs, Clubs und Events aller Art\nUniversell einsetzbar fÃƒÂ¼r Beschallungen bis zu max. 250 Personen'
+                  ? 'PA-System für Live-Bands, DJs, Clubs und Events aller Art\nUniversell einsetzbar für Beschallungen bis zu max. 250 Personen'
                   : product.id === 'pa-set-premium'
-                  ? 'hochwertiges PA-System fÃƒÂ¼r Hochzeiten, Corporate Events, Konferenz, Live Bands und DJs\nUniversell einsetzbar fÃƒÂ¼r Beschallungen bis max. 250 Personen\nSehr gute Audioeigenschaften bei minimalem Platzbedarf, einfach im PKW Kombi zu transportieren und an einer Haushaltssteckdose zu betreiben'
+                  ? 'hochwertiges PA-System für Hochzeiten, Corporate Events, Konferenz, Live Bands und DJs\nUniversell einsetzbar für Beschallungen bis max. 250 Personen\nSehr gute Audioeigenschaften bei minimalem Platzbedarf, einfach im PKW Kombi zu transportieren und an einer Haushaltssteckdose zu betreiben'
                   : product.id === 'pa-set-outdoor'
                   ? 'Sprachbeschallung bis ca. 200 Personen\nMusikbeschallung bis ca. 150 Personen mit geringem Basspegel\nLive-Musik akustisch/dezent (Gesang, Gitarre, Piano) bis 100 Personen'
                   : product.id === 'profi-pa-line-array-event-26a'
-                  ? 'Anzahl der Personen richtet sich nach der Konfiguration des Arrays:\nSprachbeschallung mit sehr hoher SprachverstÃƒÂ¤ndlichkeit und groÃƒÂŸer Reichweite\nDruckvolle Playback Musikbeschallung mit klarem Sound\nLive-Musik Indoor oder Outdoor mit gleichmÃƒÂ¤ÃƒÂŸiger horizontaler Abstrahlung und hervorragender DurchsetzungsfÃƒÂ¤higkeit der Vocals\nOutdoor geeignet (wetterfest IP44)'
+                  ? 'Anzahl der Personen richtet sich nach der Konfiguration des Arrays:\nSprachbeschallung mit sehr hoher Sprachverständlichkeit und großer Reichweite\nDruckvolle Playback Musikbeschallung mit klarem Sound\nLive-Musik Indoor oder Outdoor mit gleichmäßiger horizontaler Abstrahlung und hervorragender Durchsetzungsfähigkeit der Vocals\nOutdoor geeignet (wetterfest IP44)'
                   : product.id === 'allen-heath-sq5'
-                  ? 'Zum professionellen Abmischen und Aufnehmen von Bands, Ensembles, etc.\nAllround-Mischpult fÃƒÂ¼r viele EinsatzmÃƒÂ¶glichkeiten'
+                  ? 'Zum professionellen Abmischen und Aufnehmen von Bands, Ensembles, etc.\nAllround-Mischpult für viele Einsatzmöglichkeiten'
                   : product.id === 'allen-heath-ar2412'
-                  ? 'Zum professionellen Abmischen und Aufnehmen von Bands, Ensembles, etc.\nAllround-Mischpult fÃƒÂ¼r viele EinsatzmÃƒÂ¶glichkeiten'
+                  ? 'Zum professionellen Abmischen und Aufnehmen von Bands, Ensembles, etc.\nAllround-Mischpult für viele Einsatzmöglichkeiten'
                   : product.id === 'yamaha-dm3'
-                  ? 'Zum Abmischen von Bands, kleinen Ensembles, Sprechermikrofonen (Konferenz / PrÃƒÂ¤sentation) und Recording / Streaming'
+                  ? 'Zum Abmischen von Bands, kleinen Ensembles, Sprechermikrofonen (Konferenz / Präsentation) und Recording / Streaming'
                   : product.id === 'yamaha-tio-1608d'
-                  ? 'Zum Abmischen von Bands, kleinen Ensembles, Sprechermikrofonen (Konferenz / PrÃƒÂ¤sentation) und Recording / Streaming'
+                  ? 'Zum Abmischen von Bands, kleinen Ensembles, Sprechermikrofonen (Konferenz / Präsentation) und Recording / Streaming'
                   : product.id === 'dynacord-cms-1600-3'
-                  ? 'Zum professionellen Abmischen und Aufnehmen von kleinen Bands / Ensembles.\nAllround-Mischpult fÃƒÂ¼r viele EinsatzmÃƒÂ¶glichkeiten'
+                  ? 'Zum professionellen Abmischen und Aufnehmen von kleinen Bands / Ensembles.\nAllround-Mischpult für viele Einsatzmöglichkeiten'
                   : product.id === 'pioneer-djm-900-nexus'
-                  ? 'Professionelles und kreatives Mixen fÃƒÂ¼r DJs\nAnschluss und Abmischen von CD-Playern, Plattenspielern, USB-Audioquellen'
+                  ? 'Professionelles und kreatives Mixen für DJs\nAnschluss und Abmischen von CD-Playern, Plattenspielern, USB-Audioquellen'
                   : product.id === 'mackie-analog-mixer'
-                  ? 'kleine Allround-Mischpulte fÃƒÂ¼r viele EinsatzmÃƒÂ¶glichkeiten'
+                  ? 'kleine Allround-Mischpulte für viele Einsatzmöglichkeiten'
                   : product.id === 'akku-spot-indoor-rgb'
-                  ? 'Punktuelle Beleuchtung von FlÃƒÂ¤chen, WÃƒÂ¤nden, VorhÃƒÂ¤ngen oder Objekten'
+                  ? 'Punktuelle Beleuchtung von Flächen, Wänden, Vorhängen oder Objekten'
                   : product.id === 'akku-spot-outdoor-rgbw-ip65'
-                  ? 'Punktuelle Beleuchtung von FlÃƒÂ¤chen, WÃƒÂ¤nden, VorhÃƒÂ¤ngen oder Objekten wo Kabel nur stÃƒÂ¶ren wÃƒÂ¼rden'
+                  ? 'Punktuelle Beleuchtung von Flächen, Wänden, Vorhängen oder Objekten wo Kabel nur stören würden'
                   : product.id === 'led-outdoor-fluter-ip65'
-                  ? 'Beleuchtung von GebÃƒÂ¤uden oder Objekten im Freien, Festzelten (natÃƒÂ¼rlich auch in InnenrÃƒÂ¤umen anwendbar)'
+                  ? 'Beleuchtung von Gebäuden oder Objekten im Freien, Festzelten (natürlich auch in Innenräumen anwendbar)'
                   : product.id === 'theatre-spot-led'
-                  ? 'Frontale Ausleuchtung von BÃƒÂ¼hnen fÃƒÂ¼r Theater, Konzerte und Events\nPerfekt fÃƒÂ¼r professionelle BÃƒÂ¼hnenproduktionen\nTheaterauffÃƒÂ¼hrungen und KonzertbÃƒÂ¼hnen\nHochzeiten und Corporate Events'
+                  ? 'Frontale Ausleuchtung von Bühnen für Theater, Konzerte und Events\nPerfekt für professionelle Bühnenproduktionen\nTheateraufführungen und Konzertbühnen\nHochzeiten und Corporate Events'
                   : product.id === 'led-pll-panel-power-strobe'
-                  ? 'GleichmÃƒÂ¤ÃƒÂŸige Ausleuchtung von WÃƒÂ¤nden, BÃƒÂ¼hnen, Objekten fÃƒÂ¼r Foto- / Film und Theaterproduktionen\nEinsetzbar als Hochleistungs-Stroboskop'
+                  ? 'Gleichmäßige Ausleuchtung von Wänden, Bühnen, Objekten für Foto- / Film und Theaterproduktionen\nEinsetzbar als Hochleistungs-Stroboskop'
                   : product.id === 'party-lichtset-kompakt'
-                  ? 'Farbige und effektvolle Ausleuchtung von TanzflÃƒÂ¤che oder kleinen SÃƒÂ¤len\nLichteffekt fÃƒÂ¼r TanzflÃƒÂ¤chen/Dancefloors, der ideale Party-Effekt'
+                  ? 'Farbige und effektvolle Ausleuchtung von Tanzfläche oder kleinen Sälen\nLichteffekt für Tanzflächen/Dancefloors, der ideale Party-Effekt'
                   : product.id === 'led-pro-lichtbar-rgb'
-                  ? 'Ausleuchtung von kleinen bis mittleren BÃƒÂ¼hnen, TanzflÃƒÂ¤chen oder RÃƒÂ¤umen.\nLichteffekt fÃƒÂ¼r Parties, Live-Bands oder Clubs.'
+                  ? 'Ausleuchtung von kleinen bis mittleren Bühnen, Tanzflächen oder Räumen.\nLichteffekt für Parties, Live-Bands oder Clubs.'
                   : product.id === 'led-effekt-bar-mit-scannern'
-                  ? 'Kombinationseffekt zur dynamischen Beleuchtung von TanzflÃƒÂ¤che, PartyrÃƒÂ¤umen oder kleinen SÃƒÂ¤len\nLichteffekt fÃƒÂ¼r TanzflÃƒÂ¤chen/Dancefloors, der ideale Party-Effekt'
+                  ? 'Kombinationseffekt zur dynamischen Beleuchtung von Tanzfläche, Partyräumen oder kleinen Sälen\nLichteffekt für Tanzflächen/Dancefloors, der ideale Party-Effekt'
                   : product.id === 'high-power-led-effekt-bar-mit-laser'
-                  ? 'Kombinationseffekt zur dynamischen Beleuchtung von BÃƒÂ¼hnen und RÃƒÂ¤umen\nLichteffekt fÃƒÂ¼r TanzflÃƒÂ¤chen/Dancefloors, der ideale Party-Effekt'
+                  ? 'Kombinationseffekt zur dynamischen Beleuchtung von Bühnen und Räumen\nLichteffekt für Tanzflächen/Dancefloors, der ideale Party-Effekt'
                   : product.id === 'led-lichterketten-innen-aussen'
-                  ? 'Dekorative Ausleuchtung von RÃƒÂ¤umen, GÃƒÂ¤rten, Zelten oder Veranstaltungsorten\nPerfekt fÃƒÂ¼r stimmungsvolle Beleuchtung bei Partys, Hochzeiten und Events'
+                  ? 'Dekorative Ausleuchtung von Räumen, Gärten, Zelten oder Veranstaltungsorten\nPerfekt für stimmungsvolle Beleuchtung bei Partys, Hochzeiten und Events'
                   : product.id === 'led-derby-effekt-mit-strobe'
-                  ? 'Dynamischer Strahleneffekt fÃƒÂ¼r Party auf der TanzflÃƒÂ¤che'
+                  ? 'Dynamischer Strahleneffekt für Party auf der Tanzfläche'
                   : product.id === 'led-triple-flower'
-                  ? 'Dynamischer und heller Flowereffekt fÃƒÂ¼r Party auf der TanzflÃƒÂ¤che'
+                  ? 'Dynamischer und heller Flowereffekt für Party auf der Tanzfläche'
                   : product.id === 'led-moving-head-spot-100w'
-                  ? 'Kompaktes aber lichtstarkes Moving Head\nFÃƒÂ¼r dynamisches Licht auf mittleren BÃƒÂ¼hnen\nProfessionelle Lightshows fÃƒÂ¼r TanzflÃƒÂ¤che und mobile DJs'
+                  ? 'Kompaktes aber lichtstarkes Moving Head\nFür dynamisches Licht auf mittleren Bühnen\nProfessionelle Lightshows für Tanzfläche und mobile DJs'
                   : product.id === 'led-moving-head-beam-200w'
-                  ? 'Kompaktes aber lichtstarkes Moving Head\nFÃƒÂ¼r dynamisches Licht auf groÃƒÂŸen BÃƒÂ¼hnen oder Outdoor'
+                  ? 'Kompaktes aber lichtstarkes Moving Head\nFür dynamisches Licht auf großen Bühnen oder Outdoor'
                   : product.id === 'led-moving-head-wash-7x40w'
-                  ? 'Kompaktes aber lichtstarkes Moving Head Wash\nFlÃƒÂ¤chige bis punktuelle Ausleuchtung von BÃƒÂ¼hnen, HintergrÃƒÂ¼nden oder TanzflÃƒÂ¤chen\nProfessionelle Lightshows fÃƒÂ¼r Events und mobile DJs'
+                  ? 'Kompaktes aber lichtstarkes Moving Head Wash\nFlächige bis punktuelle Ausleuchtung von Bühnen, Hintergründen oder Tanzflächen\nProfessionelle Lightshows für Events und mobile DJs'
                   : product.id === 'jb-spyder-show-pattern-laser'
-                  ? 'Showlaser der Klasse 3 mit 400 mW Leistung in Rot, GrÃƒÂ¼n und Blau\nOptimaler Effekt fÃƒÂ¼r die TanzflÃƒÂ¤che / Dancefloor, kleinere Clubs oder Partys'
+                  ? 'Showlaser der Klasse 3 mit 400 mW Leistung in Rot, Grün und Blau\nOptimaler Effekt für die Tanzfläche / Dancefloor, kleinere Clubs oder Partys'
                   : product.id === '2000mw-diodenlaser-showlaser'
-                  ? 'Showlaser der Klasse 4 mit 2W Leistung in Rot (500mW), GrÃƒÂ¼n (500mW) und Blau (1.400mW)\nNur unter Aufsicht oder nach vorheriger Unterweisung durch einen Laserschutzbeauftragten zu betreiben'
+                  ? 'Showlaser der Klasse 4 mit 2W Leistung in Rot (500mW), Grün (500mW) und Blau (1.400mW)\nNur unter Aufsicht oder nach vorheriger Unterweisung durch einen Laserschutzbeauftragten zu betreiben'
                   : product.id === 'party-nebelmaschine-800w'
-                  ? 'Lokale Vernebelung von TanzflÃƒÂ¤chen und kleinen RÃƒÂ¤umen fÃƒÂ¼r Parties, Geburtstagsfeiern, etc.\nDichtigkeitsprÃƒÂ¼fung von GebÃƒÂ¤uden, Dachstuhl, etc.\nVorsicht: Nicht anwenden in RÃƒÂ¤umen mit Rauchmeldeanlagen!!!'
+                  ? 'Lokale Vernebelung von Tanzflächen und kleinen Räumen für Parties, Geburtstagsfeiern, etc.\nDichtigkeitsprüfung von Gebäuden, Dachstuhl, etc.\nVorsicht: Nicht anwenden in Räumen mit Rauchmeldeanlagen!!!'
                   : product.id === 'nebelmaschine-1500w'
-                  ? 'Vernebelung von RÃƒÂ¤umen, als "Rauch-Effekt" Indoor und Outdoor, sowie zur Sichtbarmachung von Licht-Beams.\nDichtigkeitsprÃƒÂ¼fung von GebÃƒÂ¤uden, Dachstuhl, etc.\nSimulation von Rauch fÃƒÂ¼r BrandschutzÃƒÂ¼bungen\nVorsicht: Nicht anwenden in RÃƒÂ¤umen mit Rauchmeldeanlagen!!!'
+                  ? 'Vernebelung von Räumen, als "Rauch-Effekt" Indoor und Outdoor, sowie zur Sichtbarmachung von Licht-Beams.\nDichtigkeitsprüfung von Gebäuden, Dachstuhl, etc.\nSimulation von Rauch für Brandschutzübungen\nVorsicht: Nicht anwenden in Räumen mit Rauchmeldeanlagen!!!'
                   : product.id === 'vertikal-nebelmaschine-spray-fogger'
-                  ? 'Senkrecht aufsteigende RauchsÃƒÂ¤ule ahmt Pyroeffekte nach\nZur Gestaltung von Licht- und BÃƒÂ¼hnenshows\nSpezialeffekt fÃƒÂ¼r Video / Theater'
+                  ? 'Senkrecht aufsteigende Rauchsäule ahmt Pyroeffekte nach\nZur Gestaltung von Licht- und Bühnenshows\nSpezialeffekt für Video / Theater'
                   : product.id === 'hazer'
-                  ? 'Zur Sichtbarmachung von Lichteffekten und Laserstrahlen auf BÃƒÂ¼hne und TanzflÃƒÂ¤che'
+                  ? 'Zur Sichtbarmachung von Lichteffekten und Laserstrahlen auf Bühne und Tanzfläche'
                   : product.id === 'bodennebelmaschine'
-                  ? 'FÃƒÂ¼r dichten Bodennebel auf TanzflÃƒÂ¤che, BÃƒÂ¼hne und Saal\nMit Spezialfluid: Nebel lÃƒÂ¶st sich auf bevor er nach oben steigt'
+                  ? 'Für dichten Bodennebel auf Tanzfläche, Bühne und Saal\nMit Spezialfluid: Nebel löst sich auf bevor er nach oben steigt'
                   : product.id === 'kaltfunkenmaschine-cold-spark'
-                  ? 'Senkrecht aufsteigende FontÃƒÂ¤neneffekt mit patentiertem Kaltfunkenverfahren\nSpezialeffekt fÃƒÂ¼r Events, Hochzeiten, Video / Theater, u.v.m.'
-                  : 'Ideal fÃƒÂ¼r private Partys, Hochzeiten im kleinen Kreis oder Vereinsfeste. Dieses kompakte Set bietet alles, was Sie fÃƒÂ¼r eine gelungene Feier benÃƒÂ¶tigen - von kraftvollem Sound bis hin zu stimmungsvollem Licht.',
+                  ? 'Senkrecht aufsteigende Fontäneeffekt mit patentiertem Kaltfunkenverfahren\nSpezialeffekt für Events, Hochzeiten, Video / Theater, u.v.m.'
+                  : 'Ideal für private Partys, Hochzeiten im kleinen Kreis oder Vereinsfeste. Dieses kompakte Set bietet alles, was Sie für eine gelungene Feier benötigen - von kraftvollem Sound bis hin zu stimmungsvollem Licht.',
               },
               technischeDetails: {
                 specs: product.specs || [],
@@ -536,13 +570,13 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 </div>
               </div>
 
-              {/* ÃƒÂ–ffnungszeiten */}
+              {/* Öffnungszeiten */}
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">ÃƒÂ–ffnungszeiten</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Öffnungszeiten</h3>
                   <div className="text-gray-700">
                     <OpeningHours />
                   </div>

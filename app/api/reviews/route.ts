@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 import { fetchGoogleReviews } from '@/lib/reviews';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 86400; // 24 Stunden Cache
+// ISR: 24 Stunden Cache – API-Key bleibt server-side
+export const revalidate = 86400;
 
 export async function GET() {
   try {

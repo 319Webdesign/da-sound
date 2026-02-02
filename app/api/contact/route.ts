@@ -8,9 +8,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { name, email, phone, message } = body;
 
-    if (!name?.trim() || !email?.trim() || !phone?.trim() || !message?.trim()) {
+    if (!name?.trim() || !email?.trim() || !message?.trim()) {
       return NextResponse.json(
-        { error: 'Alle Pflichtfelder (Name, E-Mail, Telefon, Nachricht) müssen ausgefüllt sein.' },
+        { error: 'Alle Pflichtfelder (Name, E-Mail, Nachricht) müssen ausgefüllt sein.' },
         { status: 400 }
       );
     }
@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
       '---',
       'Name: ' + name.trim(),
       'E-Mail: ' + email.trim(),
-      'Telefon: ' + phone.trim(),
+      'Telefon: ' + (phone?.trim() || 'Nicht angegeben'),
       '',
       'Nachricht:',
       message.trim(),
