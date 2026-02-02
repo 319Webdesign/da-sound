@@ -80,7 +80,7 @@ export async function fetchGoogleReviews(): Promise<ReviewsResponse> {
 
     const result = oldData.result;
     const all = (result.reviews || []).map(normalizeReview);
-    reviews = all.filter((r) => r.rating >= 4).slice(0, 6);
+    reviews = all.filter((r: Review) => r.rating >= 4).slice(0, 6);
     rating = result.rating ?? 0;
     user_ratings_total = result.user_ratings_total ?? 0;
   }
