@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import { data } from '@/lib/data';
 import { 
   Music, 
@@ -62,6 +62,7 @@ export default function BookingPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const successBannerRef = useRef<HTMLDivElement>(null);
 
   const eventTypes = [
     'Hochzeit',
@@ -222,6 +223,26 @@ export default function BookingPage() {
     <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
       {/* Header / Navigation */}
       <Navigation />
+
+      {/* Feste Erfolgsbenachrichtigung unter der Navigation – sofort sichtbar */}
+      {isSuccess && (
+        <motion.div
+          ref={successBannerRef}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.4 }}
+          className="fixed top-24 left-0 right-0 z-40 mx-auto max-w-4xl px-4 pt-2 sm:pt-4"
+          aria-live="polite"
+        >
+          <div className="rounded-xl bg-green-600 text-white shadow-lg ring-2 ring-green-500/50 px-4 py-4 sm:px-6 flex items-center gap-4">
+            <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 text-green-200" />
+            <p className="text-sm sm:text-base font-semibold">
+              Vielen Dank! Ihre Anfrage wurde erfolgreich versendet. Wir melden uns schnellstmöglich bei Ihnen.
+            </p>
+          </div>
+        </motion.div>
+      )}
 
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] lg:h-[80vh] flex items-center justify-center overflow-hidden">
@@ -389,6 +410,7 @@ export default function BookingPage() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-6 p-4 bg-green-50 border-2 border-green-200 rounded-lg flex items-center gap-3"
+                aria-hidden="true"
               >
                 <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
                 <p className="text-green-800 font-medium">
