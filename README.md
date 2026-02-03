@@ -37,7 +37,7 @@ Die Daten werden zentral in `lib/data.ts` verwaltet. Diese Datei simuliert die D
 
 Die Formulare auf **/kontakt** und **/booking** senden E-Mails über Ihren IONOS-Account. In der `.env` müssen gesetzt sein:
 
-- `SMTP_HOST` – z. B. `smtp.ionos.com` (Standard)
+- `SMTP_HOST` – z. B. `smtp.ionos.de` (IONOS Deutschland, Standard)
 - `SMTP_PORT` – `587` (STARTTLS) oder `465` (SSL)
 - `SMTP_USER` – Ihre vollständige IONOS E-Mail-Adresse (z. B. `info@da-sound.de`)
 - `SMTP_PASS` – Passwort des IONOS E-Mail-Postfachs

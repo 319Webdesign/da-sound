@@ -5,10 +5,17 @@ import nodemailer from 'nodemailer';
  * Konfiguration über Umgebungsvariablen (siehe .env.example).
  */
 function getTransporter() {
-  const host = process.env.SMTP_HOST ?? 'smtp.ionos.com';
-  const port = Number(process.env.SMTP_PORT) || 587;
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
+  const host = process.env.SMTP_HOST ?? 'smtp.ionos.de';
+  const port = 587;
+  const user = process.env.SMTP_USER?.trim();
+  let pass = process.env.SMTP_PASS?.trim() ?? '';
+  // Optional: Wenn SMTP_PASS_EXTRA gesetzt ist, Passwort zusammensetzen (für $ in .env: SMTP_PASS=L@n65xt, SMTP_PASS_EXTRA=14Pl1)
+  const extra = process.env.SMTP_PASS_EXTRA?.trim();
+  if (extra) pass = pass + '$' + extra;
+  // Falls .env die Anführungszeichen mit liefert (z. B. unter Windows/Next.js)
+  if ((pass.startsWith("'") && pass.endsWith("'")) || (pass.startsWith('"') && pass.endsWith('"'))) {
+    pass = pass.slice(1, -1);
+  }
 
   if (!user || !pass) {
     throw new Error(
@@ -19,9 +26,11 @@ function getTransporter() {
   return nodemailer.createTransport({
     host,
     port,
-    secure: port === 465,
+    secure: false,
+    requireTLS: true,
     auth: { user, pass },
-    tls: { rejectUnauthorized: true },
+    authMethod: 'PLAIN',
+    tls: { rejectUnauthorized: false },
   });
 }
 
