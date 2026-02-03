@@ -348,15 +348,17 @@ export default async function ProductDetailPage({ params }: PageProps) {
               <div className="mb-8 p-6 bg-gray-50 rounded-xl">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick-Facts</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Users className="w-5 h-5 text-primary" />
+                  {category?.slug !== 'mischpulte-mikrofone' && (
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Users className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-gray-600">Personenanzahl</div>
+                        <div className="font-semibold text-gray-900">{quickFacts.personen}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-sm text-gray-600">Personenanzahl</div>
-                      <div className="font-semibold text-gray-900">{quickFacts.personen}</div>
-                    </div>
-                  </div>
+                  )}
                   {quickFacts.bluetooth && (
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
