@@ -158,9 +158,10 @@ export default function Hero({ headline, highlight, images, socialProof, googleB
                     ? 'scale(1.1)' 
                     : 'scale(1)',
                 }}
-                sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 20vw"
                 quality={heroImageQuality}
                 priority={speakerImage.id === mainHeroImageId}
+                fetchPriority={speakerImage.id === mainHeroImageId ? 'high' : undefined}
                 placeholder="blur"
                 blurDataURL={DEFAULT_BLUR_DATA_URL}
                 onError={(e) => {
@@ -200,7 +201,7 @@ export default function Hero({ headline, highlight, images, socialProof, googleB
                       ? 'scale(1.1)' 
                       : 'scale(1)',
                   }}
-                  sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
                   quality={heroImageQuality}
                   loading="lazy"
                   placeholder="blur"
@@ -243,9 +244,10 @@ export default function Hero({ headline, highlight, images, socialProof, googleB
                           ? 'scale(1.1)' 
                           : 'scale(1)',
                       }}
-                      sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 50vw, 40vw"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 40vw"
                       quality={heroImageQuality}
                       priority={lightshowImage.id === mainHeroImageId}
+                      fetchPriority={lightshowImage.id === mainHeroImageId ? 'high' : undefined}
                       placeholder="blur"
                       blurDataURL={DEFAULT_BLUR_DATA_URL}
                       onError={(e) => {

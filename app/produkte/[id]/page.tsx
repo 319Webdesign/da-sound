@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { getAllProductIds, getProductById } from '@/lib/products';
 import { getCategoryBySlug } from '@/lib/categories';
 import { data } from '@/lib/data';
-import { MapPin, Clock, ArrowLeft, ArrowRight, Users, Bluetooth, Wrench, Volume2, Lightbulb, Cloud, Cable } from 'lucide-react';
+import { MapPin, Clock, ArrowLeft, Users, Bluetooth, Wrench, Volume2, Lightbulb, Cloud, Cable } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
@@ -204,12 +204,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
   };
   
   const lieferumfang = getLieferumfang();
-
-  // Cross-Selling Produkte
-  const crossSellingProducts = [
-    { id: 'funkmikrofon-sprache-moderation', name: 'Funkmikrofon für Reden', price: 35 },
-    { id: 'akku-spot-indoor-rgb', name: 'Zusätzliche Akku-Strahler', price: 20 },
-  ];
 
   const galleryImages =
     product.isUpgradeKit
@@ -511,39 +505,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
               },
             }}
           />
-        </div>
-      </section>
-
-      {/* Cross-Selling Section */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Oft dazu gebucht</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {crossSellingProducts.map((item) => {
-              const crossProduct = getProductById(item.id);
-              if (!crossProduct) return null;
-              const isSetProduct = setProductIds.has(item.id);
-              return (
-                <Link
-                  key={item.id}
-                  href={`/produkte/${item.id}`}
-                  className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">
-                        {item.name}
-                      </h3>
-                      <div className="text-lg font-bold text-primary">
-                        {item.price.toFixed(2).replace('.', ',')} € / {isSetProduct ? 'Tag' : (getProductById(item.id)?.priceUnitLabel ?? 'Stück')}
-                      </div>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
         </div>
       </section>
 

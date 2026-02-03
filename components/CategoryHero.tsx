@@ -52,8 +52,10 @@ export default function CategoryHero({ title, description, image, iconName }: Ca
         alt={title}
         fill
         className="object-cover"
+        sizes="100vw"
         quality={80}
         priority
+        fetchPriority="high"
       />
       <div className="relative z-20 h-full flex items-end">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12">

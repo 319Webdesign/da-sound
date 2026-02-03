@@ -80,9 +80,10 @@ export default function HighlightProduct({
                     alt={imageAlt}
                     fill
                     className="object-contain object-center"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     quality={90}
                     priority
+                    fetchPriority="high"
                     placeholder="blur"
                     blurDataURL={DEFAULT_BLUR_DATA_URL}
                     onError={(e) => {

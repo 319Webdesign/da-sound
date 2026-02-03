@@ -64,10 +64,11 @@ export default function RentalCategories() {
                       : category.image === '/images/41700503g.webp'
                       ? 'object-cover object-bottom'
                       : 'object-contain object-center'}
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
                     quality={75}
-                    loading={index < 4 ? 'eager' : 'lazy'}
+                    loading={index < 3 ? 'eager' : 'lazy'}
                     priority={index < 3}
+                    fetchPriority={index < 3 ? 'high' : undefined}
                     unoptimized={category.image === '/images/slxd4e86-1920w.webp' || category.image === '/images/z1200_1-1920w.webp' || category.image === '/images/event_array.webp' || category.image === '/images/41700503g.webp'}
                     onError={(e) => {
                       console.error('Failed to load image:', category.image, 'for category:', category.title);

@@ -179,9 +179,11 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
             alt={product.imageAlt || product.title}
             fill
             className={`${product.id === 1 || product.id === 3 ? 'object-contain' : 'object-cover'} group-hover:scale-110 transition-transform duration-500`}
-            sizes="(max-width: 768px) 280px, (max-width: 1024px) 25vw, 250px"
+            sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 250px"
             quality={75}
-            loading="lazy"
+            priority={index < 2}
+            loading={index < 2 ? undefined : 'lazy'}
+            fetchPriority={index < 2 ? 'high' : undefined}
             onError={(e) => {
               console.error('Failed to load image:', product.image);
               const target = e.currentTarget as HTMLImageElement;

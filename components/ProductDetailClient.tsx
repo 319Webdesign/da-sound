@@ -76,10 +76,10 @@ export function ProductImageSlider({ images, productName }: ProductImageSliderPr
                     alt={`${productName} - Bild ${currentImageIndex + 1}`}
                     fill
                     className="object-contain p-2 md:p-4"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     quality={75}
                     {...(currentImageIndex === 0 
-                      ? { priority: true } 
+                      ? { priority: true, fetchPriority: 'high' as const } 
                       : { loading: 'lazy' }
                     )}
                   />

@@ -53,11 +53,13 @@ export default function ProductList({ products }: ProductListProps) {
                       alt={`${product.name} - Bild 1`}
                       fill
                       className="object-contain"
-                      sizes="(max-width: 768px) 50vw, 16vw"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
                       quality={80}
-                      loading="lazy"
+                      priority={index < 3}
+                      loading={index < 3 ? undefined : 'lazy'}
                       placeholder="blur"
                       blurDataURL={DEFAULT_BLUR_DATA_URL}
+                      fetchPriority={index < 3 ? 'high' : undefined}
                     />
                   </div>
                   <div className={`relative rounded-lg overflow-hidden bg-white p-1 ${product.images[1]?.includes('audiozenit') ? 'aspect-[3/4]' : 'aspect-square'}`}>
@@ -66,11 +68,13 @@ export default function ProductList({ products }: ProductListProps) {
                       alt={`${product.name} - Bild 2`}
                       fill
                       className="object-contain"
-                      sizes="(max-width: 768px) 50vw, 16vw"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
                       quality={80}
-                      loading="lazy"
+                      priority={index < 3}
+                      loading={index < 3 ? undefined : 'lazy'}
                       placeholder="blur"
                       blurDataURL={DEFAULT_BLUR_DATA_URL}
+                      fetchPriority={index < 3 ? 'high' : undefined}
                     />
                   </div>
                 </div>
@@ -82,11 +86,13 @@ export default function ProductList({ products }: ProductListProps) {
                       alt={product.name}
                       fill
                       className="object-contain p-4"
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                       quality={85}
-                      loading="lazy"
+                      priority={index < 3}
+                      loading={index < 3 ? undefined : 'lazy'}
                       placeholder="blur"
                       blurDataURL={DEFAULT_BLUR_DATA_URL}
+                      fetchPriority={index < 3 ? 'high' : undefined}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-gray-400">
