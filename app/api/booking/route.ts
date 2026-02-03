@@ -18,9 +18,9 @@ export async function POST(request: NextRequest) {
       message,
     } = body;
 
-    if (!date?.trim() || !eventType?.trim() || !location?.trim() || !act?.trim() || !name?.trim() || !email?.trim() || !phone?.trim()) {
+    if (!date?.trim() || !eventType?.trim() || !location?.trim() || !act?.trim() || !name?.trim() || !email?.trim()) {
       return NextResponse.json(
-        { error: 'Bitte füllen Sie alle Pflichtfelder aus (Datum, Event-Art, Ort, Act, Name, E-Mail, Telefon).' },
+        { error: 'Bitte füllen Sie alle Pflichtfelder aus (Datum, Event-Art, Ort, Act, Name, E-Mail).' },
         { status: 400 }
       );
     }
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
       'Kontakt:',
       'Name: ' + name.trim(),
       'E-Mail: ' + email.trim(),
-      'Telefon: ' + phone.trim(),
+      'Telefon: ' + (phone?.trim() || 'Nicht angegeben'),
       '',
       ...(message?.trim() ? ['Weitere Informationen:', message.trim(), ''] : []),
     ].join('\n');
