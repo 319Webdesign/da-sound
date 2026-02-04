@@ -84,10 +84,13 @@
   transform-style: preserve-3d;
 }
 
-/* Auf dem Handy schneller, weiterhin endlos */
+/* Auf dem Handy: schneller, weniger GPU-Last (kein will-change/3d) */
 @media (max-width: 768px) {
   .animate-marquee-smooth {
     animation-duration: 22s;
+    will-change: auto;
+    perspective: none;
+    transform-style: flat;
   }
 }
 
