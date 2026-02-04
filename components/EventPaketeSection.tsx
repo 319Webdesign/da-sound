@@ -82,16 +82,10 @@ export default function EventPaketeSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Unsere Dienstleistungs-Pakete
           </h2>
-        </motion.div>
+        </div>
 
         {/* Lieferservice */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="bg-slate-50 rounded-xl p-6 md:p-8 mb-8"
-        >
+        <div className="bg-slate-50 rounded-xl p-6 md:p-8 mb-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
             <div className="flex items-center gap-3">
               <Truck className="w-6 h-6 text-primary" />
