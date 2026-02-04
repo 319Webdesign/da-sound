@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShoppingBag, ArrowRight, Zap, Users, Music, Home, CloudRain, CloudRainWind, Volume2, Bluetooth, Weight, Truck, Speech, BatteryMedium, SlidersVertical, Sparkles, MonitorCheck, Network, Wifi, WifiOff, Usb, Palette, Move, ShieldAlert, BarChart3, SignalHigh, Cable, Monitor, Maximize, Sun, Contrast, HdmiPort, GanttChart } from 'lucide-react';
@@ -34,12 +33,8 @@ export default function ProductList({ products }: ProductListProps) {
   return (
     <div className="space-y-12">
       {products.map((product, index) => (
-        <motion.div
+        <div
           key={product.id}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
           className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
@@ -494,7 +489,7 @@ export default function ProductList({ products }: ProductListProps) {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       ))}
     </div>
   );
