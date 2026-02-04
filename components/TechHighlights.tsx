@@ -7,12 +7,10 @@ import {
   Monitor,
   Zap,
   Speaker,
-  Lightbulb,
-  ShoppingBag,
+  ArrowRight,
 } from 'lucide-react';
+import Link from 'next/link';
 import Image from 'next/image';
-import { data } from '@/lib/data';
-import { useRentalCart } from '@/context/RentalCartContext';
 
 interface TechSpec {
   label: string;
@@ -28,7 +26,7 @@ interface TechHighlight {
   isNew?: boolean;
   isSpecial?: boolean; // Für Stromerzeuger mit Ratgeber
   productUrl?: string;
-  productId: string; // ID für Warenkorb
+  productId: string; // ID für Detailseite /produkte/[id]
 }
 
 const techHighlights: TechHighlight[] = [
@@ -44,7 +42,7 @@ const techHighlights: TechHighlight[] = [
     ],
     image: '/images/images highlights/event_4er.webp',
     imageAlt: 'Profi-PA von D.A.S. Audio',
-    productId: 'profi-pa-das-audio',
+    productId: 'profi-pa-line-array-event-26a',
   },
   {
     id: 2,
@@ -59,7 +57,7 @@ const techHighlights: TechHighlight[] = [
     image: '/images/acer1-1920w.webp',
     imageAlt: '4K Beamer von Panasonic',
     isNew: true,
-    productId: '4k-beamer-panasonic',
+    productId: '4k-laser-dlp-beamer',
   },
   {
     id: 3,
@@ -73,7 +71,7 @@ const techHighlights: TechHighlight[] = [
     ],
     image: '/images/images highlights/alteaduo.webp',
     imageAlt: 'Universell einsetzbare PA-Säulen',
-    productId: 'pa-saeulen',
+    productId: 'pa-saeule-bluetooth',
   },
   {
     id: 4,
@@ -88,13 +86,11 @@ const techHighlights: TechHighlight[] = [
     image: '/images/images highlights/Kopie von coldspark2.webp',
     imageAlt: 'Cold Spark Indoorfeuerwerk',
     isSpecial: true,
-    productId: 'cold-spark-indoorfeuerwerk',
+    productId: 'kaltfunkenmaschine-cold-spark',
   },
 ];
 
 export default function TechHighlights() {
-  const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich hätte gerne Details zu einem Technik-Highlight.')}`;
-
   return (
     <section className="bg-white pt-0 py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,14 +137,7 @@ export default function TechHighlights() {
 
 function TechCard({ product, index }: { product: TechHighlight; index: number }) {
   const IconComponent = product.icon;
-  const { addItem } = useRentalCart();
-
-  const handleAddToCart = () => {
-    addItem({
-      id: product.productId,
-      name: product.title,
-    });
-  };
+  const detailUrl = `/produkte/${product.productId}`;
 
   return (
     <motion.div
@@ -221,14 +210,14 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
       {/* Spacer um CTA nach unten zu drücken */}
       <div className="flex-grow"></div>
 
-      {/* CTA Button - Zum Warenkorb hinzufügen */}
-      <button
-        onClick={handleAddToCart}
+      {/* CTA Button - Zur Detailseite */}
+      <Link
+        href={detailUrl}
         className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg mt-auto text-sm"
       >
-        <ShoppingBag className="w-4 h-4" />
-        Zum Warenkorb
-      </button>
+        Details ansehen
+        <ArrowRight className="w-4 h-4" />
+      </Link>
     </motion.div>
   );
 }
