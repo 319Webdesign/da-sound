@@ -84,10 +84,18 @@
   transform-style: preserve-3d;
 }
 
+/* Auf dem Handy schneller, weiterhin endlos */
 @media (max-width: 768px) {
+  .animate-marquee-smooth {
+    animation-duration: 22s;
+  }
+}
+
+/* Animation nur ausblenden, wenn Nutzer reduzierte Bewegung bevorzugt */
+@media (prefers-reduced-motion: reduce) {
   .animate-marquee,
   .animate-marquee-smooth {
-    animation: none !important;
+    animation: none;
   }
 }
 
