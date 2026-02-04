@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   CheckCircle2, 
   MapPin, 
@@ -53,13 +52,7 @@ export default function AboutServiceSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Links: Text & Keywords */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6 text-center lg:text-left"
-          >
+          <div className="space-y-6 text-center lg:text-left">
             {/* Headline */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight text-center lg:text-left">
               Veranstaltungstechnik & Full-Service aus einer Hand
@@ -88,12 +81,8 @@ export default function AboutServiceSection() {
                 {eventTypes.map((event, index) => {
                   const IconComponent = event.icon;
                   return (
-                    <motion.div
+                    <div
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
                       className="flex items-center gap-2 md:gap-3 w-full justify-start"
                     >
                       <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -116,21 +105,15 @@ export default function AboutServiceSection() {
                           </span>
                         )}
                       </div>
-                    </motion.div>
+                    </div>
                   );
                 })}
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Rechts: Region & Trust */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
+          <div className="space-y-6">
             {/* Einsatzgebiet-Karte / Städte-Grid */}
             <div id="liefergebiet" className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
               <div className="flex items-center gap-3 mb-6">
@@ -143,20 +126,16 @@ export default function AboutServiceSection() {
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                {cities.map((city, index) => (
-                  <motion.div
+                {cities.map((city) => (
+                  <div
                     key={city}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
                     className="flex items-center gap-2 px-4 py-3 bg-gray-50 hover:bg-primary/5 rounded-lg border border-gray-200 hover:border-primary/20 transition-all cursor-pointer group"
                   >
                     <MapPin className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
                     <span className="text-gray-900 font-medium text-sm md:text-base">
                       {city}
                     </span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -164,13 +143,7 @@ export default function AboutServiceSection() {
             {/* Highlight-Elemente */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Beschallung */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-6 text-white shadow-lg"
-              >
+              <div className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-6 text-white shadow-lg">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                     <Volume2 className="w-6 h-6 text-white" />
@@ -182,16 +155,10 @@ export default function AboutServiceSection() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Lieferservice */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="bg-gradient-to-br from-accent to-accent-light rounded-2xl p-6 text-white shadow-lg"
-              >
+              <div className="bg-gradient-to-br from-accent to-accent-light rounded-2xl p-6 text-white shadow-lg">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                     <Truck className="w-6 h-6 text-white" />
@@ -203,19 +170,13 @@ export default function AboutServiceSection() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 text-center"
-        >
+        <div className="mt-12 text-center">
           <a
             href={whatsappLink}
             target="_blank"
@@ -225,7 +186,7 @@ export default function AboutServiceSection() {
             Jetzt unverbindliches Angebot für meine Region anfragen
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

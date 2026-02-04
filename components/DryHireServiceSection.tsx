@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Package,
   Truck,
@@ -17,31 +16,19 @@ export default function DryHireServiceSection() {
     <section className="bg-gradient-to-b from-slate-50 to-white py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Headline */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
-        >
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Dry-Hire vs. Service
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Wählen Sie die Variante, die zu Ihrem Event passt
           </p>
-        </motion.div>
+        </div>
 
         {/* Zwei Karten */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Karte 1: Dry-Hire */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100"
-          >
+          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100">
             <div className="mb-6">
               <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <Package className="w-8 h-8 text-primary" />
@@ -74,16 +61,10 @@ export default function DryHireServiceSection() {
                 <span className="text-gray-700">Eigenständiger Auf- und Abbau</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
           {/* Karte 2: Full-Service */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 md:p-10 shadow-lg text-white"
-          >
+          <div className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 md:p-10 shadow-lg text-white">
             <div className="mb-6">
               <div className="w-16 h-16 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4">
                 <Truck className="w-8 h-8 text-white" />
@@ -136,17 +117,11 @@ export default function DryHireServiceSection() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center"
-        >
+        <div className="text-center">
           <a
             href={whatsappLink}
             target="_blank"
@@ -156,7 +131,7 @@ export default function DryHireServiceSection() {
             Jetzt Mietanfrage stellen
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

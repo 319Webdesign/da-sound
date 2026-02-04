@@ -1,7 +1,6 @@
 'use client';
 
 import { MapPin } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function LocationSection() {
   const address = 'Wormser Straße 23, 64319 Pfungstadt';
@@ -18,13 +17,7 @@ export default function LocationSection() {
         <div className="hidden lg:block">
           <div className="grid grid-cols-[70%_30%] gap-8 min-h-[700px]">
             {/* Links: Google Maps Embed */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl"
-            >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <iframe
                 src={mapEmbedCode}
                 width="100%"
@@ -35,16 +28,10 @@ export default function LocationSection() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full absolute inset-0"
               />
-            </motion.div>
+            </div>
 
             {/* Rechts: Info-Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col"
-            >
+            <div className="flex flex-col">
               <div className="bg-white rounded-2xl p-8 shadow-2xl border border-gray-100 h-full flex flex-col">
                 {/* Headline */}
                 <div className="mb-6">
@@ -111,20 +98,14 @@ export default function LocationSection() {
                 </div>
 
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Mobile: Karte oben, Info-Card darunter */}
         <div className="lg:hidden space-y-6">
           {/* Karte mit festem Seitenverhältnis */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="relative rounded-2xl overflow-hidden shadow-xl aspect-square"
-          >
+          <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square">
             <iframe
               src={mapEmbedCode}
               width="100%"
@@ -135,16 +116,10 @@ export default function LocationSection() {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full"
             />
-          </motion.div>
+          </div>
 
           {/* Info-Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 text-center"
-          >
+          <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 text-center">
             {/* Headline */}
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-4 justify-center">
@@ -209,7 +184,7 @@ export default function LocationSection() {
               </p>
             </div>
 
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

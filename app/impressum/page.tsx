@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
-import { motion } from 'framer-motion';
 import { FileText, Building2, MapPin, Phone, Mail } from 'lucide-react';
 import { data } from '@/lib/data';
 
@@ -18,12 +17,7 @@ export default function ImpressumPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/10 via-blue-50/50 to-white py-16 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
+          <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
               <FileText className="w-8 h-8 text-primary" />
             </div>
@@ -33,20 +27,14 @@ export default function ImpressumPage() {
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
               Angaben gemäß § 5 TMG
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Content Section */}
       <section className="py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 md:p-12 space-y-8"
-          >
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 md:p-12 space-y-8">
             {/* Unternehmensdaten */}
             <div>
               <div className="flex items-center gap-3 mb-4">
@@ -146,7 +134,7 @@ export default function ImpressumPage() {
                 </Link>.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

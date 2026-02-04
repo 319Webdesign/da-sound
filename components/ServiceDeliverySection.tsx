@@ -1,7 +1,6 @@
 'use client';
 
-import { MapPin, Truck, ArrowDown } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { MapPin, Truck } from 'lucide-react';
 
 interface City {
   name: string;
@@ -47,13 +46,7 @@ export default function ServiceDeliverySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Liefergebiete */}
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
+          <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
               <Truck className="w-8 h-8 text-primary" />
             </div>
@@ -63,17 +56,11 @@ export default function ServiceDeliverySection() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Schnelle und zuverlässige Lieferung in ganz Südhessen und dem Rhein-Main-Gebiet
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Nahbereich */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
-              className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-center lg:text-left"
-            >
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-center lg:text-left">
               <div className="flex items-center gap-3 mb-6 justify-center lg:justify-start">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-green-600" />
@@ -95,16 +82,10 @@ export default function ServiceDeliverySection() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Erweitert */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
-              className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-center lg:text-left"
-            >
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-center lg:text-left">
               <div className="flex items-center gap-3 mb-6 justify-center lg:justify-start">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-primary" />
@@ -135,7 +116,7 @@ export default function ServiceDeliverySection() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

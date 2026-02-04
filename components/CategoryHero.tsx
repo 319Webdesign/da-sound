@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -66,19 +65,14 @@ export default function CategoryHero({ title, description, image, iconName }: Ca
             <ArrowLeft className="w-4 h-4" />
             Zurück zu allen Kategorien
           </Link>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center gap-4 mb-4"
-          >
+          <div className="flex items-center gap-4 mb-4">
             <div className="w-16 h-16 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
               <IconComponent className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
               {title}
             </h1>
-          </motion.div>
+          </div>
           <p className="text-xl text-white/90 max-w-3xl">
             {description}
           </p>

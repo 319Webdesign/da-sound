@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { CheckCircle2, Package } from 'lucide-react';
 
 interface CategoryContentProps {
@@ -15,29 +14,17 @@ export default function CategoryContent({ longDescription, features, typicalUseC
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Beschreibung */}
         {longDescription && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="prose prose-lg max-w-none mb-12"
-          >
+          <div className="prose prose-lg max-w-none mb-12">
             <p className="text-lg text-gray-700 leading-relaxed">
               {longDescription}
             </p>
-          </motion.div>
+          </div>
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Features */}
           {features && features.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-gray-50 rounded-xl p-6 md:p-8"
-            >
+            <div className="bg-gray-50 rounded-xl p-6 md:p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                 <Package className="w-6 h-6 text-primary" />
                 Leistungsmerkmale
@@ -50,18 +37,12 @@ export default function CategoryContent({ longDescription, features, typicalUseC
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           )}
 
           {/* Typische Anwendungen */}
           {typicalUseCases && typicalUseCases.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-primary/5 rounded-xl p-6 md:p-8"
-            >
+            <div className="bg-primary/5 rounded-xl p-6 md:p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Typische Anwendungen
               </h2>
@@ -75,7 +56,7 @@ export default function CategoryContent({ longDescription, features, typicalUseC
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
       </div>

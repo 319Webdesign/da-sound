@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Download, Plus, ArrowRight } from 'lucide-react';
+import { Download } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRentalCart } from '@/context/RentalCartContext';
@@ -23,15 +22,9 @@ export default function RentalCategories() {
     <section className="bg-gradient-to-b from-white to-blue-50 py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-12 md:mb-16"
-        >
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-12 md:mb-16">
           Miet-Kategorien
-        </motion.h2>
+        </h2>
 
         {/* Grid mit Bild-Karten */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
@@ -44,13 +37,7 @@ export default function RentalCategories() {
                 href={`/kategorien/${category.slug}`}
                 key={`${category.title}-${index}`}
               >
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.3) }}
-                  className="group relative aspect-[4/5] rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer"
-                >
+                <div className="group relative aspect-[4/5] rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
                 {/* Hintergrundbild */}
                 <div className="absolute inset-0 bg-white overflow-hidden">
                   <Image
@@ -110,20 +97,14 @@ export default function RentalCategories() {
                   </p>
 
                 </div>
-                </motion.div>
+                </div>
               </Link>
             );
           })}
         </div>
 
         {/* Download Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex justify-center"
-        >
+        <div className="flex justify-center">
           <button
             onClick={handleDownload}
             className="group flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl text-lg"
@@ -131,7 +112,7 @@ export default function RentalCategories() {
             <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
             Gesamte Mietpreisliste als PDF laden
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

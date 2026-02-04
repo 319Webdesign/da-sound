@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Volume2,
   Monitor,
@@ -95,20 +94,14 @@ export default function TechHighlights() {
     <section className="bg-white pt-0 py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Headline */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
-        >
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Technik-Highlights
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Ausgesuchte Top-Geräte aus unserem Sortiment – professionelle Technik für Ihre Veranstaltung
           </p>
-        </motion.div>
+        </div>
 
         {/* Produkt-Grid / Scroll-Container */}
         <div className="relative">
@@ -140,12 +133,7 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
   const detailUrl = `/produkte/${product.productId}`;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.3) }}
-      whileHover={{ scale: 1.02 }}
+    <div
       className={`
         group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full
         ${product.isSpecial ? 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-2 border-blue-200' : 'border border-gray-100'}
@@ -218,6 +206,6 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
         Details ansehen
         <ArrowRight className="w-4 h-4" />
       </Link>
-    </motion.div>
+    </div>
   );
 }

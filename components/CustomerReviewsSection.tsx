@@ -1,7 +1,6 @@
 'use client';
 
 import { Star, ExternalLink } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 // Test-Daten für Bewertungen
 const reviews = [
@@ -31,20 +30,14 @@ export default function CustomerReviewsSection() {
     <section className="bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Überschrift */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
-        >
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Einfach gemietet. Begeisternd gefeiert.
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Über 20+ Bewertungen aus der Region Darmstadt & Pfungstadt.
           </p>
-        </motion.div>
+        </div>
 
         {/* Desktop: 3-Spalten-Grid */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-6">
@@ -65,13 +58,7 @@ export default function CustomerReviewsSection() {
         </div>
 
         {/* Button: Weitere Bewertungen */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-12"
-        >
+        <div className="text-center mt-12">
           <a
             href="https://www.google.com/maps/place/?q=place_id:ChIJ5c3RqQ57vUcR790xWEv0vQo"
             target="_blank"
@@ -81,23 +68,16 @@ export default function CustomerReviewsSection() {
             Weitere Bewertungen
             <ExternalLink className="w-5 h-5" />
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 }
 
 // Review Card Komponente
-function ReviewCard({ review, index }: { review: typeof reviews[0]; index: number }) {
+function ReviewCard({ review }: { review: typeof reviews[0]; index: number }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ scale: 1.05 }}
-      className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col"
-    >
+    <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
       {/* Header: Google Icon und Sterne */}
       <div className="flex items-center gap-2 mb-4">
         <svg
@@ -146,7 +126,7 @@ function ReviewCard({ review, index }: { review: typeof reviews[0]; index: numbe
           {review.eventType}
         </span>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

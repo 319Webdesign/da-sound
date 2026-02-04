@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Truck,
   Utensils,
@@ -79,13 +78,7 @@ export default function EventPaketeSection() {
     <section className="bg-white py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
-        >
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Unsere Dienstleistungs-Pakete
           </h2>
@@ -129,16 +122,10 @@ export default function EventPaketeSection() {
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </motion.div>
+        </div>
 
         {/* EDEKA Festanhänger */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="bg-gradient-to-br from-primary to-primary-dark rounded-xl p-8 md:p-10 mb-8 text-white shadow-lg relative overflow-hidden"
-        >
+        <div className="bg-gradient-to-br from-primary to-primary-dark rounded-xl p-8 md:p-10 mb-8 text-white shadow-lg relative overflow-hidden">
           <div className="relative z-10">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div className="flex items-center gap-4">
@@ -168,7 +155,7 @@ export default function EventPaketeSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Paket-Liste */}
         <div className="space-y-4 mb-8">
@@ -179,14 +166,7 @@ export default function EventPaketeSection() {
                 href={`/leistungen#${paket.anchor}`}
                 key={index}
               >
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                  whileHover={{ backgroundColor: 'rgba(59, 130, 246, 0.05)' }}
-                  className="group relative bg-white border-2 border-gray-100 rounded-xl p-6 md:p-8 transition-all duration-300 hover:border-primary/30 cursor-pointer"
-                >
+                <div className="group relative bg-white border-2 border-gray-100 rounded-xl p-6 md:p-8 transition-all duration-300 hover:border-primary/30 cursor-pointer">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                   {/* Links: Icon & Titel */}
                   <div className="flex items-start gap-4 flex-1">
@@ -213,37 +193,28 @@ export default function EventPaketeSection() {
 
                   {/* Rechts: Preis & Button */}
                   <div className="flex flex-col items-center md:items-end gap-4 flex-shrink-0 w-full md:w-auto">
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      className="text-center md:text-right w-full md:w-auto"
-                    >
+                    <div className="text-center md:text-right w-full md:w-auto">
                       <div className="text-3xl md:text-4xl font-bold text-primary">
                         {paket.price}€
                       </div>
                       {paket.priceNote && (
                         <div className="text-xs text-gray-500 mt-1">{paket.priceNote}</div>
                       )}
-                    </motion.div>
+                    </div>
                     <div className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn w-full md:w-auto">
                       Details ansehen
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
               </Link>
             );
           })}
         </div>
 
         {/* Künstlervermittlung */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="bg-slate-50 rounded-xl p-6 md:p-8 mb-8"
-        >
+        <div className="bg-slate-50 rounded-xl p-6 md:p-8 mb-8">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
             <div className="flex items-start gap-4 flex-1">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -278,16 +249,10 @@ export default function EventPaketeSection() {
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Footer: Alle Dienstleistungen Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center"
-        >
+        <div className="text-center">
           <Link
             href="/leistungen"
             className="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl text-lg group"
@@ -295,7 +260,7 @@ export default function EventPaketeSection() {
             Alle Dienstleistungen
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

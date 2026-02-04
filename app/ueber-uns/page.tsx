@@ -8,7 +8,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RentalCart from '@/components/RentalCart';
 import PartnerLogos from '@/components/PartnerLogos';
-import { motion } from 'framer-motion';
 
 export default function UeberUnsPage() {
   const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich hätte gerne mehr Informationen über da-sound.')}`;
@@ -21,19 +20,14 @@ export default function UeberUnsPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/10 via-blue-50/50 to-white py-16 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
+          <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Über da-sound
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
               Professionelle Veranstaltungstechnik aus Pfungstadt. Wir machen ihr Event zum Erfolg.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -42,13 +36,7 @@ export default function UeberUnsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Links: Bild */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl"
-            >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/chorkonzert-1920w.webp"
                 alt="Professionelle Veranstaltungstechnik bei einem Event"
@@ -57,16 +45,10 @@ export default function UeberUnsPage() {
                 className="w-full h-full object-cover"
                 priority
               />
-            </motion.div>
+            </div>
 
             {/* Rechts: Text-Inhalt */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
-              className="space-y-8 text-center lg:text-left"
-            >
+            <div className="space-y-8 text-center lg:text-left">
               {/* Subline */}
               <div className="inline-block">
                 <span className="text-primary font-semibold text-lg">
@@ -104,13 +86,7 @@ export default function UeberUnsPage() {
               {/* Info-Boxen */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 justify-items-center lg:justify-items-start items-stretch">
                 {/* Bis 1.500 Personen */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10 text-center lg:text-left flex flex-col h-full w-full max-w-sm sm:max-w-none"
-                >
+                <div className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10 text-center lg:text-left flex flex-col h-full w-full max-w-sm sm:max-w-none">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto lg:mx-0">
                     <Users className="w-6 h-6 text-primary" />
                   </div>
@@ -118,16 +94,10 @@ export default function UeberUnsPage() {
                   <p className="text-sm text-gray-600 flex-grow">
                     Beschallung & Beleuchtung für kleine und mittlere Events
                   </p>
-                </motion.div>
+                </div>
 
                 {/* Premium Equipment */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10 text-center lg:text-left flex flex-col h-full w-full max-w-sm sm:max-w-none"
-                >
+                <div className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10 text-center lg:text-left flex flex-col h-full w-full max-w-sm sm:max-w-none">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto lg:mx-0">
                     <Volume2 className="w-6 h-6 text-primary" />
                   </div>
@@ -135,16 +105,10 @@ export default function UeberUnsPage() {
                   <p className="text-sm text-gray-600 flex-grow">
                     Hochwertige Lautsprecher Made in Europe
                   </p>
-                </motion.div>
+                </div>
 
                 {/* Regional stark */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10 text-center lg:text-left flex flex-col h-full w-full max-w-sm sm:max-w-none"
-                >
+                <div className="bg-primary/5 rounded-xl p-6 border-2 border-primary/10 text-center lg:text-left flex flex-col h-full w-full max-w-sm sm:max-w-none">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto lg:mx-0">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
@@ -152,17 +116,11 @@ export default function UeberUnsPage() {
                   <p className="text-sm text-gray-600 flex-grow">
                     Veranstaltungstechnik im Großraum Darmstadt
                   </p>
-                </motion.div>
+                </div>
               </div>
 
               {/* CTA Button */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="pt-4"
-              >
+              <div className="pt-4">
                 <Link
                   href="/#miet-kategorien"
                   className="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl text-lg group"
@@ -170,8 +128,8 @@ export default function UeberUnsPage() {
                   Jetzt Technik anfragen
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -179,20 +137,14 @@ export default function UeberUnsPage() {
       {/* Unsere Werte */}
       <section className="bg-gray-50 py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12 md:mb-16"
-          >
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Unsere Werte
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Was uns ausmacht und worauf wir bei da-sound Wert legen
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -229,12 +181,8 @@ export default function UeberUnsPage() {
             ].map((value, index) => {
               const IconComponent = value.icon;
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center md:text-left"
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto md:mx-0">
@@ -246,7 +194,7 @@ export default function UeberUnsPage() {
                   <p className="text-gray-600 leading-relaxed">
                     {value.description}
                   </p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -257,30 +205,18 @@ export default function UeberUnsPage() {
       {false && (
         <section className="py-16 md:py-20 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12 md:mb-16"
-            >
+            <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                 Unser Team
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Die Menschen hinter da-sound – für Sie vor Ort.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {/* Carsten Helfrich */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-center"
-              >
+              <div className="text-center">
                 <div className="relative mb-6 w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200 border-4 border-primary/10">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Users className="w-16 h-16 text-gray-400" />
@@ -295,16 +231,10 @@ export default function UeberUnsPage() {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Verwaltung, Eventplanung, Audio Engineer, Laserschutzbeauftragter
                 </p>
-              </motion.div>
+              </div>
 
               {/* Demian Wörl */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-center"
-              >
+              <div className="text-center">
                 <div className="relative mb-6 w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200 border-4 border-primary/10">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Users className="w-16 h-16 text-gray-400" />
@@ -319,16 +249,10 @@ export default function UeberUnsPage() {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Lagerverwaltung, Kommissionierung, Kundenbetreuung
                 </p>
-              </motion.div>
+              </div>
 
               {/* János Gede */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-center"
-              >
+              <div className="text-center">
                 <div className="relative mb-6 w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200 border-4 border-primary/10">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Users className="w-16 h-16 text-gray-400" />
@@ -343,7 +267,7 @@ export default function UeberUnsPage() {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Auslieferungen, Veranstaltungstechniker, Service
                 </p>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -352,20 +276,14 @@ export default function UeberUnsPage() {
       {/* Referenzen / Gallery */}
       <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12 md:mb-16"
-          >
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Unsere Referenzen
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Einblicke in unsere erfolgreich umgesetzten Events und Veranstaltungen
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
@@ -378,12 +296,8 @@ export default function UeberUnsPage() {
               { src: '/images/best practice/bp17.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
               { src: '/images/best practice/bp14.webp', alt: 'Event-Referenz: Professionelle Veranstaltungstechnik' },
             ].map((image, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
                 className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
               >
                 <Image
@@ -394,7 +308,7 @@ export default function UeberUnsPage() {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -403,32 +317,21 @@ export default function UeberUnsPage() {
       {/* Partner-Logos */}
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
+          <div className="mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
               Auszug unserer geschätzten Firmenkunden:
             </h3>
 
             {/* Infinite Logo Marquee Komponente */}
             <PartnerLogos />
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-primary to-primary-dark py-16 md:py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Bereit für Ihr nächstes Event?
             </h2>
@@ -452,7 +355,7 @@ export default function UeberUnsPage() {
                 Zur Startseite
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

@@ -2,7 +2,6 @@
 
 import { data } from '@/lib/data';
 import { MessageCircle, Phone, Mail, Send } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function ContactMethodsSection() {
   const whatsappLink = `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hallo, ich habe eine Anfrage bezüglich Ihrer Veranstaltungstechnik.')}`;
@@ -12,32 +11,21 @@ export default function ContactMethodsSection() {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
-        >
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             So sind wir erreichbar
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Wählen Sie die für Sie passende Kontaktmöglichkeit
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {/* WhatsApp */}
-          <motion.a
+          <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5 }}
-            whileHover={{ scale: 1.02 }}
             className="group bg-gradient-to-br from-[#25D366] to-[#20BA5A] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all text-center md:text-left"
           >
             <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
@@ -53,16 +41,11 @@ export default function ContactMethodsSection() {
               <span>Jetzt schreiben</span>
               <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
-          </motion.a>
+          </a>
 
           {/* Telefon */}
-          <motion.a
+          <a
             href={`tel:${phoneNumber}`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            whileHover={{ scale: 1.02 }}
             className="group bg-gradient-to-br from-primary to-primary-dark rounded-xl p-8 shadow-lg hover:shadow-xl transition-all text-center md:text-left"
           >
             <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
@@ -78,16 +61,11 @@ export default function ContactMethodsSection() {
               <span>015735451130</span>
               <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
             </div>
-          </motion.a>
+          </a>
 
           {/* E-Mail */}
-          <motion.a
+          <a
             href={`mailto:${email}`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            whileHover={{ scale: 1.02 }}
             className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all text-center md:text-left"
           >
             <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
@@ -103,7 +81,7 @@ export default function ContactMethodsSection() {
               <span>{email}</span>
               <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </div>
-          </motion.a>
+          </a>
         </div>
       </div>
     </section>

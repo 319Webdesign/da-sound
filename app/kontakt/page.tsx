@@ -23,7 +23,6 @@ const ContactSection = dynamic(
   }
 );
 import FAQSection from '@/components/FAQSection';
-import { motion } from 'framer-motion';
 
 // Dynamic Import für Google Maps - Lazy Loading
 const LocationSection = dynamic(
@@ -57,12 +56,7 @@ export default function KontaktPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/10 via-blue-50/50 to-white py-16 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
+          <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
               <MessageCircle className="w-8 h-8 text-primary" />
             </div>
@@ -72,7 +66,7 @@ export default function KontaktPage() {
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
               Wir sind für Sie da! Kontaktieren Sie uns gerne – wir beraten Sie persönlich zu Ihrer Veranstaltung.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
