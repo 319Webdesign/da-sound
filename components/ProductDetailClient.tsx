@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, Volume2, Lightbulb, Cloud, Cable, Users, Home, CloudRain, Zap, Bluetooth, Weight, Truck } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Volume2, Lightbulb, Cloud, Cable } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getSpecDisplayLabel } from '@/lib/specDisplayLabels';
 
 // Icon-Mapping für Client-Komponente
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -267,43 +268,14 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    {tabs.technischeDetails.specs.map((spec, index) => {
-                      const isPartySet = productId === 'party-set-small' || productId === 'party-set-medium' || productId === 'party-set-white' || productId === 'party-set-large' || productId === 'party-set-xlarge';
-                      let icon = null;
-                      
-                      if (isPartySet) {
-                        // Party-Set spezifische Icons
-                        if (spec.label === 'Personen') {
-                          icon = <Users className="w-4 h-4" />;
-                        } else if (spec.label === 'Indoor') {
-                          icon = <Home className="w-4 h-4" />;
-                        } else if (spec.label === 'Outdoor') {
-                          icon = <CloudRain className="w-4 h-4" />;
-                        } else if (spec.label === 'Leistung') {
-                          icon = <Zap className="w-4 h-4" />;
-                        } else if (spec.label === 'Schalldruck') {
-                          icon = <Volume2 className="w-4 h-4" />;
-                        } else if (spec.label === 'Bluetooth') {
-                          icon = <Bluetooth className="w-4 h-4" />;
-                        } else if (spec.label === 'Gewicht') {
-                          icon = <Weight className="w-4 h-4" />;
-                        } else if (spec.label === 'Transport') {
-                          icon = <Truck className="w-4 h-4" />;
-                        }
-                      }
-                      
-                      return (
+                    {tabs.technischeDetails.specs.map((spec, index) => (
                         <tr key={index} className="hover:bg-gray-50 transition-colors">
                           <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                            <div className="flex items-center gap-2">
-                              {icon && <span className="text-primary">{icon}</span>}
-                              {spec.label}
-                            </div>
+                            {getSpecDisplayLabel(spec.label)}
                           </td>
                           <td className="px-6 py-4 text-sm text-gray-700">{spec.value}</td>
                         </tr>
-                      );
-                    })}
+                      ))}
                   </tbody>
                 </table>
               </div>

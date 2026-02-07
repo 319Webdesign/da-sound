@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { getAllProductIds, getProductById } from '@/lib/products';
 import { getCategoryBySlug } from '@/lib/categories';
 import { data } from '@/lib/data';
-import { MapPin, Clock, ArrowLeft, Users, Bluetooth, Wrench, Volume2, Lightbulb, Cloud, Cable } from 'lucide-react';
+import { MapPin, Clock, ArrowLeft, Wrench, Volume2, Lightbulb, Cloud, Cable, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
@@ -167,10 +167,61 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const quickFactLabel = isSetProduct ? 'Aufbau-Schwierigkeit' : 'Bedienung';
 
   const quickFacts = {
-    personen: product.specs?.find(s => s.label === 'Personen')?.value || 'bis 70',
-    bluetooth: detailText?.toLowerCase().includes('bluetooth') || false,
-    aufbauSchwierigkeit: aufbauSchwierigkeitMap[product.id] ?? 'Einfach', // Kann später aus Produkt-Daten kommen
+    aufbauSchwierigkeit: aufbauSchwierigkeitMap[product.id] ?? 'Einfach',
   };
+
+  // Kategorie-spezifischer Quick-Fact aus product.specs
+  const getCategoryQuickFact = (): { displayLabel: string; value: string } | null => {
+    const specs = product.specs ?? [];
+    const find = (label: string) => specs.find(s => s.label === label)?.value;
+    const slug = category?.slug;
+    if (!slug) return null;
+    // Mischpulte & Mikrofone: Channels (Mischpulte) oder Typ (Mikrofone)
+    if (slug === 'mischpulte-mikrofone') {
+      const channels = find('Channels');
+      if (channels) return { displayLabel: 'Channels', value: channels };
+      const typ = find('Typ');
+      if (typ) return { displayLabel: 'Typ', value: typ };
+      return null;
+    }
+    // Statische Scheinwerfer: Leistung
+    if (slug === 'statische-scheinwerfer-led-spots') {
+      const v = find('Leistung');
+      return v ? { displayLabel: 'Leistung', value: v } : null;
+    }
+    // Moving Heads: Leistung
+    if (slug === 'moving-heads') {
+      const v = find('Leistung');
+      return v ? { displayLabel: 'Leistung', value: v } : null;
+    }
+    // Nebelmaschinen: Nebelart
+    if (slug === 'nebelmaschinen-buehneneffekte') {
+      const v = find('Nebelart');
+      return v ? { displayLabel: 'Nebelart', value: v } : null;
+    }
+    // Medien & Konferenz: Beamer → Helligkeit (Sun), Display/Leinwand → Bilddiagonale, andere → Typ
+    if (slug === 'medien-konferenztechnik') {
+      const bilddiagonale = find('Bilddiagonale');
+      if (bilddiagonale) return { displayLabel: 'Bilddiagonale', value: bilddiagonale };
+      const sun = find('Sun');
+      if (sun) return { displayLabel: 'Helligkeit', value: sun };
+      const typ = find('Typ');
+      if (typ) return { displayLabel: 'Typ', value: typ };
+      return null;
+    }
+    // Bühnenpodeste & Traversen: Abmessungen (oder Abmessungen Grundfläche)
+    if (slug === 'buehlenpodeste-traversen') {
+      const v = find('Abmessungen') ?? find('Abmessungen Grundfläche');
+      return v ? { displayLabel: 'Abmessungen', value: v } : null;
+    }
+    // Stromerzeuger: Dauerleistung
+    if (slug === 'stromerzeuger') {
+      const v = find('Dauerleistung');
+      return v ? { displayLabel: 'Dauerleistung', value: v } : null;
+    }
+    return null;
+  };
+  const categoryQuickFact = getCategoryQuickFact();
 
   // Lieferumfang aus Beschreibung extrahieren oder definieren
   const getLieferumfang = () => {
@@ -344,44 +395,33 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 })()}
               </div>
 
-              {/* Quick-Facts */}
+              {/* Quick-Facts: immer Bedienung + ein kategorie-spezifischer Wert (Channels, Typ, Leistung, etc.) */}
               <div className="mb-8 p-6 bg-gray-50 rounded-xl">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick-Facts</h3>
                 <div className="space-y-4">
-                  {category?.slug !== 'mischpulte-mikrofone' && (
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <Users className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-gray-600">Personenanzahl</div>
-                        <div className="font-semibold text-gray-900">{quickFacts.personen}</div>
-                      </div>
-                    </div>
-                  )}
-                  {quickFacts.bluetooth && (
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <Bluetooth className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-gray-600">Bluetooth</div>
-                        <div className="font-semibold text-gray-900">Ja, integriert</div>
-                      </div>
-                    </div>
-                  )}
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                       <Wrench className="w-5 h-5 text-primary" />
                     </div>
-                    <div>
-                      <div className="flex items-center gap-1 text-sm text-gray-600">
+                    <div className="space-y-0 leading-none">
+                      <div className="flex items-center gap-1 text-sm text-gray-600 leading-none">
                         <span>{quickFactLabel}</span>
                         <AufbauLegendTooltip label={quickFactLabel} />
                       </div>
-                      <div className="font-semibold text-gray-900">{quickFacts.aufbauSchwierigkeit}</div>
+                      <div className="font-semibold text-gray-900 leading-none mt-0.5">{quickFacts.aufbauSchwierigkeit}</div>
                     </div>
                   </div>
+                  {categoryQuickFact && (
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <BarChart3 className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <div className="text-sm text-gray-600 leading-tight">{categoryQuickFact.displayLabel}</div>
+                        <div className="font-semibold text-gray-900 leading-tight">{categoryQuickFact.value}</div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
