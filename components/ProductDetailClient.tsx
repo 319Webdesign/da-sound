@@ -268,14 +268,30 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    {tabs.technischeDetails.specs.map((spec, index) => (
+                    {(() => {
+                      const specs = tabs.technischeDetails.specs;
+                      const steuerungSpec = specs.find(s => s.label === 'Music' || s.label === 'Soundsteuerung');
+                      const dmxSpec = specs.find(s => s.label === 'DMX');
+                      const mergedSpecs =
+                        steuerungSpec && dmxSpec
+                          ? specs.filter(s => s.label !== 'DMX').map(s =>
+                              s.label === steuerungSpec.label ? { ...s, value: `${s.value} / ${dmxSpec.value}` } : s
+                            )
+                          : specs;
+                      const displayValue = (spec: { label: string; value: string }) => {
+                        if (spec.label === 'Indoor' && spec.value === 'Ja') return 'Indoor';
+                        if (spec.label === 'Outdoor' && spec.value === 'Ja') return 'Outdoor';
+                        return spec.value;
+                      };
+                      return mergedSpecs.map((spec, index) => (
                         <tr key={index} className="hover:bg-gray-50 transition-colors">
                           <td className="px-6 py-4 text-sm font-medium text-gray-900">
                             {getSpecDisplayLabel(spec.label)}
                           </td>
-                          <td className="px-6 py-4 text-sm text-gray-700">{spec.value}</td>
+                          <td className="px-6 py-4 text-sm text-gray-700">{displayValue(spec)}</td>
                         </tr>
-                      ))}
+                      ));
+                    })()}
                   </tbody>
                 </table>
               </div>
