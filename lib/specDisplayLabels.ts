@@ -24,9 +24,9 @@ const DISPLAY_LABEL_MAP: Record<string, string> = {
   Projector: 'Projektor / Typ',
   HD: 'Auflösung',
   Hd: 'Auflösung',
-  // Lichteffekte: Steuerung (Soundsteuerung/Music/DMX zusammengefasst)
-  Music: 'Steuerung',
-  Soundsteuerung: 'Steuerung',
+  // Lichteffekte: Soundsteuerung wieder als eigene Zeile, Anzeigename „Sound-to-Light“
+  Music: 'Sound-to-Light',
+  Soundsteuerung: 'Sound-to-Light',
   DMX: 'Steuerung',
   // Indoor/Outdoor: Verwendung (Wert bleibt z. B. „Indoor“, „Ja“)
   Indoor: 'Verwendung',
