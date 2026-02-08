@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { getAllProductIds, getProductById } from '@/lib/products';
 import { getCategoryBySlug } from '@/lib/categories';
 import { data } from '@/lib/data';
-import { MapPin, Clock, ArrowLeft, Wrench, Volume2, Lightbulb, Cloud, Cable, BarChart3 } from 'lucide-react';
+import { MapPin, Clock, ArrowLeft, Users, Wrench, Volume2, Lightbulb, Cloud, Cable, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
@@ -166,9 +166,16 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const isSetProduct = setProductIds.has(product.id);
   const quickFactLabel = isSetProduct ? 'Aufbau-Schwierigkeit' : 'Bedienung';
 
+  const personenRaw = product.specs?.find(s => s.label === 'Personen')?.value || 'bis 70';
+  const personenDisplay = personenRaw.replace(/\b1-(\d+)/g, 'bis $1');
+
   const quickFacts = {
+    personen: personenDisplay,
     aufbauSchwierigkeit: aufbauSchwierigkeitMap[product.id] ?? 'Einfach',
   };
+
+  const showPersonenInQuickFacts =
+    category?.slug === 'party-sets-ton-licht' || category?.slug === 'pa-anlagen';
 
   // Kategorie-spezifischer Quick-Fact aus product.specs
   const getCategoryQuickFact = (): { displayLabel: string; value: string } | null => {
@@ -395,10 +402,21 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 })()}
               </div>
 
-              {/* Quick-Facts: immer Bedienung + ein kategorie-spezifischer Wert (Channels, Typ, Leistung, etc.) */}
+              {/* Quick-Facts: bei Party-Sets & PA-Anlagen Personenanzahl, immer Bedienung, ggf. kategorie-spezifischer Wert */}
               <div className="mb-8 p-6 bg-gray-50 rounded-xl">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick-Facts</h3>
                 <div className="space-y-4">
+                  {showPersonenInQuickFacts && (
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Users className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <div className="text-sm text-gray-600 leading-tight">Personenanzahl</div>
+                        <div className="font-semibold text-gray-900 leading-tight">{quickFacts.personen}</div>
+                      </div>
+                    </div>
+                  )}
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                       <Wrench className="w-5 h-5 text-primary" />

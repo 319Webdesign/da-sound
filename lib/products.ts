@@ -459,8 +459,8 @@ Set bestehend aus:
   {
     id: 'pa-set-premium',
     name: 'PA Set PREMIUM',
-    description: 'Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportollen.',
-    detailDescription: `Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportollen.`,
+    description: 'Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportrollen.',
+    detailDescription: `Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportrollen.`,
     images: [
       '/images/pasetpremium2.webp',
       '/images/audiozenit-1920w.webp',
