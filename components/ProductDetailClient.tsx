@@ -273,7 +273,7 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
                       const displayValue = (spec: { label: string; value: string }) => {
                         if (spec.label === 'Indoor' && spec.value === 'Ja') return 'Indoor';
                         if (spec.label === 'Outdoor' && spec.value === 'Ja') return 'Outdoor';
-                        return spec.value;
+                        return (spec.value || '').replace(/\s*\(bluetooth\)\s*/gi, '').trim();
                       };
                       return specs.map((spec, index) => (
                         <tr key={index} className="hover:bg-gray-50 transition-colors">

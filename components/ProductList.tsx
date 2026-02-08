@@ -38,64 +38,70 @@ export default function ProductList({ products }: ProductListProps) {
           className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-            {/* Bilder */}
+            {/* Bilder – Klick führt zur Detailseite */}
             <div className="md:col-span-1">
-              {(product.id === 'pa-set-small' || product.id === 'pa-set-premium' || product.id === 'profi-pa-line-array-event-26a') && product.images && product.images.length >= 2 ? (
-                <div className="grid grid-cols-2 gap-1">
-                  <div className={`relative rounded-lg overflow-hidden bg-white p-1 ${product.images[1]?.includes('audiozenit') ? 'aspect-square' : 'aspect-square'}`}>
-                    <Image
-                      src={product.images[0]}
-                      alt={`${product.name} - Bild 1`}
-                      fill
-                      className="object-contain"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
-                      quality={80}
-                      priority={index < 3}
-                      loading={index < 3 ? undefined : 'lazy'}
-                      placeholder="blur"
-                      blurDataURL={DEFAULT_BLUR_DATA_URL}
-                      fetchPriority={index < 3 ? 'high' : undefined}
-                    />
-                  </div>
-                  <div className={`relative rounded-lg overflow-hidden bg-white p-1 ${product.images[1]?.includes('audiozenit') ? 'aspect-[3/4]' : 'aspect-square'}`}>
-                    <Image
-                      src={product.images[1]}
-                      alt={`${product.name} - Bild 2`}
-                      fill
-                      className="object-contain"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
-                      quality={80}
-                      priority={index < 3}
-                      loading={index < 3 ? undefined : 'lazy'}
-                      placeholder="blur"
-                      blurDataURL={DEFAULT_BLUR_DATA_URL}
-                      fetchPriority={index < 3 ? 'high' : undefined}
-                    />
-                  </div>
-                </div>
-              ) : (
-                <div className="relative aspect-square rounded-lg overflow-hidden bg-white">
-                  {product.images && product.images.length > 0 ? (
-                    <Image
-                      src={product.images[0]}
-                      alt={product.name}
-                      fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                      quality={85}
-                      priority={index < 3}
-                      loading={index < 3 ? undefined : 'lazy'}
-                      placeholder="blur"
-                      blurDataURL={DEFAULT_BLUR_DATA_URL}
-                      fetchPriority={index < 3 ? 'high' : undefined}
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center text-gray-400">
-                      <ShoppingBag className="w-16 h-16" />
+              <Link
+                href={`/produkte/${product.id}`}
+                className="block cursor-pointer rounded-lg overflow-hidden hover:opacity-95 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                aria-label={`${product.name} – Details ansehen`}
+              >
+                {(product.id === 'pa-set-small' || product.id === 'pa-set-premium' || product.id === 'profi-pa-line-array-event-26a') && product.images && product.images.length >= 2 ? (
+                  <div className="grid grid-cols-2 gap-1">
+                    <div className={`relative rounded-lg overflow-hidden bg-white p-1 ${product.images[1]?.includes('audiozenit') ? 'aspect-square' : 'aspect-square'}`}>
+                      <Image
+                        src={product.images[0]}
+                        alt={`${product.name} - Bild 1`}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
+                        quality={80}
+                        priority={index < 3}
+                        loading={index < 3 ? undefined : 'lazy'}
+                        placeholder="blur"
+                        blurDataURL={DEFAULT_BLUR_DATA_URL}
+                        fetchPriority={index < 3 ? 'high' : undefined}
+                      />
                     </div>
-                  )}
-                </div>
-              )}
+                    <div className={`relative rounded-lg overflow-hidden bg-white p-1 ${product.images[1]?.includes('audiozenit') ? 'aspect-[3/4]' : 'aspect-square'}`}>
+                      <Image
+                        src={product.images[1]}
+                        alt={`${product.name} - Bild 2`}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
+                        quality={80}
+                        priority={index < 3}
+                        loading={index < 3 ? undefined : 'lazy'}
+                        placeholder="blur"
+                        blurDataURL={DEFAULT_BLUR_DATA_URL}
+                        fetchPriority={index < 3 ? 'high' : undefined}
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative aspect-square rounded-lg overflow-hidden bg-white">
+                    {product.images && product.images.length > 0 ? (
+                      <Image
+                        src={product.images[0]}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-4"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                        quality={85}
+                        priority={index < 3}
+                        loading={index < 3 ? undefined : 'lazy'}
+                        placeholder="blur"
+                        blurDataURL={DEFAULT_BLUR_DATA_URL}
+                        fetchPriority={index < 3 ? 'high' : undefined}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-gray-400">
+                        <ShoppingBag className="w-16 h-16" />
+                      </div>
+                    )}
+                  </div>
+                )}
+              </Link>
             </div>
 
             {/* Beschreibung und Details */}
@@ -414,11 +420,12 @@ export default function ProductList({ products }: ProductListProps) {
                         // Nur anzeigen, wenn Icon vorhanden
                         if (!icon) return null;
                         
+                        const displayValue = (spec.value || '').replace(/\s*\(bluetooth\)\s*/gi, '').trim();
                         return (
                           <div key={idx} className="flex items-center gap-2">
                             <span className="text-primary">{icon}</span>
                             <span className="text-xs text-gray-600 leading-tight">
-                              {spec.value}
+                              {displayValue}
                             </span>
                           </div>
                         );

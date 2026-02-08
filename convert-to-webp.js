@@ -44,6 +44,8 @@ const targetSubdirs = [
   'Inverter Stromerzeuger 2 kW',
   'Inverter Stromerzeuger 3,2 kW',
   'Inverter Stromerzeuger 6 kW',
+  'PA Set PREMIUM mini',
+  'Theatre Spot RGB',
 ];
 
 async function convertDirectory(dirRelativePath) {

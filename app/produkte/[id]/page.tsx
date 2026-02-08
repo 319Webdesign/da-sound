@@ -71,6 +71,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'pa-set-medium',
     'pa-set-large',
     'pa-set-xlarge',
+    'pa-set-premium-mini',
     'pa-set-premium',
     'pa-set-outdoor',
     'party-set-small',
@@ -97,6 +98,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'pa-set-medium': 'Machbar',
     'pa-set-large': 'Machbar',
     'pa-set-xlarge': 'Machbar',
+    'pa-set-premium-mini': 'Einfach',
     'pa-set-premium': 'Machbar',
     'pa-set-outdoor': 'Machbar',
     'profi-pa-line-array-event-26a': 'Komplex',
@@ -114,6 +116,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'akku-spot-indoor-rgb': 'Einfach',
     'akku-spot-outdoor-rgbw-ip65': 'Einfach',
     'led-outdoor-fluter-ip65': 'Machbar',
+    'theatre-spot-rgb': 'Einfach',
     'theatre-spot-led': 'Machbar',
     'led-verfolgerspot-follow-spot': 'Einfach',
     'led-pll-panel-power-strobe': 'Machbar',
@@ -492,6 +495,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'PA-System für Live-Bands, DJs, Clubs und Events aller Art\nUniversell einsetzbar für Beschallungen bis ca. 150 Personen'
                   : product.id === 'pa-set-xlarge'
                   ? 'PA-System für Live-Bands, DJs, Clubs und Events aller Art\nUniversell einsetzbar für Beschallungen bis zu max. 250 Personen'
+                  : product.id === 'pa-set-premium-mini'
+                  ? 'Professionelles und platzsparendes PA-System für DJ, Live-Musik, Firmenevents bis max. 150 Personen. Präzise Audio-Übertragung auch für anspruchsvolle Ohren, dabei absolut einfach im Handling und mit wenigen Handgriffen einsatzbereit.'
                   : product.id === 'pa-set-premium'
                   ? 'hochwertiges PA-System für Hochzeiten, Corporate Events, Konferenz, Live Bands und DJs\nUniversell einsetzbar für Beschallungen bis max. 250 Personen\nSehr gute Audioeigenschaften bei minimalem Platzbedarf, einfach im PKW Kombi zu transportieren und an einer Haushaltssteckdose zu betreiben'
                   : product.id === 'pa-set-outdoor'
@@ -518,6 +523,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Punktuelle Beleuchtung von Flächen, Wänden, Vorhängen oder Objekten wo Kabel nur stören würden'
                   : product.id === 'led-outdoor-fluter-ip65'
                   ? 'Beleuchtung von Gebäuden oder Objekten im Freien, Festzelten (natürlich auch in Innenräumen anwendbar)'
+                  : product.id === 'theatre-spot-rgb'
+                  ? 'Leistungsstarker LED Scheinwerfer zur flächigen Beleuchtung von Bühnen, Wänden, Objekten in farbig oder warmweiß. Als Deko-Effekt sind auch Automatikprogramme und Sound-to-Light Modi verfügbar.'
                   : product.id === 'theatre-spot-led'
                   ? 'Frontale Ausleuchtung von Bühnen für Theater, Konzerte und Events\nPerfekt für professionelle Bühnenproduktionen\nTheateraufführungen und Konzertbühnen\nHochzeiten und Corporate Events'
                   : product.id === 'led-pll-panel-power-strobe'
