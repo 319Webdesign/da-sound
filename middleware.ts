@@ -16,15 +16,19 @@ const ALLOWED_STATIC_PATHS = new Set([
   '/dashboard',
 ]);
 
-/** Pfade und Dateitypen, die nie mit 410 beantwortet werden (API, Next, Statik) */
-const SKIP_PREFIXES = ['/api/', '/_next/', '/favicon', '/icon'];
+/** Pfade und Dateitypen, die nie mit 410 beantwortet werden (API, Next, Statik, SEO) */
+const SKIP_PREFIXES = ['/api/', '/_next/', '/favicon', '/icon', '/sitemap', '/robots'];
 const STATIC_EXTENSIONS = /\.(ico|png|jpg|jpeg|webp|gif|svg|css|js|woff2?|ttf|eot|map)(\?.*)?$/i;
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Immer durchlassen: API, Next.js, Favicon, Icon
+  // Immer durchlassen: API, Next.js, Favicon, Icon, Sitemap, Robots (wichtig für Google)
   if (SKIP_PREFIXES.some((p) => pathname.startsWith(p))) {
+    return NextResponse.next();
+  }
+  // Sitemap & Robots explizit erlauben (z. B. /sitemap.xml, /robots.txt)
+  if (pathname === '/sitemap.xml' || pathname === '/robots.txt') {
     return NextResponse.next();
   }
   // Statische Dateien (Bilder, Fonts, etc.)
