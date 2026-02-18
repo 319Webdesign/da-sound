@@ -210,6 +210,7 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
               transition={{ duration: 0.3 }}
             >
               <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200">
+                <h2 className="sr-only">Beschreibung</h2>
                 <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
                   {tabs.beschreibung.text}
                 </p>
@@ -226,6 +227,7 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
               transition={{ duration: 0.3 }}
             >
               <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200">
+                <h2 className="sr-only">Bildergalerie</h2>
                 <ProductImageSlider images={tabs.bildergalerie.images} productName={productName} />
               </div>
             </motion.div>
@@ -240,6 +242,7 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
               transition={{ duration: 0.3 }}
             >
               <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200">
+                <h2 className="sr-only">Anwendung</h2>
                 <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
                   {tabs.anwendung.text}
                 </p>
@@ -256,6 +259,7 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
               transition={{ duration: 0.3 }}
             >
               <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                <h2 className="sr-only">Technische Daten</h2>
                 <table className="w-full">
                   <thead className="bg-gray-50">
                     <tr>

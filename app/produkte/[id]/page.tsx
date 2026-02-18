@@ -27,21 +27,26 @@ export async function generateStaticParams() {
   return getAllProductIds().map((id) => ({ id }));
 }
 
+const FALLBACK_META_DESCRIPTION = (productName: string) =>
+  `Miete jetzt ${productName} bei da-sound in Pfungstadt & Darmstadt. Profi-Equipment für dein Event. Jetzt unverbindlich anfragen!`;
+
 export async function generateMetadata({ params }: PageProps) {
   const { id } = await params;
   const product = getProductById(id);
   if (!product) return {};
-  const title = `${product.name} mieten`;
+  const title = `${product.name} mieten in Pfungstadt | da-sound`;
+  const fromSanity =
+    product.detailDescription?.trim() || product.description?.trim();
   const description =
-    product.detailDescription?.slice(0, 155) ||
-    product.description?.slice(0, 155) ||
-    `${product.name} – Veranstaltungstechnik mieten bei da-sound Pfungstadt.`;
+    fromSanity && fromSanity.length > 0
+      ? (fromSanity.slice(0, 155) + (fromSanity.length >= 155 ? '…' : ''))
+      : FALLBACK_META_DESCRIPTION(product.name);
   return {
     title,
-    description: description + (description.length >= 155 ? '…' : ''),
+    description,
     alternates: { canonical: `/produkte/${id}` },
     openGraph: {
-      title: `${title} | da-sound`,
+      title: `${product.name} mieten in Pfungstadt | da-sound`,
       description,
       url: `/produkte/${id}`,
       images: product.images?.[0] ? [product.images[0]] : undefined,
