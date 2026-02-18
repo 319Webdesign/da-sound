@@ -4,10 +4,11 @@ export const metadata: Metadata = {
   title: 'Kontakt',
   description:
     'Kontakt zu da-sound Veranstaltungstechnik in Pfungstadt. Öffnungszeiten, Anfahrt, WhatsApp und Kontaktformular – wir beraten Sie gerne.',
+  alternates: { canonical: '/kontakt' },
   openGraph: {
     title: 'Kontakt | da-sound Veranstaltungstechnik Pfungstadt',
     description: 'Kontakt, Öffnungszeiten und Anfahrt – da-sound in Pfungstadt.',
-    url: 'https://da-sound.de/kontakt',
+    url: '/kontakt',
   },
 };
 

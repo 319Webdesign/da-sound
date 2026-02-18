@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Datenschutz',
-  description: 'Datenschutzerklärung von da-sound Veranstaltungstechnik.',
-  alternates: { canonical: '/datenschutz' },
+  title: 'Dashboard',
+  description: 'Internes Dashboard von da-sound Veranstaltungstechnik.',
+  alternates: { canonical: '/dashboard' },
   robots: { index: false, follow: true },
 };
 
-export default function DatenschutzLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;

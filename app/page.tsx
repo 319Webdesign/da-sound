@@ -34,7 +34,7 @@ import OpeningHours from '@/components/OpeningHours';
 // ISR: Incremental Static Regeneration für bessere Performance
 export const revalidate = 60;
 
-const SITE_URL = 'https://da-sound.de';
+const SITE_URL = 'https://www.da-sound.de';
 
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',

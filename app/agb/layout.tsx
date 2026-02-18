@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AGB',
   description: 'Allgemeine Geschäftsbedingungen (AGB) von da-sound Veranstaltungstechnik, Pfungstadt.',
+  alternates: { canonical: '/agb' },
   robots: { index: false, follow: true },
 };
 

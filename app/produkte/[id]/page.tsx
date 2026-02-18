@@ -39,11 +39,12 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title,
     description: description + (description.length >= 155 ? '…' : ''),
+    alternates: { canonical: `/produkte/${id}` },
     openGraph: {
       title: `${title} | da-sound`,
       description,
-      url: `https://da-sound.de/produkte/${id}`,
-      images: product.images?.[0] ? [`https://da-sound.de${product.images[0]}`] : undefined,
+      url: `/produkte/${id}`,
+      images: product.images?.[0] ? [product.images[0]] : undefined,
     },
   };
 }

@@ -4,10 +4,11 @@ export const metadata: Metadata = {
   title: 'Liefergebiet',
   description:
     'Liefergebiet von da-sound: Pfungstadt, Darmstadt, Südhessen und Umgebung. Veranstaltungstechnik liefern wir zu Ihnen.',
+  alternates: { canonical: '/liefergebiet' },
   openGraph: {
     title: 'Liefergebiet | da-sound Veranstaltungstechnik',
     description: 'Pfungstadt, Darmstadt, Südhessen – wir liefern Ihre Veranstaltungstechnik.',
-    url: 'https://da-sound.de/liefergebiet',
+    url: '/liefergebiet',
   },
 };
 

@@ -40,10 +40,11 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title,
     description,
+    alternates: { canonical: `/kategorien/${slug}` },
     openGraph: {
       title: `${title} | da-sound`,
       description,
-      url: `https://da-sound.de/kategorien/${slug}`,
+      url: `/kategorien/${slug}`,
     },
   };
 }

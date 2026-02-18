@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Canonical: non-www → www, keine Weiterleitungsschleifen
+  async redirects() {
+    return [
+      { source: '/:path*', has: [{ type: 'host', value: 'da-sound.de' }], destination: 'https://www.da-sound.de/:path*', permanent: true },
+    ];
+  },
   // Performance-Optimierungen
   compress: true,
   poweredByHeader: false,

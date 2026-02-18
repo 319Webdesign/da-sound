@@ -11,7 +11,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const SITE_URL = "https://da-sound.de";
+const SITE_URL = "https://www.da-sound.de";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -31,10 +31,11 @@ export const metadata: Metadata = {
     "Event-Technik",
     "Equipment mieten",
   ],
+  robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    url: SITE_URL,
+    url: "/",
     siteName: "da-sound Veranstaltungstechnik",
     title: "Veranstaltungstechnik & DJ in Pfungstadt & Darmstadt – da-sound",
     description:
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     title: "Veranstaltungstechnik & DJ in Pfungstadt & Darmstadt – da-sound",
     description: "Professionelle Veranstaltungstechnik in Pfungstadt & Darmstadt. Einfach gemietet.",
   },
-  alternates: { canonical: SITE_URL },
+  alternates: { canonical: "/" },
   icons: {
     icon: "/images/logo.svg",
     shortcut: "/images/logo.svg",

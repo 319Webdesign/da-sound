@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Impressum',
   description: 'Impressum und rechtliche Angaben von da-sound Veranstaltungstechnik, Pfungstadt.',
+  alternates: { canonical: '/impressum' },
   robots: { index: false, follow: true },
 };
 
