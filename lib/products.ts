@@ -42,7 +42,7 @@ Veranstaltungstechnik mieten leicht gemacht: Mit unseren Party-Sets erhalten Sie
 anschlussfertige Kombinationen aus Lautsprechern / Musikanlagen, Lichteffekten,
 Nebelmaschinen und den dazugehörigen Kabeln. Set-Bestandteile können auf Wunsch
 ohne Aufpreis ausgetauscht werden, z.B. Mikrofon oder ein weiterer Lichteffekt anstatt
-der Nebelmaschine`,
+der Nebelmaschine.`,
     images: [
       '/images/partysetsmall.webp',
       '/images/partysetSMALL/antariz800.webp',
