@@ -27,13 +27,22 @@ export const products: Product[] = [
 1 x LED Kompakt Licht-Set mit Stativ
 1 x Party-Nebelmaschine + Fernbedienung`,
     detailDescription: `Mit Freunden feiern? - Mit dem Party Set SMALL geht's ab.
-Für die spontane Party oder die Geburtstagsfeier - mit unserem kleinsten Set können bis zu 50 Gäste bestens unterhalten werden. Deine Playlist oder Spotify vom Smartphone kann kabellos über Bluetooth gespielt werden. Und das Beste: alles passt ganz easy in den Kofferraum eines Kleinwagens.
+Für die spontane WG Party oder die Geburtstagsfeier - mit unserem kleinsten Set
+können bis zu 50 Gäste bestens unterhalten werden. Deine Playlist oder Spotify vom
+Smartphone kann kabellos über Bluetooth gespielt werden. Und das Beste: alles passt
+ganz easy in den Kofferraum eines Kleinwagens.
 
 Set bestehend aus:
 1 x 2.1 Lautsprechersystem mit 12-Zoll Subwoofer
 2 x Lautsprecherstativ
 1 x LED Kompakt Licht-Set mit Stativ
-1 x Party-Nebelmaschine + Fernbedienung`,
+1 x Party-Nebelmaschine + Fernbedienung
+
+Veranstaltungstechnik mieten leicht gemacht: Mit unseren Party-Sets erhalten Sie
+anschlussfertige Kombinationen aus Lautsprechern / Musikanlagen, Lichteffekten,
+Nebelmaschinen und den dazugehörigen Kabeln. Set-Bestandteile können auf Wunsch
+ohne Aufpreis ausgetauscht werden, z.B. Mikrofon oder ein weiterer Lichteffekt anstatt
+der Nebelmaschine`,
     images: [
       '/images/partysetsmall.webp',
       '/images/partysetSMALL/antariz800.webp',
@@ -68,15 +77,23 @@ Set bestehend aus:
 1 x LED Licht-Set mit Scannern & Stativ
 1 x Party-Nebelmaschine + Fernbedienung`,
     detailDescription: `Top-Sound und effektvolles Licht für deine nächste Feier.
-Wenn es mal so richtig schön werden soll: Das Party-Set MEDIUM ist die perfekte Wahl für Feierlichtkeiten aller Art bis ca. 100 Personen. Dabei ist alles einfach zu transportieren und auch für Laien problemlos anzuschließen.
+Wenn es mal so richtig schön werden soll: Das Party-Set MEDIUM ist die perfekte Wahl
+für Feierlichtkeiten aller Art bis ca. 100 Personen. Dabei ist alles einfach zu
+transportieren und auch für Laien nach kurzer Einweisung anzuschließen.
 
 Set bestehend aus:
-1 x Profi 2.1 Lautsprechersystem mit 15-Zoll Subwoofer
+1 x Profi 2.1 Lautsprechersystem mit 15-Zoll Subwoofer von DAS Audio
 2 x Lautsprecherstativ
-1 x Audiomischpult mit Bluetooth
+1 x Audiomischpult von MACKIE mit Bluetooth
 1 x Mikrofon mit Schalter (kabelgebunden)
 1 x LED Licht-Set mit Scannern & Stativ
-1 x Party-Nebelmaschine + Fernbedienung`,
+1 x Party-Nebelmaschine + Fernbedienung
+
+Veranstaltungstechnik mieten leicht gemacht: Mit unseren Party-Sets erhalten Sie
+anschlussfertige Kombinationen aus Lautsprechern / Musikanlagen, Lichteffekten,
+Nebelmaschinen und den dazugehörigen Kabeln. Set-Bestandteile können auf Wunsch
+ohne Aufpreis ausgetauscht werden, z.B. Mikrofon oder ein weiterer Lichteffekt anstatt
+der Nebelmaschine.`,
     images: [
       '/images/partysetmedium.webp',
       '/images/partysetMEDIUM/antariz800.webp',
@@ -109,16 +126,24 @@ Set bestehend aus:
 1 x Drahtloses Mikrofon
 1 x LED Licht-Set mit Laser & Stativ in weiß
 8 x Akku LED Uplights Ambientebeleuchtung in weiß`,
-    detailDescription: `Party-Set "White Wedding"
-Für eine unvergessliche Hochzeitsfeier "ganz in weiß"
-Neben hochwertigem Sound und tollen Lichteffekte, stimmt bei diesem Paket auch die Optik. Alle Kompomenten (bis auf das Mikrofon), sind in weiß gehalten. Noch dazu sind die Komponenten einfach zu transportieren und auch für Laien kinderleicht aufzubauen und zu bedienen.
+    detailDescription: `Party-Set "WHITE"
+Für eine unvergessliche Hochzeitsfeier "ganz in weiß" oder die Mottoparty / das
+Firmenevent, wo eine dezentere Optik gefragt ist. Alle Kompomenten sind in weiß
+gehalten. Noch dazu ist das Set einfach zu transportieren und auch für Laien nach
+kurzer Einweisung verständlich aufzubauen und zu bedienen.
 
 Set bestehend aus:
-2 x PA Säule in weiß
-1 x Audiomischpult mit Bluetooth
-1 x Drahtloses Mikrofon
+2 x PA Säule in weiß von DAS Audio
+1 x Audiomischpult von MACKIE mit Bluetooth
+1 x Drahtloses Mikrofon von Shure
 1 x LED Licht-Set mit Laser & Stativ in weiß
-8 x Akku LED Uplights Ambientebeleuchtung in weiß`,
+8 x Akku LED Uplights Ambientebeleuchtung in weiß
+
+Veranstaltungstechnik mieten leicht gemacht: Mit unseren Party-Sets erhalten Sie
+anschlussfertige Kombinationen aus Lautsprechern / Musikanlagen, Lichteffekten,
+Nebelmaschinen und den dazugehörigen Kabeln. Set-Bestandteile können auf Wunsch
+ohne Aufpreis ausgetauscht werden, z.B. weitere Ambient-Spots oder ein zweites
+Mikrofon oder anstatt des LED Licht-Sets.`,
     images: [
       '/images/partysetwhite.webp',
       '/images/partysetWHITE/20000966a.webp',
@@ -153,17 +178,27 @@ Set bestehend aus:
 1 x Drahtloses Mikrofon
 1 x LED Pro Licht-Set mit Laser & Stativ
 1 x Profi Nebelmaschine + Fernbedienung`,
-    detailDescription: `Beste Unterhaltung mit tollem Sound und effektvoller Lichtanlage.
-Dieses umfangreiche Set bietet hochwertige Komponenten für optimalen Sound & Light. Sie unterhalten hiermit mühelos bis zu 150 Gäste und dennoch ist alles in einem PKW Kombi zu transportieren und notfalls auch alleine problemlos aufzubauen.
+    detailDescription: `Party-Set "LARGE"
+Beste Unterhaltung mit tollem Sound und effektvoller Lichtanlage.
+Dieses umfangreiche Set bietet hochwertige Komponenten für optimalen Sound & Light
+und eignet sich gleichermaßen für DJ, Playback und Live-Musik. Sie unterhalten hiermit
+mühelos bis zu 150 Gäste und dennoch ist alles in einem PKW Kombi zu transportieren
+und notfalls auch alleine problemlos aufzubauen.
 
 Set bestehend aus:
-2 x 15-Zoll Subwoofer
-2 x 12-Zoll Topteile
+2 x 15-Zoll Subwoofer von DAS Audio
+2 x 12-Zoll Topteile von DAS Audio
 2 x Distanzstange
-1 x Audiomischpult mit Bluetooth
-1 x Drahtloses Mikrofon
-1 x LED Pro Licht-Set mit Laser & Stativ
-1 x Profi Nebelmaschine + Fernbedienung`,
+1 x Audiomischpult von MACKIE mit Bluetooth
+1 x Drahtloses Mikrofon von Beyerdynamic
+1 x LED Profi Licht-Set mit Laserdiode & Stativ
+1 x Profi Nebelmaschine + Fernbedienung
+
+Veranstaltungstechnik mieten leicht gemacht: Mit unseren Party-Sets erhalten Sie
+anschlussfertige Kombinationen aus Lautsprechern / Musikanlagen, Lichteffekten,
+Nebelmaschinen und den dazugehörigen Kabeln. Set-Bestandteile können auf Wunsch
+ohne Aufpreis ausgetauscht werden, z.B. ein zweites Mikrofon oder ein weiterer
+Lichteffekt anstatt der Nebelmaschine.`,
     images: [
       '/images/partysetlarge.webp',
       '/images/party set LARGE/51741091a.webp',
@@ -199,17 +234,28 @@ Set bestehend aus:
 1 x Drahtloses Mikrofon
 2 x LED Pro Licht-Set mit Laser & Stativ
 1 x Hazer / Dunstnebelmaschine + Funk-Fernbedienung`,
-    detailDescription: `Das ultimative Set für die Mega-Party.
-Mit diesem Set sind Sie ganz weit vorne. Beste Soundqualität dank hochwertiger Lautsprecher, druckvolle Wiedergabe, die zum Tanzen animiert, sowie eine einzigartige Lightshow mit Lasereffekten. Glauben Sie nicht? - ist aber so!
+    detailDescription: `Party-Set "X-LARGE"
+Das ultimative Set für die Mega-Party!
+Mit diesem Set sind Sie ganz weit vorne. Wenn es mal richtig rund gehen soll: beste
+Soundqualität dank hochwertiger Lautsprecher, druckvolle Wiedergabe, die zum Tanzen
+animiert, sowie eine einzigartige Lightshow mit Lasereffekten. Glauben Sie nicht? - ist
+aber so! Mit etwas technischem Sachverstand und einer kurzen Einweisung durch uns
+bei Abholung, sind Aufbau und Verkabelung kein Problem.
 
 Set bestehend aus:
-2 x 18-Zoll Profi Subwoofer
-2 x 12-Zoll Profi Topteile
+2 x 18-Zoll Profi Subwoofer mit DSP von DAS Audio
+2 x 12-Zoll Profi Topteile mit DSP / FIR-Filtern von DAS Audio
 2 x Distanzstange
-1 x Audiomischpult mit Bluetooth
-1 x Drahtloses Mikrofon
-2 x LED Pro Licht-Set mit Laser & Stativ
-1 x Hazer / Dunstnebelmaschine + Funk-Fernbedienung`,
+1 x Audiomischpult von MACKIE (wahlweise mit Bluetooth)
+1 x Drahtloses Mikrofon von Beyerdynamic
+2 x LED Profi Licht-Set mit Laser-Diode & Stativ
+1 x Hazer / Dunstnebelmaschine von ANTARI + Funk-Fernbedienung
+
+Veranstaltungstechnik mieten leicht gemacht: Mit unseren Party-Sets erhalten Sie
+anschlussfertige Kombinationen aus Lautsprechern / Musikanlagen, Lichteffekten,
+Nebelmaschinen und den dazugehörigen Kabeln. Set-Bestandteile können auf Wunsch
+ohne Aufpreis ausgetauscht werden, z.B. ein zweites Mikrofon oder ein weiterer
+Lichteffekt anstatt der Nebelmaschine.`,
     images: [
       '/images/partyset_xlarge.webp',
       '/images/party set X-LARGE/51741091a.webp',
