@@ -29,16 +29,24 @@ export async function generateStaticParams() {
   }));
 }
 
+const MAX_TITLE_PREFIX = 44;
+const MAX_META_DESCRIPTION = 150;
+
+const truncateMetaDesc = (text: string) =>
+  text.length > MAX_META_DESCRIPTION ? text.slice(0, MAX_META_DESCRIPTION - 1) + '…' : text;
+
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const category = getCategoryBySlug(slug);
   if (!category) return {};
-  const title = `${category.title} mieten in Pfungstadt & Darmstadt`;
-  const description =
+  const rawTitle = `${category.title} mieten`;
+  const title = rawTitle.length > MAX_TITLE_PREFIX ? rawTitle.slice(0, MAX_TITLE_PREFIX - 1) + '…' : rawTitle;
+  const rawDesc =
     category.longDescription ||
-    `${category.title} mieten bei da-sound in Pfungstadt & Darmstadt. ${category.description} Professionelle Veranstaltungstechnik, Abholung oder Lieferung in Südhessen.`;
+    `${category.title} mieten bei da-sound in Pfungstadt & Darmstadt. ${category.description}`;
+  const description = truncateMetaDesc(rawDesc);
   return {
-    title: `${title} | da-sound`,
+    title,
     description,
     alternates: { canonical: `/kategorien/${slug}` },
     openGraph: {

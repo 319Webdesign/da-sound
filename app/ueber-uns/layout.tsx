@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Über da-sound – Veranstaltungstechnik in Pfungstadt & Darmstadt',
+  title: 'Über uns',
   description:
-    'Professionelle Veranstaltungstechnik aus Pfungstadt für Events bis 1.500 Personen. Ton, Licht, Bühne – Abholung oder Lieferung in Südhessen. Jetzt beraten lassen!',
+    'Veranstaltungstechnik aus Pfungstadt & Darmstadt. Events bis 1.500 Personen. Ton, Licht, Bühne. Abholung oder Lieferung in Südhessen.',
   alternates: { canonical: '/ueber-uns' },
   openGraph: {
-    title: 'Über da-sound | da-sound Veranstaltungstechnik',
+    title: 'Über uns | da-sound',
     description:
-      'Professionelle Veranstaltungstechnik aus Pfungstadt. Equipment und Know-How für Ihr Event in Südhessen.',
+      'Veranstaltungstechnik aus Pfungstadt. Ton, Licht, Bühne für Ihr Event in Südhessen.',
     url: '/ueber-uns',
   },
 };

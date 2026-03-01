@@ -27,26 +27,33 @@ export async function generateStaticParams() {
   return getAllProductIds().map((id) => ({ id }));
 }
 
+const MAX_META_DESCRIPTION = 150; // ~950px, unter Google-Limit 1000px
+const MAX_TITLE_PREFIX = 44;
+
+const truncateMetaDesc = (text: string) =>
+  text.length > MAX_META_DESCRIPTION ? text.slice(0, MAX_META_DESCRIPTION - 1) + '…' : text;
+
 const FALLBACK_META_DESCRIPTION = (productName: string) =>
-  `Miete das ${productName} bei da-sound in Pfungstadt & Darmstadt. Profi-Veranstaltungstechnik für bis zu 50 Personen. Jetzt Verfügbarkeit prüfen!`;
+  truncateMetaDesc(`Miete das ${productName} bei da-sound in Pfungstadt & Darmstadt. Profi-Veranstaltungstechnik. Jetzt prüfen!`);
 
 export async function generateMetadata({ params }: PageProps) {
   const { id } = await params;
   const product = getProductById(id);
   if (!product) return {};
-  const title = `${product.name} mieten in Pfungstadt & Darmstadt | da-sound`;
+  const rawTitle = `${product.name} mieten`;
+  const title = rawTitle.length > MAX_TITLE_PREFIX ? rawTitle.slice(0, MAX_TITLE_PREFIX - 1) + '…' : rawTitle;
   const fromSanity =
     product.detailDescription?.trim() || product.description?.trim();
   const description =
     fromSanity && fromSanity.length > 0
-      ? (fromSanity.slice(0, 155) + (fromSanity.length >= 155 ? '…' : ''))
+      ? truncateMetaDesc(fromSanity)
       : FALLBACK_META_DESCRIPTION(product.name);
   return {
     title,
     description,
     alternates: { canonical: `/produkte/${id}` },
     openGraph: {
-      title: `${product.name} mieten in Pfungstadt & Darmstadt | da-sound`,
+      title: `${title} | da-sound`,
       description,
       url: `/produkte/${id}`,
       images: product.images?.[0] ? [product.images[0]] : undefined,

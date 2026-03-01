@@ -16,11 +16,11 @@ const SITE_URL = "https://www.da-sound.de";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Veranstaltungstechnik & DJ in Pfungstadt & Darmstadt – da-sound",
-    template: "%s | da-sound Veranstaltungstechnik",
+    default: "Veranstaltungstechnik & DJ | da-sound",
+    template: "%s | da-sound",
   },
   description:
-    "Professionelle Veranstaltungstechnik in Pfungstadt & Darmstadt. Tontechnik, Lichttechnik, PA-Anlagen und Event-Zubehör zum Mieten. Einfach gemietet.",
+    "Veranstaltungstechnik in Pfungstadt & Darmstadt mieten. PA-Anlagen, Licht, Ton. Abholung oder Lieferung. Jetzt prüfen!",
   keywords: [
     "Veranstaltungstechnik",
     "PA-Anlage",
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     locale: "de_DE",
     url: "/",
     siteName: "da-sound Veranstaltungstechnik",
-    title: "Veranstaltungstechnik & DJ in Pfungstadt & Darmstadt – da-sound",
+    title: "Veranstaltungstechnik & DJ | da-sound",
     description:
-      "Professionelle Veranstaltungstechnik in Pfungstadt & Darmstadt. Tontechnik, Lichttechnik und Event-Zubehör zum Mieten.",
+      "Veranstaltungstechnik in Pfungstadt & Darmstadt. PA, Licht, Ton mieten. Abholung oder Lieferung.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Veranstaltungstechnik & DJ in Pfungstadt & Darmstadt – da-sound",
-    description: "Professionelle Veranstaltungstechnik in Pfungstadt & Darmstadt. Einfach gemietet.",
+    title: "Veranstaltungstechnik & DJ | da-sound",
+    description: "Veranstaltungstechnik in Pfungstadt & Darmstadt mieten. PA, Licht, Ton.",
   },
   alternates: { canonical: "/" },
   icons: {

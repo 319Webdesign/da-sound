@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Equipment & DJ buchen – Veranstaltungstechnik mieten Pfungstadt & Darmstadt',
+  title: 'Equipment & DJ buchen',
   description:
-    'Veranstaltungstechnik und DJ-Service buchen: PA-Anlagen, Licht, DJ, Solomusiker oder Live-Band. Unverbindliche Anfrage für Events in Pfungstadt, Darmstadt und Südhessen.',
+    'Equipment und DJ buchen: PA, Licht, Solomusiker, Live-Band. Unverbindliche Anfrage für Events in Pfungstadt & Darmstadt.',
   alternates: { canonical: '/booking' },
   openGraph: {
-    title: 'Equipment & DJ buchen | da-sound Veranstaltungstechnik',
-    description: 'Equipment mieten oder DJ-Service buchen – Ihre unverbindliche Anfrage.',
+    title: 'Equipment & DJ buchen | da-sound',
+    description: 'Equipment oder DJ buchen – unverbindliche Anfrage für Pfungstadt & Darmstadt.',
     url: '/booking',
   },
 };

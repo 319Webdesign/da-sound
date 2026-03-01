@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Liefergebiet – Veranstaltungstechnik in Pfungstadt, Darmstadt & Südhessen',
+  title: 'Liefergebiet',
   description:
-    'Veranstaltungstechnik liefern oder abholen: Pfungstadt, Darmstadt, Weiterstadt, Frankfurt, Mainz, Wiesbaden. Professionelle Lieferung in Südhessen & Rhein-Main. Kostenlose Lieferung im Kerngebiet.',
+    'Liefergebiet: Pfungstadt, Darmstadt, Frankfurt, Mainz. Kostenlose Lieferung im Kerngebiet. Südhessen & Rhein-Main.',
   alternates: { canonical: '/liefergebiet' },
   openGraph: {
-    title: 'Liefergebiet | da-sound Veranstaltungstechnik',
+    title: 'Liefergebiet | da-sound',
     description:
-      'PA-Anlagen, Licht und Event-Technik liefern wir nach Pfungstadt, Darmstadt und ganz Südhessen.',
+      'PA, Licht und Event-Technik nach Pfungstadt, Darmstadt und Südhessen liefern.',
     url: '/liefergebiet',
   },
 };

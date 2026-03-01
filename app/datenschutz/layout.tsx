@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Datenschutz – Datenschutzerklärung | da-sound',
+  title: 'Datenschutz',
   description:
-    'Datenschutzerklärung von da-sound Veranstaltungstechnik. Informationen zum Schutz Ihrer Daten bei der Anmietung von PA-Anlagen und Event-Technik in Pfungstadt.',
+    'Datenschutzerklärung da-sound. Schutz Ihrer Daten bei Anmietung von Veranstaltungstechnik in Pfungstadt & Darmstadt.',
   alternates: { canonical: '/datenschutz' },
   openGraph: {
-    title: 'Datenschutz | da-sound Veranstaltungstechnik',
+    title: 'Datenschutz | da-sound',
     description: 'Informationen zum Schutz Ihrer persönlichen Daten.',
     url: '/datenschutz',
   },
