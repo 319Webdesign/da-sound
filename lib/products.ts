@@ -283,8 +283,20 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'akku-lautsprecher-compact',
     name: 'Akku Lautsprecher Compact',
-    description: 'Hochwertiger Akkulautsprecher mit Bluetooth von Electro Voice mit einer Batterielaufzeit von bis zu 12 Stunden. Optimal zur Übertragung von Playback- und Live-Musik wenn kein Stromanschluss vorhanden ist. Mit nur 7kg Gewicht ein echtes Leichtgewicht mit MEGA Sound.',
-    detailDescription: `Hochwertiger Akkulautsprecher mit Bluetooth von Electro Voice mit einer Batterielaufzeit von bis zu 12 Stunden. Optimal zur Übertragung von Playback- und Live-Musik wenn kein Stromanschluss vorhanden ist. Mit nur 7kg Gewicht ein echtes Leichtgewicht mit MEGA Sound.`,
+    description: 'Mobiler Profi Sound im Kleinformat. Hochwertiger Akkulautsprecher mit Bluetooth von Electro Voice, bis zu 12h Akku. Optimal für Playback- und Live-Musik ohne Stromanschluss.',
+    detailDescription: `Akku Lautsprecher Compact
+Mobiler Profi Sound im Kleinformat
+Hochwertiger Akkulautsprecher mit Bluetooth von Electro Voice mit einer
+Batterielaufzeit von bis zu 12 Stunden. Optimal zur Übertragung von Playback- und Live-Musik wenn kein Stromanschluss vorhanden ist. 3 variable Eingänge mit Digitalmixer
+ermöglichen den Stand-Alone Einsatz für z.B. Straßenmusik, etc. Mit nur 7kg Gewicht
+ein echtes Leichtgewicht mit MEGA Sound.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/akkuLautsprecherCompact.webp',
       '/images/akku lautsprecher kompakt/ev8_1.webp',
@@ -307,8 +319,23 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'akku-lautsprecher-maxi',
     name: 'Akku Lautsprecher Maxi',
-    description: 'Der wohl berühmt und berüchtigste unter den Akku Lautsprechern jetzt bei uns im Verleih: Teufel Rockster XL. Unglaubliche Leistung bei gleichzeitig langer Akkulaufzeit von bis zu 12 Stunden. Neueste Bluetooth Technologie plus zahlreiche Eingänge mit EQ machen diese stattliche Box zum Allroundtalent.',
-    detailDescription: `Der wohl berühmt und berüchtigste unter den Akku Lautsprechern jetzt bei uns im Verleih: Teufel Rockster XL. Unglaubliche Leistung bei gleichzeitig langer Akkulaufzeit von bis zu 12 Stunden. Neueste Bluetooth Technologie plus zahlreiche Eingänge mit EQ machen diese stattliche Box zum Allroundtalent.`,
+    description: 'Massive Bassleistung bei langer Akkulaufzeit. Der Teufel Rockster XL mit 2 Bluetooth Empfängern überzeugt durch Druck und bis zu 12h Laufzeit.',
+    detailDescription: `Akku Lautsprecher Maxi
+Massive Bassleistung bei langer Akkulaufzeit
+Der Teufel Rockster XL ist ein stattlicher Akkulautsprecher mit gleich 2 Bluetooth
+Empfängern, so können 2 mobile Endgeräte gleichzeitig gekoppelt werden, um Playlisten
+abzufeuern. Der schier unglaubliche „Druck“ dieser Box beeindruckt auch Fachleute
+immer aufs Neue. Wird der Lautsprecher an seinem Leistungsmaximum betrieben,
+stehen ca. 4-6 Stunden Akkulaufzeit zur Verfügung, bei gemäßigter Lautstärke dürfen
+auch gerne mal 12 Stunden ohne Nachladen durchgefeiert werden. Zwei Teufel Rockster
+XL lassen sich via Kabel zum Stereo-Set koppeln.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/akkuLautsprecherMaxi.webp',
       '/images/akku lautsprecher maxi/rockster1.webp',
@@ -331,8 +358,22 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'aktivlautsprecher-bluetooth',
     name: 'Aktivlautsprecher Bluetooth',
-    description: 'Der aktive Lautsprecher von DAS Audio (Made in Spain) überzeugt durch hohe Leistungsreserven und professionellen Klang. Das robuste Kunststoffgehäuse sorgt für ein transportfreundliches Gewicht. Auch als Monitorbox einsetzbar. Lautsprecherstativ inkl.',
-    detailDescription: `Der aktive Lautsprecher von DAS Audio (Made in Spain) überzeugt durch hohe Leistungsreserven und professionellen Klang. Das robuste Kunststoffgehäuse sorgt für ein transportfreundliches Gewicht. Auch als Monitorbox einsetzbar. Lautsprecherstativ inkl.`,
+    description: 'Universell einsetzbare Multifunktionsboxen von DAS Audio. 5 Klang-Presets, Bluetooth, auch als Monitorbox nutzbar. Lautsprecherstativ inkl.',
+    detailDescription: `Aktivlautsprecher Bluetooth
+Universell einsetzbare Multifunktionsboxen
+Die hochwertigen Lautsprecher von DAS Audio (Made in Spain) überzeugen durch hohe
+Leistungsreserven und professionellen Klang. Das verbaute DSP mit FIR Filtern bietet 5
+verschiedene Klang-Presets: Live, Dance, Vocal (für Gesang & Sprache), Monitor und
+BBoost, zudem lassen sich die Lautsprecher via Bluetooth mit ihrem Handy verbinden.
+Durch das Gehäusedesign auch als Monitorbox einsetzbar. Die zum Aufstellen
+benötigten Lautsprecherstative sind im Mietpreis enthalten.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/akkulautsprecherbt.webp',
       '/images/aktiv lautsprecher bluetooth/altea1.webp',
@@ -354,8 +395,23 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'sub-sat-set-bluetooth',
     name: 'Sub-Sat Set Bluetooth',
-    description: 'Dieses kompakte aber kraftvolle 2.1 System besteht aus einem 12-Zoll Aktiv-Subwoofer mit 700W RMS Leistung (500W Sub + 2x 100W Satelliten). Es stehen verschiedene EQ Presets zur Verfügung, die Verbindung zu eurem Smartphone oder Tablet erfolgt via Bluetooth. Inkl. Stative.',
-    detailDescription: `Dieses kompakte aber kraftvolle 2.1 System besteht aus einem 12-Zoll Aktiv-Subwoofer mit 700W RMS Leistung (500W Sub + 2x 100W Satelliten). Es stehen verschiedene EQ Presets zur Verfügung, die Verbindung zu eurem Smartphone oder Tablet erfolgt via Bluetooth. Inkl. Stative.`,
+    description: 'Kompakte Klein-PA mit 12-Zoll Sub, 700W RMS. EQ Presets: Music, DJ, Sprache, Neutral. Bluetooth. Lautsprecherstative inkl.',
+    detailDescription: `Sub-Sat-Set Bluetooth
+QUICK-FACTS: Personenzahl bis 50
+
+Kompakte Klein-PA für reichlich Spaß
+Dieses handliche aber kraftvolle 2.1 System besteht aus einem 12-Zoll Aktiv-Subwoofer
+mit 700W RMS Leistung (500W Sub + 2x 100W Satelliten). Es stehen verschiedene EQ
+Presets zur Auswahl: Music, DJ, Sprache, Neutral. Die Verbindung zu eurem Smartphone
+oder Tablet erfolgt via Bluetooth. Die passenden Lautsprecherstative sind im Mietpreis
+enthalten.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/Sub-SatSet Bluetooth.webp',
       '/images/sub sat bluetooth/molly1.webp',
@@ -379,8 +435,22 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'pa-saeule-bluetooth',
     name: 'PA Säule Bluetooth',
-    description: 'Das Altea-DUO-20 ist ein kompaktes und mit 2000W Power gleichzeitig sehr leistungsstarkes Beschallungssystem mit dezenter Optik. Es lässt sich extrem einfach und schnell ohne weiteres Zubehör wie Stative oder Lautsprecherkabel montieren. Stecker in die Steckdose, fertig! Erhältlich in schwarz oder weiß.',
-    detailDescription: `Das Altea-DUO-20 ist ein kompaktes und mit 2000W Power gleichzeitig sehr leistungsstarkes Beschallungssystem mit dezenter Optik. Es lässt sich extrem einfach und schnell ohne weiteres Zubehör wie Stative oder Lautsprecherkabel montieren. Stecker in die Steckdose, fertig! Erhältlich in schwarz oder weiß.`,
+    description: 'Das Allround-Talent in 1 Min spielbereit. Altea-DUO-20: 2000W, Linienstrahler-Prinzip, einfach montierbar ohne Stative. Schwarz oder weiß.',
+    detailDescription: `PA Säule Bluetooth
+Das Allround-Talent in 1 Min spielbereit.
+Das Altea-DUO-20 ist ein kompaktes und mit 2000W Power gleichzeitig sehr
+leistungsstarkes Beschallungssystem mit dezenter Optik. Der Vorteil von PA Säulen liegt
+im Linienstrahler-Prinzip: klanglich ausgewogen, strahlt es über eine Breite von 100°
+gleichmäßig ab. Zudem lässt es sich extrem einfach und schnell ohne weiteres Zubehör
+wie Stative oder Lautsprecherkabel montieren. Stecker in die Steckdose, fertig!
+Erhältlich in schwarz oder weiß.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/PASaeuleBluetooth.webp',
       '/images/pa-säulebluetooth/DAS10435063.webp',
@@ -403,8 +473,22 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'pa-set-small',
     name: 'PA Set SMALL',
-    description: 'Die Action 508A von DAS Audio sind kompakte aber sehr robuste Multifunktionslautsprecher. Das Set eignet sich für Hintergrundmusik, Sprachbeschallung und Monitoranwendungen. Stative sind im Mietpreis enthalten.',
-    detailDescription: `Die Action 508A von DAS Audio sind kompakte aber sehr robuste Multifunktionslautsprecher. Das Set eignet sich für Hintergrundmusik, Sprachbeschallung und Monitoranwendungen. Stative sind im Mietpreis enthalten.`,
+    description: 'Lautsprecherset optimal für Sprachübertragung. Hintergrundmusik, Sprachbeschallung, Monitor. Mikrofone direkt anschließbar. Stative inkl.',
+    detailDescription: `PA Set SMALL
+Lautsprecherset optimal für Sprachübertragung
+Das Set eignet sich für Hintergrundmusik, Sprachbeschallung und
+Monitoranwendungen. Durch die Möglichkeit Mikrofone direkt anzuschließen, ist nicht
+zwingend ein separates Mischpult erforderlich. Das Signal kann von Box zu Box
+durchgeschliffen werden, was auch die Kombination mehrerer Sets für die
+Sprachbeschallung größerer Säle oder entlang einer Straße ermöglicht. Passende
+Stative sind im Mietpreis enthalten.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/pasetsmall1.webp',
       '/images/pasetsmall2.webp',
@@ -428,8 +512,21 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'pa-set-medium',
     name: 'PA Set MEDIUM',
-    description: 'Dieses kompakte 2.1 Lautsprecher Set von DAS Audio kann problemlos in einem PKW transportiert werden und beschallt bis zu 100 Personen. Bestehend aus einem kräftigen 15er Subwoofer mit passenden aktiven Topteilen. Es eignet sich perfekt für kleine bis mittlere Räume, Bars/Kneipen und Tanzflächen Beschallung. Stative sind im Mietpreis enthalten.',
-    detailDescription: `Dieses kompakte 2.1 Lautsprecher Set von DAS Audio kann problemlos in einem PKW transportiert werden und beschallt bis zu 100 Personen. Bestehend aus einem kräftigen 15er Subwoofer mit passenden aktiven Topteilen. Es eignet sich perfekt für kleine bis mittlere Räume, Bars/Kneipen und Tanzflächen Beschallung. Stative sind im Mietpreis enthalten.`,
+    description: '„Klein aber Oho“ – 2.1 System mit 15-Zoll Sub (1.200W) und 2×400W Topteilen. Beschallung bis 100 Personen. Stative inkl.',
+    detailDescription: `PA Set MEDIUM
+„Klein aber Oho“ – leistungsstarkes 2.1 System
+Dieses noch als kompakt zu bezeichnende PA Set kann problemlos in einem PKW
+transportiert werden und beschallt dennoch bis zu 100 Personen. Bestehend aus einem
+kräftigen 15-Zoll (38cm) Subwoofer mit 1.200W und 2 abgestimmten Topteilen mit je
+400W, eignet es sich perfekt für kleine bis mittlere Räume, Bars/Kneipen und zur
+Tanzflächen Beschallung. Passende Lautsprecherstative sind im Mietpreis enthalten.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/PaSetMedium.webp',
       '/images/pa set MEDIUM/altea15a_1.webp',
@@ -452,8 +549,22 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'pa-set-large',
     name: 'PA Set LARGE',
-    description: 'Mit einer maximalen Systemleistung von 5.400W lassen sich mittlere Räume, kleine Säle und Clubs adäquat beschallen. Wir empfehlen es für bis zu 150 Personen. Die 15er Subs spielen sehr definiert im Bassbereich, wodurch das Set gleichermaßen für DJ Anwendungen und Live-Sound geeignet ist.',
-    detailDescription: `Mit einer maximalen Systemleistung von 5.400W lassen sich mittlere Räume, kleine Säle und Clubs adäquat beschallen. Wir empfehlen es für bis zu 150 Personen. Die 15er Subs spielen sehr definiert im Bassbereich, wodurch das Set gleichermaßen für DJ Anwendungen und Live-Sound geeignet ist.`,
+    description: 'Live-Bands oder DJs lieben dieses Paket. 5.400W, bis 150 Personen. 15er Subs, 12-Zoll Topteile mit Presets. Distanzstangen inkl.',
+    detailDescription: `PA Set LARGE
+Live-Bands oder DJs lieben dieses Paket.
+Mit einer maximalen Systemleistung von 5.400W lassen sich mittlere Räume, kleine
+Säle und Clubs adäquat beschallen. Wir empfehlen es für bis zu 150 Personen. Die 15er
+Subs spielen sehr definiert im Bassbereich, wodurch das Set gleichermaßen für DJ-
+Anwendungen und Live-Sound geeignet ist. Die leistungsstarken 12-Zoll Topteile bieten
+Klang-Presets für Dance, Live-Musik oder Sprache. Höhenverstellbare Distanzstangen
+sind im Mietpreis enthalten.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/PaSetLarge.webp',
       '/images/pa set LARGE/altea15a_1.webp',
@@ -477,8 +588,22 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'pa-set-xlarge',
     name: 'PA Set X-LARGE',
-    description: 'Für anspruchsvolle DJ- und Live-Anwendungen empfehlen wir dieses professionelle PA Set bis 250 Personen. Präzise und druckvolle Wiedergabe in allen Frequenzbereichen. Sie sollten für den Transport und Aufbau 2 Personen einplanen.',
-    detailDescription: `Für anspruchsvolle DJ- und Live-Anwendungen empfehlen wir dieses professionelle PA Set bis 250 Personen. Präzise und druckvolle Wiedergabe in allen Frequenzbereichen. Sie sollten für den Transport und Aufbau 2 Personen einplanen.`,
+    description: 'Profi-Sound mit solidem Bassfundament. PA Set bis 250 Personen. FIR-Filtertechnologie, 18er Bässe bis 30Hz. Transport: 2 Personen empfohlen.',
+    detailDescription: `PA Set X-LARGE
+Profi-Sound mit solidem Bassfundament.
+Für anspruchsvolle DJ- und Live-Anwendungen empfehlen wir dieses professionelle PA
+Set bis 250 Personen. Präzise und druckvolle Wiedergabe in allen Frequenzbereichen
+durch fortschrittliche FIR-Filtertechnologie. Die 18er Bässe spielen im „Deep“ Mode bis
+30Hz und sind damit auch für elektronische Musik bestens geeignet. Höhenverstellbare
+Distanzstangen sind im Mietpreis enthalten. Aufgrund von Größe und Gewicht der
+Subwoofer sollten für den Transport und Aufbau 2 Personen eingeplant werden.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/PaSetXLarge.webp',
       '/images/pa set X-LARGE/Set_XL2.webp',
@@ -505,8 +630,22 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'pa-set-premium-mini',
     name: 'PA Set PREMIUM mini',
-    description: 'Minimale Optik trifft maximalen Sound. Dieses Platzwunder überrascht durch einen druckvollen Bass, transparente Mitten und glasklare Höhen. In Minutenschnelle aufgebaut, lassen sich damit problemlos 100-150 Personen beschallen. Dabei passt es auf die Rücksitzbank eines PKW.',
-    detailDescription: `Minimale Optik trifft maximalen Sound. Dieses Platzwunder überrascht durch einen druckvollen Bass, transparente Mitten und glasklare Höhen. In Minutenschnelle aufgebaut, lassen sich damit problemlos 100-150 Personen beschallen. Dabei passt es auf die Rücksitzbank eines PKW.`,
+    description: 'Minimale Optik trifft maximalen Sound. 100-150 Personen, German Engineering. Systemverkabelung & Distanzstangen inkl. Passt auf die Rücksitzbank.',
+    detailDescription: `PA Set PREMIUM mini
+Minimale Optik trifft maximalen Sound.
+Dieses Platzwunder überrascht durch einen druckvollen Bass, transparente Mitten und
+glasklare Höhen. In Minutenschnelle aufgebaut, lassen sich damit problemlos 100-150
+Personen beschallen. Dies ist möglich durch German Engineering, die Lautsprecher
+werden in Deutschland entwickelt und hergestellt. Die benötigte Systemverkabelung
+sowie höhenverstellbare Distanzstangen sind im Mietpreis enthalten. Dabei passt das
+komplette Set spielend auf die Rücksitzbank eines PKW.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/PA Set PREMIUM mini/nl_8_1.webp',
       '/images/PA Set PREMIUM mini/nlw12A.webp',
@@ -528,8 +667,21 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'pa-set-premium',
     name: 'PA Set PREMIUM',
-    description: 'Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem Gewicht, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportrollen.',
-    detailDescription: `Exklusiv für hochwertige Acts, wo dezente Optik bei maximalem Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem Gewicht, lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit Verkabelung und Transportrollen.`,
+    description: 'Die exklusiv Gala-PA für Ihr Event. Zenit Audio (Made in Germany) – bis 250 Personen. System-Verkabelung, Distanzstangen, Transportrollen inkl.',
+    detailDescription: `PA Set PREMIUM
+Die exklusiv Gala-PA für ihr Event.
+Für hochwertige Acts (Live-Band, Orchester oder DJ), wo dezente Optik bei maximalem
+Sound entscheidend sind, ist unsere neue Gala/Concert PA von Zenit Audio (Made in
+Germany) die richtige Wahl. Trotz kompakter Abmessungen und geringem Gewicht,
+lassen sich bis zu 250 Personen adäquat beschallen. Komplett mit System-Verkabelung,
+höhenverstellbaren Distanzstangen und Transportrollen.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/pasetpremium2.webp',
       '/images/audiozenit-1920w.webp',
@@ -555,8 +707,23 @@ Lichteffekt anstatt der Nebelmaschine.`,
   {
     id: 'pa-set-outdoor',
     name: 'PA Set OUTDOOR',
-    description: 'Wenn es größere Flächen im Außenbereich zu beschallen gilt, wo längere Strecken überbrückt werden müssen, empfehlen sich passive Lautsprecher, die mit einem einzigen Kabel anschließbar sind. Die spritzwasser-geschützten Lautsprecher halten auch Regen und Wind stand und sind somit auch bei ungünstigem Wetter einsetzbar. Das Set kann einfach durch weitere Lautsprecher erweitert werden.',
-    detailDescription: `Wenn es größere Flächen im Außenbereich zu beschallen gilt, wo längere Strecken überbrückt werden müssen, empfehlen sich passive Lautsprecher, die mit einem einzigen Kabel anschließbar sind. Die spritzwasser-geschützten Lautsprecher halten auch Regen und Wind stand und sind somit auch bei ungünstigem Wetter einsetzbar. Das Set kann einfach durch weitere Lautsprecher erweitert werden.`,
+    description: 'Arbeitstiere für Events im Freien. Passive Lautsprecher, spritzwasser-geschützt. 100-500 Personen (Sprache). Erweiterbar. Stromgeneratoren ebenfalls verfügbar.',
+    detailDescription: `PA Set OUTDOOR
+PERSONENANZAHL: 100-500 (Sprache)
+
+Arbeitstiere für Events im Freien.
+Wenn es größere Flächen im Außenbereich zu beschallen gilt, wo längere Strecken
+überbrückt werden müssen, empfehlen sich passive Lautsprecher, die mit einem
+einzigen Kabel anschließbar sind. Die spritzwasser-geschützten Lautsprecher halten
+auch Regen und Wind stand und sind somit auch bei ungünstigem Wetter einsetzbar.
+Die zugehörige Elektronik (Verstärker, Mischpult) muss vor Regen geschützt stehen. Das
+Set kann einfach durch weitere Lautsprecher erweitert werden. Wir vermieten auch
+passende Stromgeneratoren für mobile Einsätze.
+
+Lautsprecher mieten leicht gemacht: Passive Lautsprecher erhalten Sie bei uns
+ausschließlich mit passenden Verstärkern, ggf. Controllern und Kabeln. Damit lässt sich
+in der Regel eine Beschädigung / Überlastung vermeiden. Bitte befolgen Sie unsere
+Hinweise zum Anschluss und Inbetriebnahme bei Abholung.`,
     images: [
       '/images/pasetoutdoor.webp',
       '/images/pa set OUTDOOR/SetP.webp',
@@ -581,8 +748,22 @@ Lichteffekt anstatt der Nebelmaschine.`,
     id: 'profi-pa-line-array-event-26a',
     name: 'Profi PA / Line-Array Event 26A',
     priceUnitLabel: 'Tag',
-    description: 'Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe. Sie sollten für den Transport und Aufbau 2 Personen einplanen.',
-    detailDescription: `Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe. Sie sollten für den Transport und Aufbau 2 Personen einplanen.`,
+    description: 'Professionelles Line Array von DAS Audio. Skalierbar, bis 1.500 Personen. Small/Medium an Endverbraucher. Transport: 2 Personen.',
+    detailDescription: `Profi PA / Line-Array Event26A
+Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen
+Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das
+System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe.
+Werden mehr als 4 Topteile pro Seite benutzt, muss das System geflogen werden, hierzu
+ist geschultes Fachpersonal erforderlich, weshalb wir nur die Varianten Small und
+Medium an Endverbraucher vermieten. Sie sollten für den Transport und Aufbau 2
+Personen einplanen.
+
+Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
+größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
+Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
+auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
+Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
+Abholung mit der von uns empfohlenen Voreinstellung.`,
     images: [
       '/images/paprofi1.webp',
       '/images/paprofi2.webp',
@@ -608,7 +789,6 @@ Lichteffekt anstatt der Nebelmaschine.`,
       { label: 'Gewicht', value: 'ab 150 kg' },
       { label: 'Transport', value: 'Transporter' },
       { label: 'Gewicht', value: '16,5 kg (Top) / 37 kg (Bass)' },
-      { label: 'Outdoor', value: 'Ja (IP44)' },
     ],
   },
 

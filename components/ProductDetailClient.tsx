@@ -6,6 +6,38 @@ import { ChevronLeft, ChevronRight, Volume2, Lightbulb, Cloud, Cable } from 'luc
 import { motion, AnimatePresence } from 'framer-motion';
 import { getSpecDisplayLabel } from '@/lib/specDisplayLabels';
 
+/** Erster Absatz = Header (Produktname fett), Rest = Fließtext */
+function ProductDescriptionWithHeader({ text }: { text: string }) {
+  const trimmed = text.trim();
+  const firstBreak = trimmed.indexOf('\n\n');
+  const header = firstBreak >= 0 ? trimmed.slice(0, firstBreak).trim() : trimmed;
+  const body = firstBreak >= 0 ? trimmed.slice(firstBreak + 2).trim() : '';
+
+  const headerLines = header.split('\n');
+  const productName = headerLines[0] ?? '';
+  const headerRest = headerLines.slice(1).join('\n');
+
+  return (
+    <div className="space-y-5">
+      <div className="border-b border-gray-200 pb-4 space-y-1">
+        <p className="text-xl md:text-2xl font-bold text-gray-900 leading-snug">
+          {productName}
+        </p>
+        {headerRest ? (
+          <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+            {headerRest}
+          </p>
+        ) : null}
+      </div>
+      {body ? (
+        <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+          {body}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 // Icon-Mapping für Client-Komponente
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Volume2,
@@ -211,9 +243,7 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
             >
               <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200">
                 <h2 className="sr-only">Beschreibung</h2>
-                <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
-                  {tabs.beschreibung.text}
-                </p>
+                <ProductDescriptionWithHeader text={tabs.beschreibung.text} />
               </div>
             </motion.div>
           )}
