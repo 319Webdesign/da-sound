@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Datenschutz',
-  description: 'Datenschutzerklärung von da-sound Veranstaltungstechnik.',
+  title: 'Datenschutz – Datenschutzerklärung | da-sound',
+  description:
+    'Datenschutzerklärung von da-sound Veranstaltungstechnik. Informationen zum Schutz Ihrer Daten bei der Anmietung von PA-Anlagen und Event-Technik in Pfungstadt.',
   alternates: { canonical: '/datenschutz' },
-  robots: { index: false, follow: true },
+  openGraph: {
+    title: 'Datenschutz | da-sound Veranstaltungstechnik',
+    description: 'Informationen zum Schutz Ihrer persönlichen Daten.',
+    url: '/datenschutz',
+  },
 };
 
 export default function DatenschutzLayout({
@@ -12,5 +17,5 @@ export default function DatenschutzLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <>{children}</>;
 }

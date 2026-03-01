@@ -33,12 +33,12 @@ export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const category = getCategoryBySlug(slug);
   if (!category) return {};
-  const title = `${category.title} mieten`;
+  const title = `${category.title} mieten in Pfungstadt & Darmstadt`;
   const description =
     category.longDescription ||
-    `${category.title} – ${category.description} da-sound Veranstaltungstechnik Pfungstadt.`;
+    `${category.title} mieten bei da-sound in Pfungstadt & Darmstadt. ${category.description} Professionelle Veranstaltungstechnik, Abholung oder Lieferung in Südhessen.`;
   return {
-    title,
+    title: `${title} | da-sound`,
     description,
     alternates: { canonical: `/kategorien/${slug}` },
     openGraph: {

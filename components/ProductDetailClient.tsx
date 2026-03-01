@@ -241,9 +241,20 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200">
-                <h2 className="sr-only">Beschreibung</h2>
-                <ProductDescriptionWithHeader text={tabs.beschreibung.text} />
+              <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200 space-y-8">
+                <div>
+                  <h2 className="sr-only">Beschreibung</h2>
+                  <ProductDescriptionWithHeader text={tabs.beschreibung.text} />
+                </div>
+                <div className="border-t border-gray-200 pt-8">
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Service-Vorteile</h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    Mit da-sound mieten Sie professionelle <strong>Veranstaltungstechnik</strong> in Südhessen – 
+                    bequem per <strong>Abholung</strong> ab unserem Lager in Pfungstadt oder Lieferung in Darmstadt 
+                    und Umgebung. Ob Ton, Licht oder Bühne: Wir liefern alles aus einer Hand. Transparente Preise, 
+                    kompetente Beratung und technische Unterstützung inklusive.
+                  </p>
+                </div>
               </div>
             </motion.div>
           )}

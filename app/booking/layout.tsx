@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Booking & Anfrage',
+  title: 'Equipment & DJ buchen – Veranstaltungstechnik mieten Pfungstadt & Darmstadt',
   description:
-    'Veranstaltungstechnik buchen bei da-sound Pfungstadt. Einfach Termin und Equipment auswählen – wir liefern in Pfungstadt, Darmstadt und Südhessen.',
+    'Veranstaltungstechnik und DJ-Service buchen: PA-Anlagen, Licht, DJ, Solomusiker oder Live-Band. Unverbindliche Anfrage für Events in Pfungstadt, Darmstadt und Südhessen.',
   alternates: { canonical: '/booking' },
   openGraph: {
-    title: 'Booking & Anfrage | da-sound Veranstaltungstechnik',
-    description:
-      'Veranstaltungstechnik buchen bei da-sound Pfungstadt. Termin und Equipment auswählen – Lieferung in Südhessen.',
+    title: 'Equipment & DJ buchen | da-sound Veranstaltungstechnik',
+    description: 'Equipment mieten oder DJ-Service buchen – Ihre unverbindliche Anfrage.',
     url: '/booking',
   },
 };
@@ -18,5 +17,5 @@ export default function BookingLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <>{children}</>;
 }

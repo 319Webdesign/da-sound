@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Kontakt',
+  title: 'Kontakt – da-sound Veranstaltungstechnik Pfungstadt & Darmstadt',
   description:
-    'Kontakt zu da-sound Veranstaltungstechnik in Pfungstadt. Öffnungszeiten, Anfahrt, WhatsApp und Kontaktformular – wir beraten Sie gerne.',
+    'Kontakt zu da-sound: Veranstaltungstechnik mieten in Pfungstadt & Darmstadt. Beratung per Telefon, E-Mail oder WhatsApp. Wormser Str. 23, 64319 Pfungstadt.',
   alternates: { canonical: '/kontakt' },
   openGraph: {
-    title: 'Kontakt | da-sound Veranstaltungstechnik Pfungstadt',
-    description: 'Kontakt, Öffnungszeiten und Anfahrt – da-sound in Pfungstadt.',
+    title: 'Kontakt | da-sound Veranstaltungstechnik',
+    description:
+      'Wir beraten Sie persönlich zu Ihrer Veranstaltung – Ton, Licht und Bühne für Events in Südhessen.',
     url: '/kontakt',
   },
 };
@@ -17,5 +18,5 @@ export default function KontaktLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <>{children}</>;
 }

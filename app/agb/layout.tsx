@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AGB',
-  description: 'Allgemeine Geschäftsbedingungen (AGB) von da-sound Veranstaltungstechnik, Pfungstadt.',
+  title: 'AGB – Allgemeine Geschäftsbedingungen | da-sound',
+  description:
+    'Allgemeine Geschäftsbedingungen von da-sound Veranstaltungstechnik. Mietbedingungen, Zahlung, Rückgabe für PA-Anlagen, Lichttechnik und Equipment in Pfungstadt.',
   alternates: { canonical: '/agb' },
-  robots: { index: false, follow: true },
+  openGraph: {
+    title: 'AGB | da-sound Veranstaltungstechnik',
+    description: 'Allgemeine Geschäftsbedingungen für die Anmietung von Veranstaltungstechnik.',
+    url: '/agb',
+  },
 };
 
 export default function AGBLayout({
@@ -12,5 +17,5 @@ export default function AGBLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <>{children}</>;
 }
