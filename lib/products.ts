@@ -127,8 +127,9 @@ der Nebelmaschine.`,
 1 x LED Licht-Set mit Laser & Stativ in weiß
 8 x Akku LED Uplights Ambientebeleuchtung in weiß`,
     detailDescription: `Party-Set "WHITE"
-Für eine unvergessliche Hochzeitsfeier "ganz in weiß" oder die Mottoparty / das
-Firmenevent, wo eine dezentere Optik gefragt ist. Alle Kompomenten sind in weiß
+Für eine unvergessliche Hochzeitsfeier
+
+"ganz in weiß" oder die Mottoparty / das Firmenevent, wo eine dezentere Optik gefragt ist. Alle Kompomenten sind in weiß
 gehalten. Noch dazu ist das Set einfach zu transportieren und auch für Laien nach
 kurzer Einweisung verständlich aufzubauen und zu bedienen.
 
@@ -396,10 +397,8 @@ Abholung mit der von uns empfohlenen Voreinstellung.`,
     id: 'sub-sat-set-bluetooth',
     name: 'Sub-Sat Set Bluetooth',
     description: 'Kompakte Klein-PA mit 12-Zoll Sub, 700W RMS. EQ Presets: Music, DJ, Sprache, Neutral. Bluetooth. Lautsprecherstative inkl.',
-    detailDescription: `Sub-Sat-Set Bluetooth
-QUICK-FACTS: Personenzahl bis 50
+    detailDescription: `Kompakte Klein-PA für reichlich Spaß
 
-Kompakte Klein-PA für reichlich Spaß
 Dieses handliche aber kraftvolle 2.1 System besteht aus einem 12-Zoll Aktiv-Subwoofer
 mit 700W RMS Leistung (500W Sub + 2x 100W Satelliten). Es stehen verschiedene EQ
 Presets zur Auswahl: Music, DJ, Sprache, Neutral. Die Verbindung zu eurem Smartphone
@@ -423,7 +422,7 @@ Abholung mit der von uns empfohlenen Voreinstellung.`,
     pricePerPair: 70,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Personen', value: '1-80' },
+      { label: 'Personen', value: '1-50' },
       { label: 'Indoor', value: 'Indoor' },
       { label: 'Leistung', value: '700W' },
       { label: 'Schalldruck', value: '121,5 dB' },
@@ -709,9 +708,8 @@ Abholung mit der von uns empfohlenen Voreinstellung.`,
     name: 'PA Set OUTDOOR',
     description: 'Arbeitstiere für Events im Freien. Passive Lautsprecher, spritzwasser-geschützt. 100-500 Personen (Sprache). Erweiterbar. Stromgeneratoren ebenfalls verfügbar.',
     detailDescription: `PA Set OUTDOOR
-PERSONENANZAHL: 100-500 (Sprache)
-
 Arbeitstiere für Events im Freien.
+
 Wenn es größere Flächen im Außenbereich zu beschallen gilt, wo längere Strecken
 überbrückt werden müssen, empfehlen sich passive Lautsprecher, die mit einem
 einzigen Kabel anschließbar sind. Die spritzwasser-geschützten Lautsprecher halten
@@ -735,7 +733,7 @@ Hinweise zum Anschluss und Inbetriebnahme bei Abholung.`,
     pricePerPair: 105,
     categorySlug: 'pa-anlagen',
     specs: [
-      { label: 'Personen', value: '1-200 (500) Sprache' },
+      { label: 'Personen', value: '100-500' },
       { label: 'Indoor', value: 'Indoor & Outdoor' },
       { label: 'Leistung', value: '1.000W' },
       { label: 'Schalldruck', value: '131 dB' },
@@ -750,8 +748,9 @@ Hinweise zum Anschluss und Inbetriebnahme bei Abholung.`,
     priceUnitLabel: 'Tag',
     description: 'Professionelles Line Array von DAS Audio. Skalierbar, bis 1.500 Personen. Small/Medium an Endverbraucher. Transport: 2 Personen.',
     detailDescription: `Profi PA / Line-Array Event26A
-Das professionelle Line Array Event 26 von DAS Audio begeistert durch hochwertigen
-Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das
+Das professionelle Line Array Event 26 von DAS Audio
+
+begeistert durch hochwertigen Sound und präzises Abstrahlverhalten. Ob für Live-Musik, Messe-Events oder Gala, das
 System kann je nach Bedarf skaliert werden durch zufügen weiterer Topteile / Bässe.
 Werden mehr als 4 Topteile pro Seite benutzt, muss das System geflogen werden, hierzu
 ist geschultes Fachpersonal erforderlich, weshalb wir nur die Varianten Small und

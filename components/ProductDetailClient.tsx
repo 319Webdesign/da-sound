@@ -6,33 +6,56 @@ import { ChevronLeft, ChevronRight, Volume2, Lightbulb, Cloud, Cable } from 'luc
 import { motion, AnimatePresence } from 'framer-motion';
 import { getSpecDisplayLabel } from '@/lib/specDisplayLabels';
 
-/** Erster Absatz = Header (Produktname fett), Rest = Fließtext */
+/** Erster Absatz = Header. Produktname (1. Zeile) wird übersprungen – H1 ist der Satz danach. Rest = Fließtext. */
 function ProductDescriptionWithHeader({ text }: { text: string }) {
   const trimmed = text.trim();
   const firstBreak = trimmed.indexOf('\n\n');
   const header = firstBreak >= 0 ? trimmed.slice(0, firstBreak).trim() : trimmed;
   const body = firstBreak >= 0 ? trimmed.slice(firstBreak + 2).trim() : '';
 
-  const headerLines = header.split('\n');
-  const productName = headerLines[0] ?? '';
-  const headerRest = headerLines.slice(1).join('\n');
+  const headerLines = header.split('\n').filter(Boolean);
+  // Produktname (1. Zeile) entfernen, da oben bereits angezeigt – H1 = Satz danach
+  const h1Line = headerLines.length >= 2 ? headerLines[1] : headerLines[0] ?? '';
+  const headerRest = headerLines.length >= 2 ? headerLines.slice(2).join('\n') : '';
 
   return (
-    <div className="space-y-5">
-      <div className="border-b border-gray-200 pb-4 space-y-1">
-        <p className="text-xl md:text-2xl font-bold text-gray-900 leading-snug">
-          {productName}
+    <div className="space-y-1 min-w-0">
+      <div className="space-y-1 min-w-0">
+        <p className="text-xl font-semibold text-gray-900 leading-snug">
+          {h1Line}
         </p>
         {headerRest ? (
-          <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+          <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line break-words min-w-0">
             {headerRest}
           </p>
         ) : null}
       </div>
       {body ? (
-        <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
-          {body}
-        </p>
+        <div className="space-y-4 min-w-0">
+          {body.split(/\n\n+/).map((paragraph, i) => {
+            const boldPhrase = 'Lautsprecher mieten leicht gemacht:';
+            if (paragraph.startsWith(boldPhrase)) {
+              const rest = paragraph.slice(boldPhrase.length).trim();
+              return (
+                <div key={i} className="space-y-1 min-w-0 border-t-2 border-gray-300 pt-6 mt-6">
+                  <p className="text-xl font-semibold text-gray-900">
+                    {boldPhrase}
+                  </p>
+                  {rest ? (
+                    <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line break-words overflow-visible">
+                      {rest}
+                    </p>
+                  ) : null}
+                </div>
+              );
+            }
+            return (
+              <p key={i} className="text-base text-gray-700 leading-relaxed whitespace-pre-line break-words min-w-0 overflow-visible">
+                {paragraph}
+              </p>
+            );
+          })}
+        </div>
       ) : null}
     </div>
   );
@@ -183,7 +206,7 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
   return (
     <div>
       {/* Tab Navigation */}
-      <div className="flex flex-wrap gap-2 mb-8 border-b border-gray-200">
+      <div className="flex flex-wrap gap-2 mb-8 border-b-2 border-gray-300">
         {tabs.beschreibung && (
           <button
             onClick={() => setActiveTab('beschreibung')}
@@ -242,13 +265,13 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
               transition={{ duration: 0.3 }}
             >
               <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200 space-y-8">
-                <div>
+                <div className="max-w-3xl min-w-0">
                   <h2 className="sr-only">Beschreibung</h2>
                   <ProductDescriptionWithHeader text={tabs.beschreibung.text} />
                 </div>
-                <div className="border-t border-gray-200 pt-8">
+                <div className="max-w-3xl min-w-0 border-t-2 border-gray-300 pt-8">
                   <h2 className="text-xl font-semibold text-gray-900 mb-4">Service-Vorteile</h2>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed break-words min-w-0">
                     Mit da-sound mieten Sie professionelle <strong>Veranstaltungstechnik</strong> in Südhessen – 
                     bequem per <strong>Abholung</strong> ab unserem Lager in Pfungstadt oder Lieferung in Darmstadt 
                     und Umgebung. Ob Ton, Licht oder Bühne: Wir liefern alles aus einer Hand. Transparente Preise, 
@@ -284,9 +307,11 @@ export function ProductTabs({ tabs, productId, productName = '' }: ProductTabsPr
             >
               <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200">
                 <h2 className="sr-only">Anwendung</h2>
-                <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
-                  {tabs.anwendung.text}
-                </p>
+                <div className="max-w-3xl min-w-0">
+                  <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line break-words min-w-0">
+                    {tabs.anwendung.text}
+                  </p>
+                </div>
               </div>
             </motion.div>
           )}
