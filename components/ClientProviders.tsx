@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { MotionConfig } from 'framer-motion';
 import { RentalCartProvider } from '@/context/RentalCartContext';
 import CookieConsent from '@/components/CookieConsent';
 import AnalyticsScripts from '@/components/AnalyticsScripts';
+import EasterPopup from '@/components/EasterPopup';
 
 /**
  * Auf Mobilgeräten (≤768px) und bei prefers-reduced-motion werden alle
@@ -45,6 +46,9 @@ export default function ClientProviders({ children }: { children: React.ReactNod
     <RentalCartProvider>
       <MotionConfigMobile>
         {children}
+        <Suspense fallback={null}>
+          <EasterPopup />
+        </Suspense>
         <CookieConsent />
         <AnalyticsScripts />
       </MotionConfigMobile>
