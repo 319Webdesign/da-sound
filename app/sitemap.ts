@@ -2,7 +2,8 @@ import { MetadataRoute } from 'next';
 import { categories } from '@/lib/categories';
 import { products } from '@/lib/products';
 
-const SITE_URL = 'https://da-sound.de';
+// Canonical URL: www ist die finale Domain (da-sound.de wird dorthin umgeleitet)
+const SITE_URL = 'https://www.da-sound.de';
 
 type SitemapChangefreq =
   | 'always'
