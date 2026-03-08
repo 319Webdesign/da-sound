@@ -203,7 +203,7 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
         href={detailUrl}
         className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg mt-auto text-sm"
       >
-        Details ansehen
+        {product.title} ansehen
         <ArrowRight className="w-4 h-4" />
       </Link>
     </div>

@@ -60,7 +60,7 @@ export const data = {
     ],
     price: '49€',
     pricePeriod: '/ Tag',
-    ctaText: 'Zur Produktseite',
+    ctaText: 'Speech 100 Konferenzsystem entdecken',
     productUrl: '/produkte/speech-100-konferenzsystem', // Dashboard: URL zur Produktseite
   },
 };

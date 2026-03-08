@@ -30,7 +30,8 @@ const staticRoutes: {
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  // Fixer Zeitstempel für Google Re-Crawl-Priorisierung (2026-03-08)
+  const lastModified = new Date('2026-03-08');
 
   const staticEntries = staticRoutes.map(route => ({
     url: new URL(route.path, SITE_URL).toString(),

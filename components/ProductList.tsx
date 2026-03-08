@@ -482,7 +482,7 @@ export default function ProductList({ products }: ProductListProps) {
                     href={`/produkte/${product.id}`}
                     className="flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-lg font-semibold transition-all"
                   >
-                    Details
+                    {product.name} ansehen
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <button

@@ -112,7 +112,7 @@ export default function EventPaketeSection() {
               href="/leistungen#lieferservice"
               className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn w-full md:w-auto"
             >
-              Details ansehen
+              Lieferservice Details ansehen
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -143,7 +143,7 @@ export default function EventPaketeSection() {
                   href="/leistungen#edeka-festanhaenger"
                   className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-primary px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn w-full md:w-auto"
                 >
-                  Details ansehen
+                  EDEKA Festanhänger Details ansehen
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -196,7 +196,7 @@ export default function EventPaketeSection() {
                       )}
                     </div>
                     <div className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn w-full md:w-auto">
-                      Details ansehen
+                      {paket.title} Details ansehen
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -238,7 +238,7 @@ export default function EventPaketeSection() {
                 href="/leistungen#kuenstlervermittlung"
                 className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm group/btn w-full md:w-auto"
               >
-                Details ansehen
+                Künstlervermittlung Details ansehen
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
