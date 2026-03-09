@@ -798,16 +798,17 @@ Abholung mit der von uns empfohlenen Voreinstellung.`,
     description: 'Digitales Mischpult der Extraklasse mit internem 96kHz Processing. Logischer Workflow und ein großes Touch-Display erlauben eine intuitive Bedienung nach kurzer Einarbeitung.',
     detailDescription: `Allen & Heath SQ-5
 Digitales Mischpult der Extraklasse
-Digitales Mischpult der Extraklasse mit internem 96kHz Processing. Logischer Workflow und ein großes Touch-Display erlauben eine intuitive Bedienung nach kurzer Einarbeitung.
 
-Technische Daten:
-16/24/48 IN / 12 OUT
-8 FX Engines
-7" Touchdisplay
-S-Link via CAT5 Kabel
-Wifi ja mit ext. Router
-32 x 32 USB Interface, Multitrack USB Recording
-22 kg inkl. Flightcase`,
+Das SQ-5 gehört mittlerweile zum Industriestandard und zeichnet sich durch einen
+intuitiven Workflow und das interne 96kHz Processing aus. Das absolut flexible
+Signalrouting, ein gut ablesbares und klar strukturiertes Touch Display und die
+umfassende Ausstattung mit Dynamik- und Effektprozessoren machen es zum Allround-
+Tool für Live-Sound und Recording-Anwendungen.
+
+Digital Mischpult mieten bei da-sound: Auch als Laie können Sie die Vorteile von voll
+ausgestatteten Digitalpulten nutzen. Im speziellen die DM Serie von Yamaha bietet eine
+reichhaltige Auswahl von Presets, die alle Einstellungen für verschiedene Live- oder
+Recording-Anwendungen bereitstellen.`,
     images: [
       '/images/sq5c-1920w.webp',
       '/images/allen heath sq5/sq5c.webp',
@@ -835,7 +836,12 @@ Wifi ja mit ext. Router
     description: 'Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Über nur ein CAT5E Netzwerkabel können 24 Eingangskanäle und 12 Ausgangskanäle digital und störungsfrei von der Bühne zum Frontplatz übertragen werden. Inkl. 50m CAT5E Netzwerkkabel auf Trommel.',
     detailDescription: `Allen & Heath AR2412
 Digitale Stagebox / Bühnenverteilung
-Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Über nur ein CAT5E Netzwerkabel können 24 Eingangskanäle und 12 Ausgangskanäle digital und störungsfrei von der Bühne zum Frontplatz übertragen werden. Inkl. 50m CAT5E Netzwerkkabel auf Trommel.`,
+
+Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Über nur ein
+CAT5E Netzwerkabel können 24 Eingangskanäle und 12 Ausgangskanäle digital und
+störungsfrei von der Bühne zum Frontplatz übertragen werden. Die AR2412 verfügt über
+eigene 24 hochwertige, rauscharme Mikrofonvorverstärker. Somit kann die SQ-5 Konsole
+um weitere Eingänge erweitert werden. Inkl. 50m CAT5E Netzwerkkabel auf Trommel.`,
     images: [
       '/images/ar2412_1-1920w.webp',
       '/images/allen heath ar2412/ar2412.webp',
@@ -861,16 +867,17 @@ Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Üb
     description: 'Digitales Mischpult mit innovativer Bedienoberfläche. Fertige Presets für unterschiedliche Live- oder Recording Anwendungen machen dieses Mischpult zum professionellen Werkzeug auch für Laien. Die überragende Soundqualität wurde von den zum Industriestandard zählenden Yamaha Live Consolen übernommen.',
     detailDescription: `Yamaha DM-3
 Digitales Mischpult mit innovativer Bedienoberfläche
-Digitales Mischpult mit innovativer Bedienoberfläche. Fertige Presets für unterschiedliche Live- oder Recording Anwendungen machen dieses Mischpult zum professionellen Werkzeug auch für Laien. Die überragende Soundqualität wurde von den zum Industriestandard zählenden Yamaha Live Consolen übernommen.
 
-Technische Daten:
-16 IN / 8 OUT
-2 FX Engines
-9" Touchdisplay
-DANTE
-Wifi ja mit ext. Router
-USB Audio Playback, USB Interface, Stereo USB Recording
-15 kg inkl. Flightcase`,
+Digitales Mischpult mit innovativer Bedienoberfläche. Fertige Presets für
+unterschiedliche Live- oder Recording Anwendungen machen dieses Mischpult zum
+professionellen Werkzeug auch für Laien. Die überragende Soundqualität wurde von den zum Industriestandard zählenden Yamaha Live Konsolen übernommen. Die Anzahl der
+Ein- und Ausgänge ist auf 16 IN / 8 OUT begrenzt. Das große 9-Zoll Touchdisplay
+erleichtert die Bedienung und zeigt alle wichtigen Parameter grafisch an.
+
+Digital Mischpult mieten bei da-sound: Auch als Laie können Sie die Vorteile von voll
+ausgestatteten Digitalpulten nutzen. Im speziellen die DM Serie von Yamaha bietet eine
+reichhaltige Auswahl von Presets, die alle Einstellungen für verschiedene Live- oder
+Recording-Anwendungen bereitstellen.`,
     images: [
       '/images/dm3_2-1920w.webp',
       '/images/yamaha dm3/dm3_1.webp',
@@ -903,7 +910,11 @@ USB Audio Playback, USB Interface, Stereo USB Recording
     description: 'Dante-fähige digitale Stagebox mit 16 Inputs und 8 Outputs. Kaskadierbar mit weiteren Einheiten. Die Signale werden somit störungsfrei von der Bühne zum Mischpult transportiert über ein CAT6E Netzwerkkabel, 50m Kabel sind im Mietpreis enthalten.',
     detailDescription: `Yamaha TIO-1608D
 Dante-fähige digitale Stagebox
-Dante-fähige digitale Stagebox mit 16 Inputs und 8 Outputs. Kaskadierbar mit weiteren Einheiten. Die Signale werden somit störungsfrei von der Bühne zum Mischpult transportiert über ein CAT6E Netzwerkkabel, 50m Kabel sind im Mietpreis enthalten.`,
+
+Digitale Stagebox mit 16 Inputs und 8 Outputs. DANTE-Protokoll, damit auch in anderen
+Netzwerkumgebungen als In/Out Device einsetzbar. Die Signale werden störungsfrei von
+der Bühne zum Mischpult transportiert über ein CAT6E Netzwerkkabel, 50m Kabel sind
+im Mietpreis enthalten.`,
     images: [
       '/images/tio1608D-1920w.webp',
       '/images/yamaha tio1608D/tio1608D.webp',
@@ -929,16 +940,18 @@ Dante-fähige digitale Stagebox mit 16 Inputs und 8 Outputs. Kaskadierbar mit we
     description: 'Analoges Live Mischpult der Profiklasse. Bewährter "Dynacord Sound" mit 2 digitalen Effektgeräten und einem 4-Band EQ pro Kanal, sowie zusätzlichen Filtern machen dieses Mischpult zum Garant für einen guten, analogen Live Sound!',
     detailDescription: `DYNACORD CMS 1600-3
 Analoges Live Mischpult der Profiklasse
-Analoges Live Mischpult der Profiklasse. Bewährter "Dynacord Sound" mit 2 digitalen Effektgeräten und einem 4-Band EQ pro Kanal, sowie zusätzlichen Filtern machen dieses Mischpult zum Garant für einen guten, analogen Live Sound!
 
-Technische Daten:
-16/20 IN / 4 OUT
-2 FX Engines
-OLED Display
-Network nein
-Wifi nein
-2x2 USB Interface
-22 kg inkl. Flightcase`,
+Bewährter "Dynacord Sound" mit 2 digitalen Effektgeräten, 4-Band EQ pro Kanal, sowie
+zusätzlichen VOICE-Filtern machen dieses Mischpult zum Garant für einen guten,
+analogen Live Sound! Insgesamt stehen 16 Mikrofon-Eingänge und 4 Stereo Eingänge für
+maximale Variabilität zur Verfügung. Ein grafischer Summen-EQ rundet die vollwertige
+Ausstattung ab.
+
+Analoge Mischpulte mieten bei da-sound: Wer noch echte Regler, Fader und Potis
+bevorzugt, wird mit digitalen Mischpulten nicht glücklich. Ehrlichen Live-Sound und eine
+intuitive Bedienbarkeit gibt's nur mit klassischen Analogmischpulten. DYNACORD und
+MACKIE bieten nicht nur hochwertige Pre-Amps sondern auch robuste, road-taugliche
+und grundsolide Qualität.`,
     images: [
       '/images/cms1600_1-1920w.webp',
       '/images/dynacord cms1600/cms1600_1.webp',
@@ -967,16 +980,19 @@ Wifi nein
     description: 'Professionelles 4-Kanal DJ Mischpult. Vermietung im Flightcase mit passenden Kabeln (USB / Netzwerk).',
     detailDescription: `Pioneer DJM-900 Nexus
 Professionelles 4-Kanal DJ Mischpult
-Professionelles 4-Kanal DJ Mischpult. Vermietung im Flightcase mit passenden Kabeln (USB / Netzwerk).
 
-Technische Daten:
-4 Stereo-IN / 3 Stereo-OUT
-dig. Special FX
-Beat/FX Display
-Pioneer ProDJ Link
-Wifi nein
-4x4 USB Interface
-12,5 kg inkl. Flightcase`,
+Der DJM-900NXS steht für Kreativität und bietet vielseitige Anschlussmöglichkeiten,
+aktuelle Spezial-Effekte und überwältigende Performance-Features, was ihn zum
+idealen Herzstück eines professionellen DJ-Setups macht.
+Für die Anforderungen des harten DJ-Alltags gebaut, verfügt dieser Mixer über robuste
+Fader und solide Audioschaltkreise, die wenig Pflege brauchen und für eine lange
+Lebensdauer sorgen.
+
+Analoge Mischpulte mieten bei da-sound: Wer noch echte Regler, Fader und Potis
+bevorzugt, wird mit digitalen Mischpulten nicht glücklich. Ehrlichen Live-Sound und eine
+intuitive Bedienbarkeit gibt's nur mit klassischen Analogmischpulten. DYNACORD und
+MACKIE bieten nicht nur hochwertige Pre-Amps sondern auch robuste, road-taugliche
+und grundsolide Qualität.`,
     images: [
       '/images/djm900_2-edae2eca-1920w.webp',
       '/images/pioneer djm900nx/djm900_1.webp',
@@ -1003,17 +1019,21 @@ Wifi nein
     name: 'Analoge MACKIE Mischpulte',
     description: 'Die ProFX Serie von Mackie zählt seit Jahren zu den zuverlässigsten und robusten Analog Mischpulten. Rauscharme Mikrofonvorverstärker und pegelfeste Summenverstärker sorgen für einen glasklaren Sound. Eingebaute Digitaleffekte und USB/Bluetooth Funktionalität.',
     detailDescription: `Analoge MACKIE Mischpulte
-Die ProFX Serie von Mackie
-Die ProFX Serie von Mackie zählt seit Jahren zu den zuverlässigsten und robusten Analog Mischpulten. Rauscharme Mikrofonvorverstärker und pegelfeste Summenverstärker sorgen für einen glasklaren Sound. Eingebaute Digitaleffekte und USB/Bluetooth Funktionalität.
+Die ProFX Serie von MACKIE
 
-Technische Daten:
-4-12 IN / 2 OUT
-1 Digital FX
-Display nein
-Network nein
-Wifi nein
-2x2 USB Interface
-ab 5 kg inkl. Koffer`,
+Für einfache Audioanwendungen vermieten wir verschiedene Mischpulte, die auch für
+Anfänger problemlos zu bedienen sind. Alle ProFX Mixer verfügen über ein digitales
+Effektgerät für Karaoke und Live-Gesang und ein USB-Audiointerface, um PC/Laptop zu
+verbinden.
+ProFX6: Kleinstmixer mit 2 Mikrofoneingängen und Bluetooth-Empfänger
+ProFX8: Kleinmixer mit 4 Mikrofoneingängen und 2 Stereo/Line Inputs
+ProFX12: Audiomixer mit 6 Mikrofoneingängen und 2 Stereo/Line Inputs
+
+Analoge Mischpulte mieten bei da-sound: Wer noch echte Regler, Fader und Potis
+bevorzugt, wird mit digitalen Mischpulten nicht glücklich. Ehrlichen Live-Sound und eine
+intuitive Bedienbarkeit gibt's nur mit klassischen Analogmischpulten. DYNACORD und
+MACKIE bieten nicht nur hochwertige Pre-Amps sondern auch robuste, road-taugliche
+und grundsolide Qualität.`,
     images: [
       '/images/E8734E62-1976-463C-8087-B75D6B73138C-1920w.webp',
       '/images/mackie profx serie/profx12.webp',
@@ -1048,14 +1068,7 @@ ab 5 kg inkl. Koffer`,
     description: 'Die Standardausstattung, die auf keiner Bühne fehlen darf. Robuste dynamische Mikrofone. Wahlweise für Gesang/Sprache (Shure Beta58a) oder Instrument, Amp, Blasinstrumente (Shure SM-57) jeweils mit Mikrofonständer von König & Meyer und 10m XLR Kabel.',
     detailDescription: `Shure Mikrofon Set SM58 / SM57
 Die Standardausstattung, die auf keiner Bühne fehlen darf
-Die Standardausstattung, die auf keiner Bühne fehlen darf. Robuste dynamische Mikrofone. Wahlweise für Gesang/Sprache (Shure Beta58a) oder Instrument, Amp, Blasinstrumente (Shure SM-57) jeweils mit Mikrofonständer von König & Meyer und 10m XLR Kabel.
-
-Technische Daten:
-Robuste dynamische Mikrofone
-Wahlweise für Gesang/Sprache (Shure Beta58a)
-Oder Instrument, Amp, Blasinstrumente (Shure SM-57)
-Inkl. Mikrofonständer von König & Meyer
-Inkl. 10m XLR Kabel`,
+Die Standardausstattung, die auf keiner Bühne fehlen darf. Robuste dynamische Mikrofone. Wahlweise für Gesang/Sprache (Shure Beta58a) oder Instrument, Amp, Blasinstrumente (Shure SM-57) jeweils mit Mikrofonständer von König & Meyer und 10m XLR Kabel.`,
     images: [
       '/images/micstandset-1920w.webp',
       '/images/shure mikrofon set/miccable_1.webp',
@@ -1087,14 +1100,7 @@ Zur Abnahme eines Standard Drumsets erhalten Sie hier ein Komplettpaket mit 7 Mi
 - 1 x Bassdrum Shure Beta52
 - 4 x Snare/Tom Clipmikros Beyerdynamic TG D58
 - 2 x Kondensatormikro für Hi Hat / Overhead), Lewitt LCL40
-- inkl. Stativen und XLR Kabeln
-
-Technische Daten:
-7 Mikrofone insgesamt
-1 x Bassdrum Mikrofon (Shure Beta52)
-4 x Snare/Tom Clipmikros (Beyerdynamic TG D58)
-2 x Kondensatormikro (Lewitt LCL40) für Hi Hat / Overhead
-Inkl. Stativen und XLR Kabeln`,
+- inkl. Stativen und XLR Kabeln`,
     images: [
       '/images/3A8023FD-AB53-4131-800A-A54D3D9CAEF8-1920w.webp',
       '/images/mikrofon set drums/drums_micset.webp',
@@ -1124,14 +1130,7 @@ Inkl. Stativen und XLR Kabeln`,
 Funkstrecken von Beyerdynamic
 Unsere Funkstrecken von Beyerdynamic wahlweise mit Handsender oder Headset / Kopfbügelmikrofon eigenen sich perfekt für Ansprachen, Reden, Moderation und Konferenzen. Sprache wird sauber und störungsfrei übertragen. Wahlweise Handmikrofon oder Headset mit Taschensender.
 
-Batterien (AA) sind nicht im Mietpreis enthalten.
-
-Technische Daten:
-Funkstrecken von Beyerdynamic
-Wahlweise mit Handsender oder Headset / Kopfbügelmikrofon
-Saubere und störungsfreie Übertragung
-Varianten: Handmikrofon oder Headset mit Taschensender
-Anwendung: Ansprachen, Reden, Moderation und Konferenzen`,
+Batterien (AA) sind nicht im Mietpreis enthalten.`,
     images: [
       '/images/beyertg550-c1a0fc40-1920w.webp',
       '/images/funkmikrofon moderation/beyertg500h.webp',
@@ -1160,15 +1159,7 @@ Anwendung: Ansprachen, Reden, Moderation und Konferenzen`,
 Zuverlässige Arbeitstiere für den Bühneneinsatz
 Shure stellt mit den neuen SLXD Funkstrecken zuverlässige Arbeitstiere für den Bühneneinsatz zur Verfügung. Erstklassige Übertragungssicherheit in Kombination mit dynamischer, rauscharmer Audioqualität sind für den Profieinsatz gewährleistet. Mehrere Funkstrecken lassen sich parallel betreiben. Wahlweise mit Beta58A oder Beta86 Kapsel. Auch mit Taschensender und Kopfbügelmikrofon (Nieren- oder Kugelcharakteristik) oder Lavaliermikrofon erhältlich.
 
-Batterien (AA) sind nicht im Mietpreis enthalten.
-
-Technische Daten:
-Shure SLXD Funkstrecken
-Erstklassige Übertragungssicherheit
-Dynamische, rauscharme Audioqualität
-Mehrere Funkstrecken parallel betreibbar
-Varianten: Beta58A oder Beta86 Kapsel, Taschensender mit Kopfbügelmikrofon (Nieren- oder Kugelcharakteristik) oder Lavaliermikrofon
-Profieinsatz geeignet`,
+Batterien (AA) sind nicht im Mietpreis enthalten.`,
     images: [
       '/images/slxd4e86-1920w (1).webp',
       '/images/profi funkmikrofon shure slxd/slxd1.webp',

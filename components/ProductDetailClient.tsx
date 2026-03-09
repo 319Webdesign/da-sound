@@ -33,8 +33,9 @@ function ProductDescriptionWithHeader({ text }: { text: string }) {
       {body ? (
         <div className="space-y-4 min-w-0">
           {body.split(/\n\n+/).map((paragraph, i) => {
-            const boldPhrase = 'Lautsprecher mieten leicht gemacht:';
-            if (paragraph.startsWith(boldPhrase)) {
+            const boldPhrases = ['Lautsprecher mieten leicht gemacht:', 'Digital Mischpult mieten bei da-sound:', 'Analoge Mischpulte mieten bei da-sound:', 'Veranstaltungstechnik mieten leicht gemacht:'];
+            const boldPhrase = boldPhrases.find(p => paragraph.startsWith(p));
+            if (boldPhrase) {
               const rest = paragraph.slice(boldPhrase.length).trim();
               return (
                 <div key={i} className="space-y-1 min-w-0 border-t-2 border-gray-300 pt-6 mt-6">
