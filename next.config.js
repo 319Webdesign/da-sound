@@ -1,11 +1,40 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Canonical: non-www → www, keine Weiterleitungsschleifen
+  // Canonical: non-www → www + SEO-Redirects nach Migration (Reihenfolge: spezifisch vor allgemein)
   async redirects() {
-    return [
-      { source: '/:path*', has: [{ type: 'host', value: 'da-sound.de' }], destination: 'https://www.da-sound.de/:path*', permanent: true },
+    const hostRedirect = {
+      source: '/:path*',
+      has: [{ type: 'host', value: 'da-sound.de' }],
+      destination: 'https://www.da-sound.de/:path*',
+      permanent: true,
+    };
+
+    // ─── 1. Rechtliches & Basis ─────────────────────────────────────────────
+    const rechtliches = [
+      { source: '/anfrage', destination: '/booking', permanent: true },
+      { source: '/anfrage/', destination: '/booking', permanent: true },
     ];
+    // /agb, /datenschutz, /impressum, /kontakt, /booking existieren unverändert – keine Redirects nötig
+
+    // ─── 2. Kategorien (alte Slugs → aktuelle Next.js-Slugs) ────────────────
+    const kategorien = [
+      { source: '/kategorien/pa-systeme', destination: '/kategorien/pa-anlagen', permanent: true },
+      { source: '/kategorien/pa-systeme/', destination: '/kategorien/pa-anlagen', permanent: true },
+      { source: '/kategorien/lichttechnik', destination: '/kategorien/statische-scheinwerfer-led-spots', permanent: true },
+      { source: '/kategorien/lichttechnik/', destination: '/kategorien/statische-scheinwerfer-led-spots', permanent: true },
+      { source: '/kategorien/tontechnik', destination: '/kategorien/mischpulte-mikrofone', permanent: true },
+      { source: '/kategorien/tontechnik/', destination: '/kategorien/mischpulte-mikrofone', permanent: true },
+      { source: '/kategorien/mikrofone', destination: '/kategorien/mischpulte-mikrofone', permanent: true },
+      { source: '/kategorien/mikrofone/', destination: '/kategorien/mischpulte-mikrofone', permanent: true },
+      { source: '/kategorien/effektmaschinen', destination: '/kategorien/nebelmaschinen-buehneneffekte', permanent: true },
+      { source: '/kategorien/effektmaschinen/', destination: '/kategorien/nebelmaschinen-buehneneffekte', permanent: true },
+      { source: '/kategorien/scheinwerfer', destination: '/kategorien/statische-scheinwerfer-led-spots', permanent: true },
+      { source: '/kategorien/scheinwerfer/', destination: '/kategorien/statische-scheinwerfer-led-spots', permanent: true },
+    ];
+    // moving-heads, pa-systeme (→ pa-anlagen) bereits abgedeckt; Rest identisch mit aktuellen Slugs
+
+    return [hostRedirect, ...rechtliches, ...kategorien];
   },
   // Performance-Optimierungen
   compress: true,
