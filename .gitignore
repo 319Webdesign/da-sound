@@ -25,6 +25,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# Google Cloud / secrets (niemals committen!)
+service-account.json
+
 # vercel
 .vercel
 

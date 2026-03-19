@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ClientProviders from "@/components/ClientProviders";
@@ -71,6 +72,18 @@ export default function RootLayout({
   return (
     <html lang={htmlLang} className={`overflow-x-hidden ${inter.variable}`}>
       <body className="overflow-x-hidden w-full font-sans">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-623175037"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-623175037');
+          `}
+        </Script>
         <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
