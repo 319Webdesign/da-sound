@@ -631,33 +631,28 @@ Abholung mit der von uns empfohlenen Voreinstellung.`,
   {
     id: 'pa-set-premium-mini',
     name: 'PA Set PREMIUM mini',
-    description: 'Minimale Optik trifft maximalen Sound. 100-150 Personen, German Engineering. Systemverkabelung & Distanzstangen inkl. Passt auf die Rücksitzbank.',
+    description: 'Minimale Optik trifft maximalen Sound. Dieses Platzwunder überrascht durch einen druckvollen Bass, transparente Mitten und glasklare Höhen. In Minutenschnelle aufgebaut, lassen sich damit problemlos 100-150 Personen beschallen. Dabei passt es auf die Rücksitzbank eines PKW.',
     detailDescription: `PA Set PREMIUM mini
 Minimale Optik trifft maximalen Sound.
-Dieses Platzwunder überrascht durch einen druckvollen Bass, transparente Mitten und
-glasklare Höhen. In Minutenschnelle aufgebaut, lassen sich damit problemlos 100-150
-Personen beschallen. Dies ist möglich durch German Engineering, die Lautsprecher
-werden in Deutschland entwickelt und hergestellt. Die benötigte Systemverkabelung
-sowie höhenverstellbare Distanzstangen sind im Mietpreis enthalten. Dabei passt das
-komplette Set spielend auf die Rücksitzbank eines PKW.
-
-Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
-größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
-Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
-auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
-Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
-Abholung mit der von uns empfohlenen Voreinstellung.`,
+Dieses Platzwunder überrascht durch einen druckvollen Bass, transparente Mitten und glasklare Höhen. In Minutenschnelle aufgebaut, lassen sich damit problemlos 100-150 Personen beschallen. Dabei passt es auf die Rücksitzbank eines PKW.`,
     images: [
-      '/images/PA Set PREMIUM mini/nl_8_1.webp',
-      '/images/PA Set PREMIUM mini/nlw12A.webp',
-      '/images/PA Set PREMIUM mini/nlw12set.webp',
+      '/images/PA Set PREMIUM mini/premium_mini1.jpeg',
+      '/images/PA Set PREMIUM mini/premium_mini2.jpeg',
+      '/images/PA Set PREMIUM mini/premium_mini3.jpeg',
+      '/images/PA Set PREMIUM mini/premium_mini4.jpeg',
+    ],
+    galleryImages: [
+      '/images/PA Set PREMIUM mini/premium_mini1.jpeg',
+      '/images/PA Set PREMIUM mini/premium_mini2.jpeg',
+      '/images/PA Set PREMIUM mini/premium_mini3.jpeg',
+      '/images/PA Set PREMIUM mini/premium_mini4.jpeg',
     ],
     pricePerUnit: 120,
     pricePerPair: 180,
-    categorySlug: 'pa-anlagen',
+    categorySlug: 'party-sets-ton-licht',
     specs: [
       { label: 'Personen', value: '1-150' },
-      { label: 'Indoor', value: 'Indoor' },
+      { label: 'Verwendung', value: 'Indoor' },
       { label: 'Leistung', value: '4.600W' },
       { label: 'Schalldruck', value: '132 dB' },
       { label: 'Bluetooth', value: 'Nein' },
