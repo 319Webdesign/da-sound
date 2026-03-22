@@ -14,6 +14,7 @@ export interface Product {
   priceOptions?: { label: string; price: number }[];
   priceUnitLabel?: string; // z. B. "Paar" statt "Stück"
   isUpgradeKit?: boolean; // Markiert Zusatzartikel/Upgrade-Kits
+  availableUntil?: string; // ISO-Datum (YYYY-MM-DD): Produkt wird ab diesem Datum ausgeblendet
 }
 
 export const products: Product[] = [
@@ -430,6 +431,7 @@ Abholung mit der von uns empfohlenen Voreinstellung.`,
       { label: 'Gewicht', value: '31 kg' },
       { label: 'Transport', value: 'Kleinwagen / PKW' },
     ],
+    availableUntil: '2026-03-31',
   },
   {
     id: 'pa-saeule-bluetooth',
@@ -1881,6 +1883,7 @@ Empfohlener Abstand: mindestens 4 Meter zur bestrahlenden Fläche`,
       { label: 'DMX', value: 'Stand-Alone / DMX' },
       { label: 'Gewicht', value: '3,3 kg' },
     ],
+    availableUntil: '2026-03-31',
   },
   {
     id: '50cm-spiegelkugel-set',
@@ -2953,18 +2956,29 @@ Mietpreis 6x3m: 50,- €`,
   },
 ];
 
+function isProductAvailable(product: Product): boolean {
+  if (!product.availableUntil) return true;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const until = new Date(product.availableUntil);
+  until.setHours(0, 0, 0, 0);
+  return today <= until;
+}
+
 export function getProductsByCategory(categorySlug: string): Product[] {
-  return products.filter(product => product.categorySlug === categorySlug && !product.isUpgradeKit);
+  return products.filter(product => product.categorySlug === categorySlug && !product.isUpgradeKit && isProductAvailable(product));
 }
 
 export function getUpgradeKitsByCategory(categorySlug: string): Product[] {
-  return products.filter(product => product.categorySlug === categorySlug && product.isUpgradeKit === true);
+  return products.filter(product => product.categorySlug === categorySlug && product.isUpgradeKit === true && isProductAvailable(product));
 }
 
 export function getProductById(id: string): Product | undefined {
-  return products.find(product => product.id === id);
+  const product = products.find(product => product.id === id);
+  if (!product || !isProductAvailable(product)) return undefined;
+  return product;
 }
 
 export function getAllProductIds(): string[] {
-  return products.map(product => product.id);
+  return products.filter(isProductAvailable).map(product => product.id);
 }

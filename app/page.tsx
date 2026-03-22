@@ -89,6 +89,10 @@ export default async function HomePage() {
     return null;
   }
 
+  const now = new Date();
+  const aprilStart = new Date('2026-04-01T00:00:00');
+  const activeHighlight = now >= aprilStart ? data.highlightProductApril : data.highlightProduct;
+
   let reviewsData: ReviewsResponse | null = null;
   try {
     reviewsData = await fetchGoogleReviews();
@@ -119,15 +123,15 @@ export default async function HomePage() {
 
       {/* Highlight-Artikel */}
       <HighlightProduct
-        title={data.highlightProduct.title}
-        image={data.highlightProduct.image}
-        imageAlt={data.highlightProduct.imageAlt}
-        description={data.highlightProduct.description}
-        features={data.highlightProduct.features}
-        price={data.highlightProduct.price}
-        pricePeriod={data.highlightProduct.pricePeriod}
-        ctaText={data.highlightProduct.ctaText}
-        productUrl={data.highlightProduct.productUrl}
+        title={activeHighlight.title}
+        image={activeHighlight.image}
+        imageAlt={activeHighlight.imageAlt}
+        description={activeHighlight.description}
+        features={activeHighlight.features}
+        price={activeHighlight.price}
+        pricePeriod={activeHighlight.pricePeriod}
+        ctaText={activeHighlight.ctaText}
+        productUrl={activeHighlight.productUrl}
       />
 
       {/* Miet-Kategorien */}
