@@ -90,8 +90,8 @@ export default async function HomePage() {
   }
 
   const now = new Date();
-  const aprilStart = new Date('2026-04-01T00:00:00');
-  const activeHighlight = now >= aprilStart ? data.highlightProductApril : data.highlightProduct;
+  const highlightStart = new Date('2026-03-22T00:00:00');
+  const activeHighlight = now >= highlightStart ? data.highlightProductApril : data.highlightProduct;
 
   let reviewsData: ReviewsResponse | null = null;
   try {

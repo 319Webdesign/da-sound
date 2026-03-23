@@ -63,10 +63,10 @@ export const data = {
     ctaText: 'Speech 100 Konferenzsystem entdecken',
     productUrl: '/produkte/speech-100-konferenzsystem', // Dashboard: URL zur Produktseite
   },
-  // Ab 01.04.2026: PA Set PREMIUM mini als Highlight des Monats
+  // Ab 22.03.2026: PA Set PREMIUM mini als Highlight der Woche
   highlightProductApril: {
     title: 'PA Set PREMIUM mini',
-    image: '/images/PA Set PREMIUM mini/nl_8_1.webp',
+    image: '/images/PA Set PREMIUM mini/premium_mini1.png',
     imageAlt: 'PA Set PREMIUM mini',
     description: 'Minimale Optik trifft maximalen Sound. Dieses Platzwunder beschallt problemlos 100–150 Personen und passt dabei auf die Rücksitzbank eines PKW.',
     features: [
