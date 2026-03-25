@@ -2,12 +2,13 @@
 
 import React from 'react';
 import {
-  Volume2,
   Monitor,
   Zap,
   Speaker,
+  Mic2,
   ArrowRight,
 } from 'lucide-react';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -29,20 +30,6 @@ interface TechHighlight {
 }
 
 const techHighlights: TechHighlight[] = [
-  {
-    id: 1,
-    icon: Volume2,
-    title: 'Profi-PA von D.A.S. Audio',
-    specs: [
-      { label: '200-1.500 Personen' },
-      { label: 'Line Array' },
-      { label: 'wetterfest IP44' },
-      { label: 'Made in Europe' },
-    ],
-    image: '/images/images highlights/event_4er.webp',
-    imageAlt: 'Profi-PA von D.A.S. Audio',
-    productId: 'profi-pa-line-array-event-26a',
-  },
   {
     id: 2,
     icon: Monitor,
@@ -71,6 +58,20 @@ const techHighlights: TechHighlight[] = [
     image: '/images/images highlights/alteaduo.webp',
     imageAlt: 'Universell einsetzbare PA-Säulen',
     productId: 'pa-saeule-bluetooth',
+  },
+  {
+    id: 5,
+    icon: Mic2,
+    title: 'Speech 100 Konferenztechnik',
+    specs: [
+      { label: 'Bis 50 Sprechstellen' },
+      { label: 'Tischmikrofone' },
+      { label: 'Abstimmungen / Votings' },
+      { label: 'CAT5 Verkabelung' },
+    ],
+    image: '/images/speech 100 konferenzsystem/speech100.webp',
+    imageAlt: 'Speech 100 Konferenzsystem',
+    productId: 'speech-100-konferenzsystem',
   },
   {
     id: 4,

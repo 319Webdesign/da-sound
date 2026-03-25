@@ -303,8 +303,8 @@ export default function BookingPage() {
               },
               {
                 icon: Award,
-                title: 'Profi-Equipment',
-                description: 'Hochwertige Technik von führenden Herstellern',
+                title: 'Profi-Künstler',
+                description: 'Erstklassige Musiker/innen mit langjähriger Bühnenerfahrung',
               },
             ].map((feature, index) => {
               const IconComponent = feature.icon;

@@ -15,6 +15,7 @@ export interface Product {
   priceUnitLabel?: string; // z. B. "Paar" statt "Stück"
   isUpgradeKit?: boolean; // Markiert Zusatzartikel/Upgrade-Kits
   availableUntil?: string; // ISO-Datum (YYYY-MM-DD): Produkt wird ab diesem Datum ausgeblendet
+  isHidden?: boolean; // Produkt vorübergehend aus dem Sortiment nehmen (true = unsichtbar, false/undefined = sichtbar)
 }
 
 export const products: Product[] = [
@@ -742,6 +743,7 @@ Hinweise zum Anschluss und Inbetriebnahme bei Abholung.`,
   {
     id: 'profi-pa-line-array-event-26a',
     name: 'Profi PA / Line-Array Event 26A',
+    isHidden: true, // vorübergehend aus dem Sortiment genommen – zum Reaktivieren auf false setzen oder entfernen
     priceUnitLabel: 'Tag',
     description: 'Professionelles Line Array von DAS Audio. Skalierbar, bis 1.500 Personen. Small/Medium an Endverbraucher. Transport: 2 Personen.',
     detailDescription: `Profi PA / Line-Array Event26A
@@ -2952,6 +2954,7 @@ Mietpreis 6x3m: 50,- €`,
 ];
 
 function isProductAvailable(product: Product): boolean {
+  if (product.isHidden) return false;
   if (!product.availableUntil) return true;
   const today = new Date();
   today.setHours(0, 0, 0, 0);
