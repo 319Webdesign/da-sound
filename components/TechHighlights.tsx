@@ -156,7 +156,7 @@ function TechCard({ product, index }: { product: TechHighlight; index: number })
             src={product.image}
             alt={product.imageAlt || product.title}
             fill
-            className={`${product.id === 1 || product.id === 3 ? 'object-contain' : 'object-cover'} group-hover:scale-110 transition-transform duration-500`}
+            className={`${product.id === 1 || product.id === 3 || product.id === 5 ? 'object-contain' : 'object-cover'} group-hover:scale-110 transition-transform duration-500`}
             sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 250px"
             quality={75}
             priority={index < 2}
