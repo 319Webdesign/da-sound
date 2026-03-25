@@ -40,7 +40,7 @@ const techHighlights: TechHighlight[] = [
       { label: '5.200 Ansi-Lumen' },
       { label: '2-Fache ZOOM Optik' },
     ],
-    image: '/images/acer1-1920w.webp',
+    image: '/images/4K laser dlp beamer/frq50wangledrhigh.webp',
     imageAlt: '4K Beamer von Panasonic',
     isNew: true,
     productId: '4k-laser-dlp-beamer',
