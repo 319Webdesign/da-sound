@@ -206,7 +206,7 @@ export default function Footer() {
             <p>
               Designed by{' '}
               <a
-                href="https://319webdesign.com"
+                href="https://www.319webdesign.de/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary-light transition-colors font-semibold"
