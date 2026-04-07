@@ -24,8 +24,7 @@ export const products: Product[] = [
     id: 'party-set-small',
     name: 'Party-Set SMALL',
     description: `Bestehend aus:
-1 x 2.1 Lautsprechersystem mit 12-Zoll Subwoofer
-2 x Lautsprecherstativ
+1 x PA-Säule mit 2x10-Zoll Subwoofer, 1.000W RMS und Bluetooth Audio
 1 x LED Kompakt Licht-Set mit Stativ
 1 x Party-Nebelmaschine + Fernbedienung`,
     detailDescription: `Mit Freunden feiern? - Mit dem Party Set SMALL geht's ab.
@@ -35,8 +34,7 @@ Smartphone kann kabellos über Bluetooth gespielt werden. Und das Beste: alles p
 ganz easy in den Kofferraum eines Kleinwagens.
 
 Set bestehend aus:
-1 x 2.1 Lautsprechersystem mit 12-Zoll Subwoofer
-2 x Lautsprecherstativ
+1 x PA-Säule mit 2x10-Zoll Subwoofer, 1.000W RMS und Bluetooth Audio
 1 x LED Kompakt Licht-Set mit Stativ
 1 x Party-Nebelmaschine + Fernbedienung
 
@@ -46,14 +44,14 @@ Nebelmaschinen und den dazugehörigen Kabeln. Set-Bestandteile können auf Wunsc
 ohne Aufpreis ausgetauscht werden, z.B. Mikrofon oder ein weiterer Lichteffekt anstatt
 der Nebelmaschine.`,
     images: [
-      '/images/partysetsmall.webp',
-      '/images/partysetSMALL/antariz800.webp',
-      '/images/partysetSMALL/antariz8002.webp',
-      '/images/partysetSMALL/kls120_1.webp',
-      '/images/partysetSMALL/kls120_2.webp',
-      '/images/partysetSMALL/kls120_3.webp',
-      '/images/partysetSMALL/molly4.webp',
-      '/images/partysetSMALL/molly5.webp',
+      '/images/tn_partysetsmall.jpg',
+      '/images/party set SMALL/party set SMALL/antariz800.jpg',
+      '/images/party set SMALL/party set SMALL/antariz8002.jpg',
+      '/images/party set SMALL/party set SMALL/kls120_1.jpg',
+      '/images/party set SMALL/party set SMALL/kls120_2.jpg',
+      '/images/party set SMALL/party set SMALL/kls120_3.jpg',
+      '/images/party set SMALL/party set SMALL/duo2.png',
+      '/images/party set SMALL/party set SMALL/duo3.png',
     ],
     pricePerUnit: 80,
     pricePerPair: 120,
@@ -61,8 +59,8 @@ der Nebelmaschine.`,
     specs: [
       { label: 'Personen', value: '1-50' },
       { label: 'Indoor', value: 'Indoor' },
-      { label: 'Leistung', value: '700 W' },
-      { label: 'Schalldruck', value: '128 dB' },
+      { label: 'Leistung', value: '1.000 W' },
+      { label: 'Schalldruck', value: '127 dB' },
       { label: 'Bluetooth', value: 'ja' },
       { label: 'Gewicht', value: '45 kg' },
       { label: 'Transport', value: 'PKW' },
