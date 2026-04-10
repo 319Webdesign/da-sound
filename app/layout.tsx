@@ -71,6 +71,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={htmlLang} className={`overflow-x-hidden ${inter.variable}`}>
+      <head>
+        <script
+          defer
+          src="https://api.pirsch.io/pa.js"
+          id="pianjs"
+          data-code="shaRM3FwY8nXrQem5DHw9tLH9nQdMl26"
+        />
+      </head>
       <body className="overflow-x-hidden w-full font-sans">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-623175037"
