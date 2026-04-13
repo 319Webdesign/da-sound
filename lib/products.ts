@@ -739,6 +739,72 @@ Hinweise zum Anschluss und Inbetriebnahme bei Abholung.`,
     ],
   },
   {
+    id: 'pa-set-pro-500',
+    name: 'PA Set PRO 500',
+    description: `Kompromissloser Sound für bis zu 500 Personen
+
+Das in Deutschland entwickelte und produzierte Lautsprechersystem vereint hochwertige Treiber, robuste und roadtaugliche Konstruktionen mit überragender DSP Technik und kann somit auch professionelle Ansprüche in Sachen Sound & Performance bedienen.`,
+    detailDescription: `Die XP Serie von Audio Zenit (Made in Germany) besticht durch einfaches Handling, erstklassige Klangeigenschaften und robuste Konstruktionen. Sie kann Indoor und Outdoor eingesetzt werden und wird auch professionellen Ansprüchen gerecht. Für den Betrieb wird ein 16A CEE (Starkstrom) Anschluss benötigt.`,
+    images: [
+      '/images/PA-Set-Pro-500-vorschau.png',
+      '/images/PA Set PRO 500/xperience1.png',
+      '/images/PA Set PRO 500/xperience2.png',
+      '/images/PA Set PRO 500/xperience3.png',
+      '/images/PA Set PRO 500/20260327_105835.jpg',
+    ],
+    galleryImages: [
+      '/images/PA Set PRO 500/xperience1.png',
+      '/images/PA Set PRO 500/xperience2.png',
+      '/images/PA Set PRO 500/xperience3.png',
+      '/images/PA Set PRO 500/20260327_105835.jpg',
+    ],
+    pricePerUnit: 250,
+    pricePerPair: 375,
+    categorySlug: 'pa-anlagen',
+    specs: [
+      { label: 'Personen', value: '1-500' },
+      { label: 'Indoor', value: 'Indoor & Outdoor' },
+      { label: 'Leistung', value: '5.000 W RMS' },
+      { label: 'Schalldruck', value: '133 dB' },
+      { label: 'Bluetooth', value: 'Nein' },
+      { label: 'Gewicht', value: 'ca. 170 kg' },
+      { label: 'Transport', value: 'Kleintransporter / VAN' },
+    ],
+  },
+  {
+    id: 'pa-set-pro-800',
+    name: 'PA Set PRO 800',
+    description: `Kompromissloser Sound für bis zu 800 Personen
+
+Das in Deutschland entwickelte und produzierte Lautsprechersystem vereint hochwertige Treiber, robuste und roadtaugliche Konstruktionen mit überragender DSP Technik und kann somit auch professionelle Ansprüche in Sachen Sound & Performance bedienen. Dank 4 potenter 18-Zoll Subs, spielt dieses System bis 32 Hz hinab druckvoll und eignet sich somit auch für elektronische Musik.`,
+    detailDescription: `Die XP Serie von Audio Zenit (Made in Germany) besticht durch einfaches Handling, erstklassige Klangeigenschaften und robuste Konstruktionen. Sie kann Indoor und Outdoor eingesetzt werden und wird auch professionellen Ansprüchen gerecht. Für den Betrieb wird ein 16A CEE (Starkstrom) Anschluss benötigt. Dank 4 potenter 18-Zoll Subs, spielt dieses System bis 32 Hz hinab druckvoll und eignet sich somit auch für elektronische Musik.`,
+    images: [
+      '/images/PA-Set-800-vorschau.png',
+      '/images/PA Set PRO 800/xperience1.png',
+      '/images/PA Set PRO 800/xperience4.png',
+      '/images/PA Set PRO 800/20260327_105835.jpg',
+      '/images/PA Set PRO 800/pa set pro 800.jpg',
+    ],
+    galleryImages: [
+      '/images/PA Set PRO 800/xperience1.png',
+      '/images/PA Set PRO 800/xperience4.png',
+      '/images/PA Set PRO 800/20260327_105835.jpg',
+      '/images/PA Set PRO 800/pa set pro 800.jpg',
+    ],
+    pricePerUnit: 375,
+    pricePerPair: 550,
+    categorySlug: 'pa-anlagen',
+    specs: [
+      { label: 'Personen', value: '1-800' },
+      { label: 'Indoor', value: 'Indoor & Outdoor' },
+      { label: 'Leistung', value: '8.000 W RMS' },
+      { label: 'Schalldruck', value: '134,5 dB' },
+      { label: 'Bluetooth', value: 'Nein' },
+      { label: 'Gewicht', value: 'ca. 170 kg' },
+      { label: 'Transport', value: 'Transporter / Sprinter' },
+    ],
+  },
+  {
     id: 'profi-pa-line-array-event-26a',
     name: 'Profi PA / Line-Array Event 26A',
     isHidden: true, // vorübergehend aus dem Sortiment genommen – zum Reaktivieren auf false setzen oder entfernen

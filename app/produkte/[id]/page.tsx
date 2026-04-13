@@ -86,6 +86,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'pa-set-xlarge',
     'pa-set-premium-mini',
     'pa-set-premium',
+    'pa-set-pro-500',
+    'pa-set-pro-800',
     'pa-set-outdoor',
     'party-set-small',
     'party-set-medium',
@@ -113,6 +115,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'pa-set-xlarge': 'Machbar',
     'pa-set-premium-mini': 'Einfach',
     'pa-set-premium': 'Machbar',
+    'pa-set-pro-500': 'Machbar',
+    'pa-set-pro-800': 'Machbar',
     'pa-set-outdoor': 'Machbar',
     'profi-pa-line-array-event-26a': 'Komplex',
     'allen-heath-sq5': 'Pro',
@@ -512,6 +516,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Professionelles und platzsparendes PA-System für DJ, Live-Musik, Firmenevents bis max. 150 Personen. Präzise Audio-Übertragung auch für anspruchsvolle Ohren, dabei absolut einfach im Handling und mit wenigen Handgriffen einsatzbereit.'
                   : product.id === 'pa-set-premium'
                   ? 'hochwertiges PA-System für Hochzeiten, Corporate Events, Konferenz, Live Bands und DJs\nUniversell einsetzbar für Beschallungen bis max. 250 Personen\nSehr gute Audioeigenschaften bei minimalem Platzbedarf, einfach im PKW Kombi zu transportieren und an einer Haushaltssteckdose zu betreiben'
+                  : product.id === 'pa-set-pro-500'
+                  ? 'Universelle Beschallungen Indoor & Outdoor mit professioneller Sound-Qualität für bis zu 500 Personen.'
+                  : product.id === 'pa-set-pro-800'
+                  ? 'Universelle Beschallungen Indoor & Outdoor mit professioneller Sound-Qualität für bis zu 800 Personen.'
                   : product.id === 'pa-set-outdoor'
                   ? 'Sprach- und Playback-Musik Beschallung im Freien. Festumzüge, Straßenfeste. Die Personenzahl ist abhängig von der Anzahl der verwendeten Lautsprecher.'
                   : product.id === 'profi-pa-line-array-event-26a'

@@ -17,11 +17,19 @@ function ProductDescriptionWithHeader({ text }: { text: string }) {
   // Produktname (1. Zeile) entfernen, da oben bereits angezeigt – H1 = Satz danach
   const h1Line = headerLines.length >= 2 ? headerLines[1] : headerLines[0] ?? '';
   const headerRest = headerLines.length >= 2 ? headerLines.slice(2).join('\n') : '';
+  // Nur ein Absatz ohne \n\n-Trennung (z. B. PA Set PRO 500/800): ganzer Text = Fließtext, nicht als Lead fett
+  const leadIsPlainBody = firstBreak < 0 && headerLines.length === 1;
 
   return (
     <div className="space-y-1 min-w-0">
       <div className="space-y-1 min-w-0">
-        <p className="text-xl font-semibold text-gray-900 leading-snug">
+        <p
+          className={
+            leadIsPlainBody
+              ? 'text-base font-normal text-gray-700 leading-relaxed whitespace-pre-line break-words min-w-0'
+              : 'text-xl font-semibold text-gray-900 leading-snug'
+          }
+        >
           {h1Line}
         </p>
         {headerRest ? (
