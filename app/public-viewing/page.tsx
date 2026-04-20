@@ -123,7 +123,6 @@ export default function PublicViewingPage() {
               </div>
             </div>
 
-            <p className="text-sm text-gray-500">*bitte erfragen Sie auch unsere attraktiven Konditionen für Langzeitmiete</p>
           </div>
         </div>
       </section>
