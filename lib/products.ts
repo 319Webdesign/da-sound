@@ -3000,6 +3000,96 @@ Mietpreis 6x3m: 50,- €`,
     ],
   },
   {
+    id: 'public-viewing-set-small',
+    name: '1. Set Small',
+    description: `Bilddiagonale 250cm, bestehend aus:
+- Stativleinwand 2 x 1,5m
+- Laser DLP Beamer mit Full-HD und 4.500 ANSI Lumen
+- Beamer Stativ
+- HDMI Kabel
+- Soundsystem für 50 - 80 Personen`,
+    detailDescription: `Bilddiagonale 250cm, bestehend aus:
+- Stativleinwand 2 x 1,5m
+- Laser DLP Beamer mit Full-HD und 4.500 ANSI Lumen
+- Beamer Stativ
+- HDMI Kabel
+- Soundsystem für 50 - 80 Personen`,
+    images: ['/images/preview_public_viewing.png'],
+    pricePerUnit: 99,
+    categorySlug: 'public-viewing',
+    priceOptions: [
+      { label: 'Preis / Tag', price: 99 },
+      { label: 'Preis / Wochenende*', price: 150 },
+    ],
+    specs: [
+      { label: 'Bilddiagonale', value: '250 cm' },
+      { label: 'Leinwand', value: 'Stativleinwand 2 x 1,5 m' },
+      { label: 'Projektor', value: 'Laser DLP, Full-HD, 4.500 ANSI Lumen' },
+      { label: 'Sound', value: 'Für 50 - 80 Personen' },
+      { label: 'Anschluss', value: 'HDMI' },
+    ],
+  },
+  {
+    id: 'public-viewing-set-medium',
+    name: '2. Set Medium',
+    description: `Bilddiagonale 360cm, bestehend aus:
+- Faltrahmenleinwand 3 x 1,9m
+- Laser DLP Beamer mit Full-HD und 6.200 ANSI Lumen
+- Beamer Stativ
+- HDMI Kabel
+- Soundsystem für 100 Personen`,
+    detailDescription: `Bilddiagonale 360cm, bestehend aus:
+- Faltrahmenleinwand 3 x 1,9m
+- Laser DLP Beamer mit Full-HD und 6.200 ANSI Lumen
+- Beamer Stativ
+- HDMI Kabel
+- Soundsystem für 100 Personen`,
+    images: ['/images/preview_public_viewing.png'],
+    pricePerUnit: 199,
+    categorySlug: 'public-viewing',
+    priceOptions: [
+      { label: 'Preis / Tag', price: 199 },
+      { label: 'Preis / Wochenende*', price: 300 },
+    ],
+    specs: [
+      { label: 'Bilddiagonale', value: '300 cm' },
+      { label: 'Leinwand', value: 'Stativleinwand 2,4 x 1,8 m' },
+      { label: 'Projektor', value: 'Laser DLP, Full-HD, 5.000 ANSI Lumen' },
+      { label: 'Sound', value: 'Für 80 - 120 Personen' },
+      { label: 'Anschluss', value: 'HDMI' },
+    ],
+  },
+  {
+    id: 'public-viewing-set-large',
+    name: '3. Set Large',
+    description: `Bilddiagonale 480cm, bestehend aus:
+- Faltrahmenleinwand 4 x 2,5m
+- Laser DLP Beamer mit 4K und 5.500 ANSI Lumen
+- Beamer Stativ
+- HDMI Kabel
+- Soundsystem für 100+ Personen`,
+    detailDescription: `Bilddiagonale 480cm, bestehend aus:
+- Faltrahmenleinwand 4 x 2,5m
+- Laser DLP Beamer mit 4K und 5.500 ANSI Lumen
+- Beamer Stativ
+- HDMI Kabel
+- Soundsystem für 100+ Personen`,
+    images: ['/images/preview_public_viewing.png'],
+    pricePerUnit: 299,
+    categorySlug: 'public-viewing',
+    priceOptions: [
+      { label: 'Preis / Tag', price: 299 },
+      { label: 'Preis / Wochenende*', price: 450 },
+    ],
+    specs: [
+      { label: 'Bilddiagonale', value: '350 cm' },
+      { label: 'Leinwand', value: 'Rahmenleinwand 3 x 2 m' },
+      { label: 'Projektor', value: 'Laser DLP, Full-HD, 6.000 ANSI Lumen' },
+      { label: 'Sound', value: 'Für 120 - 180 Personen' },
+      { label: 'Anschluss', value: 'HDMI' },
+    ],
+  },
+  {
     id: 'upgrade-kit-wireless',
     name: 'Upgrade Kit Wireless',
     description:

@@ -8,6 +8,7 @@ const ALLOWED_STATIC_PATHS = new Set([
   '/',
   '/kontakt',
   '/booking',
+  '/public-viewing',
   '/ueber-uns',
   '/datenschutz',
   '/impressum',
@@ -22,27 +23,28 @@ const STATIC_EXTENSIONS = /\.(ico|png|jpg|jpeg|webp|gif|svg|css|js|woff2?|ttf|eo
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const normalizedPathname = pathname !== '/' && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
 
   // Immer durchlassen: API, Next.js, Favicon, Icon, Sitemap, Robots (wichtig für Google)
-  if (SKIP_PREFIXES.some((p) => pathname.startsWith(p))) {
+  if (SKIP_PREFIXES.some((p) => normalizedPathname.startsWith(p))) {
     return NextResponse.next();
   }
   // Sitemap & Robots explizit erlauben (z. B. /sitemap.xml, /robots.txt)
-  if (pathname === '/sitemap.xml' || pathname === '/robots.txt') {
+  if (normalizedPathname === '/sitemap.xml' || normalizedPathname === '/robots.txt') {
     return NextResponse.next();
   }
   // Statische Dateien (Bilder, Fonts, etc.)
-  if (STATIC_EXTENSIONS.test(pathname) || pathname.startsWith('/images/')) {
+  if (STATIC_EXTENSIONS.test(normalizedPathname) || normalizedPathname.startsWith('/images/')) {
     return NextResponse.next();
   }
 
   // Exakt erlaubte statische Pfade
-  if (ALLOWED_STATIC_PATHS.has(pathname)) {
+  if (ALLOWED_STATIC_PATHS.has(normalizedPathname)) {
     return NextResponse.next();
   }
 
   // Erlaubte Kategorien: /kategorien/:slug
-  const categoryMatch = pathname.match(/^\/kategorien\/([^/]+)\/?$/);
+  const categoryMatch = normalizedPathname.match(/^\/kategorien\/([^/]+)\/?$/);
   if (categoryMatch) {
     const slug = categoryMatch[1];
     const allowedSlugs = getAllCategorySlugs();
@@ -52,7 +54,7 @@ export function middleware(request: NextRequest) {
   }
 
   // Erlaubte Produkte: /produkte/:id
-  const productMatch = pathname.match(/^\/produkte\/([^/]+)\/?$/);
+  const productMatch = normalizedPathname.match(/^\/produkte\/([^/]+)\/?$/);
   if (productMatch) {
     const id = productMatch[1];
     const allowedIds = getAllProductIds();

@@ -69,22 +69,16 @@ export const data = {
   // Ab 22.03.2026: PA Set PREMIUM mini als Highlight der Woche
   highlightProductApril: {
     title: 'Echtes WM Live-Feeling für Zuhause, Kneipe, Biergarten.',
-    image: '/images/dlp3.png',
+    image: '/images/preview_public_viewing.png',
     imageAlt: 'Menschen jubeln beim Public Viewing im Garten',
     description: 'Rechtzeitig zum Start in die WM bieten wir ihnen 4 exklusive Public Viewing Sets. Alles was Sie benötigen, ist ein Empfangsgerät mit HDMI Ausgang (z.B. Laptop, SAT Receiver oder TV Top-Box).',
-    featuresTitle: 'Bilddiagonale 250cm, bestehend aus:',
-    features: [
-      { icon: 'settings' as const, text: 'Stativleinwand 2 x 1,5m' },
-      { icon: 'zap' as const, text: 'Laser DLP Beamer mit Full-HD und 4.500 ANSI Lumen' },
-      { icon: 'cable' as const, text: 'Beamer Stativ' },
-      { icon: 'cable' as const, text: 'HDMI Kabel' },
-      { icon: 'volume' as const, text: 'Soundsystem für 50 - 80 Personen' },
-    ],
+    featuresTitle: '',
+    features: [],
     price: '99,- €',
     pricePeriod: '',
     secondaryPrice: '150€',
     priceNote: '*bitte erfragen Sie auch unsere attraktiven Konditionen für Langzeitmiete',
-    ctaText: 'Jetzt WM-Pakete endecken',
-    productUrl: '/kategorien/pa-anlagen',
+    ctaText: 'Jetzt WM-Pakete entdecken',
+    productUrl: '/public-viewing',
   },
 };
