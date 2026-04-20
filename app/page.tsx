@@ -128,8 +128,11 @@ export default async function HomePage() {
         imageAlt={activeHighlight.imageAlt}
         description={activeHighlight.description}
         features={activeHighlight.features}
+        featuresTitle={activeHighlight.featuresTitle}
         price={activeHighlight.price}
         pricePeriod={activeHighlight.pricePeriod}
+        secondaryPrice={activeHighlight.secondaryPrice}
+        priceNote={activeHighlight.priceNote}
         ctaText={activeHighlight.ctaText}
         productUrl={activeHighlight.productUrl}
       />
