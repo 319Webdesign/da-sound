@@ -77,7 +77,7 @@ export default function PublicViewingPage() {
               Echtes WM Live-Feeling für Zuhause, Kneipe, Biergarten
             </h2>
             <p className="text-gray-600">
-              Rechtzeitig zum Start in die WM bieten wir ihnen 4 exklusive Public Viewing Sets. Alles was Sie
+              Rechtzeitig zum Start in die WM bieten wir ihnen 3 exklusive Public Viewing Sets. Alles was Sie
               benötigen, ist ein Empfangsgerät mit HDMI Ausgang (z.B. Laptop, SAT Receiver oder TV Top-Box)
             </p>
             <p className="text-sm text-gray-500 mt-3">

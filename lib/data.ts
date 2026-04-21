@@ -72,7 +72,7 @@ export const data = {
     title: 'Echtes WM Live-Feeling für Zuhause, Kneipe, Biergarten.',
     image: '/images/preview_public_viewing.png',
     imageAlt: 'Menschen jubeln beim Public Viewing im Garten',
-    description: 'Rechtzeitig zum Start in die WM bieten wir ihnen 4 exklusive Public Viewing Sets. Alles was Sie benötigen, ist ein Empfangsgerät mit HDMI Ausgang (z.B. Laptop, SAT Receiver oder TV Top-Box).',
+    description: 'Rechtzeitig zum Start in die WM bieten wir ihnen 3 exklusive Public Viewing Sets. Alles was Sie benötigen, ist ein Empfangsgerät mit HDMI Ausgang (z.B. Laptop, SAT Receiver oder TV Top-Box).',
     featuresTitle: '',
     features: [],
     price: '99,- €',
