@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getAllProductIds, getProductById } from '@/lib/products';
+import { getRoutableProductIds, getProductById } from '@/lib/products';
 import { getCategoryBySlug } from '@/lib/categories';
 import { data } from '@/lib/data';
 import { MapPin, Clock, ArrowLeft, Users, Wrench, Volume2, Lightbulb, Cloud, Cable, BarChart3 } from 'lucide-react';
@@ -24,7 +24,7 @@ interface PageProps {
 export const revalidate = 3600; // 1 Stunde – Preise können sich ändern
 
 export async function generateStaticParams() {
-  return getAllProductIds().map((id) => ({ id }));
+  return getRoutableProductIds().map((id) => ({ id }));
 }
 
 const MAX_META_DESCRIPTION = 150; // ~950px, unter Google-Limit 1000px
@@ -39,7 +39,7 @@ const FALLBACK_META_DESCRIPTION = (productName: string) =>
 export async function generateMetadata({ params }: PageProps) {
   const { id } = await params;
   const product = getProductById(id);
-  if (!product) return {};
+  if (!product || product.hideDetailPage) return {};
   const rawTitle = `${product.name} mieten`;
   const title = rawTitle.length > MAX_TITLE_PREFIX ? rawTitle.slice(0, MAX_TITLE_PREFIX - 1) + '…' : rawTitle;
   const fromSanity =
@@ -66,6 +66,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const product = getProductById(id);
 
   if (!product) {
+    notFound();
+  }
+  if (product.hideDetailPage) {
     notFound();
   }
 

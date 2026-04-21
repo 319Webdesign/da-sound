@@ -47,12 +47,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changefreq: 'weekly' as const,
   }));
 
-  const productEntries = products.map(product => ({
-    url: new URL(`/produkte/${product.id}`, SITE_URL).toString(),
-    lastModified,
-    priority: 0.75,
-    changefreq: 'weekly' as const,
-  }));
+  const productEntries = products
+    .filter((product) => !product.hideDetailPage)
+    .map((product) => ({
+      url: new URL(`/produkte/${product.id}`, SITE_URL).toString(),
+      lastModified,
+      priority: 0.75,
+      changefreq: 'weekly' as const,
+    }));
 
   return [...staticEntries, ...categoryEntries, ...productEntries];
 }

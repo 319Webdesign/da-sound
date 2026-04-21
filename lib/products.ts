@@ -16,6 +16,8 @@ export interface Product {
   isUpgradeKit?: boolean; // Markiert Zusatzartikel/Upgrade-Kits
   availableUntil?: string; // ISO-Datum (YYYY-MM-DD): Produkt wird ab diesem Datum ausgeblendet
   isHidden?: boolean; // Produkt vorübergehend aus dem Sortiment nehmen (true = unsichtbar, false/undefined = sichtbar)
+  /** Keine eigene /produkte/:id-Seite (nur Karte + Warenkorb) */
+  hideDetailPage?: boolean;
 }
 
 export const products: Product[] = [
@@ -3001,6 +3003,7 @@ Mietpreis 6x3m: 50,- €`,
   },
   {
     id: 'public-viewing-set-small',
+    hideDetailPage: true,
     name: '1. Set Small',
     description: `Bilddiagonale 250cm, bestehend aus:
 - Stativleinwand 2 x 1,5m
@@ -3031,6 +3034,7 @@ Mietpreis 6x3m: 50,- €`,
   },
   {
     id: 'public-viewing-set-medium',
+    hideDetailPage: true,
     name: '2. Set Medium',
     description: `Bilddiagonale 360cm, bestehend aus:
 - Faltrahmenleinwand 3 x 1,9m
@@ -3061,6 +3065,7 @@ Mietpreis 6x3m: 50,- €`,
   },
   {
     id: 'public-viewing-set-large',
+    hideDetailPage: true,
     name: '3. Set Large',
     description: `Bilddiagonale 480cm, bestehend aus:
 - Faltrahmenleinwand 4 x 2,5m
@@ -3133,4 +3138,12 @@ export function getProductById(id: string): Product | undefined {
 
 export function getAllProductIds(): string[] {
   return products.filter(isProductAvailable).map(product => product.id);
+}
+
+/** Produkt-IDs mit öffentlicher Detailseite (/produkte/:id) */
+export function getRoutableProductIds(): string[] {
+  return products
+    .filter(isProductAvailable)
+    .filter((p) => !p.hideDetailPage)
+    .map((p) => p.id);
 }

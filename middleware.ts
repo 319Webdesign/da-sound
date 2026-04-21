@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { getAllCategorySlugs } from '@/lib/categories';
-import { getAllProductIds } from '@/lib/products';
+import { getRoutableProductIds } from '@/lib/products';
 
 /** Exakt erlaubte Pfade (statische Seiten) */
 const ALLOWED_STATIC_PATHS = new Set([
@@ -57,7 +57,7 @@ export function middleware(request: NextRequest) {
   const productMatch = normalizedPathname.match(/^\/produkte\/([^/]+)\/?$/);
   if (productMatch) {
     const id = productMatch[1];
-    const allowedIds = getAllProductIds();
+    const allowedIds = getRoutableProductIds();
     if (allowedIds.includes(id)) {
       return NextResponse.next();
     }
