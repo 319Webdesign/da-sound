@@ -3014,7 +3014,7 @@ Mietpreis 6x3m: 50,- €`,
 - Beamer Stativ
 - HDMI Kabel
 - Soundsystem für 50 - 80 Personen`,
-    images: ['/images/preview_public_viewing.png'],
+    images: ['/images/public_viewing_Set1.jpg'],
     pricePerUnit: 99,
     categorySlug: 'public-viewing',
     priceOptions: [
@@ -3074,7 +3074,7 @@ Mietpreis 6x3m: 50,- €`,
 - Beamer Stativ
 - HDMI Kabel
 - Soundsystem für 100+ Personen`,
-    images: ['/images/preview_public_viewing.png'],
+    images: ['/images/public_viewing_Set3.jpg'],
     pricePerUnit: 299,
     categorySlug: 'public-viewing',
     priceOptions: [

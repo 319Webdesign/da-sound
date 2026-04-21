@@ -18,6 +18,8 @@ interface HighlightProductProps {
   pricePeriod?: string;
   secondaryPrice?: string;
   priceNote?: string;
+  /** Wenn gesetzt, ersetzt die komplette erste Preiszeile (z. B. „ab 99,- € pro Tag“). */
+  priceSummary?: string;
   ctaText?: string;
   productUrl?: string;
   onCtaClick?: () => void;
@@ -47,6 +49,7 @@ export default function HighlightProduct({
   pricePeriod = '/ Tag',
   secondaryPrice,
   priceNote,
+  priceSummary,
   ctaText = 'Zur Produktseite',
   productUrl,
   onCtaClick,
@@ -181,21 +184,25 @@ export default function HighlightProduct({
               })}
             </div>
 
-            {/* Preise */}
-            <div className="rounded-2xl border border-white/20 bg-white/10 p-5 text-white">
-              <p className="text-lg md:text-xl font-semibold">
-                Preis / Tag: {price}{pricePeriod}
-              </p>
-              {secondaryPrice && (
-                <p className="mt-2 text-base md:text-lg text-white/90">
-                  Preis / Wochenende*: {secondaryPrice}
+            {/* Preise — Breite an Inhalt gekoppelt (nicht volle Spaltenbreite) */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="inline-block w-fit max-w-full rounded-2xl border border-white/20 bg-white/10 px-5 py-4 text-white text-left">
+                <p className="text-lg md:text-xl font-semibold">
+                  {priceSummary?.trim()
+                    ? priceSummary.trim()
+                    : `Preis / Tag: ${price}${pricePeriod}`}
                 </p>
-              )}
-              {priceNote && (
-                <p className="mt-3 text-xs md:text-sm text-white/75">
-                  {priceNote}
-                </p>
-              )}
+                {secondaryPrice && (
+                  <p className="mt-2 text-base md:text-lg text-white/90">
+                    Preis / Wochenende*: {secondaryPrice}
+                  </p>
+                )}
+                {priceNote && (
+                  <p className="mt-3 text-xs md:text-sm text-white/75">
+                    {priceNote}
+                  </p>
+                )}
+              </div>
             </div>
 
             {/* Call-to-Action Button */}

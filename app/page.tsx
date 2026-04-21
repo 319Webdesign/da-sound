@@ -133,6 +133,7 @@ export default async function HomePage() {
         pricePeriod={activeHighlight.pricePeriod}
         secondaryPrice={activeHighlight.secondaryPrice}
         priceNote={activeHighlight.priceNote}
+        priceSummary={activeHighlight.priceSummary}
         ctaText={activeHighlight.ctaText}
         productUrl={activeHighlight.productUrl}
       />
