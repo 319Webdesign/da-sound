@@ -1756,38 +1756,6 @@ Optimal für Hochzeiten oder Motto-Partys`,
     ],
   },
   {
-    id: 'led-moving-head-spot-100w',
-    name: 'LED Moving Head Spot 100W',
-    description: 'Dank einer hochwertigen Optik holt der Briteq Meteor viel Lichtausbeute aus der reinweißen 100W COB LED. Neben verschiedenen Gobos (statisch und rotierend) und RGB Farbwechsel verfügt der Spot auch über ein sich drehendes 3-Fach-Prisma. Stand-Alone Modus und Soundsteuerung. Die volle Funktion entfaltet der Spot aber erst durch Ansteuerung via DMX.',
-    detailDescription: `Moving Head LED
-Immer einen kühlen Kopf bewahren - mit LED Moving Heads kein Problem.
-
-Der BT-Meteor des belgischen Herstellers Briteq ist ein wahrer Hingucker. Die kraftvolle 100W LED wird durch die hochwertige Optik in idealerweise in Szene gesetzt. Helle, durchsetzungsfähige Farben und ruckelfreie Bewegungen zeichnen dieses Moving Head aus.`,
-    images: ['/images/moving-head-spot.webp'],
-    galleryImages: [
-      '/images/led moving head spot/27827_5.webp',
-      '/images/led moving head spot/bt-meteor_back_6hr.webp',
-      '/images/led moving head spot/bt-meteor_front_5hr.webp',
-      '/images/led moving head spot/bt-meteor_front_6hr.webp',
-    ],
-    pricePerUnit: 30,
-    priceUnitLabel: 'Tag',
-    priceOptions: [
-      { label: 'Einzeln', price: 30 },
-      { label: '2er Set (im Flightcase)', price: 50 },
-    ],
-    categorySlug: 'moving-heads',
-    specs: [
-      { label: 'Leistung', value: '100 W' },
-      { label: 'Pan/Tilt Range', value: '540° Pan / 270° Tilt' },
-      { label: 'Indoor', value: 'Ja' },
-      { label: 'Farbmischung', value: '8 Farben + weiß' },
-      { label: 'Soundsteuerung', value: 'Ja' },
-      { label: 'DMX', value: 'Stand-Alone/DMX' },
-      { label: 'Gewicht', value: '8,4 kg' },
-    ],
-  },
-  {
     id: 'led-moving-head-beam-200w',
     name: 'LED Moving Head Beam 200W',
     description: 'Sehr lichtstarker Moving Head BEAM. Für große Bühnen / Hallen / Outdoor geeignet. Erzeugt beeindruckende Beam-Effekte oder breite Strahlenbündel dank der rotierenden Prismen. Es lassen sich mehrere Spots auch Stand-Alone synchroniseren, steuerbar über DMX oder das eingebaute Mikrofon (Sound-to-Light). Als Highlight bietet dieser Spot noch einen farbigen, programmierbaren LED Ring um die Linse.',

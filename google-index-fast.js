@@ -37,7 +37,6 @@ const URLS = [
   'https://www.da-sound.de/produkte/party-set-medium',
   'https://www.da-sound.de/produkte/party-set-large',
   'https://www.da-sound.de/produkte/led-wasser-projektionseffekt',
-  'https://www.da-sound.de/produkte/led-moving-head-spot-100w',
   'https://www.da-sound.de/produkte/led-triple-flower',
   'https://www.da-sound.de/produkte/led-derby-effekt-mit-strobe',
   'https://www.da-sound.de/produkte/2000mw-diodenlaser-showlaser',

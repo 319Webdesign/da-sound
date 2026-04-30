@@ -148,7 +148,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'led-derby-effekt-mit-strobe': 'Einfach',
     'led-triple-flower': 'Einfach',
     'mirror-ball-saturn-led-effekt': 'Machbar',
-    'led-moving-head-spot-100w': 'Machbar',
     'led-moving-head-beam-200w': 'Komplex',
     'led-moving-head-wash-7x40w': 'Komplex',
     'jb-spyder-show-pattern-laser': 'Machbar',
@@ -567,8 +566,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Dynamischer Strahleneffekt für Party auf der Tanzfläche'
                   : product.id === 'led-triple-flower'
                   ? 'Dynamischer und heller Flowereffekt für Party auf der Tanzfläche'
-                  : product.id === 'led-moving-head-spot-100w'
-                  ? 'Kompaktes aber lichtstarkes Moving Head\nFür dynamisches Licht auf mittleren Bühnen\nProfessionelle Lightshows für Tanzfläche und mobile DJs'
                   : product.id === 'led-moving-head-beam-200w'
                   ? 'Kompaktes aber lichtstarkes Moving Head\nFür dynamisches Licht auf großen Bühnen oder Outdoor'
                   : product.id === 'led-moving-head-wash-7x40w'
