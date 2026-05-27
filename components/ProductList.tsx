@@ -171,6 +171,8 @@ export default function ProductList({ products }: ProductListProps) {
                         }
                         
                         if (category === 'mischpulte-mikrofone') {
+                          // Auf der Kategorie-Produktkarte sollen lokale Channels (z. B. "16 IN / 16 OUT") nicht angezeigt werden.
+                          if (spec.label.toLowerCase() === 'channels lokal') return false;
                           return labelLower.includes('channel') || labelLower.includes('input') || labelLower.includes('output') || labelLower.includes('effect') || labelLower.includes('dsp') || labelLower.includes('touch') || labelLower.includes('display') || labelLower.includes('protokoll') || labelLower.includes('network') || labelLower.includes('wifi') || labelLower.includes('wireless') || labelLower.includes('bluetooth') || labelLower.includes('usb') || spec.label === 'Gewicht' || labelLower === 'weight';
                         }
                         
