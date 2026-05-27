@@ -896,34 +896,37 @@ Recording-Anwendungen bereitstellen.`,
     ],
   },
   {
-    id: 'allen-heath-ar2412',
-    name: 'Allen & Heath AR2412',
-    description: 'Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Über nur ein CAT5E Netzwerkabel können 24 Eingangskanäle und 12 Ausgangskanäle digital und störungsfrei von der Bühne zum Frontplatz übertragen werden. Inkl. 50m CAT5E Netzwerkkabel auf Trommel.',
-    detailDescription: `Allen & Heath AR2412
-Digitale Stagebox / Bühnenverteilung
+    id: 'yamaha-dm7-c',
+    name: 'Yamaha DM7-C',
+    description: 'Kompaktes 72-Kanal Digitalpult mit Profi-Ausstattung. Das DM7 Compact ist ein mit Dante ausgestattetes, vielseitiges digitales Mischpult mit Spitzen-Klangqualität, einfacher Bedienung und professioneller Zuverlässigkeit.',
+    detailDescription: `Yamaha DM7-C
+Kompaktes 72-Kanal Digitalpult mit Profi-Ausstattung
 
-Digitale Stagebox / Bühnenverteilung für Allen & Heath Digital Mischpulte. Über nur ein
-CAT5E Netzwerkabel können 24 Eingangskanäle und 12 Ausgangskanäle digital und
-störungsfrei von der Bühne zum Frontplatz übertragen werden. Die AR2412 verfügt über
-eigene 24 hochwertige, rauscharme Mikrofonvorverstärker. Somit kann die SQ-5 Konsole
-um weitere Eingänge erweitert werden. Inkl. 50m CAT5E Netzwerkkabel auf Trommel.`,
+Die DM7-Serie stellt einen bedeutenden Schritt nach vorne in Sachen Form, Funktionalität und
+Flexibilität dar. Dank intuitiver Benutzeroberfläche, kompaktem Design und einer umfassenden
+Palette an leistungsstarken Funktionen übertreffen sie andere Mischpulte ihrer Klasse bei weitem.
+Von Broadcasting, Streaming und Musikproduktion bis hin zu Live-Hybrid-Events und
+Konzertauftritten - mit dem DM7 sind Sie bestens aufgestellt. Sowohl in Sachen Klang als auch
+Bedienbarkeit / Work-Flow ist dieses Pult ganz weit vorn.`,
     images: [
-      '/images/ar2412_1-1920w.webp',
-      '/images/allen heath ar2412/ar2412.webp',
+      '/images/Yamaha DM-7C/dm7c_1.jpg',
+      '/images/Yamaha DM-7C/dm7c_2.jpg',
+      '/images/Yamaha DM-7C/dm7c_3.jpg',
     ],
-    pricePerUnit: 40,
+    pricePerUnit: 160,
     priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
-      { label: 'Hersteller', value: 'Allen & Heath' },
-      { label: 'Typ', value: 'Digitale Stagebox / Bühnenverteilung' },
-      { label: 'Eingänge', value: '24 Kanäle' },
-      { label: 'Ausgänge', value: '12 Kanäle' },
-      { label: 'Verkabelung', value: 'CAT5E Netzwerkkabel (ein Kabel)' },
-      { label: 'Übertragung', value: 'Digital und störungsfrei' },
-      { label: 'Anwendung', value: 'Bühne zum Frontplatz' },
-      { label: 'Kompatibilität', value: 'Allen & Heath Digital Mischpulte' },
-      { label: 'Inklusive', value: '50m CAT5E Netzwerkkabel auf Trommel' },
+      { label: 'Hersteller', value: 'Yamaha' },
+      { label: 'Typ', value: 'Digital Mixer' },
+      { label: 'Channels', value: '72 IN / 62 OUT' },
+      { label: 'Channels lokal', value: '16 IN / 16 OUT' },
+      { label: 'Effects', value: '16 FX Engines + 64 DSP Effekte' },
+      { label: 'Display', value: '12" Touchdisplay MAIN + 7" Touchdisplay' },
+      { label: 'Network', value: 'DANTE (144 IN / 144 OUT)' },
+      { label: 'Wifi', value: 'ja mit ext. Router' },
+      { label: 'USB', value: 'USB Audio Playback, 18 x 18 USB Interface, Stereo USB Recording' },
+      { label: 'Gewicht', value: '24 kg inkl. Flightcase' },
     ],
   },
   {

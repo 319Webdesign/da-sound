@@ -123,7 +123,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'pa-set-outdoor': 'Machbar',
     'profi-pa-line-array-event-26a': 'Komplex',
     'allen-heath-sq5': 'Pro',
-    'allen-heath-ar2412': 'Pro',
+    'yamaha-dm7-c': 'Pro',
     'yamaha-dm3': 'Komplex',
     'yamaha-tio-1608d': 'Komplex',
     'dynacord-cms-1600-3': 'Machbar',
@@ -532,6 +532,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Erweiterung der SQ Serie um weitere Ein-/Ausgänge. Latenzfreie Übertragung der\nSignale mit einem CAT5 Kabel (S-Link Protokoll) vom FOH zur Bühne.'
                   : product.id === 'yamaha-dm3'
                   ? 'Zum Abmischen von Bands, kleinen Ensembles, Sprechermikrofonen (Konferenz / Präsentation) und Recording / Streaming'
+                  : product.id === 'yamaha-dm7-c'
+                  ? 'Abmischen von Bands, Orchestern, Musikensembles in jeglicher Form. Theater, Musicals,\nKonferenzen mit mehreren Tonspuren, Hybrid-Veranstaltungen, Audio-Streaming, Mehrspur-Recording, u.v.m.'
                   : product.id === 'yamaha-tio-1608d'
                   ? 'Latenzfreie Übertragung der Ein-/Ausgangs-Signale mit einem Netzwerkkabel (DANTE\nProtokoll) vom FOH zur Bühne.'
                   : product.id === 'dynacord-cms-1600-3'
