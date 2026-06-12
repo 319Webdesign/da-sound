@@ -858,44 +858,6 @@ Abholung mit der von uns empfohlenen Voreinstellung.`,
 
   // Mischpulte & Mikrofone
   {
-    id: 'allen-heath-sq5',
-    name: 'Allen & Heath SQ-5',
-    description: 'Digitales Mischpult der Extraklasse mit internem 96kHz Processing. Logischer Workflow und ein großes Touch-Display erlauben eine intuitive Bedienung nach kurzer Einarbeitung.',
-    detailDescription: `Allen & Heath SQ-5
-Digitales Mischpult der Extraklasse
-
-Das SQ-5 gehört mittlerweile zum Industriestandard und zeichnet sich durch einen
-intuitiven Workflow und das interne 96kHz Processing aus. Das absolut flexible
-Signalrouting, ein gut ablesbares und klar strukturiertes Touch Display und die
-umfassende Ausstattung mit Dynamik- und Effektprozessoren machen es zum Allround-
-Tool für Live-Sound und Recording-Anwendungen.
-
-Digital Mischpult mieten bei da-sound: Auch als Laie können Sie die Vorteile von voll
-ausgestatteten Digitalpulten nutzen. Im speziellen die DM Serie von Yamaha bietet eine
-reichhaltige Auswahl von Presets, die alle Einstellungen für verschiedene Live- oder
-Recording-Anwendungen bereitstellen.`,
-    images: [
-      '/images/sq5c-1920w.webp',
-      '/images/allen heath sq5/sq5c.webp',
-      '/images/allen heath sq5/sq5d.webp',
-      '/images/allen heath sq5/sq5h.webp',
-    ],
-    pricePerUnit: 100,
-    priceUnitLabel: 'Tag',
-    categorySlug: 'mischpulte-mikrofone',
-    specs: [
-      { label: 'Hersteller', value: 'Allen & Heath' },
-      { label: 'Typ', value: 'Digital Mixer' },
-      { label: 'Channels', value: '16/24/48 IN / 12 OUT' },
-      { label: 'Effects', value: '8 FX Engines' },
-      { label: 'Display', value: '7" Touchdisplay' },
-      { label: 'Network', value: 'S-Link via CAT5 Kabel' },
-      { label: 'Wifi', value: 'ja mit ext. Router' },
-      { label: 'USB', value: '32 x 32 USB Interface, Multitrack USB Recording' },
-      { label: 'Gewicht', value: '22 kg inkl. Flightcase' },
-    ],
-  },
-  {
     id: 'yamaha-dm7-c',
     name: 'Yamaha DM7-C',
     description: 'Kompaktes 72-Kanal Digitalpult mit Profi-Ausstattung. Das DM7 Compact ist ein mit Dante ausgestattetes, vielseitiges digitales Mischpult mit Spitzen-Klangqualität, einfacher Bedienung und professioneller Zuverlässigkeit.',

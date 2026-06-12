@@ -47,7 +47,6 @@ const URLS = [
   'https://www.da-sound.de/produkte/jb-spyder-show-pattern-laser',
   'https://www.da-sound.de/produkte/mikrofon-set-drums',
   'https://www.da-sound.de/produkte/yamaha-tio-1608d',
-  'https://www.da-sound.de/produkte/allen-heath-sq5',
   'https://www.da-sound.de/produkte/allen-heath-ar2412',
   'https://www.da-sound.de/produkte/mackie-analog-mixer',
   'https://www.da-sound.de/produkte/pa-saeule-bluetooth',

@@ -122,7 +122,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'pa-set-pro-800': 'Machbar',
     'pa-set-outdoor': 'Machbar',
     'profi-pa-line-array-event-26a': 'Komplex',
-    'allen-heath-sq5': 'Pro',
     'yamaha-dm7-c': 'Pro',
     'yamaha-dm3': 'Komplex',
     'yamaha-tio-1608d': 'Komplex',
@@ -526,8 +525,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Sprach- und Playback-Musik Beschallung im Freien. Festumzüge, Straßenfeste. Die Personenzahl ist abhängig von der Anzahl der verwendeten Lautsprecher.'
                   : product.id === 'profi-pa-line-array-event-26a'
                   ? 'Anzahl der Personen richtet sich nach der Konfiguration des Arrays:\nSprachbeschallung mit sehr hoher Sprachverständlichkeit und großer Reichweite\nDruckvolle Playback Musikbeschallung mit klarem Sound\nLive-Musik Indoor oder Outdoor mit gleichmäßiger horizontaler Abstrahlung und hervorragender Durchsetzungsfähigkeit der Vocals\nOutdoor geeignet (wetterfest IP44)'
-                  : product.id === 'allen-heath-sq5'
-                  ? 'Zum professionellen Abmischen und Aufnehmen von Bands, Ensembles, etc.\nAllround-Mischpult für viele Einsatzmöglichkeiten'
                   : product.id === 'allen-heath-ar2412'
                   ? 'Erweiterung der SQ Serie um weitere Ein-/Ausgänge. Latenzfreie Übertragung der\nSignale mit einem CAT5 Kabel (S-Link Protokoll) vom FOH zur Bühne.'
                   : product.id === 'yamaha-dm3'
