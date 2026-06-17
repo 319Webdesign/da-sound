@@ -19,7 +19,7 @@ const ALLOWED_STATIC_PATHS = new Set([
 
 /** Pfade und Dateitypen, die nie mit 410 beantwortet werden (API, Next, Statik, SEO) */
 const SKIP_PREFIXES = ['/api/', '/_next/', '/favicon', '/icon', '/sitemap', '/robots'];
-const STATIC_EXTENSIONS = /\.(ico|png|jpg|jpeg|webp|gif|svg|css|js|woff2?|ttf|eot|map)(\?.*)?$/i;
+const STATIC_EXTENSIONS = /\.(ico|png|jpg|jpeg|webp|gif|svg|css|js|woff2?|ttf|eot|map|pdf|mp4|webm)(\?.*)?$/i;
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;

@@ -9,9 +9,8 @@ import { categories } from '@/lib/categories';
 
 export default function RentalCategories() {
   const handleDownload = () => {
-    // Erstelle einen temporären Link für den Download
     const link = document.createElement('a');
-    link.href = '/Mietpreisliste da-sound.pdf';
+    link.href = encodeURI('/Mietpreisliste da-sound.pdf');
     link.download = 'Mietpreisliste da-sound.pdf';
     document.body.appendChild(link);
     link.click();
