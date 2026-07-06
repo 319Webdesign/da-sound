@@ -126,7 +126,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'yamaha-dm3': 'Komplex',
     'yamaha-tio-1608d': 'Komplex',
     'dynacord-cms-1600-3': 'Machbar',
-    'pioneer-djm-900-nexus': 'Komplex',
+    'pioneer-ddj-flx10': 'Machbar',
     'mackie-analog-mixer': 'Einfach',
     'shure-mikrofon-set-sm58-sm57': 'Einfach',
     'mikrofon-set-drums': 'Komplex',
@@ -206,6 +206,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
     if (!slug) return null;
     // Mischpulte & Mikrofone: Channels (Mischpulte) oder Typ (Mikrofone)
     if (slug === 'mischpulte-mikrofone') {
+      if (product.id === 'pioneer-ddj-flx10') {
+        return { displayLabel: 'Channels', value: '4 Stereo IN / 2 Stereo OUT' };
+      }
       const channels = find('Channels');
       if (channels) return { displayLabel: 'Channels', value: channels };
       const typ = find('Typ');
@@ -411,7 +414,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                         </div>
                         {product.pricePerPair && (
                           <div className="text-lg text-gray-600 mb-2">
-                            {product.pricePerPair.toFixed(2).replace('.', ',')} € / {isSetProduct ? 'Wochenende' : 'Paar'}
+                            {product.pricePerPair.toFixed(2).replace('.', ',')} € / {(isSetProduct || product.priceUnitLabel === 'Tag') ? 'Wochenende' : 'Paar'}
                           </div>
                         )}
                         <p className="text-sm text-gray-500">
@@ -535,8 +538,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Latenzfreie Übertragung der Ein-/Ausgangs-Signale mit einem Netzwerkkabel (DANTE\nProtokoll) vom FOH zur Bühne.'
                   : product.id === 'dynacord-cms-1600-3'
                   ? 'Zum professionellen Abmischen und Aufnehmen von kleinen Bands / Ensembles.\nAllround-Mischpult für viele Einsatzmöglichkeiten'
-                  : product.id === 'pioneer-djm-900-nexus'
-                  ? 'Professionelles und kreatives Mixen für DJs\nAnschluss und Abmischen von CD-Playern, Plattenspielern, USB-Audioquellen'
+                  : product.id === 'pioneer-ddj-flx10'
+                  ? 'Professionelles Mixen von Audiotracks vom Laptop für DJs (kompatibel zu serato und rekordbox und weiteren DJ Softwares)'
                   : product.id === 'mackie-analog-mixer'
                   ? 'kleine Allround-Mischpulte für viele Einsatzmöglichkeiten'
                   : product.id === 'akku-spot-indoor-rgb'
@@ -588,7 +591,19 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   : 'Ideal für private Partys, Hochzeiten im kleinen Kreis oder Vereinsfeste. Dieses kompakte Set bietet alles, was Sie für eine gelungene Feier benötigen - von kraftvollem Sound bis hin zu stimmungsvollem Licht.',
               },
               technischeDetails: {
-                specs: product.specs || [],
+                specs: product.id === 'pioneer-ddj-flx10'
+                  ? [
+                      { label: 'Hersteller', value: 'Pioneer' },
+                      { label: 'Typ', value: 'DJ Controller für serato und rekordbox' },
+                      { label: 'Channels', value: '4 Kanäle (2x Line, 2x Phono) + 2 x Mic' },
+                      { label: 'Effects', value: '20 versch. Digital-FX und Filter' },
+                      { label: 'Display', value: '2 x On Jog Display' },
+                      { label: 'Network', value: 'Nein' },
+                      { label: 'Wifi', value: 'Nein' },
+                      { label: 'USB', value: '2 x USB Typ C' },
+                      { label: 'Gewicht', value: '6 kg (plus 16 kg Flightcase)' },
+                    ]
+                  : (product.specs || []),
               },
             }}
           />

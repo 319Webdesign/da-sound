@@ -1005,43 +1005,38 @@ und grundsolide Qualität.`,
     ],
   },
   {
-    id: 'pioneer-djm-900-nexus',
-    name: 'Pioneer DJM-900 Nexus',
-    description: 'Professionelles 4-Kanal DJ Mischpult. Vermietung im Flightcase mit passenden Kabeln (USB / Netzwerk).',
-    detailDescription: `Pioneer DJM-900 Nexus
-Professionelles 4-Kanal DJ Mischpult
+    id: 'pioneer-ddj-flx10',
+    name: 'Pioneer DDJ-FLX10',
+    description: 'Professioneller 4-Kanal DJ-Controller. Der DDJ-FLX10 ist ein leistungsstarker 4-Kanal-DJ-Controller für rekordbox und Serato DJ Pro. Er bietet eine Vielzahl brandneuer Funktionen, darunter die STEMS-Technologie, die neue kreative Möglichkeiten ermöglicht, wie die einfache Performance von Mash-ups aus dem Stand heraus, ohne dass die Tracks dafür vorbereitet werden müssen.',
+    detailDescription: `Pioneer DDJ-FLX10
+Professioneller 4-Kanal DJ-Controller
 
-Der DJM-900NXS steht für Kreativität und bietet vielseitige Anschlussmöglichkeiten,
-aktuelle Spezial-Effekte und überwältigende Performance-Features, was ihn zum
-idealen Herzstück eines professionellen DJ-Setups macht.
-Für die Anforderungen des harten DJ-Alltags gebaut, verfügt dieser Mixer über robuste
-Fader und solide Audioschaltkreise, die wenig Pflege brauchen und für eine lange
-Lebensdauer sorgen.
-
-Analoge Mischpulte mieten bei da-sound: Wer noch echte Regler, Fader und Potis
-bevorzugt, wird mit digitalen Mischpulten nicht glücklich. Ehrlichen Live-Sound und eine
-intuitive Bedienbarkeit gibt's nur mit klassischen Analogmischpulten. DYNACORD und
-MACKIE bieten nicht nur hochwertige Pre-Amps sondern auch robuste, road-taugliche
-und grundsolide Qualität.`,
+Der DDJ-FLX10 ist ein fortschrittlicher All-In-One Dj-Controller und bietet kostenlose Plug-and-Play-
+Kompatibilität mit Rekordbox und Serato DJ Pro. Nutze das völlig neue Wiedergabekonzept in
+rekordbox, mit dem du eine raffinierte musikalische Entwicklung in deinen Sets erzeugen kannst,
+indem du Mix Points in den Tracks verknüpfst, damit der nächste Song im perfekten Moment beginnt.
+Der MAGVEL-FADER des DDJ-1000 wurde im Vergleich zum 2-Sensor-System des DDJ-FLX10 durch
+ein 4-Sensor-System verbessert. Belebe deine Performances mit Lichteffekten, die zu der Stimmung
+deiner Tracks passen. Mit der rekordbox-Lighting-Funktion ist das ganz einfach, und dank des DMX-
+Ausgangs am DDJ-FLX10 benötigst du keine weiteren Geräte.`,
     images: [
-      '/images/djm900_2-edae2eca-1920w.webp',
-      '/images/pioneer djm900nx/djm900_1.webp',
-      '/images/pioneer djm900nx/djm900_2-edae2eca.webp',
-      '/images/pioneer djm900nx/djm900_3.webp',
+      '/images/PioneerDJFLX10/flx10_1.png',
+      '/images/PioneerDJFLX10/flx10_2.png',
+      '/images/PioneerDJFLX10/flx10_3.png',
+      '/images/PioneerDJFLX10/flx10_4.jpg',
     ],
-    pricePerUnit: 50,
+    pricePerUnit: 80,
+    pricePerPair: 120,
     priceUnitLabel: 'Tag',
     categorySlug: 'mischpulte-mikrofone',
     specs: [
-      { label: 'Hersteller', value: 'Pioneer' },
-      { label: 'Typ', value: '4-Kanal DJ Mischpult' },
-      { label: 'Channels', value: '4 Stereo-IN / 3 Stereo-OUT' },
-      { label: 'Effects', value: 'dig. Special FX' },
-      { label: 'Display', value: 'Beat/FX Display' },
-      { label: 'Network', value: 'Pioneer ProDJ Link' },
-      { label: 'Wifi', value: 'nein' },
-      { label: 'USB', value: '4x4 USB Interface' },
-      { label: 'Gewicht', value: '12,5 kg inkl. Flightcase' },
+      { label: 'Channels', value: '4 Stereo Kanäle mit Crossfader' },
+      { label: 'Effects', value: 'Beat Digital FX' },
+      { label: 'Display', value: '2 x On Jog Display' },
+      { label: 'Network', value: 'Nein' },
+      { label: 'Wifi', value: 'Nein' },
+      { label: 'USB', value: '2 x Typ C' },
+      { label: 'Gewicht', value: '6 kg (plus 16 kg Flightcase)' },
     ],
   },
   {

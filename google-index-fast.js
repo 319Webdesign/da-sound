@@ -108,7 +108,6 @@ const URLS = [
   'https://www.da-sound.de/produkte/theatre-spot-rgb',
   'https://www.da-sound.de/produkte/led-outdoor-fluter-ip65',
   'https://www.da-sound.de/produkte/dynacord-cms-1600-3',
-  'https://www.da-sound.de/produkte/pioneer-djm-900-nexus',
   'https://www.da-sound.de/produkte/funkmikrofon-sprache-moderation',
 ];
 
