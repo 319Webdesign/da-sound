@@ -125,7 +125,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'yamaha-dm7-c': 'Pro',
     'yamaha-dm3': 'Komplex',
     'yamaha-tio-1608d': 'Komplex',
-    'dynacord-cms-1600-3': 'Machbar',
     'pioneer-ddj-flx10': 'Machbar',
     'mackie-analog-mixer': 'Einfach',
     'shure-mikrofon-set-sm58-sm57': 'Einfach',
@@ -536,8 +535,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Abmischen von Bands, Orchestern, Musikensembles in jeglicher Form. Theater, Musicals,\nKonferenzen mit mehreren Tonspuren, Hybrid-Veranstaltungen, Audio-Streaming, Mehrspur-Recording, u.v.m.'
                   : product.id === 'yamaha-tio-1608d'
                   ? 'Latenzfreie Übertragung der Ein-/Ausgangs-Signale mit einem Netzwerkkabel (DANTE\nProtokoll) vom FOH zur Bühne.'
-                  : product.id === 'dynacord-cms-1600-3'
-                  ? 'Zum professionellen Abmischen und Aufnehmen von kleinen Bands / Ensembles.\nAllround-Mischpult für viele Einsatzmöglichkeiten'
                   : product.id === 'pioneer-ddj-flx10'
                   ? 'Professionelles Mixen von Audiotracks vom Laptop für DJs (kompatibel zu serato und rekordbox und weiteren DJ Softwares)'
                   : product.id === 'mackie-analog-mixer'

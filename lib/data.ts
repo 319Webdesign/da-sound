@@ -67,20 +67,26 @@ export const data = {
     ctaText: 'Speech 100 Konferenzsystem entdecken',
     productUrl: '/produkte/speech-100-konferenzsystem', // Dashboard: URL zur Produktseite
   },
-  // Ab 22.03.2026: PA Set PREMIUM mini als Highlight der Woche
+  // Highlight der Woche: PA Set PRO 500 / 800
   highlightProductApril: {
-    title: 'Echtes WM Live-Feeling für Zuhause, Kneipe, Biergarten.',
-    image: '/images/preview_public_viewing.png',
-    imageAlt: 'Menschen jubeln beim Public Viewing im Garten',
-    description: 'Rechtzeitig zum Start in die WM bieten wir ihnen 3 exklusive Public Viewing Sets. Alles was Sie benötigen, ist ein Empfangsgerät mit HDMI Ausgang (z.B. Laptop, SAT Receiver oder TV Top-Box).',
+    title: 'PA Set PRO 500 / 800',
+    image: '/images/PA-Set-Pro-500-vorschau.png',
+    imageAlt: 'PA Set PRO 500 – Audio Zenit XP Serie',
+    description:
+      'Kompromissloser Sound für große Events: Die neuen PA Sets PRO mit der XP Serie von Audio Zenit (Made in Germany) – roadtauglich, mit starker DSP-Technik, für Indoor und Outdoor.',
     featuresTitle: '',
-    features: [],
-    price: '99,- €',
-    pricePeriod: '',
+    features: [
+      { icon: 'users' as const, text: 'PRO 500 bis 500 Personen · PRO 800 bis 800 Personen' },
+      { icon: 'zap' as const, text: '5.000–8.000 W RMS mit überragender DSP-Technik' },
+      { icon: 'volume' as const, text: 'Hochwertige Treiber, robust & roadtauglich' },
+      { icon: 'package' as const, text: 'Indoor & Outdoor – entwickelt und produziert in Deutschland' },
+    ],
+    price: '250€',
+    pricePeriod: '/ Tag',
     secondaryPrice: '',
     priceNote: '',
-    priceSummary: 'ab 99,- € pro Tag',
-    ctaText: 'Jetzt WM-Pakete entdecken',
-    productUrl: '/public-viewing',
+    priceSummary: 'ab 250 € pro Tag',
+    ctaText: 'PA Sets PRO entdecken',
+    productUrl: '/produkte/pa-set-pro-500',
   },
 };

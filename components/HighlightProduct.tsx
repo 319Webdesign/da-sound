@@ -18,7 +18,7 @@ interface HighlightProductProps {
   pricePeriod?: string;
   secondaryPrice?: string;
   priceNote?: string;
-  /** Wenn gesetzt, ersetzt die komplette erste Preiszeile (z. B. „ab 99,- € pro Tag“). */
+  /** Wenn gesetzt, ersetzt die komplette erste Preiszeile (z. B. „ab 250 € pro Tag“). */
   priceSummary?: string;
   ctaText?: string;
   productUrl?: string;
@@ -61,8 +61,6 @@ export default function HighlightProduct({
     if (onCtaClick) {
       onCtaClick();
     }
-    // Wenn productUrl vorhanden ist, wird Link-Komponente verwendet
-    // Ansonsten Fallback
     if (!productUrl && !onCtaClick) {
       const contactSection = document.getElementById('kontakt');
       contactSection?.scrollIntoView({ behavior: 'smooth' });
@@ -70,29 +68,19 @@ export default function HighlightProduct({
   };
 
   return (
-    <section
-      ref={ref}
-      className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
-      style={{
-        backgroundImage:
-          "linear-gradient(140deg, rgba(10, 12, 18, 0.78), rgba(10, 12, 18, 0.66)), url('/images/wm-bg-stadium.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="bg-[#F3F4F6] py-16 md:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Links: Produktbild */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="relative flex items-center justify-center mt-6 lg:mt-10"
+            className="relative flex items-center justify-center"
           >
             <div className="relative w-full max-w-sm lg:max-w-md aspect-square">
               <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl transform rotate-3 opacity-20" />
-              <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-xl bg-white/95 flex items-center justify-center p-4 md:p-6 lg:p-8">
+              <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-xl bg-white flex items-center justify-center p-4 md:p-6 lg:p-8">
                 <div className="relative w-full h-full">
                   <Image
                     src={image}
@@ -129,20 +117,15 @@ export default function HighlightProduct({
           >
             {/* Badge */}
             <div className="flex justify-center lg:justify-start">
-              <span className="inline-flex items-center px-4 py-2 rounded-full text-xs md:text-sm font-semibold bg-[#DD0000] text-white uppercase tracking-wide border border-white/20 shadow-lg">
-                WM-Special
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-xs md:text-sm font-semibold bg-primary text-white uppercase tracking-wide">
+                Neu im Sortiment
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               {title}
             </h2>
-            <div className="flex justify-center lg:justify-start gap-2" aria-hidden="true">
-              <span className="h-1.5 w-12 rounded-full bg-black/80" />
-              <span className="h-1.5 w-12 rounded-full bg-[#DD0000]" />
-              <span className="h-1.5 w-12 rounded-full bg-[#FFCE00]" />
-            </div>
 
             {/* Description */}
             {description && (
@@ -150,7 +133,7 @@ export default function HighlightProduct({
                 initial={{ opacity: 0, y: 10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                 transition={{ duration: 0.4, delay: 0.25 }}
-                className="text-lg md:text-xl text-gray-100 leading-relaxed"
+                className="text-lg md:text-xl text-gray-600 leading-relaxed"
               >
                 {description}
               </motion.p>
@@ -158,7 +141,7 @@ export default function HighlightProduct({
 
             {/* Features / Bullet-Points */}
             {featuresTitle && (
-              <p className="text-xl md:text-2xl font-semibold text-white/95">
+              <p className="text-xl md:text-2xl font-semibold text-gray-900">
                 {featuresTitle}
               </p>
             )}
@@ -173,10 +156,10 @@ export default function HighlightProduct({
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                     className="flex items-center gap-4 justify-center lg:justify-start"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 text-[#FFCE00]" />
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-primary" />
                     </div>
-                    <span className="text-lg md:text-xl text-white/95 font-medium">
+                    <span className="text-lg md:text-xl text-gray-700 font-medium">
                       {feature.text}
                     </span>
                   </motion.div>
@@ -184,26 +167,28 @@ export default function HighlightProduct({
               })}
             </div>
 
-            {/* Preise — Breite an Inhalt gekoppelt (nicht volle Spaltenbreite) */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="inline-block w-fit max-w-full rounded-2xl border border-white/20 bg-white/10 px-5 py-4 text-white text-left">
-                <p className="text-lg md:text-xl font-semibold">
-                  {priceSummary?.trim()
-                    ? priceSummary.trim()
-                    : `Preis / Tag: ${price}${pricePeriod}`}
-                </p>
-                {secondaryPrice && (
-                  <p className="mt-2 text-base md:text-lg text-white/90">
-                    Preis / Wochenende*: {secondaryPrice}
+            {/* Preise */}
+            {(priceSummary || price) && (
+              <div className="flex justify-center lg:justify-start">
+                <div className="inline-block w-fit max-w-full rounded-2xl border border-gray-200 bg-white px-5 py-4 text-gray-900 text-left shadow-sm">
+                  <p className="text-lg md:text-xl font-semibold text-primary">
+                    {priceSummary?.trim()
+                      ? priceSummary.trim()
+                      : `Preis / Tag: ${price}${pricePeriod}`}
                   </p>
-                )}
-                {priceNote && (
-                  <p className="mt-3 text-xs md:text-sm text-white/75">
-                    {priceNote}
-                  </p>
-                )}
+                  {secondaryPrice && (
+                    <p className="mt-2 text-base md:text-lg text-gray-600">
+                      Preis / Wochenende*: {secondaryPrice}
+                    </p>
+                  )}
+                  {priceNote && (
+                    <p className="mt-3 text-xs md:text-sm text-gray-500">
+                      {priceNote}
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Call-to-Action Button */}
             <motion.div
@@ -215,7 +200,7 @@ export default function HighlightProduct({
               {productUrl ? (
                 <Link
                   href={productUrl}
-                  className="group inline-flex items-center justify-center gap-2 bg-[#FFCE00] hover:bg-[#f4c100] text-black px-8 py-4 rounded-xl font-extrabold transition-all shadow-lg hover:shadow-xl text-lg"
+                  className="group inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl text-lg"
                 >
                   {ctaText}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -223,7 +208,7 @@ export default function HighlightProduct({
               ) : (
                 <button
                   onClick={handleCtaClick}
-                  className="group flex items-center justify-center gap-2 bg-[#FFCE00] hover:bg-[#f4c100] text-black px-8 py-4 rounded-xl font-extrabold transition-all shadow-lg hover:shadow-xl text-lg w-full sm:w-auto"
+                  className="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl text-lg w-full sm:w-auto"
                 >
                   {ctaText}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

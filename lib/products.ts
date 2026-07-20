@@ -965,46 +965,6 @@ im Mietpreis enthalten.`,
     ],
   },
   {
-    id: 'dynacord-cms-1600-3',
-    name: 'DYNACORD CMS 1600-3',
-    description: 'Analoges Live Mischpult der Profiklasse. Bewährter "Dynacord Sound" mit 2 digitalen Effektgeräten und einem 4-Band EQ pro Kanal, sowie zusätzlichen Filtern machen dieses Mischpult zum Garant für einen guten, analogen Live Sound!',
-    detailDescription: `DYNACORD CMS 1600-3
-Analoges Live Mischpult der Profiklasse
-
-Bewährter "Dynacord Sound" mit 2 digitalen Effektgeräten, 4-Band EQ pro Kanal, sowie
-zusätzlichen VOICE-Filtern machen dieses Mischpult zum Garant für einen guten,
-analogen Live Sound! Insgesamt stehen 16 Mikrofon-Eingänge und 4 Stereo Eingänge für
-maximale Variabilität zur Verfügung. Ein grafischer Summen-EQ rundet die vollwertige
-Ausstattung ab.
-
-Analoge Mischpulte mieten bei da-sound: Wer noch echte Regler, Fader und Potis
-bevorzugt, wird mit digitalen Mischpulten nicht glücklich. Ehrlichen Live-Sound und eine
-intuitive Bedienbarkeit gibt's nur mit klassischen Analogmischpulten. DYNACORD und
-MACKIE bieten nicht nur hochwertige Pre-Amps sondern auch robuste, road-taugliche
-und grundsolide Qualität.`,
-    images: [
-      '/images/cms1600_1-1920w.webp',
-      '/images/dynacord cms1600/cms1600_1.webp',
-      '/images/dynacord cms1600/cms1600_2.webp',
-      '/images/dynacord cms1600/cms1600_3.webp',
-      '/images/dynacord cms1600/cms1600_4.webp',
-    ],
-    pricePerUnit: 60,
-    priceUnitLabel: 'Tag',
-    categorySlug: 'mischpulte-mikrofone',
-    specs: [
-      { label: 'Hersteller', value: 'DYNACORD' },
-      { label: 'Typ', value: 'Analoges Live Mischpult' },
-      { label: 'Channels', value: '16/20 IN / 4 OUT' },
-      { label: 'Effects', value: '2 FX Engines' },
-      { label: 'Display', value: 'OLED Display' },
-      { label: 'Network', value: 'nein' },
-      { label: 'Wifi', value: 'nein' },
-      { label: 'USB', value: '2x2 USB Interface' },
-      { label: 'Gewicht', value: '22 kg inkl. Flightcase' },
-    ],
-  },
-  {
     id: 'pioneer-ddj-flx10',
     name: 'Pioneer DDJ-FLX10',
     description: 'Professioneller 4-Kanal DJ-Controller. Der DDJ-FLX10 ist ein leistungsstarker 4-Kanal-DJ-Controller für rekordbox und Serato DJ Pro. Er bietet eine Vielzahl brandneuer Funktionen, darunter die STEMS-Technologie, die neue kreative Möglichkeiten ermöglicht, wie die einfache Performance von Mash-ups aus dem Stand heraus, ohne dass die Tracks dafür vorbereitet werden müssen.',
