@@ -2,41 +2,58 @@
 
 import React, { useEffect, useState, useMemo } from 'react';
 import { motion, AnimatePresence, type MotionProps } from 'framer-motion';
-import { ShoppingBag, X, MessageCircle, Mail, Trash2 } from 'lucide-react';
+import { ShoppingBag, X, MessageCircle, Mail, Trash2, Calendar } from 'lucide-react';
 import { useRentalCart } from '@/context/RentalCartContext';
 import { data } from '@/lib/data';
 
+function formatDateDE(isoDate: string): string {
+  const [year, month, day] = isoDate.split('-');
+  if (!year || !month || !day) return isoDate;
+  return `${day}.${month}.${year}`;
+}
+
+function getTodayISO(): string {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 export default function RentalCart() {
-  const { items, removeItem, getTotalCount, isAnimating } = useRentalCart();
+  const { items, removeItem, getTotalCount, isAnimating, rentalDate, setRentalDate } = useRentalCart();
   const [isOpen, setIsOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [dateError, setDateError] = useState(false);
 
   const totalCount = getTotalCount();
+  const minDate = useMemo(() => getTodayISO(), []);
+  const hasValidDate = Boolean(rentalDate);
 
   // WhatsApp-Link generieren - mit useMemo optimiert
   const whatsappLink = useMemo(() => {
-    if (items.length === 0) return '';
-    
+    if (items.length === 0 || !rentalDate) return '';
+
     const itemList = items
       .map((item) => `${item.quantity}x ${item.name}`)
       .join(', ');
-    
-    const message = `Hallo da-sound, ich hätte gerne ein Angebot für: ${itemList}`;
+
+    const message = `Hallo da-sound, ich hätte gerne ein Angebot für: ${itemList}\n\nGewünschtes Ausleihdatum: ${formatDateDE(rentalDate)}`;
     return `https://wa.me/${data.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
-  }, [items]);
+  }, [items, rentalDate]);
 
   // E-Mail-Link generieren - mit useMemo optimiert
   const emailLink = useMemo(() => {
-    if (items.length === 0) return '';
-    
+    if (items.length === 0 || !rentalDate) return '';
+
     const itemList = items
       .map((item) => `${item.quantity}x ${item.name}`)
       .join('\n');
-    
-    const body = `Hallo da-sound,\n\nich hätte gerne ein Angebot für folgende Technik:\n\n${itemList}\n\nVielen Dank!`;
+
+    const body = `Hallo da-sound,\n\nich hätte gerne ein Angebot für folgende Technik:\n\n${itemList}\n\nGewünschtes Ausleihdatum: ${formatDateDE(rentalDate)}\n\nVielen Dank!`;
     return `mailto:info@da-sound.de?subject=Mietanfrage&body=${encodeURIComponent(body)}`;
-  }, [items]);
+  }, [items, rentalDate]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -61,6 +78,18 @@ export default function RentalCart() {
 
   const shouldAnimate = isDesktop && !prefersReducedMotion;
   const applyMotion = (config?: MotionProps) => (shouldAnimate && config ? config : {});
+
+  const handleDateChange = (value: string) => {
+    setRentalDate(value);
+    if (value) setDateError(false);
+  };
+
+  const handleRequestClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!hasValidDate) {
+      e.preventDefault();
+      setDateError(true);
+    }
+  };
 
   return (
     <>
@@ -160,12 +189,45 @@ export default function RentalCart() {
               {/* Actions */}
               {items.length > 0 && (
                 <div className="p-6 border-t border-gray-200 space-y-3">
+                  {/* Ausleihdatum */}
+                  <div>
+                    <label htmlFor="rental-date" className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+                      <Calendar className="w-4 h-4 text-primary" />
+                      Ausleihdatum *
+                    </label>
+                    <input
+                      type="date"
+                      id="rental-date"
+                      name="rental-date"
+                      value={rentalDate}
+                      min={minDate}
+                      onChange={(e) => handleDateChange(e.target.value)}
+                      className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-0 transition-colors ${
+                        dateError
+                          ? 'border-red-300 focus:border-red-500'
+                          : 'border-gray-300 focus:border-primary'
+                      }`}
+                      required
+                    />
+                    {dateError && (
+                      <p className="mt-1.5 text-sm text-red-600">
+                        Bitte wähle ein Ausleihdatum aus.
+                      </p>
+                    )}
+                  </div>
+
                   {/* WhatsApp Button */}
                   <a
-                    href={whatsappLink}
+                    href={hasValidDate ? whatsappLink : undefined}
+                    onClick={handleRequestClick}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
+                    aria-disabled={!hasValidDate}
+                    className={`w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all shadow-lg ${
+                      hasValidDate
+                        ? 'bg-[#25D366] hover:bg-[#20BA5A] text-white hover:shadow-xl cursor-pointer'
+                        : 'bg-gray-300 text-gray-500 cursor-not-allowed shadow-none'
+                    }`}
                   >
                     <MessageCircle className="w-5 h-5" />
                     Anfrage via WhatsApp
@@ -173,8 +235,14 @@ export default function RentalCart() {
 
                   {/* E-Mail Button */}
                   <a
-                    href={emailLink}
-                    className="w-full flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
+                    href={hasValidDate ? emailLink : undefined}
+                    onClick={handleRequestClick}
+                    aria-disabled={!hasValidDate}
+                    className={`w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all shadow-lg ${
+                      hasValidDate
+                        ? 'bg-blue-600 hover:bg-blue-700 text-white hover:shadow-xl cursor-pointer'
+                        : 'bg-gray-300 text-gray-500 cursor-not-allowed shadow-none'
+                    }`}
                   >
                     <Mail className="w-5 h-5" />
                     Anfrage via E-Mail

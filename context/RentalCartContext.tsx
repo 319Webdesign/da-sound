@@ -10,6 +10,8 @@ export interface CartItem {
 
 interface RentalCartContextType {
   items: CartItem[];
+  rentalDate: string;
+  setRentalDate: (date: string) => void;
   addItem: (item: Omit<CartItem, 'quantity'>) => void;
   removeItem: (id: string) => void;
   clearCart: () => void;
@@ -20,18 +22,24 @@ interface RentalCartContextType {
 const RentalCartContext = createContext<RentalCartContextType | undefined>(undefined);
 
 const STORAGE_KEY = 'da-sound-rental-cart';
+const DATE_STORAGE_KEY = 'da-sound-rental-date';
 
 export function RentalCartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
+  const [rentalDate, setRentalDateState] = useState('');
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // Lade Warenkorb aus localStorage beim Mount
+  // Lade Warenkorb und Mietdatum aus localStorage beim Mount
   useEffect(() => {
     if (typeof window !== 'undefined') {
       try {
         const stored = localStorage.getItem(STORAGE_KEY);
         if (stored) {
           setItems(JSON.parse(stored));
+        }
+        const storedDate = localStorage.getItem(DATE_STORAGE_KEY);
+        if (storedDate) {
+          setRentalDateState(storedDate);
         }
       } catch (error) {
         console.error('Fehler beim Laden des Warenkorbs:', error);
@@ -49,6 +57,25 @@ export function RentalCartProvider({ children }: { children: React.ReactNode }) 
       }
     }
   }, [items]);
+
+  // Speichere Mietdatum in localStorage bei Änderungen
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        if (rentalDate) {
+          localStorage.setItem(DATE_STORAGE_KEY, rentalDate);
+        } else {
+          localStorage.removeItem(DATE_STORAGE_KEY);
+        }
+      } catch (error) {
+        console.error('Fehler beim Speichern des Mietdatums:', error);
+      }
+    }
+  }, [rentalDate]);
+
+  const setRentalDate = useCallback((date: string) => {
+    setRentalDateState(date);
+  }, []);
 
   const addItem = useCallback((item: Omit<CartItem, 'quantity'>) => {
     setItems((prevItems) => {
@@ -76,6 +103,7 @@ export function RentalCartProvider({ children }: { children: React.ReactNode }) 
 
   const clearCart = useCallback(() => {
     setItems([]);
+    setRentalDateState('');
   }, []);
 
   const getTotalCount = useCallback(() => {
@@ -86,13 +114,15 @@ export function RentalCartProvider({ children }: { children: React.ReactNode }) 
   const contextValue = useMemo(
     () => ({
       items,
+      rentalDate,
+      setRentalDate,
       addItem,
       removeItem,
       clearCart,
       getTotalCount,
       isAnimating,
     }),
-    [items, addItem, removeItem, clearCart, getTotalCount, isAnimating]
+    [items, rentalDate, setRentalDate, addItem, removeItem, clearCart, getTotalCount, isAnimating]
   );
 
   return (
