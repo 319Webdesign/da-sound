@@ -1108,6 +1108,33 @@ Zur Abnahme eines Standard Drumsets erhalten Sie hier ein Komplettpaket mit 7 Mi
     ],
   },
   {
+    id: 'shure-blx24-sm58',
+    name: 'Shure BLX24/SM58',
+    description:
+      'Das BLX ist eine hochwertige Funkstrecke zur Übertragung von Sprache und Gesang. Einfachstes Setup dank automatischer Frequenzsuche, die im Empfänger verbauten Antennen machen das System sehr kompakt und unproblematisch im Handling. Mit der legendären SM58 Mikrofonkapsel versehen, bietet das System eine professionelle Klangqualität.',
+    detailDescription: `Shure BLX24/SM58
+Solides Funkmikrofon mit einfachster Bedienung und Pro-Sound
+
+Das BLX ist eine hochwertige Funkstrecke zur Übertragung von Sprache und Gesang. Einfachstes Setup dank automatischer Frequenzsuche, die im Empfänger verbauten Antennen machen das System sehr kompakt und unproblematisch im Handling. Mit der legendären SM58 Mikrofonkapsel versehen, bietet das System eine professionelle Klangqualität.`,
+    images: [
+      '/images/ShureBLX/blx_1.jpg',
+      '/images/ShureBLX/blx_2.jpg',
+      '/images/ShureBLX/blx_3.jpg',
+    ],
+    pricePerUnit: 20,
+    pricePerPair: 30,
+    priceUnitLabel: 'Tag',
+    categorySlug: 'mischpulte-mikrofone',
+    specs: [
+      { label: 'Typ', value: 'Funkmikrofon' },
+      { label: 'Hersteller', value: 'Shure' },
+      { label: 'Anwendung', value: 'Ansprachen / Reden, Moderation, Gesang, Karaoke' },
+      { label: 'Übertragung', value: 'Prozessorgesteuertes Diversity UHF-Bereich, störungsfrei' },
+      { label: 'Besonderheit', value: 'Easy Setup mit Quick-Scan (automatische Frequenzsuche)' },
+      { label: 'Batterien', value: '2 x AA Batterien oder vgl. Akku (bis 14 Stunden Laufzeit)' },
+    ],
+  },
+  {
     id: 'funkmikrofon-sprache-moderation',
     name: 'Funkmikrofon für Sprache / Moderation',
     description: 'Unsere Funkstrecken von Beyerdynamic wahlweise mit Handsender oder Headset / Kopfbügelmikrofon eigenen sich perfekt für Ansprachen, Reden, Moderation und Konferenzen. Sprache wird sauber und störungsfrei übertragen. Wahlweise Handmikrofon oder Headset mit Taschensender. Batterien (AA) sind nicht im Mietpreis enthalten.',

@@ -129,6 +129,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'mackie-analog-mixer': 'Einfach',
     'shure-mikrofon-set-sm58-sm57': 'Einfach',
     'mikrofon-set-drums': 'Komplex',
+    'shure-blx24-sm58': 'Einfach',
     'funkmikrofon-sprache-moderation': 'Machbar',
     'profi-funkmikrofon-shure-slxd2': 'Machbar',
     'akku-spot-indoor-rgb': 'Einfach',
@@ -539,6 +540,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Professionelles Mixen von Audiotracks vom Laptop für DJs (kompatibel zu serato und rekordbox und weiteren DJ Softwares)'
                   : product.id === 'mackie-analog-mixer'
                   ? 'kleine Allround-Mischpulte für viele Einsatzmöglichkeiten'
+                  : product.id === 'shure-blx24-sm58'
+                  ? 'Drahtlose Übertragung von Sprache & Gesang für Bühne, Privatfeiern, Hochzeiten, Konferenz / Tagung'
                   : product.id === 'akku-spot-indoor-rgb'
                   ? 'Punktuelle Beleuchtung von Flächen, Wänden, Vorhängen oder Objekten'
                   : product.id === 'akku-spot-outdoor-rgbw-ip65'
