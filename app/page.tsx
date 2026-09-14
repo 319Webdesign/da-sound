@@ -11,6 +11,7 @@ import AboutServiceSection from '@/components/AboutServiceSection';
 import dynamic from 'next/dynamic';
 import LazyRender from '@/components/LazyRender';
 import CTASection from '@/components/CTASection';
+import ErentoSection from '@/components/ErentoSection';
 import { fetchGoogleReviews, type ReviewsResponse } from '@/lib/reviews';
 
 const GoogleReviewsSection = dynamic(
@@ -169,7 +170,8 @@ export default async function HomePage() {
         <FAQSection />
       </LazyRender>
 
-   
+      {/* Erento */}
+      <ErentoSection />
 
       {/* Über uns / Kontakt */}
       <section id="kontakt" className="bg-gray-50 py-16 md:py-24">
