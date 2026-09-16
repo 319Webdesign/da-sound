@@ -1706,6 +1706,7 @@ Optimal für Hochzeiten oder Motto-Partys`,
   {
     id: 'led-moving-head-beam-200w',
     name: 'LED Moving Head Beam 200W',
+    isHidden: true, // steht nicht mehr zur Vermietung – zum Reaktivieren auf false setzen oder entfernen
     description: 'Sehr lichtstarker Moving Head BEAM. Für große Bühnen / Hallen / Outdoor geeignet. Erzeugt beeindruckende Beam-Effekte oder breite Strahlenbündel dank der rotierenden Prismen. Es lassen sich mehrere Spots auch Stand-Alone synchroniseren, steuerbar über DMX oder das eingebaute Mikrofon (Sound-to-Light). Als Highlight bietet dieser Spot noch einen farbigen, programmierbaren LED Ring um die Linse.',
     detailDescription: `Moving Head BEAM
 Power auf Reichweite - die gebündelten Strahlen "zersägen" den Nachthimmel

@@ -42,7 +42,6 @@ const URLS = [
   'https://www.da-sound.de/produkte/2000mw-diodenlaser-showlaser',
   'https://www.da-sound.de/produkte/mirror-ball-saturn-led-effekt',
   'https://www.da-sound.de/produkte/50cm-spiegelkugel-set',
-  'https://www.da-sound.de/produkte/led-moving-head-beam-200w',
   'https://www.da-sound.de/produkte/led-moving-head-wash-7x40w',
   'https://www.da-sound.de/produkte/jb-spyder-show-pattern-laser',
   'https://www.da-sound.de/produkte/mikrofon-set-drums',

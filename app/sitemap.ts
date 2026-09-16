@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { categories } from '@/lib/categories';
-import { products } from '@/lib/products';
+import { getRoutableProductIds } from '@/lib/products';
 
 // Canonical URL: www ist die finale Domain (da-sound.de wird dorthin umgeleitet)
 const SITE_URL = 'https://www.da-sound.de';
@@ -47,14 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changefreq: 'weekly' as const,
   }));
 
-  const productEntries = products
-    .filter((product) => !product.hideDetailPage)
-    .map((product) => ({
-      url: new URL(`/produkte/${product.id}`, SITE_URL).toString(),
-      lastModified,
-      priority: 0.75,
-      changefreq: 'weekly' as const,
-    }));
+  const productEntries = getRoutableProductIds().map((id) => ({
+    url: new URL(`/produkte/${id}`, SITE_URL).toString(),
+    lastModified,
+    priority: 0.75,
+    changefreq: 'weekly' as const,
+  }));
 
   return [...staticEntries, ...categoryEntries, ...productEntries];
 }
