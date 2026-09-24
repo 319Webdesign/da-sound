@@ -99,6 +99,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'party-set-xlarge',
     'rednerpodest-drumriser',
     'buehne-4x3m',
+    'buehnendach-the-arch-8x4',
     'faltpavillion',
     'alutruss-trilock-e-gl33',
     'traversenlift-150kg',
@@ -172,6 +173,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'wireless-hdmi-funk-set': 'Machbar',
     'rednerpodest-drumriser': 'Machbar',
     'buehne-4x3m': 'Machbar',
+    'buehnendach-the-arch-8x4': 'Pro',
     'faltpavillion': 'Einfach',
     'alutruss-trilock-e-gl33': 'Komplex',
     'traversenlift-150kg': 'Pro',
@@ -239,8 +241,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
       if (typ) return { displayLabel: 'Typ', value: typ };
       return null;
     }
-    // Bühnenpodeste & Traversen: Abmessungen (oder Abmessungen Grundfläche)
+    // Bühnenpodeste & Traversen: Größe, sonst Abmessungen (oder Abmessungen Grundfläche)
     if (slug === 'buehlenpodeste-traversen') {
+      const groesse = find('Größe');
+      if (groesse) return { displayLabel: 'Größe', value: groesse };
       const v = find('Abmessungen') ?? find('Abmessungen Grundfläche');
       return v ? { displayLabel: 'Abmessungen', value: v } : null;
     }
@@ -377,7 +381,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     return (
                       <div>
                         <div className="text-4xl font-bold text-primary mb-2">
-                          {product.priceOptions[0].price.toFixed(2).replace('.', ',')} € / {priceLabel}
+                          {product.priceFrom ? 'Ab ' : ''}{product.priceOptions[0].price.toFixed(2).replace('.', ',')} € / {priceLabel}{product.priceNote ? '*' : ''}
                         </div>
                         {product.priceOptions.length > 1 && (
                           <div className="space-y-1 mt-2 text-lg text-gray-700">
@@ -387,6 +391,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
                               </div>
                             ))}
                           </div>
+                        )}
+                        {product.priceNote && (
+                          <p className="text-sm text-gray-500 mt-2">*{product.priceNote}</p>
                         )}
                         <p className="text-sm text-gray-500 mt-2">
                           Alle Preise verstehen sich inkl. 19% MwSt.
@@ -409,12 +416,15 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     return (
                       <>
                         <div className="text-4xl font-bold text-primary mb-2">
-                          {product.pricePerUnit.toFixed(2).replace('.', ',')} € / {priceLabel}
+                          {product.priceFrom ? 'Ab ' : ''}{product.pricePerUnit.toFixed(2).replace('.', ',')} € / {priceLabel}{product.priceNote ? '*' : ''}
                         </div>
                         {product.pricePerPair && (
                           <div className="text-lg text-gray-600 mb-2">
                             {product.pricePerPair.toFixed(2).replace('.', ',')} € / {(isSetProduct || product.priceUnitLabel === 'Tag') ? 'Wochenende' : 'Paar'}
                           </div>
+                        )}
+                        {product.priceNote && (
+                          <p className="text-sm text-gray-500">*{product.priceNote}</p>
                         )}
                         <p className="text-sm text-gray-500">
                           Alle Preise verstehen sich inkl. 19% MwSt.
@@ -585,6 +595,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Für dichten Bodennebel auf Tanzfläche, Bühne und Saal\nMit Spezialfluid: Nebel löst sich auf bevor er nach oben steigt'
                   : product.id === 'kaltfunkenmaschine-cold-spark'
                   ? 'Senkrecht aufsteigende Fontäneeffekt mit patentiertem Kaltfunkenverfahren\nSpezialeffekt für Events, Hochzeiten, Video / Theater, u.v.m.'
+                  : product.id === 'buehnendach-the-arch-8x4'
+                  ? 'Als Bühnendach, Eventzelt, Pavillion und Regenschutz bei Outdoor Events aller Art.'
                   : 'Ideal für private Partys, Hochzeiten im kleinen Kreis oder Vereinsfeste. Dieses kompakte Set bietet alles, was Sie für eine gelungene Feier benötigen - von kraftvollem Sound bis hin zu stimmungsvollem Licht.',
               },
               technischeDetails: {

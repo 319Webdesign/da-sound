@@ -13,6 +13,8 @@ export interface Product {
   offerInfo?: string;
   priceOptions?: { label: string; price: number }[];
   priceUnitLabel?: string; // z. B. "Paar" statt "Stück"
+  priceFrom?: boolean; // Preis als „Ab …“ anzeigen
+  priceNote?: string; // Zusatzhinweis unter dem Preis, z. B. „zzgl. Transport & Service“
   isUpgradeKit?: boolean; // Markiert Zusatzartikel/Upgrade-Kits
   availableUntil?: string; // ISO-Datum (YYYY-MM-DD): Produkt wird ab diesem Datum ausgeblendet
   isHidden?: boolean; // Produkt vorübergehend aus dem Sortiment nehmen (true = unsichtbar, false/undefined = sichtbar)
@@ -2769,6 +2771,38 @@ weitere Größen/Konfigurationen auf Anfrage`,
       { label: 'Oberfläche', value: 'strapzierfähige Siebdruckoberfläche' },
       { label: 'Transportgewicht', value: 'ca. 200kg' },
       { label: 'Anwendung', value: 'DJs, Alleinunterhalter, kleine Ensembles, u.v.m.' },
+    ],
+  },
+  {
+    id: 'buehnendach-the-arch-8x4',
+    name: 'Bühnendach „The Arch“ 8x4m',
+    description: `Schickes und ultra kompaktes Bühnendach mit patentiertem Faltmechanismus
+
+Das neue Bühnendach mit den Außenabmessungen 8x4m vom belgischen Start-Up Konligo überzeugt durch eine schicke Optik und einfachste Montage. Die Konstruktion kann dabei wahlweise auf dem Boden zur Überdachung einer 6x4m Bühne oder auf einer Podestfläche mit mindestens 8x4m verwendet werden. Transport und Montage erfolgt dabei kostengünstig mit einem 2-Mann Team.`,
+    detailDescription: `Durch einen patentierten, einzigartigen Faltmechanismus lässt sich dieses formschöne, stabile Bühnendach innerhalb von 1 Stunde mit 2 Personen (Aufbau/Anlieferung erfolgt ausschließlich durch da-sound) in Betrieb nehmen. Wahlweise kann das Dach noch mit einem zusätzlichen Sonnen-/Regenschutz auf der Vorderseite ausgestattet werden.`,
+    images: ['/images/The Arch Bühnendach/arch2.jpg'],
+    galleryImages: [
+      '/images/The Arch Bühnendach/arch2.jpg',
+      '/images/The Arch Bühnendach/arch1.png',
+      '/images/The Arch Bühnendach/arch3.jpg',
+      '/images/The Arch Bühnendach/arch4.jpg',
+      '/images/The Arch Bühnendach/arch5.jpg',
+      '/images/The Arch Bühnendach/Fastival Bühnendach2.jpg',
+    ],
+    pricePerUnit: 500,
+    priceUnitLabel: 'Tag',
+    priceFrom: true,
+    priceNote: 'zzgl. Transport & Service',
+    categorySlug: 'buehlenpodeste-traversen',
+    specs: [
+      { label: 'Größe', value: 'ca. 8 x 4 x 3,5 m' },
+      { label: 'Typ', value: 'mobiles Faltzelt / Bühnendach' },
+      { label: 'Hersteller', value: 'Konligo' },
+      { label: 'Abmessungen (außen)', value: '750 x 370 x 330 cm (B x T x H)' },
+      { label: 'Transportabmessungen', value: '188 x 86 x 49 cm (L x B x H)' },
+      { label: 'Transportgewicht', value: 'ca. 100kg' },
+      { label: 'Windfestigkeit', value: 'bis 60 kmh mit entsprechender Beschwerung' },
+      { label: 'Anwendung', value: 'Als Bühnendach, Eventzelt, Pavillion und Regenschutz bei Outdoor Events aller Art' },
     ],
   },
   {
