@@ -92,7 +92,15 @@ export default async function HomePage() {
 
   const now = new Date();
   const highlightStart = new Date('2026-03-22T00:00:00');
-  const activeHighlight = now >= highlightStart ? data.highlightProductApril : data.highlightProduct;
+  const halloweenStart = new Date(
+    process.env.NODE_ENV === 'development' ? '2026-09-30T00:00:00' : '2026-10-01T00:00:00'
+  );
+  const activeHighlight =
+    now >= halloweenStart
+      ? data.highlightProductHalloween
+      : now >= highlightStart
+        ? data.highlightProductApril
+        : data.highlightProduct;
 
   let reviewsData: ReviewsResponse | null = null;
   try {
@@ -137,6 +145,8 @@ export default async function HomePage() {
         priceSummary={activeHighlight.priceSummary}
         ctaText={activeHighlight.ctaText}
         productUrl={activeHighlight.productUrl}
+        tone={'tone' in activeHighlight ? activeHighlight.tone : undefined}
+        badge={'badge' in activeHighlight ? activeHighlight.badge : undefined}
       />
 
       {/* Miet-Kategorien */}

@@ -89,4 +89,26 @@ export const data = {
     ctaText: 'PA Sets PRO entdecken',
     productUrl: '/produkte/pa-set-pro-500',
   },
+  // Highlight ab 1.10.: Halloween Party Pack (ohne Detailseite)
+  highlightProductHalloween: {
+    title: 'Halloween Party Pack',
+    image: '/images/halloween1.jpg',
+    imageAlt: 'Halloween Party Pack – animierte Hexenfigur mit UV-Licht',
+    description: 'Ein schaurig schönes Set zum Gruseln – der Hingucker für eure Halloween Party.',
+    featuresTitle: '',
+    features: [
+      { icon: 'zap' as const, text: 'Animierte Hexenfigur in Lebensgröße (ca. 178 cm) mit leuchtenden Augen' },
+      { icon: 'settings' as const, text: '2 UV-Strahler lassen die Figur in gespenstischem Blau fluoreszieren' },
+      { icon: 'package' as const, text: 'Plus Nebelmaschine für den ultimativen Grusel-Effekt' },
+    ],
+    price: '50 €',
+    pricePeriod: '/ Tag',
+    secondaryPrice: '75 €',
+    priceNote: '',
+    priceSummary: '50 € / Tag',
+    ctaText: 'Jetzt anfragen',
+    productUrl: '/booking',
+    tone: 'halloween' as const,
+    badge: 'Oktober Highlight',
+  },
 };

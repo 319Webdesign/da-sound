@@ -23,6 +23,8 @@ interface HighlightProductProps {
   ctaText?: string;
   productUrl?: string;
   onCtaClick?: () => void;
+  tone?: 'halloween';
+  badge?: string;
 }
 
 const iconMap = {
@@ -53,9 +55,12 @@ export default function HighlightProduct({
   ctaText = 'Zur Produktseite',
   productUrl,
   onCtaClick,
+  tone,
+  badge = 'Neu im Sortiment',
 }: HighlightProductProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const halloween = tone === 'halloween';
 
   const handleCtaClick = () => {
     if (onCtaClick) {
@@ -68,20 +73,50 @@ export default function HighlightProduct({
   };
 
   return (
-    <section ref={ref} className="bg-[#F3F4F6] py-16 md:py-20 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      ref={ref}
+      id="highlight"
+      className={`relative overflow-hidden py-16 md:py-20 lg:py-24 ${halloween ? 'bg-[#120c18]' : 'bg-[#F3F4F6]'}`}
+    >
+      {halloween && (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(ellipse 50% 70% at 22% 42%, rgba(79, 70, 229, 0.42), transparent 62%), radial-gradient(ellipse 42% 50% at 86% 78%, rgba(234, 88, 12, 0.28), transparent 64%)',
+          }}
+        />
+      )}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Links: Produktbild */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            initial={{ opacity: halloween ? 1 : 0, x: halloween ? 0 : -50 }}
+            animate={isInView || halloween ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="relative flex items-center justify-center"
           >
-            <div className="relative w-full max-w-sm lg:max-w-md aspect-square">
-              <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl transform rotate-3 opacity-20" />
-              <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-xl bg-white flex items-center justify-center p-4 md:p-6 lg:p-8">
-                <div className="relative w-full h-full">
+            <div className="relative z-10 w-full max-w-sm lg:max-w-md aspect-[4/3]">
+              <div
+                className={`absolute inset-0 rounded-3xl shadow-2xl transform rotate-3 ${
+                  halloween
+                    ? 'bg-gradient-to-br from-violet-500/50 to-orange-500/35 opacity-70'
+                    : 'bg-gradient-to-br from-white to-gray-50 opacity-20'
+                }`}
+              />
+              <div
+                className={`absolute inset-0 overflow-hidden rounded-3xl shadow-xl ${
+                  halloween ? 'bg-black shadow-orange-950/40' : 'bg-white'
+                }`}
+              >
+                {halloween ? (
+                  <img
+                    src={image}
+                    alt={imageAlt}
+                    className="absolute inset-0 h-full w-full object-cover object-center"
+                  />
+                ) : (
                   <Image
                     src={image}
                     alt={imageAlt}
@@ -93,17 +128,8 @@ export default function HighlightProduct({
                     fetchPriority="high"
                     placeholder="blur"
                     blurDataURL={DEFAULT_BLUR_DATA_URL}
-                    onError={(e) => {
-                      console.error('Failed to load image:', image);
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.style.opacity = '1';
-                    }}
-                    onLoad={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.style.opacity = '1';
-                    }}
                   />
-                </div>
+                )}
               </div>
             </div>
           </motion.div>
@@ -117,13 +143,17 @@ export default function HighlightProduct({
           >
             {/* Badge */}
             <div className="flex justify-center lg:justify-start">
-              <span className="inline-flex items-center px-4 py-2 rounded-full text-xs md:text-sm font-semibold bg-primary text-white uppercase tracking-wide">
-                Neu im Sortiment
+              <span
+                className={`inline-flex items-center px-4 py-2 rounded-full text-xs md:text-sm font-semibold uppercase tracking-wide text-white ${
+                  halloween ? 'bg-orange-600' : 'bg-primary'
+                }`}
+              >
+                {badge}
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ${halloween ? 'text-white' : 'text-gray-900'}`}>
               {title}
             </h2>
 
@@ -133,7 +163,7 @@ export default function HighlightProduct({
                 initial={{ opacity: 0, y: 10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                 transition={{ duration: 0.4, delay: 0.25 }}
-                className="text-lg md:text-xl text-gray-600 leading-relaxed"
+                className={`text-lg md:text-xl leading-relaxed ${halloween ? 'text-gray-300' : 'text-gray-600'}`}
               >
                 {description}
               </motion.p>
@@ -156,10 +186,14 @@ export default function HighlightProduct({
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                     className="flex items-center gap-4 justify-center lg:justify-start"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 text-primary" />
+                    <div
+                      className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center ${
+                        halloween ? 'bg-orange-500/15' : 'bg-primary/10'
+                      }`}
+                    >
+                      <IconComponent className={`w-6 h-6 ${halloween ? 'text-orange-400' : 'text-primary'}`} />
                     </div>
-                    <span className="text-lg md:text-xl text-gray-700 font-medium">
+                    <span className={`text-lg md:text-xl font-medium ${halloween ? 'text-gray-100' : 'text-gray-700'}`}>
                       {feature.text}
                     </span>
                   </motion.div>
@@ -170,14 +204,20 @@ export default function HighlightProduct({
             {/* Preise */}
             {(priceSummary || price) && (
               <div className="flex justify-center lg:justify-start">
-                <div className="inline-block w-fit max-w-full rounded-2xl border border-gray-200 bg-white px-5 py-4 text-gray-900 text-left shadow-sm">
-                  <p className="text-lg md:text-xl font-semibold text-primary">
+                <div
+                  className={`inline-block w-fit max-w-full rounded-2xl px-5 py-4 text-left shadow-sm ${
+                    halloween
+                      ? 'border border-orange-400/30 bg-white/5 text-white'
+                      : 'border border-gray-200 bg-white text-gray-900'
+                  }`}
+                >
+                  <p className={`text-lg md:text-xl font-semibold ${halloween ? 'text-orange-300' : 'text-primary'}`}>
                     {priceSummary?.trim()
                       ? priceSummary.trim()
                       : `Preis / Tag: ${price}${pricePeriod}`}
                   </p>
                   {secondaryPrice && (
-                    <p className="mt-2 text-base md:text-lg text-gray-600">
+                    <p className={`mt-2 text-base md:text-lg ${halloween ? 'text-gray-300' : 'text-gray-600'}`}>
                       Preis / Wochenende*: {secondaryPrice}
                     </p>
                   )}
