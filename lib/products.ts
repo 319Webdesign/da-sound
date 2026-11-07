@@ -2049,6 +2049,34 @@ WICHTIG: Bitte befolgen Sie die Aufbau-Anleitung und leeren Sie das Gerät sorgf
     ],
   },
   {
+    id: 'ultraschall-bodennebelmaschine-3000w',
+    name: '3000W Ultraschall Bodennebelmaschine',
+    description: 'Für große Bühnen und Tanzfläche / Saal bis 500 m². Die Briteq BT-H2FOG 3000 erzeugt mit 3.000 W einen dunstartigen, dichten Nebelschleier in Bodennähe. Mit 2 flexiblen Schläuchen lässt sich der Nebel ausrichten. Steuerung manuell am Gerät oder per DMX.',
+    detailDescription: `3000W Ultraschall Bodennebelmaschine
+Briteq BT-H2FOG 3000 für große Bühnen und Säle bis 500 m²
+
+Die Briteq BT-H2FOG 3000 ist eine leistungsstarke 3000 Watt Ultraschall Bodennebelmaschine, die mit speziellem Nebelfluid und destilliertem Wasser betrieben wird. Sie erzeugt einen dunstartigen, dichten Nebelschleier in Bodennähe. Mit 2 flexiblen Schläuchen lässt sich der Nebel zur gewünschten Stelle ausrichten. Wahlweise manuelle Steuerung am Gerät oder DMX-Betrieb.`,
+    images: ['/images/h2fog2-1920w.webp'],
+    galleryImages: [
+      '/images/bodennebelmaschine pro power/h2fog2_1.webp',
+      '/images/bodennebelmaschine pro power/h2fog2_2.webp',
+      '/images/bodennebelmaschine pro power/h2fog2_3.webp',
+      '/images/bodennebelmaschine pro power/h2fog_4.webp',
+    ],
+    pricePerUnit: 130,
+    pricePerPair: 185,
+    priceUnitLabel: 'Tag',
+    categorySlug: 'nebelmaschinen-buehneneffekte',
+    specs: [
+      { label: 'Leistung', value: '3.000 W' },
+      { label: 'Indoor', value: 'Ja' },
+      { label: 'Nebelart', value: 'Bodennebel' },
+      { label: 'Nebelausstoß', value: 'ca. 450 m3/min.' },
+      { label: 'Steuerung', value: 'Manuell (Timer) / DMX' },
+      { label: 'Gewicht', value: '33 kg' },
+    ],
+  },
+  {
     id: 'kaltfunkenmaschine-cold-spark',
     name: 'Kaltfunkenmaschine "Cold Spark"',
     description: 'Dieser sehr beliebte Fontäneneffekt erfreut sich bei Hochzeiten aber auch Bühnenshows aller Art größter Beliebtheit. Denn durch ein spezielles Verfahren entsteht hier keine große Hitze und damit keine Feuergefahr. Die Höhe der Fontäne lässt sich zwischen 2-5m einstellen, der Effekt ist für Drinnen und Draußen geeignet. Das Spezialgranulat können Sie bei uns erwerben. Preis pro Beutel (200gr) = 39,- € reicht für ca. 8 min Fontäne.',

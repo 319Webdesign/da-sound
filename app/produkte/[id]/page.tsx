@@ -158,6 +158,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     'vertikal-nebelmaschine-spray-fogger': 'Einfach',
     'hazer': 'Einfach',
     'bodennebelmaschine': 'Machbar',
+    'ultraschall-bodennebelmaschine-3000w': 'Einfach',
     'kaltfunkenmaschine-cold-spark': 'Machbar',
     'lcd-dlp-beamer': 'Einfach',
     'laser-dlp-beamer': 'Einfach',
@@ -593,6 +594,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Zur Sichtbarmachung von Lichteffekten und Laserstrahlen auf Bühne und Tanzfläche'
                   : product.id === 'bodennebelmaschine'
                   ? 'Für dichten Bodennebel auf Tanzfläche, Bühne und Saal\nMit Spezialfluid: Nebel löst sich auf bevor er nach oben steigt'
+                  : product.id === 'ultraschall-bodennebelmaschine-3000w'
+                  ? 'Bodennebel für Theater, Tanzfläche, Film/Video'
                   : product.id === 'kaltfunkenmaschine-cold-spark'
                   ? 'Senkrecht aufsteigende Fontäneeffekt mit patentiertem Kaltfunkenverfahren\nSpezialeffekt für Events, Hochzeiten, Video / Theater, u.v.m.'
                   : product.id === 'buehnendach-the-arch-8x4'

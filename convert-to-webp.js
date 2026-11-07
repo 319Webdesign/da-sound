@@ -29,6 +29,7 @@ const targetSubdirs = [
   'vertical spray fogger',
   'hazer',
   'bodennebelmaschine',
+  'bodennebelmaschine pro power',
   'cold spark kaltfunkenmaschine',
   'laser dlp beamer',
   'laser dlp beamer PRO',

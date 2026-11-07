@@ -185,7 +185,7 @@ export default function ProductList({ products }: ProductListProps) {
                         }
                         
                         if (category === 'nebelmaschinen-buehneneffekte') {
-                          return labelLower.includes('leistung') || labelLower.includes('heiz') || labelLower.includes('aufnahme') || labelLower.includes('watt') || labelLower.includes('heizleistung') || labelLower.includes('leistungsaufnahme') || labelLower.includes('nebelart') || labelLower.includes('bodennebel') || labelLower.includes('dunst') || labelLower.includes('shownebel') || labelLower.includes('kaltfunken') || labelLower.includes('fontäne') || labelLower.includes('nebelausstoß') || labelLower.includes('ausstoß') || labelLower.includes('menge') || labelLower.includes('funk') || labelLower.includes('wireless') || labelLower.includes('funkbedienung') || labelLower.includes('kabel') || labelLower.includes('cable') || labelLower.includes('kabelfernbedienung') || labelLower.includes('fernbedienung') || spec.label === 'Gewicht' || labelLower === 'weight';
+                          return labelLower.includes('leistung') || labelLower.includes('heiz') || labelLower.includes('aufnahme') || labelLower.includes('watt') || labelLower.includes('heizleistung') || labelLower.includes('leistungsaufnahme') || labelLower.includes('nebelart') || labelLower.includes('bodennebel') || labelLower.includes('dunst') || labelLower.includes('shownebel') || labelLower.includes('kaltfunken') || labelLower.includes('fontäne') || labelLower.includes('nebelausstoß') || labelLower.includes('ausstoß') || labelLower.includes('menge') || labelLower.includes('steuerung') || labelLower.includes('funk') || labelLower.includes('wireless') || labelLower.includes('funkbedienung') || labelLower.includes('kabel') || labelLower.includes('cable') || labelLower.includes('kabelfernbedienung') || labelLower.includes('fernbedienung') || spec.label === 'Gewicht' || labelLower === 'weight';
                         }
                         
                         if (category === 'medien-konferenztechnik') {
@@ -387,6 +387,9 @@ export default function ProductList({ products }: ProductListProps) {
                           } else if (labelLower.includes('nebelausstoß') || labelLower.includes('ausstoß') || labelLower.includes('menge')) {
                             icon = <SignalHigh className="w-5 h-5" />;
                             label = 'AUSSTOSS';
+                          } else if (labelLower.includes('steuerung')) {
+                            icon = <SlidersVertical className="w-5 h-5" />;
+                            label = 'STEUERUNG';
                           } else if (labelLower.includes('funk') || labelLower.includes('wireless') || labelLower.includes('funkbedienung')) {
                             icon = <Wifi className="w-5 h-5" />;
                             label = 'FUNK';
