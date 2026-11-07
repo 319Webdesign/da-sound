@@ -5,7 +5,7 @@ import { MotionConfig } from 'framer-motion';
 import { RentalCartProvider } from '@/context/RentalCartContext';
 import CookieConsent from '@/components/CookieConsent';
 import AnalyticsScripts from '@/components/AnalyticsScripts';
-import EasterPopup from '@/components/EasterPopup';
+import ChristmasPopup from '@/components/ChristmasPopup';
 
 /**
  * Auf Mobilgeräten (≤768px) und bei prefers-reduced-motion werden alle
@@ -47,7 +47,7 @@ export default function ClientProviders({ children }: { children: React.ReactNod
       <MotionConfigMobile>
         {children}
         <Suspense fallback={null}>
-          <EasterPopup />
+          <ChristmasPopup />
         </Suspense>
         <CookieConsent />
         <AnalyticsScripts />

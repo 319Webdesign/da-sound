@@ -3,7 +3,6 @@ import { Volume2, Lightbulb, Package, MessageCircle, MapPin, Clock } from 'lucid
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import HighlightProduct from '@/components/HighlightProduct';
 import ExpertiseSection from '@/components/ExpertiseSection';
 import TechHighlights from '@/components/TechHighlights';
 import RentalCategories from '@/components/RentalCategories';
@@ -90,18 +89,6 @@ export default async function HomePage() {
     return null;
   }
 
-  const now = new Date();
-  const highlightStart = new Date('2026-03-22T00:00:00');
-  const halloweenStart = new Date(
-    process.env.NODE_ENV === 'development' ? '2026-09-30T00:00:00' : '2026-10-01T00:00:00'
-  );
-  const activeHighlight =
-    now >= halloweenStart
-      ? data.highlightProductHalloween
-      : now >= highlightStart
-        ? data.highlightProductApril
-        : data.highlightProduct;
-
   let reviewsData: ReviewsResponse | null = null;
   try {
     reviewsData = await fetchGoogleReviews();
@@ -129,25 +116,6 @@ export default async function HomePage() {
 
       {/* Unsere Expertise */}
       <ExpertiseSection />
-
-      {/* Highlight-Artikel */}
-      <HighlightProduct
-        title={activeHighlight.title}
-        image={activeHighlight.image}
-        imageAlt={activeHighlight.imageAlt}
-        description={activeHighlight.description}
-        features={activeHighlight.features}
-        featuresTitle={activeHighlight.featuresTitle}
-        price={activeHighlight.price}
-        pricePeriod={activeHighlight.pricePeriod}
-        secondaryPrice={activeHighlight.secondaryPrice}
-        priceNote={activeHighlight.priceNote}
-        priceSummary={activeHighlight.priceSummary}
-        ctaText={activeHighlight.ctaText}
-        productUrl={activeHighlight.productUrl}
-        tone={'tone' in activeHighlight ? activeHighlight.tone : undefined}
-        badge={'badge' in activeHighlight ? activeHighlight.badge : undefined}
-      />
 
       {/* Miet-Kategorien */}
       <section id="miet-kategorien">

@@ -73,6 +73,21 @@ export default function RootLayout({
     <html lang={htmlLang} className={`overflow-x-hidden ${inter.variable}`}>
       <head>
         <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-K15K6XD73D"
+        />
+        <script
+          id="google-gtag"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-K15K6XD73D');
+            `,
+          }}
+        />
+        <script
           defer
           src="https://api.pirsch.io/pa.js"
           id="pianjs"
