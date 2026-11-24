@@ -53,7 +53,6 @@ const URLS = [
   'https://www.da-sound.de/produkte/profi-funkmikrofon-shure-slxd2',
   'https://www.da-sound.de/produkte/upgrade-kit-mixer-mikrofon',
   'https://www.da-sound.de/produkte/yamaha-dm3',
-  'https://www.da-sound.de/produkte/akku-lautsprecher-maxi',
   'https://www.da-sound.de/produkte/pa-set-large',
   'https://www.da-sound.de/produkte/aktivlautsprecher-bluetooth',
   'https://www.da-sound.de/produkte/pa-set-outdoor',

@@ -88,6 +88,20 @@ export default function RootLayout({
           }}
         />
         <script
+          async
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-5RK7XJWM"
+        />
+        <script
+          id="google-gtm"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            `,
+          }}
+        />
+        <script
           defer
           src="https://api.pirsch.io/pa.js"
           id="pianjs"

@@ -322,45 +322,6 @@ Abholung mit der von uns empfohlenen Voreinstellung.`,
     ],
   },
   {
-    id: 'akku-lautsprecher-maxi',
-    name: 'Akku Lautsprecher Maxi',
-    description: 'Massive Bassleistung bei langer Akkulaufzeit. Der Teufel Rockster XL mit 2 Bluetooth Empfängern überzeugt durch Druck und bis zu 12h Laufzeit.',
-    detailDescription: `Akku Lautsprecher Maxi
-Massive Bassleistung bei langer Akkulaufzeit
-Der Teufel Rockster XL ist ein stattlicher Akkulautsprecher mit gleich 2 Bluetooth
-Empfängern, so können 2 mobile Endgeräte gleichzeitig gekoppelt werden, um Playlisten
-abzufeuern. Der schier unglaubliche „Druck“ dieser Box beeindruckt auch Fachleute
-immer aufs Neue. Wird der Lautsprecher an seinem Leistungsmaximum betrieben,
-stehen ca. 4-6 Stunden Akkulaufzeit zur Verfügung, bei gemäßigter Lautstärke dürfen
-auch gerne mal 12 Stunden ohne Nachladen durchgefeiert werden. Zwei Teufel Rockster
-XL lassen sich via Kabel zum Stereo-Set koppeln.
-
-Lautsprecher mieten leicht gemacht: Unsere Lautsprecher und PA Anlagen sind
-größtenteils aktiv, d.h. der Verstärker ist bereits eingebaut. Das erleichtert nicht nur den
-Anschluss, sondern gewährleistet durch perfekt aufeinander abgestimmte Elektronik
-auch die Betriebssicherheit und einen guten Sound. In der Regel können verschiedene
-Presets – je nach Anwendung – gewählt werden. Sie erhalten alle Komponenten bei
-Abholung mit der von uns empfohlenen Voreinstellung.`,
-    images: [
-      '/images/akkuLautsprecherMaxi.webp',
-      '/images/akku lautsprecher maxi/rockster1.webp',
-      '/images/akku lautsprecher maxi/rockster2.webp',
-      '/images/akku lautsprecher maxi/rockster3.webp',
-    ],
-    pricePerUnit: 40,
-    pricePerPair: 60,
-    categorySlug: 'pa-anlagen',
-    specs: [
-      { label: 'Personen', value: '1-120' },
-      { label: 'Indoor', value: 'Indoor' },
-      { label: 'Akkulaufzeit', value: '4-12h' },
-      { label: 'Schalldruck', value: '131 dB' },
-      { label: 'Bluetooth', value: 'Ja, 2 x Audio Streaming' },
-      { label: 'Gewicht', value: '30 kg' },
-      { label: 'Transport', value: 'Kombi / Van' },
-    ],
-  },
-  {
     id: 'aktivlautsprecher-bluetooth',
     name: 'Aktivlautsprecher Bluetooth',
     description: 'Universell einsetzbare Multifunktionsboxen von DAS Audio. 5 Klang-Presets, Bluetooth, auch als Monitorbox nutzbar. Lautsprecherstativ inkl.',

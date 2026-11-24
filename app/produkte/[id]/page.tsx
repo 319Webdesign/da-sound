@@ -79,7 +79,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   const setProductIds = new Set([
     'akku-lautsprecher-compact',
-    'akku-lautsprecher-maxi',
     'aktivlautsprecher-bluetooth',
     'pa-saeule-bluetooth',
     'sub-sat-set-bluetooth',
@@ -510,8 +509,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ? 'Hochzeitsfeier, Partys, runde Geburtstage und große Familienfeiern, Studentenpartys, Firmenevents (Sommerfest, Weihnachtsfeier), kleine Zeltveranstaltungen (Kerb)\nBis zu 250 Personen (nur Indoor)'
                   : product.id === 'akku-lautsprecher-compact'
                   ? 'Mobiler Akku-Lautsprecher für Straßenmusik, Trauungen, Schulaufführungen, Konferenzen, Gottesdienste, Sportveranstaltungen, Präsentationen oder Grillpartys - überall dort, wo kein Stromanschluss vorhanden oder die Verlegung von Kabeln nicht möglich ist. Wetterfest bei Verwendung der Schutzabdeckung.'
-                  : product.id === 'akku-lautsprecher-maxi'
-                  ? 'Sehr leistungsstarker Akku-Lautsprecher für Straßenmusik, Festzüge, Trauungen, Schulaufführungen, Sportveranstaltungen, Grill- und Gartenpartys - überall dort, wo kein Stromanschluss vorhanden oder die Verlegung von Kabeln nicht möglich ist.'
                   : product.id === 'aktivlautsprecher-bluetooth'
                   ? 'Anwendung (bei 2 Stck):\nSprachbeschallung bis max. 200 Personen\nPlayback Musikbeschallung bis max. 150 Personen mit mittlerem Basspegel\nLive-Musik akustisch für bis zu 100 Personen'
                   : product.id === 'sub-sat-set-bluetooth'
